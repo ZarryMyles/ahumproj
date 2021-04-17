@@ -3,10 +3,6 @@ import Navbar from "./Navbar";
 import logo from "../Images/logo.png";
 import $ from "jquery";
 
-import ImgsViewer from 'react-images-viewer'
-
-import { ImageGroup, Image } from 'react-fullscreen-image'
-
 import facility1 from "../assets/images/wifi-signal.png";
 import facility2 from "../assets/images/microphone.png";
 import facility3 from "../assets/images/speaker.png";
@@ -21,8 +17,6 @@ import thumb4 from "../assets/images/7-thumb.jpg";
 import thumb5 from "../assets/images/8-thumb.jpg";
 import thumb6 from "../assets/images/9-thumb.jpg";
 
-
-
 function BookSpace() {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
@@ -32,31 +26,25 @@ function BookSpace() {
   };
 
   const ImageViewer = () => {
-    return (
-      <dev>Hello</dev>
-    )
+    return <dev>Hello</dev>;
   };
 
-  const images = [
-{thumb4},
-{thumb5}
-  ]
+  const images = [{ thumb4 }, { thumb5 }];
 
   const IMG_SET = [
     {
-      src: '../assets/images/1-thumb.jpg',
-      caption: 'A forest',
+      src: "../assets/images/1-thumb.jpg",
+      caption: "A forest",
       // As an array
-      srcSet: [
-        '../assets/images/1-thumb.jpg 1024w'
-      ]
+      srcSet: ["../assets/images/1-thumb.jpg 1024w"],
     },
     {
-      src: '../assets/images/1-thumb.jpg',
+      src: "../assets/images/1-thumb.jpg",
       // As a string
-      srcSet: '../assets/images/1-thumb.jpg 1024w,../assets/images/1-thumb.jpg 800w, ../assets/images/1-thumb.jpg 500w, ../assets/images/1-thumb.jpg 320w',
-    }
-  ]
+      srcSet:
+        "../assets/images/1-thumb.jpg 1024w,../assets/images/1-thumb.jpg 800w, ../assets/images/1-thumb.jpg 500w, ../assets/images/1-thumb.jpg 320w",
+    },
+  ];
 
   return (
     <div class="wrapper">
@@ -104,30 +92,7 @@ function BookSpace() {
           </div>
 
           <>
-
-          <ImageGroup>
-            <div className="images">
-            <Image
-              src={thumb5}
-              alt="nature"
-              style={{
-                
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                height: '100%',
-                width: '100%',
-                objectFit: 'cover',
-              }}
-            />
-            </div>
-                </ImageGroup>
             <div className="py-5">
-            <Image
-              src={thumb5}
-              alt="nature"
-            />
               {/* Top Content */}
               <div className="flex mx-32 flex-col items-center">
                 <h1 className="text-2xl font-semibold">Book Our Space</h1>
@@ -149,16 +114,7 @@ function BookSpace() {
                 <div className="mx-32">
                   <div className="grid grid-cols-9 gap-8 flex items-center">
                     <div className="col-span-2 flex items-right">
-                      <img onClick={() => {
-                this.simpleDialogMob.hide();
-                this.simpleDialogMob1.show();
-              }}
-
-              
-              
-              className="w-11/12" src={thumb1} />
-
-
+                      <img className="w-11/12" src={thumb1} />
                     </div>
                     <div className="col-span-5 -ml-6">
                       <div className="grid gap-8 grid-rows-2">

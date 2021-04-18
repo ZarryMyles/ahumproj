@@ -59,7 +59,7 @@ function Contact() {
           </div>
 
           <>
-            <div className="grid h-ahum-contact-screen grid-cols-2">
+            <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
               <div className="flex justify-center items-center col-span-1">
                 <div className="flex flex-col">
                   <span className="font-normal mb-3">
@@ -97,7 +97,7 @@ function Contact() {
                   />
 
                   <button
-                    className="my-1 py-2 w-1/4 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-xl"
+                    className="my-1 py-2 md:w-1/4 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-xl"
                     type="submit"
                     value="Send Message"
                   >
@@ -105,12 +105,12 @@ function Contact() {
                   </button>
                 </div>
               </div>
-              <div className="flex justify-center col-span-1 items-center">
+              <div className="mt-4 lg:mt-0 flex justify-center col-span-1 items-center">
                 <div className="flex flex-col w-full">
                   <span className="font-normal">
                     Come drop by and explore our space (10am to 5pm)
                   </span>
-                  <div className="w-5/6">
+                  <div className="lg:w-5/6">
                     <iframe
                       className="w-full h-64 mt-2 pt-3"
                       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10992.079379615054!2d77.60054457270812!3d13.080992781944996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82b5d79c5fe90710!2sart%20heart%20u%20%26%20mind!5e0!3m2!1sen!2sin!4v1618606129974!5m2!1sen!2sin"
@@ -121,31 +121,42 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div className="bg-ahum-brown absolute inset-x-0 bottom-0 h-52 bottom-0">
-              <div className="flex h-full ml-24 justify-center items-center">
-                  <div className="grid w-full grid-cols-8">
-                <div className="col-start-2 col-span-2 flex flex-col">
-                  <span className="text-white text-2xl">
-                    Join our mailing list
-                  </span>
-                  <span className="uppercase text-white">
-                    Never miss an update
-                  </span>
-                </div>
-                <div className="col-start-4 col-end-6 w-4/6 flex flex-col">
-                  <span className="text-white text-sm">Email Address</span>
-                  <div className="border-t border-white border"></div>
-                  <input className="py-1 px-2 mt-2 focus:outline-none" type="text" name="name" />
-                </div>
-
-                <div className="col-start-6 col-end-8 flex flex-col">
-                  <span className="text-white">
-                    Phone : +91 9888897645, +91 999999990
-                  </span>
-                  <span className="text-white">Email : ahum@gmail.com</span>
+            <div className="bg-ahum-brown lg:absolute lg:inset-x-0 lg:bottom-0 lg:h-52 h-max py-6 mt-10 lg:p-0 lg:mt-0">
+              <div className="flex mx-9 lg:mt-0 h-full lg:ml-24 justify-center items-center">
+                <div className="lg:grid w-full lg:grid-cols-8">
+                  <div className="col-start-2 col-span-2 flex flex-col mb-2 md:mb-0">
+                    <span className="text-white text-2xl">
+                      Join our mailing list
+                    </span>
+                    <span className="uppercase text-white">
+                      Never miss an update
+                    </span>
+                  </div>
+                  <div className="lg:col-start-4 col-end-6 w-5/6 md:w-4/6 flex flex-col">
+                    <span className="text-white text-sm">Email Address</span>
+                    <div className="border-t border-white border"></div>
+                    <input
+                      className="py-1 px-2 mt-2 focus:outline-none"
+                      type="text"
+                      name="name"
+                    />
+                  </div>
+                  {/* for normal screen */}
+                  <div className="col-start-6 col-end-8 hidden lg:flex flex-col">
+                    <span className="text-white">
+                      Phone : +91 9888897645, +91 999999990
+                    </span>
+                    <span className="text-white">Email : ahum@gmail.com</span>
+                  </div>
+                  {/* for phones */}
+                  <div className="col-start-6 pt-2 col-end-9 lg:hidden flex flex-col">
+                    <span className="text-white">
+                      Phone : +91 9888897645, +91 999999990
+                    </span>
+                    <span className="text-white">Email : ahum@gmail.com</span>
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </>
         </div>

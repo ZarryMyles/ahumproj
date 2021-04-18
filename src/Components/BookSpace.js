@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Navbar from "./Navbar";
 import logo from "../Images/logo.png";
 import $ from "jquery";
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
+import ImageZoom from "react-medium-image-zoom";
 
 import facility1 from "../assets/images/wifi-signal.png";
 import facility2 from "../assets/images/microphone.png";
@@ -18,6 +21,19 @@ import thumb5 from "../assets/images/8-thumb.jpg";
 import thumb6 from "../assets/images/9-thumb.jpg";
 
 function BookSpace() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
@@ -25,24 +41,36 @@ function BookSpace() {
     $("#sidebar").toggleClass("active");
   };
 
-  const ImageViewer = () => {
-    return <dev>Hello</dev>;
-  };
-
-  const images = [{ thumb4 }, { thumb5 }];
-
-  const IMG_SET = [
+  const photos = [
     {
-      src: "../assets/images/1-thumb.jpg",
-      caption: "A forest",
-      // As an array
-      srcSet: ["../assets/images/1-thumb.jpg 1024w"],
+      src: thumb1,
+      width: 4,
+      height: 3,
     },
     {
-      src: "../assets/images/1-thumb.jpg",
-      // As a string
-      srcSet:
-        "../assets/images/1-thumb.jpg 1024w,../assets/images/1-thumb.jpg 800w, ../assets/images/1-thumb.jpg 500w, ../assets/images/1-thumb.jpg 320w",
+      src: thumb2,
+      width: 1,
+      height: 1,
+    },
+    {
+      src: thumb3,
+      width: 1,
+      height: 1,
+    },
+    {
+      src: thumb5,
+      width: 1,
+      height: 1,
+    },
+    {
+      src: thumb6,
+      width: 1,
+      height: 1,
+    },
+    {
+      src: thumb4,
+      width: 1,
+      height: 1,
     },
   ];
 
@@ -94,7 +122,7 @@ function BookSpace() {
           <>
             <div className="py-5">
               {/* Top Content */}
-              <div className="flex mx-32 flex-col items-center">
+              <div className="flex lg:mx-32 mx-10 flex-col items-center">
                 <h1 className="text-2xl font-semibold">Book Our Space</h1>
                 <p className="text-black py-3">
                   Contrary to popular belief, Lorem Ipsum is not simply random
@@ -110,124 +138,225 @@ function BookSpace() {
               </div>
 
               {/* Collage */}
-              <div className="bg-ahum-brown-collage mt-10 h-max py-20">
-                <div className="mx-32">
-                  <div className="grid grid-cols-9 gap-8 flex items-center">
-                    <div className="col-span-2 flex items-right">
-                      <img className="w-11/12" src={thumb1} />
+              <div className="bg-ahum-brown-collage mt-10 h-max py-10 lg:py-20">
+                <div className="lg:mx-32 mx-10">
+                  <div className="flex flex-row justify-center items-center">
+                    <div className="mr-4">
+                      <ImageZoom
+                        image={{
+                          src: thumb1,
+                          alt: "Golden Gate Bridge",
+                        }}
+                      />
                     </div>
-                    <div className="col-span-5 -ml-6">
-                      <div className="grid gap-8 grid-rows-2">
+                    <div className="flex flex-col justify-center items-center">
+                      <div className="flex flex-row justify-center items-center">
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: thumb2,
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: thumb3,
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-row justify-center items-center">
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: thumb5,
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: thumb6,
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="">
+                      <ImageZoom
+                        image={{
+                          src: thumb4,
+                          alt: "Golden Gate Bridge",
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  
+                  {/* <div className="grid grid-cols-10 flex items-center">
+                    <div className="col-span-2 pr-4">
+                      <ImageZoom
+                        image={{
+                          src: thumb1,
+                          alt: "Golden Gate Bridge",
+                          className: "img",
+                        }}
+                      />
+                    </div>
+                    <div className="col-span-6">
+                      <div className="grid grid-rows-2">
                         <div className="row-span-1">
-                          <div className="grid gap-8 grid-cols-6 flex justify-center items-center">
-                            <div className="col-span-2">
-                              <img className="" src={thumb2} />
+                          <div className="grid grid-cols-3 flex justify-center items-center">
+                            <div className="col-span-1">
+                              <ImageZoom
+                                image={{
+                                  src: thumb2,
+                                  alt: "Golden Gate Bridge",
+                                  className: "img",
+                                }}
+                              />
                             </div>
-                            <div className="col-span-4">
-                              <img className="" src={thumb3} />
+                            <div className="col-span-2">
+                              <ImageZoom
+                                image={{
+                                  src: thumb3,
+                                  alt: "Golden Gate Bridge",
+                                  className: "img",
+                                }}
+                              />
                             </div>
                           </div>
                         </div>
                         <div className="row-span-1">
-                          <div className="grid gap-8 grid-cols-6 flex justify-center items-center">
-                            <div className="col-span-4">
-                              <img className="" src={thumb5} />
-                            </div>
+                          <div className="grid grid-cols-3 flex justify-center items-center">
                             <div className="col-span-2">
-                              <img className="" src={thumb6} />
+                              <ImageZoom
+                                image={{
+                                  src: thumb5,
+                                  alt: "Golden Gate Bridge",
+                                  className: "img",
+                                }}
+                              />
+                            </div>
+                            <div className="col-span-1">
+                              <ImageZoom
+                                image={{
+                                  src: thumb6,
+                                  alt: "Golden Gate Bridge",
+                                  className: "img",
+                                }}
+                              />
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-span-2">
-                      <img className="w-11/12" src={thumb4} />
+                      <ImageZoom
+                        image={{
+                          src: thumb4,
+                          alt: "Golden Gate Bridge",
+                          className: "img",
+                        }}
+                      />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
               {/* Facilities */}
-              <div className="mx-32 mt-12">
-                <h2 className="text-2xl font-semibold">Facilities</h2>
-
-                <div className="mt-10 flex justify-between">
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105">
-                    <div className="rounded-full bg-ahum-brown-collage h-44 w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+              <div className="lg:mx-32 mx-10 mt-12">
+                {/* for phones */}
+                <h2 className="text-2xl font-semibold text-center lg:hidden">
+                  Facilities
+                </h2>
+                {/* for normal displays */}
+                <h2 className="text-2xl font-semibold hidden lg:flex">
+                  Facilities
+                </h2>
+                <div className="mt-10 flex flex-wrap justify-around">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities wifi"
                         src={facility1}
                       />
                     </div>
-                    <span className="font-medium m-3 text-xl">WiFi</span>
+                    <span className="font-medium my-3 text-xl">WiFi</span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105">
-                    <div className="rounded-full bg-ahum-brown-collage h-44 w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities 3 Microphones"
                         src={facility2}
                       />
                     </div>
-                    <span className="font-medium m-3 text-xl">
+                    <span className="font-medium my-3 text-xl">
                       3 Microphones
                     </span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105">
-                    <div className="rounded-full bg-ahum-brown-collage h-44 w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities JBL EON Speakers"
                         src={facility3}
                       />
                     </div>
-                    <span className="font-medium m-3 text-xl">
+                    <span className="font-medium my-3 text-xl">
                       JBL EON Speakers
                     </span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105">
-                    <div className="rounded-full bg-ahum-brown-collage h-44 w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities 4 LED Warm Lights"
                         src={facility4}
                       />
                     </div>
-                    <span className="font-medium m-3 text-xl">
+                    <span className="font-medium my-3 text-xl">
                       4 LED Warm Lights
                     </span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105">
-                    <div className="rounded-full bg-ahum-brown-collage h-44 w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities Pantry"
                         src={facility5}
                       />
                     </div>
-                    <span className="font-medium m-3 text-xl">Pantry</span>
+                    <span className="font-medium my-3 text-xl">Pantry</span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105">
-                    <div className="rounded-full bg-ahum-brown-collage h-44 w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities Restroom"
                         src={facility6}
                       />
                     </div>
-                    <span className="font-medium m-3 text-xl">Restroom</span>
+                    <span className="font-medium my-3 text-xl">Restroom</span>
                   </div>
                 </div>
-
-                <button className="text-lg my-10 h-10 bg-ahum-maroon w-max items-center focus:outline-none flex px-5 rounded-full text-white transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl">
-                  Enquire
-                </button>
+                <div className="flex justify-center lg:justify-start">
+                  <button className="text-lg my-10 h-10 bg-ahum-maroon w-max items-center focus:outline-none flex px-5 rounded-full text-white transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl">
+                    Enquire
+                  </button>
+                </div>
               </div>
             </div>
           </>

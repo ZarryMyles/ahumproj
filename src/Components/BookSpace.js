@@ -2,8 +2,6 @@ import React, { useEffect, useState, useCallback } from "react";
 import Navbar from "./Navbar";
 import logo from "../Images/logo.png";
 import $ from "jquery";
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
 import ImageZoom from "react-medium-image-zoom";
 
 import facility1 from "../assets/images/wifi-signal.png";
@@ -21,22 +19,9 @@ import thumb5 from "../assets/images/8-thumb.jpg";
 import thumb6 from "../assets/images/9-thumb.jpg";
 
 function BookSpace() {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
-
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
@@ -197,7 +182,6 @@ function BookSpace() {
                     </div>
                   </div>
 
-                  
                   {/* <div className="grid grid-cols-10 flex items-center">
                     <div className="col-span-2 pr-4">
                       <ImageZoom

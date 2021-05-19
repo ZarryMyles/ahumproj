@@ -11,6 +11,7 @@ import Screen6 from "./Components/Screen6";
 import Screen7 from "./Components/Screen7";
 import Contact from "./Components/Contact";
 import BookSpace from "./Components/BookSpace";
+import Archives from "./Components/Archives";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/aboutUs" exact component={Screen3} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/bookspace" exact component={BookSpace} />
+          <Route path="/archives" exact component={Archives} />
         </Switch>
       </BrowserRouter>
     </div>

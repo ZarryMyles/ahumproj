@@ -75,7 +75,10 @@ function Navbar() {
                     <a href='/bookspace'>Book the Space</a>
                 </li>
                 <li>
-                    <a href='/contact'>Contact</a>
+                    <a href='/archives'>Archives</a>
+                </li>
+                <li>
+                    <a href='/contact'>Get in Touch</a>
                 </li>
             </ul>
             <div class='navFooter'>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Navbar from "./Navbar";
-import logo from "../Images/logo.png";
+
 import $ from "jquery";
 import ImageZoom from "react-medium-image-zoom";
 
@@ -17,6 +17,7 @@ import thumb3 from "../assets/images/6-thumb.jpg";
 import thumb4 from "../assets/images/7-thumb.jpg";
 import thumb5 from "../assets/images/8-thumb.jpg";
 import thumb6 from "../assets/images/9-thumb.jpg";
+import TopLogoBar from "./TopLogoBar";
 
 function BookSpace() {
   useEffect(() => {
@@ -79,30 +80,8 @@ function BookSpace() {
           >
             <i class="fas fa-align-left"></i>
           </button>
-          <div style={{ height: 125 }}>
-            <div
-              className="text-center "
-              style={{
-                height: 125,
-                background: "white",
-                position: "fixed",
-                height: 125,
-                width: "100%",
-                zIndex: 999,
-              }}
-            >
-              <img
-                className="fixed-top"
-                src={logo}
-                style={{
-                  height: 125,
-                  width: 187.5,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                }}
-              />
-            </div>
-          </div>
+
+          <TopLogoBar />
 
           <>
             <div className="py-5">
@@ -265,7 +244,7 @@ function BookSpace() {
                 </h2>
                 <div className="mt-10 flex flex-wrap justify-around">
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities wifi"
@@ -276,7 +255,7 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities 3 Microphones"
@@ -289,7 +268,7 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities JBL EON Speakers"
@@ -302,7 +281,7 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities 4 LED Warm Lights"
@@ -315,7 +294,7 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities Pantry"
@@ -326,7 +305,7 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 md:h-44 md:w-44 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-4/6"
                         alt="facilities Restroom"

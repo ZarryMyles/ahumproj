@@ -19,6 +19,7 @@ import img1 from "../assets/images/Image_004.png";
 import img2 from "../assets/images/Image_006.png";
 import img3 from "../assets/images/Image_007.png";
 import img4 from "../assets/images/Image_008.png";
+import TopLogoBar from "./TopLogoBar";
 
 function Archives() {
   // useEffect(() => {
@@ -48,30 +49,7 @@ function Archives() {
           >
             <i class="fas fa-align-left"></i>
           </button>
-          <div style={{ height: 125 }}>
-            <div
-              className="text-center "
-              style={{
-                height: 125,
-                background: "white",
-                position: "fixed",
-                height: 125,
-                width: "100%",
-                zIndex: 999,
-              }}
-            >
-              <img
-                className="fixed-top"
-                src={logo}
-                style={{
-                  height: 125,
-                  width: 187.5,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                }}
-              />
-            </div>
-          </div>
+          <TopLogoBar />
 
           <>
             <div className="py-5 md:px-64 xs:px-5 xs:pl-10 flex justify-start">
@@ -111,7 +89,7 @@ function Archives() {
                         <span className="py-1 block">
                           Artists : lore ipsum, lore ipsum
                         </span>
-                        <span className="py-1 block text-justify">
+                        <span className="py-1 block text-justify font-normal">
                           Lorem ipsum is a dummy text used for filling up
                           content on websites, apps etc. Its very useful when we
                           don’t have data.
@@ -138,7 +116,7 @@ function Archives() {
                         <span className="py-1 block">
                           Artists : lore ipsum, lore ipsum
                         </span>
-                        <span className="py-1 block text-justify">
+                        <span className="py-1 block text-justify font-normal">
                           Lorem ipsum is a dummy text used for filling up
                           content on websites, apps etc. Its very useful when we
                           don’t have data.
@@ -165,7 +143,7 @@ function Archives() {
                         <span className="py-1 block">
                           Artists : lore ipsum, lore ipsum
                         </span>
-                        <span className="py-1 block text-justify">
+                        <span className="py-1 block text-justify font-normal">
                           Lorem ipsum is a dummy text used for filling up
                           content on websites, apps etc. Its very useful when we
                           don’t have data.
@@ -192,7 +170,7 @@ function Archives() {
                         <span className="py-1 block">
                           Artists : lore ipsum, lore ipsum
                         </span>
-                        <span className="py-1 block text-justify">
+                        <span className="py-1 block text-justify font-normal">
                           Lorem ipsum is a dummy text used for filling up
                           content on websites, apps etc. Its very useful when we
                           don’t have data.

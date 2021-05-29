@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
-import logo from "../Images/logo.png";
 import $ from "jquery";
+import TopLogoBar from "./TopLogoBar";
 
 function Contact() {
   useEffect(() => {
@@ -34,29 +34,7 @@ function Contact() {
           >
             <i class="fas fa-align-left"></i>
           </button>
-          <div style={{ height: 125 }}>
-            <div
-              className="text-center "
-              style={{
-                height: 125,
-                background: "white",
-                position: "fixed",
-                width: "100%",
-                zIndex: 999,
-              }}
-            >
-              <img
-                className="fixed-top"
-                src={logo}
-                style={{
-                  height: 125,
-                  width: 187.5,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                }}
-              />
-            </div>
-          </div>
+          <TopLogoBar />
 
           <>
             <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
@@ -97,7 +75,7 @@ function Contact() {
                   />
 
                   <button
-                    className="my-1 py-2 md:w-1/4 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-xl"
+                    className="my-1 py-1 md:w-1/5 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
                     type="submit"
                     value="Send Message"
                   >
@@ -105,7 +83,7 @@ function Contact() {
                   </button>
                 </div>
               </div>
-              <div className="mt-4 lg:mt-0 flex justify-center col-span-1 items-center">
+              <div className="xs:mt-4 md:mt-0 flex justify-center col-span-1 items-center">
                 <div className="flex flex-col w-full">
                   <span className="font-normal">
                     Come drop by and explore our space (10am to 5pm)

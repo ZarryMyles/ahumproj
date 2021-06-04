@@ -78,7 +78,15 @@ function Archives() {
 
                 <div className="flex flex-row h-full">
                   <div className="bg-black h-full w-2 ml-3"></div>
-                  <div>{<ArchiveMedia year={"2020"} month={"November"} />}</div>
+                  <div>
+                    {
+                      <ArchiveMedia
+                        year={"2020"}
+                        month={"November"}
+                        program={""}
+                      />
+                    }
+                  </div>
                 </div>
               </div>
               {/* <Timeline align="alternate">

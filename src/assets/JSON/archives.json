@@ -4,7 +4,31 @@
       "year": "2020",
       "month": "November"
     },
-
+    "programType": "Saturdays ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_004_xfwvez.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here", "link": "link" }
+  },
+  {
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+    "programType": "Saturdays ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_006_jbe1hv.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+    "programType": "Saturdays ",
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_004_xfwvez.png",
     "title": "Natya rasa",
     "artists": "lorem ipsum , lorem ipsum",
@@ -16,6 +40,7 @@
       "year": "2020",
       "month": "November"
     },
+    "programType": "Music By lake ",
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_006_jbe1hv.png",
     "title": "Natya rasa1s",
     "artists": "lorem ipsum , lorem ipsum",
@@ -27,6 +52,7 @@
       "year": "2020",
       "month": "November"
     },
+    "programType": "kalakridi",
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_007_svgzjm.png",
     "title": "Natya rasa",
     "artists": "lorem ipsum , lorem ipsum",
@@ -38,8 +64,81 @@
       "year": "2020",
       "month": "November"
     },
+    "programType": "swastika school of dance ",
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
     "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+    "programType": "swastika school of dance ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+    "programType": "swastika school of dance ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+    "programType": "swastika school of dance ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+    "programType": "swastika school of dance ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+    "programType": "swastika school of dance ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": {
+      "year": "2019",
+      "month": "August"
+    },
+    "programType": "swastika school of dance ",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
+    "title": "Lorem Ipsum ",
     "artists": "lorem ipsum , lorem ipsum",
     "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
     "links": { "insta": "path_here", "youtube": "path_here" }

@@ -69,25 +69,25 @@ function SwastikSchoolofDanceMusic() {
           </div>
 
           <div className="col-md-6 nattext  " id="block1">
-            <h5 className="pt-4 pb-2" style={{ fontWeight: "600" }}>
+            <h5 className="pt-4 pb-2 text-lg" style={{ fontWeight: "600" }}>
               About Anuradha
             </h5>
             <h5>Founder, Teacher</h5>
             <p className="customp7">
-              I am a Bharatanatyam dancer and have trained under Padmabhushan
-              Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an 'A' graded
-              artist of Delhi Doordarshan and empanelled artist of ICCR, I have
-              been dancing professionally for past twenty years. Some of the
-              prductions choreodgraphed by me are - "Pratham Parth", Jananyey
-              Namah", "Vaidehi" and “Stories Unearthed” a site- specific work, 6
-              feet land and us & Female Gaze. I have been an Artist in residence
-              at TUIDA (South Korea) and OMI (New York). Under ICCR I performed
-              in Sarajevo, Poland, Germany, Denmark and Luxembourg. Academically
-              I am a gold medalist in Mphil- Cultural Studies from Jain
-              University. With this background it was natural for me to create a
-              platform where I could bring in art and society closer together
-              and try and create a beautiful community. Ahum was born out of
-              this desire
+              <br />I am a Bharatanatyam dancer and have trained under
+              Padmabhushan Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an
+              'A' graded artist of Delhi Doordarshan and empanelled artist of
+              ICCR, I have been dancing professionally for past twenty years.
+              Some of the prductions choreodgraphed by me are - "Pratham Parth",
+              Jananyey Namah", "Vaidehi" and “Stories Unearthed” a site-
+              specific work, 6 feet land and us & Female Gaze. I have been an
+              Artist in residence at TUIDA (South Korea) and OMI (New York).
+              Under ICCR I performed in Sarajevo, Poland, Germany, Denmark and
+              Luxembourg. Academically I am a gold medalist in Mphil- Cultural
+              Studies from Jain University. With this background it was natural
+              for me to create a platform where I could bring in art and society
+              closer together and try and create a beautiful community. Ahum was
+              born out of this desire
             </p>
           </div>
           <div className="col-md-1"></div>
@@ -105,11 +105,12 @@ function SwastikSchoolofDanceMusic() {
             </div>
 
             <div className="col-md-6 nattext" id="block1">
-              <h5 className="pt-4 pb-2" style={{ fontWeight: "600" }}>
+              <h5 className="pt-4 pb-2 text-lg" style={{ fontWeight: "600" }}>
                 About Natarajan
               </h5>
               <h5>Founder, Teacher</h5>
               <p className="customp7">
+                <br />
                 An engineer by profession Natarajan has always been a patron of
                 arts. This engagement deepened after marrying Anu and when Anu
                 decided to start ahum he was a natural partner. With his 20+

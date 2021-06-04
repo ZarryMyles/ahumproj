@@ -63,7 +63,7 @@ function BookSpace() {
   return (
     <div class="wrapper">
       <Navbar />
-      <div id="content" className="p-0">
+      <div className="p-0">
         <div class="container-fluid justify-content-center px-0">
           <button
             type="button"
@@ -86,7 +86,7 @@ function BookSpace() {
           <>
             <div className="py-5">
               {/* Top Content */}
-              <div className="flex lg:mx-32 mx-10 flex-col items-center">
+              <div className="flex lg:mx-32 mx-10 pl-24 flex-col items-center">
                 <h1 className="text-2xl font-semibold">Book Our Space</h1>
                 <p className="text-black py-3">
                   Contrary to popular belief, Lorem Ipsum is not simply random
@@ -102,7 +102,7 @@ function BookSpace() {
               </div>
 
               {/* Collage */}
-              <div className="bg-ahum-brown-collage mt-10 h-max py-10 lg:py-20">
+              <div className="bg-ahum-brown-collage mt-10 h-max pl-24 py-10 lg:py-20">
                 <div className="lg:mx-32 mx-10">
                   <div className="flex flex-row justify-center items-center">
                     <div className="mr-4">
@@ -160,80 +160,11 @@ function BookSpace() {
                       />
                     </div>
                   </div>
-
-                  {/* <div className="grid grid-cols-10 flex items-center">
-                    <div className="col-span-2 pr-4">
-                      <ImageZoom
-                        image={{
-                          src: thumb1,
-                          alt: "Golden Gate Bridge",
-                          className: "img",
-                        }}
-                      />
-                    </div>
-                    <div className="col-span-6">
-                      <div className="grid grid-rows-2">
-                        <div className="row-span-1">
-                          <div className="grid grid-cols-3 flex justify-center items-center">
-                            <div className="col-span-1">
-                              <ImageZoom
-                                image={{
-                                  src: thumb2,
-                                  alt: "Golden Gate Bridge",
-                                  className: "img",
-                                }}
-                              />
-                            </div>
-                            <div className="col-span-2">
-                              <ImageZoom
-                                image={{
-                                  src: thumb3,
-                                  alt: "Golden Gate Bridge",
-                                  className: "img",
-                                }}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row-span-1">
-                          <div className="grid grid-cols-3 flex justify-center items-center">
-                            <div className="col-span-2">
-                              <ImageZoom
-                                image={{
-                                  src: thumb5,
-                                  alt: "Golden Gate Bridge",
-                                  className: "img",
-                                }}
-                              />
-                            </div>
-                            <div className="col-span-1">
-                              <ImageZoom
-                                image={{
-                                  src: thumb6,
-                                  alt: "Golden Gate Bridge",
-                                  className: "img",
-                                }}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-span-2">
-                      <ImageZoom
-                        image={{
-                          src: thumb4,
-                          alt: "Golden Gate Bridge",
-                          className: "img",
-                        }}
-                      />
-                    </div>
-                  </div> */}
                 </div>
               </div>
 
               {/* Facilities */}
-              <div className="lg:mx-32 mx-10 mt-12">
+              <div className="lg:mx-32 mx-10 mt-12 pl-8 ">
                 {/* for phones */}
                 <h2 className="text-2xl font-semibold text-center lg:hidden">
                   Facilities
@@ -242,11 +173,11 @@ function BookSpace() {
                 <h2 className="text-2xl font-semibold hidden lg:flex">
                   Facilities
                 </h2>
-                <div className="mt-10 flex flex-wrap justify-around">
+                <div className="mt-10 flex flex-wrap justify-between">
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
-                        className="w-4/6"
+                        className="w-3/6"
                         alt="facilities wifi"
                         src={facility1}
                       />
@@ -255,9 +186,9 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
-                        className="w-4/6"
+                        className="w-3/6"
                         alt="facilities 3 Microphones"
                         src={facility2}
                       />
@@ -268,9 +199,9 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
-                        className="w-4/6"
+                        className="w-3/6"
                         alt="facilities JBL EON Speakers"
                         src={facility3}
                       />
@@ -281,9 +212,9 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
-                        className="w-4/6"
+                        className="w-3/6"
                         alt="facilities 4 LED Warm Lights"
                         src={facility4}
                       />
@@ -294,9 +225,9 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
-                        className="w-4/6"
+                        className="w-3/6"
                         alt="facilities Pantry"
                         src={facility5}
                       />
@@ -305,9 +236,9 @@ function BookSpace() {
                   </div>
 
                   <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
-                    <div className="rounded-full bg-ahum-brown-collage h-40 w-40 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                    <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
-                        className="w-4/6"
+                        className="w-3/6"
                         alt="facilities Restroom"
                         src={facility6}
                       />

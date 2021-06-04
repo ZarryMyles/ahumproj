@@ -254,10 +254,10 @@ a.article:hover {
 }
 
 .customp {
-  /* font-weight: 400;
-  font-size: 1em; */
+  font-weight: 400;
+  font-size: 1em;
   padding: 50px 17%;
-  /* line-height: 150%; */
+  line-height: 150%;
 }
 .squarepic1 {
   background-image: url("./Images/Anuradha.jpg");
@@ -396,7 +396,7 @@ a.article:hover {
   text-align: justify;
 }
 #block1 {
-  border-left: 1px solid #411b22;
+  /* border-left: 1px solid #411b22; */
   line-height: 60%;
 }
 /* ---------------------------------------------------
@@ -497,8 +497,6 @@ a.article:hover {
   .nattext {
     padding: unset;
     margin: 0 20px 0 20px;
-  }
-  .squarebgpic2 {
   }
 
   .nospace {

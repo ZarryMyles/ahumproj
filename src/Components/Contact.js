@@ -38,7 +38,7 @@ function Contact() {
 
           <>
             <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
-              <div className="flex justify-center items-center col-span-1">
+              <div className="flex justify-center items-center col-span-1 ml-24 w-8/12">
                 <div className="flex flex-col">
                   <span className="font-normal mb-3">
                     Drop us a message, we'll call you back!
@@ -83,14 +83,14 @@ function Contact() {
                   </button>
                 </div>
               </div>
-              <div className="xs:mt-4 md:mt-0 flex justify-center col-span-1 items-center">
+              <div className="xs:mt-4 md:mt-0 flex justify-center col-span-1 items-center ml-10 pb-4">
                 <div className="flex flex-col w-full">
-                  <span className="font-normal">
+                  <span className="font-normal pl-12">
                     Come drop by and explore our space (10am to 5pm)
                   </span>
                   <div className="lg:w-5/6">
                     <iframe
-                      className="w-full h-64 mt-2 pt-3"
+                      className="w-full h-60 mt-2 pt-3"
                       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10992.079379615054!2d77.60054457270812!3d13.080992781944996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82b5d79c5fe90710!2sart%20heart%20u%20%26%20mind!5e0!3m2!1sen!2sin!4v1618606129974!5m2!1sen!2sin"
                       allowfullscreen=""
                       loading="lazy"

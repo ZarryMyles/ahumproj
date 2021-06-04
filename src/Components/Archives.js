@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
+import { Listbox } from "@headlessui/react";
 import logo from "../Images/logo.png";
 import $ from "jquery";
 
@@ -27,6 +28,15 @@ function Archives() {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
+  const options1 = [
+    { id: 1, name: "Program" },
+    { id: 2, name: "Sundays @ Swastika" },
+    { id: 3, name: "Music By the Lake" },
+    { id: 4, name: "Kalakrida" },
+    { id: 5, name: "Swastika School of Dance" },
+    { id: 6, name: "Shows" },
+  ];
+  const [selectedPerson, setSelectedPerson] = useState(options1[0]);
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
@@ -60,14 +70,40 @@ function Archives() {
                   <div className="flex justify-between">
                     <span className="md:-ml-7 -ml-6">ARCHIVES</span>{" "}
                     <div className="">
-                      <a href="#">
-                        <span className="pr-5 ">
-                          Program <KeyboardArrowDownIcon />
-                        </span>
-                      </a>
+                      <span className="pr-5 text-right">
+                        {/* Program <KeyboardArrowDownIcon /> */}
+                        <Listbox
+                          value={selectedPerson}
+                          onChange={setSelectedPerson}
+                        >
+                          <Listbox.Button>{selectedPerson.name}</Listbox.Button>
+                          <Listbox.Options>
+                            {options1.map((person) => (
+                              <Listbox.Option key={person.id} value={person}>
+                                {person.name}
+                              </Listbox.Option>
+                            ))}
+                          </Listbox.Options>
+                        </Listbox>
+                      </span>
                       <a href="#">
                         <span className="text-right">
-                          Year <KeyboardArrowDownIcon />
+                          {/* Year <KeyboardArrowDownIcon /> */}
+                          <Listbox
+                            value={selectedPerson}
+                            onChange={setSelectedPerson}
+                          >
+                            <Listbox.Button>
+                              {selectedPerson.name}
+                            </Listbox.Button>
+                            <Listbox.Options>
+                              {options1.map((person) => (
+                                <Listbox.Option key={person.id} value={person}>
+                                  {person.name}
+                                </Listbox.Option>
+                              ))}
+                            </Listbox.Options>
+                          </Listbox>
                         </span>
                       </a>
                     </div>
@@ -78,7 +114,15 @@ function Archives() {
 
                 <div className="flex flex-row h-full">
                   <div className="bg-black h-full w-2 ml-3"></div>
-                  <div>{<ArchiveMedia year={"2020"} month={"November"} />}</div>
+                  <div>
+                    {
+                      <ArchiveMedia
+                        year={"2020"}
+                        month={"November"}
+                        program={""}
+                      />
+                    }
+                  </div>
                 </div>
               </div>
               {/* <Timeline align="alternate">

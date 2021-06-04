@@ -6,6 +6,9 @@ function Navbar() {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
+  const resize = () => {
+    $("#sidebar").addClass("active");
+  };
 
   return (
     <nav

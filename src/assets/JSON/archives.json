@@ -1,6 +1,10 @@
 [
   {
-    "date": "November 19",
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
+
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_004_xfwvez.png",
     "title": "Natya rasa",
     "artists": "lorem ipsum , lorem ipsum",
@@ -8,7 +12,10 @@
     "links": { "insta": "path_here", "youtube": "path_here" }
   },
   {
-    "date": "November 20",
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_006_jbe1hv.png",
     "title": "Natya rasa1s",
     "artists": "lorem ipsum , lorem ipsum",
@@ -16,7 +23,10 @@
     "links": { "insta": "path_here", "youtube": "path_here" }
   },
   {
-    "date": "November 21",
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_007_svgzjm.png",
     "title": "Natya rasa",
     "artists": "lorem ipsum , lorem ipsum",
@@ -24,7 +34,10 @@
     "links": { "insta": "path_here", "youtube": "path_here" }
   },
   {
-    "date": "November 19",
+    "date": {
+      "year": "2020",
+      "month": "November"
+    },
     "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
     "title": "Natya rasa",
     "artists": "lorem ipsum , lorem ipsum",

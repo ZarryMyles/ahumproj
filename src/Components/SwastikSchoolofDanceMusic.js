@@ -103,12 +103,14 @@ function SwastikSchoolofDanceMusic() {
         </p>
       </div>
       <div
-        class="text-center font-medium  md:py-3 py-2 md:mb-5"
+        class="text-center font-medium  md:py-4 md:mb-5"
         style={{ backgroundColor: "#D7CEC7" }}
       >
-        <h2 className="text-2xl">Schedule</h2>
+        <h2 className="text-2xl" style={{ color: "#41363D" }}>
+          Schedule
+        </h2>
       </div>
-      <div className="bg-white py-4 flex flex-col items-center">
+      <div className=" py-4 flex flex-col items-center">
         {schedule.map((lesson) => section(lesson))}
       </div>
 

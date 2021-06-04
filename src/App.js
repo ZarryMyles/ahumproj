@@ -29,7 +29,7 @@ function App() {
           <Route path="/about-us" exact component={AboutUs} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/bookspace" exact component={BookSpace} />
-          <Route path="/archives" exact component={Archives} />
+          <Route path="/archives/:category/:year" exact component={Archives} />
         </Switch>
       </BrowserRouter>
     </div>

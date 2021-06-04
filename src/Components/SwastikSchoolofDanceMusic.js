@@ -36,7 +36,7 @@ function SwastikSchoolofDanceMusic() {
           </div>
           <div
             className="md:w-5/12 w-full py-3 md:pl-12 text-sm font-normal  md:border-l-2 md:border-t-0 border-t-2 md:my-0 mt-4"
-            style={{ borderColor: "#411b22" }}
+            style={{ borderColor: "#D7CEC7" }}
           >
             <h4 className="md:my-4 my-2 text-2xl md:text-left text-center">
               '{lesson.title.toUpperCase()}'
@@ -114,10 +114,11 @@ function SwastikSchoolofDanceMusic() {
         {schedule.map((lesson) => section(lesson))}
       </div>
 
-      <div class="text-center my-4">
-        <button
+      <div class="text-center my-4 ">
+        <a
           type="button"
           className="btn py-2 px-5"
+          href="/archives"
           style={{
             borderRadius: "25px",
             background: "#411b22",
@@ -125,7 +126,7 @@ function SwastikSchoolofDanceMusic() {
           }}
         >
           Gallery
-        </button>
+        </a>
       </div>
     </>
   );

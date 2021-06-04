@@ -24,7 +24,9 @@ import img3 from "../assets/images/Image_007.png";
 import img4 from "../assets/images/Image_008.png";
 import TopLogoBar from "./TopLogoBar";
 
-function Archives() {
+function Archives(props) {
+  const { category, year } = props.match.params;
+  console.log(category, year);
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
@@ -124,15 +126,7 @@ function Archives() {
 
                 <div className="flex flex-row h-full">
                   <div className="bg-black h-full w-2 ml-3"></div>
-                  <div>
-                    {
-                      <ArchiveMedia
-                        year={"2020"}
-                        month={"November"}
-                        program={""}
-                      />
-                    }
-                  </div>
+                  <div>{<ArchiveMedia year={year} category={category} />}</div>
                 </div>
               </div>
               {/* <Timeline align="alternate">

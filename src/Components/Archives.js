@@ -28,7 +28,7 @@ function Archives() {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
-  const options1 = [
+  const program = [
     { id: 1, name: "Program" },
     { id: 2, name: "Sundays @ Swastika" },
     { id: 3, name: "Music By the Lake" },
@@ -36,7 +36,17 @@ function Archives() {
     { id: 5, name: "Swastika School of Dance" },
     { id: 6, name: "Shows" },
   ];
-  const [selectedPerson, setSelectedPerson] = useState(options1[0]);
+  const yearO = [
+    { id: 1, name: "year" },
+    { id: 2, name: "2021" },
+    { id: 3, name: "2020" },
+    { id: 4, name: "2019" },
+    { id: 5, name: "2018" },
+    { id: 6, name: "2017" },
+  ];
+  const [selectedProgram, setSelectedProgram] = useState(program[0]);
+  const [selectedYear, setSelectedYear] = useState(yearO[0]);
+
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
@@ -73,12 +83,14 @@ function Archives() {
                       <span className="pr-5 text-right">
                         {/* Program <KeyboardArrowDownIcon /> */}
                         <Listbox
-                          value={selectedPerson}
-                          onChange={setSelectedPerson}
+                          value={selectedProgram}
+                          onChange={setSelectedProgram}
                         >
-                          <Listbox.Button>{selectedPerson.name}</Listbox.Button>
+                          <Listbox.Button>
+                            {selectedProgram.name}
+                          </Listbox.Button>
                           <Listbox.Options>
-                            {options1.map((person) => (
+                            {program.map((person) => (
                               <Listbox.Option key={person.id} value={person}>
                                 {person.name}
                               </Listbox.Option>
@@ -90,14 +102,12 @@ function Archives() {
                         <span className="text-right">
                           {/* Year <KeyboardArrowDownIcon /> */}
                           <Listbox
-                            value={selectedPerson}
-                            onChange={setSelectedPerson}
+                            value={selectedYear}
+                            onChange={setSelectedYear}
                           >
-                            <Listbox.Button>
-                              {selectedPerson.name}
-                            </Listbox.Button>
+                            <Listbox.Button>{selectedYear.name}</Listbox.Button>
                             <Listbox.Options>
-                              {options1.map((person) => (
+                              {yearO.map((person) => (
                                 <Listbox.Option key={person.id} value={person}>
                                   {person.name}
                                 </Listbox.Option>

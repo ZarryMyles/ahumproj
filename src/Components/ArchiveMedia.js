@@ -8,7 +8,8 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import TempArchive from "./TempArchive";
 import axios from "axios";
 export default function ArchiveMedia(props) {
-  const { year, category } = props;
+  let { year, category } = props;
+
   const [archive, setArchive] = useState();
 
   useEffect(() => {
@@ -21,7 +22,6 @@ export default function ArchiveMedia(props) {
     await fetch("https://sheetdb.io/api/v1/nhnqv6cb4schd").then((res) =>
       res.json().then((archiveData) => setArchive(archiveData))
     );
-    console.log(year, category);
   };
   function filtering() {
     const newData = archive.filter(
@@ -56,13 +56,41 @@ export default function ArchiveMedia(props) {
         program.date.toLowerCase().trim().replaceAll(" ", "").slice(-4) ===
         "2021"
     );
-  return (
-    <>
-      {/* {archive && byProg.map((program) => <TempArchive program={program}/>)} */}
-      {/* {archive &&   byYear.map((program) => console.log("by year", program.event))} */}
-      {archive &&
-        byProgYear.map((program) => <TempArchive program={program} />)}
-      {/* {archive &&         byCurrentYear.map((program) =>           console.log("by current", program.event)   )} */}
-    </>
-  );
+  const bySwastika =
+    archive &&
+    archive.filter(
+      (program) =>
+        program.date.toLowerCase().trim().replaceAll(" ", "").slice(-4) ===
+          "2021" &&
+        program.category.toLowerCase().trim().replaceAll(" ", "") ===
+          "saturdaysatswastika"
+    );
+  function chooseFilter() {
+    if (year === "year" && category !== "program")
+      return (
+        archive && byProg.map((program) => <TempArchive program={program} />)
+      );
+    else if (year !== "year" && category === "program")
+      return (
+        archive && byYear.map((program) => <TempArchive program={program} />)
+      );
+    else if (year !== "year" && category !== "program") {
+      console.log(year, category);
+      return (
+        archive &&
+        byProgYear.map((program) => <TempArchive program={program} />)
+      );
+    } else if (year === "year" && category === "program")
+      return (
+        archive &&
+        byCurrentYear.map((program) => <TempArchive program={program} />)
+      );
+    else
+      return (
+        archive &&
+        byCurrentYear.map((program) => <TempArchive program={program} />)
+      );
+  }
+  const filter = chooseFilter();
+  return <>{filter && !filter.length > 0 ? <h2>Empty</h2> : filter}</>;
 }

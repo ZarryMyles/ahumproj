@@ -7,7 +7,7 @@ import TopLogoBar from "./TopLogoBar";
 import schedule from "../assets/JSON/schedule.json";
 function SwastikSchoolofDanceMusic() {
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
@@ -118,7 +118,7 @@ function SwastikSchoolofDanceMusic() {
         <a
           type="button"
           className="btn py-2 px-5"
-          href="/archives"
+          href="/archives/saturdaysatswastika"
           style={{
             borderRadius: "25px",
             background: "#411b22",

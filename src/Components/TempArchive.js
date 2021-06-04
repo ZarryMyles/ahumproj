@@ -10,7 +10,17 @@ export default function TempArchive(props) {
       <div className="col-span-2  font-normal text-lg xs:pb-3 md:pb-0 -mt-7  md:-mt-0">
         {program.date.slice(-4)}
       </div>
-      <div className="col-span-5 mr-20">
+      <div
+        className="col-span-5 mr-20"
+        // style={{
+        //   width: "300px",
+        //   height: "250px",
+        //   backgroundImage: `url('${program.image_link})`,
+        //   backgroundPosition: "top",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        // }}
+      >
         <img src={program.image_link} />
       </div>
       <div className="col-span-4 text-center text-base ">

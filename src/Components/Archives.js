@@ -25,22 +25,30 @@ import img4 from "../assets/images/Image_008.png";
 import TopLogoBar from "./TopLogoBar";
 
 function Archives(props) {
-  const { category, year } = props.match.params;
-  console.log(category, year);
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  const { category } = props.match.params;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const program = [
-    { id: 1, name: "Program" },
-    { id: 2, name: "Sundays @ Swastika" },
-    { id: 3, name: "Music By the Lake" },
-    { id: 4, name: "Kalakrida" },
-    { id: 5, name: "Swastika School of Dance" },
-    { id: 6, name: "Shows" },
+    {
+      id: 1,
+      name: category ? "Saturdays @ Swastika" : "program",
+      cat: category ? "saturdaysatswastika" : "program",
+    },
+    {
+      id: 2,
+      name: !category ? "Saturdays @ Swastika" : "program",
+      cat: !category ? "saturdaysatswastika" : "program",
+    },
+    { id: 3, name: "Music By the Lake", cat: "musicbythelake" },
+    { id: 4, name: "Kalakrida", cat: "kalakridi" },
+    { id: 5, name: "Swastika School of Dance", cat: "swastikaschoolofdance" },
+    { id: 6, name: "Shows", cat: "shows" },
   ];
   const yearO = [
-    { id: 1, name: "year" },
-    { id: 2, name: "2021" },
+    { id: 1, name: category ? "2021" : "year" },
+    { id: 2, name: !category ? "2021" : "year" },
     { id: 3, name: "2020" },
     { id: 4, name: "2019" },
     { id: 5, name: "2018" },
@@ -48,6 +56,11 @@ function Archives(props) {
   ];
   const [selectedProgram, setSelectedProgram] = useState(program[0]);
   const [selectedYear, setSelectedYear] = useState(yearO[0]);
+  const [swastika, setSwastika] = useState(false);
+  useEffect(() => {
+    console.log();
+    if (category === "saturdaysatswastika") setSwastika(true);
+  }, []);
 
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
@@ -121,12 +134,20 @@ function Archives(props) {
                     </div>
                   </div>
 
-                  <span className="mt-3">2020</span>
+                  <span className="mt-3">{selectedYear.name}</span>
                 </div>
 
                 <div className="flex flex-row h-full">
                   <div className="bg-black h-full w-2 ml-3"></div>
-                  <div>{<ArchiveMedia year={year} category={category} />}</div>
+                  <div>
+                    {
+                      <ArchiveMedia
+                        year={selectedYear.name}
+                        category={selectedProgram.cat}
+                      />
+                    }
+                    {console.log(selectedYear.name, selectedProgram.name)}
+                  </div>
                 </div>
               </div>
               {/* <Timeline align="alternate">

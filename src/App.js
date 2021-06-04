@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./assets/css/tailwind.css";
@@ -21,7 +21,11 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
           <Route path="/upcoming-shows" exact component={UpcomingShows} />
-          <Route path="/swastik-school-of-dance" exact component={SwastikSchoolofDanceMusic} />
+          <Route
+            path="/swastik-school-of-dance"
+            exact
+            component={SwastikSchoolofDanceMusic}
+          />
           <Route path="/about-us" exact component={AboutUs} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/bookspace" exact component={BookSpace} />

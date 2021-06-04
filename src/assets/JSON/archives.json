@@ -1,0 +1,34 @@
+[
+  {
+    "date": "November 19",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_004_xfwvez.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": "November 20",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_006_jbe1hv.png",
+    "title": "Natya rasa1s",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": "November 21",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_007_svgzjm.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  },
+  {
+    "date": "November 19",
+    "imagePath": "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_008_e3hs9j.png",
+    "title": "Natya rasa",
+    "artists": "lorem ipsum , lorem ipsum",
+    "description": " Lorem ipsum is a dummy text used for filling up content on websites, apps etc. Its very useful when we don’t have data.",
+    "links": { "insta": "path_here", "youtube": "path_here" }
+  }
+]

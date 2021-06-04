@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import logo from "../Images/logo.png";
 import $ from "jquery";
@@ -6,6 +6,8 @@ import $ from "jquery";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+
+import archives from "../assets/JSON/archives.json";
 
 // import Timeline from "@material-ui/lab/Timeline";
 // import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -28,7 +30,64 @@ function Archives() {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
-
+  function section(program) {
+    // return (
+    //   <div className="flex md:flex-row   items-center py-4 my-8">
+    //     <div className="rounded-full flex bg-black h-5 w-5 col-span-1 md:-ml-3 xs:-ml-8 w-1/12"></div>
+    //     <div className="col-span-2  font-normal text-lg xs:pb-3 md:pb-0 -mt-7  md:-mt-0">
+    //       {program.date}
+    //     </div>
+    //     <div className="col-span-5">
+    //       <img src={program.imagePath} />
+    //     </div>
+    //     <div className="col-span-4 text-center text-base ">
+    //       <span className="py-1 block text-base font-semibold ">
+    //         ‘{program.title.toUpperCase()}’
+    //       </span>
+    //       <span className="py-1 block font-normal">
+    //         Artists :{program.artists}{" "}
+    //       </span>
+    //       <span className="py-1 block text-justify  font-normal leading-5">
+    //         {program.description}
+    //       </span>
+    //       <a href={program.links.insta} className="px-3 py-2">
+    //         <InstagramIcon style={{ fontSize: 40 }} />{" "}
+    //       </a>{" "}
+    //       <a href={program.links.youtube} className="px-3 py-2 ">
+    //         <YouTubeIcon style={{ fontSize: 40 }} />
+    //       </a>
+    //     </div>
+    //   </div>
+    // );
+    return (
+      <div className="md:grid xs:pl-5 md:pl-0 grid-cols-12 gap-6 items-center py-4 my-8">
+        <div className="rounded-full flex bg-black h-5 w-5 col-span-1 md:-ml-3 xs:-ml-8"></div>
+        <div className="col-span-2  font-normal text-lg xs:pb-3 md:pb-0 -mt-7  md:-mt-0">
+          {program.date}
+        </div>
+        <div className="col-span-5">
+          <img src={program.imagePath} />
+        </div>
+        <div className="col-span-4 text-center text-base ">
+          <span className="py-1 block text-base font-semibold ">
+            ‘{program.title.toUpperCase()}’
+          </span>
+          <span className="py-1 block font-normal">
+            Artists :{program.artists}{" "}
+          </span>
+          <span className="py-1 block text-justify  font-normal leading-5">
+            {program.description}
+          </span>
+          <a href={program.links.insta} className="px-3 py-2">
+            <InstagramIcon style={{ fontSize: 40 }} />{" "}
+          </a>{" "}
+          <a href={program.links.youtube} className="px-3 py-2 ">
+            <YouTubeIcon style={{ fontSize: 40 }} />
+          </a>
+        </div>
+      </div>
+    );
+  }
   return (
     <div class="wrapper">
       <Navbar />
@@ -54,12 +113,12 @@ function Archives() {
           <>
             <div className="py-5 md:px-64 xs:px-5 xs:pl-10 flex justify-start">
               <div className="">
-                <div className="flex flex-col justify-start font-bold md:text-xl text-lg mb-3 -ml-2">
+                <div className="flex flex-col justify-start font-medium md:text-xl text-lg mb-3 -ml-2">
                   <div className="flex justify-between">
                     <span className="md:-ml-7 -ml-6">ARCHIVES</span>{" "}
                     <div className="">
                       <a href="#">
-                        <span className="pr-5">
+                        <span className="pr-5 ">
                           Program <KeyboardArrowDownIcon />
                         </span>
                       </a>
@@ -71,119 +130,12 @@ function Archives() {
                     </div>
                   </div>
 
-                  <span>2020</span>
+                  <span className="mt-3">2020</span>
                 </div>
+
                 <div className="flex flex-row h-full">
-                  <div className="bg-black h-5/6 w-2 ml-3"></div>
-                  <div>
-                    <div className="md:grid xs:pl-5 md:pl-0 grid-cols-12 gap-4 items-center py-4">
-                      <div className="rounded-full flex bg-black h-7 w-7 col-span-1 md:-ml-4 xs:-ml-9"></div>
-                      <div className="col-span-2 font-semibold text-lg xs:pb-3 md:pb-0 -mt-7 md:pb-0 md:-mt-0">
-                        November 19
-                      </div>
-                      <div className="col-span-5">
-                        <img src={img1} />
-                      </div>
-                      <div className="col-span-4 text-center font-semibold text-lg">
-                        <span className="py-1 block">‘NATYA RASA’</span>
-                        <span className="py-1 block">
-                          Artists : lore ipsum, lore ipsum
-                        </span>
-                        <span className="py-1 block text-justify font-normal">
-                          Lorem ipsum is a dummy text used for filling up
-                          content on websites, apps etc. Its very useful when we
-                          don’t have data.
-                        </span>
-                        <span className="px-3 py-2">
-                          <InstagramIcon style={{ fontSize: 45 }} />{" "}
-                        </span>{" "}
-                        <span className="px-3 py-2 ">
-                          <YouTubeIcon style={{ fontSize: 55 }} />
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="md:grid xs:pl-5 md:pl-0 grid-cols-12 gap-4 items-center py-4">
-                      <div className="rounded-full flex bg-black h-7 w-7 col-span-1 md:-ml-4 xs:-ml-9"></div>
-                      <div className="col-span-2 font-semibold text-lg xs:pb-3 md:pb-0 -mt-7 md:pb-0 md:-mt-0">
-                        November 19
-                      </div>
-                      <div className="col-span-5">
-                        <img src={img2} />
-                      </div>
-                      <div className="col-span-4 text-center font-semibold text-lg">
-                        <span className="py-1 block">‘NATYA RASA’</span>
-                        <span className="py-1 block">
-                          Artists : lore ipsum, lore ipsum
-                        </span>
-                        <span className="py-1 block text-justify font-normal">
-                          Lorem ipsum is a dummy text used for filling up
-                          content on websites, apps etc. Its very useful when we
-                          don’t have data.
-                        </span>
-                        <span className="px-3 py-2">
-                          <InstagramIcon style={{ fontSize: 45 }} />{" "}
-                        </span>{" "}
-                        <span className="px-3 py-2 ">
-                          <YouTubeIcon style={{ fontSize: 55 }} />
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="md:grid xs:pl-5 md:pl-0 grid-cols-12 gap-4 items-center py-4">
-                      <div className="rounded-full flex bg-black h-7 w-7 col-span-1 md:-ml-4 xs:-ml-9"></div>
-                      <div className="col-span-2 font-semibold text-lg xs:pb-3 md:pb-0 -mt-7 md:pb-0 md:-mt-0">
-                        November 19
-                      </div>
-                      <div className="col-span-5">
-                        <img src={img3} />
-                      </div>
-                      <div className="col-span-4 text-center font-semibold text-lg">
-                        <span className="py-1 block">‘NATYA RASA’</span>
-                        <span className="py-1 block">
-                          Artists : lore ipsum, lore ipsum
-                        </span>
-                        <span className="py-1 block text-justify font-normal">
-                          Lorem ipsum is a dummy text used for filling up
-                          content on websites, apps etc. Its very useful when we
-                          don’t have data.
-                        </span>
-                        <span className="px-3 py-2">
-                          <InstagramIcon style={{ fontSize: 45 }} />{" "}
-                        </span>{" "}
-                        <span className="px-3 py-2 ">
-                          <YouTubeIcon style={{ fontSize: 55 }} />
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="md:grid xs:pl-5 md:pl-0 grid-cols-12 gap-4 items-center py-4">
-                      <div className="rounded-full flex bg-black h-7 w-7 col-span-1 md:-ml-4 xs:-ml-9"></div>
-                      <div className="col-span-2 font-semibold text-lg xs:pb-3 md:pb-0 -mt-7 md:pb-0 md:-mt-0">
-                        November 19
-                      </div>
-                      <div className="col-span-5">
-                        <img src={img4} />
-                      </div>
-                      <div className="col-span-4 text-center font-semibold text-lg">
-                        <span className="py-1 block">‘NATYA RASA’</span>
-                        <span className="py-1 block">
-                          Artists : lore ipsum, lore ipsum
-                        </span>
-                        <span className="py-1 block text-justify font-normal">
-                          Lorem ipsum is a dummy text used for filling up
-                          content on websites, apps etc. Its very useful when we
-                          don’t have data.
-                        </span>
-                        <span className="px-3 py-2">
-                          <InstagramIcon style={{ fontSize: 45 }} />{" "}
-                        </span>{" "}
-                        <span className="px-3 py-2 ">
-                          <YouTubeIcon style={{ fontSize: 55 }} />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="bg-black h-full w-2 ml-3"></div>
+                  <div>{archives.map((program) => section(program))}</div>
                 </div>
               </div>
               {/* <Timeline align="alternate">

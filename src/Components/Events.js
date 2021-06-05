@@ -48,7 +48,7 @@ function Events() {
             <div className="col-md-6 py-5 align-self-center">
               <h2
                 className="text-center text-xl"
-                style={{ color: "#5f585d", fontWeight: "600" }}
+                style={{ color: "#222021", fontWeight: "500" }}
               >
                 Saturday's @ Swastika
               </h2>

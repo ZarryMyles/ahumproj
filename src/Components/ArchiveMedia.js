@@ -75,7 +75,6 @@ export default function ArchiveMedia(props) {
         archive && byYear.map((program) => <TempArchive program={program} />)
       );
     else if (year !== "year" && category !== "program") {
-      console.log(year, category);
       return (
         archive &&
         byProgYear.map((program) => <TempArchive program={program} />)

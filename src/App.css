@@ -319,7 +319,7 @@ a.article:hover {
   font-weight: 400;
   font-size: 1.1em;
   padding: 30px 7.5%;
-  color: #4d4249;
+  color: #222021;
   line-height: 150%;
 }
 
@@ -578,4 +578,10 @@ a.article:hover {
     /* min-height: 100vh; */
     transition: all 0.3s;
   }
+}
+
+/* Unlisted */
+
+.listBox:focus {
+  outline: none;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Linkicon from "@material-ui/icons/Link";
+
 export default function TempArchive(props) {
   const { program } = props;
   return (
@@ -10,25 +11,21 @@ export default function TempArchive(props) {
       <div className="col-span-2  font-normal text-lg xs:pb-3 md:pb-0 -mt-7  md:-mt-0">
         {program.date.slice(-4)}
       </div>
-      <div
-        className="col-span-5 mr-20"
-        // style={{
-        //   width: "300px",
-        //   height: "250px",
-        //   backgroundImage: `url('${program.image_link})`,
-        //   backgroundPosition: "top",
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundSize: "cover",
-        // }}
-      >
-        <img src={program.image_link} />
+      <div className="col-span-5 mr-20">
+        <img
+          src={
+            program.image_link === ""
+              ? "https://via.placeholder.com/310x225?text=No Image found"
+              : program.image_link
+          }
+        />
       </div>
       <div className="col-span-4 text-center text-base ">
         <span className="py-1 block text-base font-semibold ">
           ‘{program.event.toUpperCase()}’
         </span>
         <span className="py-2 block font-normal">
-          Artists :{program.artists}{" "}
+          Artists :{program.artist}{" "}
         </span>
         <span className="py-1 block text-justify  font-normal leading-5">
           {program.category}

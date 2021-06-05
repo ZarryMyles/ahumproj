@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import { Listbox } from "@headlessui/react";
+import { Listbox, Transition } from "@headlessui/react";
 import logo from "../Images/logo.png";
 import $ from "jquery";
 
@@ -33,12 +33,12 @@ function Archives(props) {
   const program = [
     {
       id: 1,
-      name: category ? "Saturdays @ Swastika" : "program",
+      name: category ? "Saturdays @ Swastika" : "All programs",
       cat: category ? "saturdaysatswastika" : "program",
     },
     {
       id: 2,
-      name: !category ? "Saturdays @ Swastika" : "program",
+      name: !category ? "Saturdays @ Swastika" : "All programs",
       cat: !category ? "saturdaysatswastika" : "program",
     },
     { id: 3, name: "Music By the Lake", cat: "musicbythelake" },
@@ -47,8 +47,8 @@ function Archives(props) {
     { id: 6, name: "Shows", cat: "shows" },
   ];
   const yearO = [
-    { id: 1, name: category ? "2021" : "year" },
-    { id: 2, name: !category ? "2021" : "year" },
+    { id: 1, name: category ? "2021" : "Year" },
+    { id: 2, name: !category ? "2021" : "Year" },
     { id: 3, name: "2020" },
     { id: 4, name: "2019" },
     { id: 5, name: "2018" },
@@ -58,7 +58,6 @@ function Archives(props) {
   const [selectedYear, setSelectedYear] = useState(yearO[0]);
   const [swastika, setSwastika] = useState(false);
   useEffect(() => {
-    console.log();
     if (category === "saturdaysatswastika") setSwastika(true);
   }, []);
 
@@ -98,30 +97,43 @@ function Archives(props) {
                       <span className="pr-5 text-right">
                         {/* Program <KeyboardArrowDownIcon /> */}
                         <Listbox
+                          as="div"
                           value={selectedProgram}
+                          className="listBox absolute z-2 right-52"
                           onChange={setSelectedProgram}
                         >
                           <Listbox.Button>
                             {selectedProgram.name}
                           </Listbox.Button>
-                          <Listbox.Options>
-                            {program.map((person) => (
-                              <Listbox.Option key={person.id} value={person}>
-                                {person.name}
-                              </Listbox.Option>
-                            ))}
-                          </Listbox.Options>
+                          <Transition
+                            enter="transition duration-100 ease-out"
+                            enterFrom="transform scale-95 opacity-0"
+                            enterTo="transform scale-100 opacity-100"
+                            leave="transition duration-75 ease-out"
+                            leaveFrom="transform scale-100 opacity-100"
+                            leaveTo="transform scale-95 opacity-0"
+                          >
+                            <Listbox.Options className="relative bg-ahum-brown opacity-90 p-3 -right-3 rounded-sm ">
+                              {program.map((person) => (
+                                <Listbox.Option key={person.id} value={person}>
+                                  {person.name}
+                                </Listbox.Option>
+                              ))}
+                            </Listbox.Options>
+                          </Transition>
                         </Listbox>
                       </span>
                       <a href="#">
                         <span className="text-right">
                           {/* Year <KeyboardArrowDownIcon /> */}
                           <Listbox
+                            as="div"
                             value={selectedYear}
                             onChange={setSelectedYear}
+                            className="listBox absolute z-2 right-20"
                           >
                             <Listbox.Button>{selectedYear.name}</Listbox.Button>
-                            <Listbox.Options>
+                            <Listbox.Options className="relative bg-ahum-brown-collage opacity-90 rounded-sm p-3 -right-4">
                               {yearO.map((person) => (
                                 <Listbox.Option key={person.id} value={person}>
                                   {person.name}
@@ -146,7 +158,6 @@ function Archives(props) {
                         category={selectedProgram.cat}
                       />
                     }
-                    {console.log(selectedYear.name, selectedProgram.name)}
                   </div>
                 </div>
               </div>

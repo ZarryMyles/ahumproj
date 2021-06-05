@@ -12,8 +12,8 @@ function EventsCardLeft() {
 
       <div className="col-md-6 py-5 align-self-center">
         <h2
-          className="text-center text-xl"
-          style={{ color: "#5f585d", fontWeight: "600" }}
+          className="text-center text-xl font-bold"
+          style={{ color: "#5f585d" }}
         >
           Kalakrida
         </h2>

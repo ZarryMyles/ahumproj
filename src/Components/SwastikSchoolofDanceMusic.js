@@ -66,7 +66,7 @@ function SwastikSchoolofDanceMusic() {
     <div className="">
       <Navbar />
 
-      <div id="content" class=" px-0 md:-ml-11 py-0" onMouseDown={resize}>
+      <div id="content" class=" px-0 md:-ml-11 py-0 " onMouseDown={resize}>
         <button
           type="button"
           id="sidebarCollapse"
@@ -84,7 +84,7 @@ function SwastikSchoolofDanceMusic() {
         </button>
         <TopLogoBar className="absolute right-0" />
 
-        <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10 my-4">
+        <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10 my-4 text-black">
           Swastika School of Dance & Music
         </h1>
         <div class="bg-holder-school mx-auto"></div>
@@ -106,7 +106,7 @@ function SwastikSchoolofDanceMusic() {
         class="text-center font-medium  md:py-4 md:mb-5"
         style={{ backgroundColor: "#D7CEC7" }}
       >
-        <h2 className="text-2xl" style={{ color: "#41363D" }}>
+        <h2 className="text-2xl font-bold" style={{ color: "#41363D" }}>
           Schedule
         </h2>
       </div>

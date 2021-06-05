@@ -51,11 +51,8 @@ function Events() {
               <div class="holderbg1"></div>
             </div>
 
-            <div className="col-md-6 py-5 align-self-center">
-              <h2
-                className="text-center text-xl"
-                style={{ color: "#222021", fontWeight: "500" }}
-              >
+            <div className="col-md-6 py-5 align-self-center font-bold">
+              <h2 className="text-center text-xl" style={{ color: "#222021" }}>
                 Saturday's @ Swastika
               </h2>
               <p class="text-justify customp1">

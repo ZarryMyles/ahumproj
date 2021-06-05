@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+.font-monserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
 .App {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+
   background: #fafafa;
   font-weight: 300;
 }
@@ -319,7 +327,8 @@ a.article:hover {
   font-weight: 400;
   font-size: 1.1em;
   padding: 30px 7.5%;
-  color: #41363d;
+  color: black;
+  /* color: #41363d; */
   line-height: 150%;
 }
 
@@ -390,6 +399,7 @@ a.article:hover {
 
 .customp7 {
   /* font-weight: 500; */
+
   font-size: 0.95em;
   color: #41363d;
   line-height: 150%;
@@ -523,7 +533,7 @@ a.article:hover {
     font-weight: 400;
     font-size: 1.1em;
     padding: 30px 7.5%;
-    color: #4d4249;
+    /* color: #4d4249; */
     line-height: 150%;
   }
   /*-------------------------------------------------------
@@ -584,4 +594,23 @@ a.article:hover {
 
 *:focus {
   outline: none;
+}
+
+.newsField::placeholder {
+  color: white;
+}
+
+.newsBtn {
+  background-color: gray;
+  height: 30px;
+}
+
+.newsBtn:focus {
+  border: none;
+  outline: none;
+}
+
+.archiveImages {
+  /* max-height: 250px;
+  min-width: 400px; */
 }

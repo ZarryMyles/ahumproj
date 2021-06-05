@@ -14,7 +14,7 @@ function SwastikSchoolofDanceMusic() {
     $("#sidebar").addClass("active");
   };
   return (
-    <div class="wrapper">
+    <div class="wrapper ">
       <Navbar />
       <div id="content" className="p-0">
         <div
@@ -39,7 +39,7 @@ function SwastikSchoolofDanceMusic() {
           <TopLogoBar />
 
           <div class="bg-holder-about"></div>
-          <p class="text-justify customp">
+          <p class="text-justify customp text-black">
             ahum - art heart u and mind is a trust which was founded in 2015
             with the aim of connecting art and community. Today this has become
             very important. Though we are moving towards more civilized world,
@@ -79,7 +79,7 @@ function SwastikSchoolofDanceMusic() {
               About Anuradha
             </h5>
             <h5>Founder, Teacher</h5>
-            <p className="customp7">
+            <p className="customp7 text-black">
               <br />I am a Bharatanatyam dancer and have trained under
               Padmabhushan Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an
               'A' graded artist of Delhi Doordarshan and empanelled artist of
@@ -115,7 +115,7 @@ function SwastikSchoolofDanceMusic() {
                 About Natarajan
               </h5>
               <h5>Founder, Teacher</h5>
-              <p className="customp7">
+              <p className="customp7 text-black">
                 <br />
                 An engineer by profession Natarajan has always been a patron of
                 arts. This engagement deepened after marrying Anu and when Anu

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import $ from "jquery";
-
+import TopLogoBar from "./TopLogoBar";
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -35,12 +35,7 @@ function Home() {
           >
             <i class="fas fa-align-left"></i>
           </button>
-          <h1
-            className="text-center"
-            style={{ fontWeight: "600", fontSize: "4em" }}
-          >
-            ahum
-          </h1>
+          <TopLogoBar />
         </div>
       </div>
     </div>

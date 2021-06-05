@@ -8,12 +8,12 @@ function EventsCardRight() {
     >
       <div className="col-md-6 col-md-push-6 py-5 align-self-center">
         <h2
-          className="text-center text-xl"
-          style={{ color: "#5f585d", fontWeight: "600" }}
+          className="text-center text-xl text-black"
+          style={{ color: "#222021" }}
         >
           Music by The Lake
         </h2>
-        <p class="text-justify customp1">
+        <p class="text-justify customp1 " style={{ color: "black" }}>
           ahum with support of Jalaposhan has been presenting “Music by the
           Lake”, a monthly concert. The idea behind this concept is to bring
           art, community and nature in unison with each other. The series was

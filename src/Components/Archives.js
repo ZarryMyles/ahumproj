@@ -156,8 +156,11 @@ function Archives(props) {
 
                 <div className="flex flex-row h-full">
                   <div
-                    className="bg-black h-full  ml-3"
-                    style={{ width: "4px" }}
+                    className="bg-black h-full ml-3"
+                    style={{
+                      width: 2,
+                      marginRight: 1,
+                    }}
                   ></div>
                   <div>
                     {

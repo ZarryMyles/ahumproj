@@ -40,7 +40,7 @@ function UpcomingShows() {
 
           <TopLogoBar />
 
-          <h1 className="text-2xl font-semibold text-center text-gray-700 mt-0 md:mb-5 pl-20">
+          <h1 className="text-2xl pt-6 font-semibold text-center text-gray-700 mt-0  pl-20">
             Upcoming Shows
           </h1>
           <div className="flex md:flex-row flex-col justify-content-around pl-20">

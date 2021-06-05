@@ -90,8 +90,8 @@ function SwastikSchoolofDanceMusic() {
         <div class="bg-holder-school mx-auto"></div>
 
         <p
-          class="text-justify  customp leading-5 md:text-base text-sm md:font-normal "
-          style={{ color: "#41363D" }}
+          class="text-justify  customp  leading-5 md:text-base text-sm md:font-normal "
+          style={{ color: "#222021" }}
         >
           The school started in the year 2010 and was taken under the umbrella
           of ahum trust in 2015. At the school we conduct classes in

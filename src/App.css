@@ -582,6 +582,6 @@ a.article:hover {
 
 /* Unlisted */
 
-.listBox:focus {
+*:focus {
   outline: none;
 }

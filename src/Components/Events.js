@@ -18,7 +18,10 @@ function Events() {
     <div class="wrapper" style={{ background: "white" }}>
       <Navbar />
       <div id="content" className="p-0">
-        <div class="container-fluid justify-content-center px-0">
+        <div
+          class="container-fluid justify-content-center px-0"
+          onMouseDown={resize}
+        >
           <button
             type="button"
             id="sidebarCollapse"

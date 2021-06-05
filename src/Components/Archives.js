@@ -69,7 +69,10 @@ function Archives(props) {
     <div class="">
       <Navbar />
       <div id="" className="">
-        <div class="container-fluid justify-content-center px-0">
+        <div
+          class="container-fluid justify-content-center px-0"
+          onMouseDown={resize}
+        >
           <button
             type="button"
             id="sidebarCollapse"
@@ -103,7 +106,7 @@ function Archives(props) {
                           onChange={setSelectedProgram}
                         >
                           <Listbox.Button>
-                            {selectedProgram.name}
+                            {selectedProgram.name + " ▾"}
                           </Listbox.Button>
                           <Transition
                             enter="transition duration-100 ease-out"
@@ -132,8 +135,10 @@ function Archives(props) {
                             onChange={setSelectedYear}
                             className="listBox absolute z-2 right-20"
                           >
-                            <Listbox.Button>{selectedYear.name}</Listbox.Button>
-                            <Listbox.Options className="relative bg-ahum-brown-collage opacity-90 rounded-sm p-3 -right-4">
+                            <Listbox.Button>
+                              {selectedYear.name + " ▾"}
+                            </Listbox.Button>
+                            <Listbox.Options className="relative bg-ahum-brown-collage opacity-90 rounded-sm p-3 -right-2">
                               {yearO.map((person) => (
                                 <Listbox.Option key={person.id} value={person}>
                                   {person.name}

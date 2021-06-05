@@ -64,7 +64,10 @@ function BookSpace() {
     <div class="wrapper">
       <Navbar />
       <div className="p-0">
-        <div class="container-fluid justify-content-center px-0">
+        <div
+          class="container-fluid justify-content-center px-0"
+          onMouseDown={resize}
+        >
           <button
             type="button"
             id="sidebarCollapse"

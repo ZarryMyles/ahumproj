@@ -19,7 +19,7 @@ function SwastikSchoolofDanceMusic() {
     return (
       <>
         <div
-          className="flex md:flex-row flex-col  align-items-center md:mb-14  w-4/6"
+          className="wapper flex md:flex-row flex-col  align-items-center md:mb-14  w-4/6"
           style={{
             background: "white",
             minHeight: "40vh",
@@ -63,13 +63,10 @@ function SwastikSchoolofDanceMusic() {
   }
 
   return (
-    <>
+    <div className="">
       <Navbar />
 
-      <div
-        class="container-fluid justify-content-center px-0"
-        onMouseDown={resize}
-      >
+      <div id="content" class=" px-0 md:-ml-11 py-0" onMouseDown={resize}>
         <button
           type="button"
           id="sidebarCollapse"
@@ -92,7 +89,10 @@ function SwastikSchoolofDanceMusic() {
         </h1>
         <div class="bg-holder-school mx-auto"></div>
 
-        <p class="text-justify customp leading-5 md:text-base text-sm md:font-normal ">
+        <p
+          class="text-justify  customp leading-5 md:text-base text-sm md:font-normal "
+          style={{ color: "#41363D" }}
+        >
           The school started in the year 2010 and was taken under the umbrella
           of ahum trust in 2015. At the school we conduct classes in
           Bharatanatyam and Carnatic vocal mainly. We have also had other forms
@@ -128,7 +128,7 @@ function SwastikSchoolofDanceMusic() {
           Gallery
         </a>
       </div>
-    </>
+    </div>
   );
 }
 

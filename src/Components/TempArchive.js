@@ -9,13 +9,13 @@ export default function TempArchive(props) {
     <div className="md:grid xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0 grid-cols-12 gap-6 items-center py-4 my-8">
       <div className="rounded-full flex bg-black md:h-3 md:w-3 h-4 w-4 col-span-1 md:-ml-2 xs:-ml-8"></div>
       <div className="col-span-2  font-normal text-lg xs:pb-3 md:pb-0 -mt-7  md:-mt-0">
-        {program.date.slice(-4)}
+        {program.date.split(" ")[1]}
       </div>
       <div className="col-span-5 mr-20">
         <img
           src={
             program.image_link === ""
-              ? "https://via.placeholder.com/310x225?text=No Image found"
+              ? "https://res.cloudinary.com/genesiscloudimages/image/upload/v1622620688/ahum/archives/Image_004_xfwvez.png"
               : program.image_link
           }
         />

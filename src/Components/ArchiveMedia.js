@@ -66,20 +66,20 @@ export default function ArchiveMedia(props) {
           "saturdaysatswastika"
     );
   function chooseFilter() {
-    if (year === "year" && category !== "program")
+    if (year.toLowerCase() === "year" && category !== "program")
       return (
         archive && byProg.map((program) => <TempArchive program={program} />)
       );
-    else if (year !== "year" && category === "program")
+    else if (year.toLowerCase() !== "year" && category === "program")
       return (
         archive && byYear.map((program) => <TempArchive program={program} />)
       );
-    else if (year !== "year" && category !== "program") {
+    else if (year.toLowerCase() !== "year" && category !== "program") {
       return (
         archive &&
         byProgYear.map((program) => <TempArchive program={program} />)
       );
-    } else if (year === "year" && category === "program")
+    } else if (year.toLowerCase() === "year" && category === "program")
       return (
         archive &&
         byCurrentYear.map((program) => <TempArchive program={program} />)

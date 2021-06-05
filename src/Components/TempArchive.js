@@ -12,14 +12,15 @@ export default function TempArchive(props) {
         {program.date.split(" ")[1]}
       </div>
       <div className="col-span-5 mr-20">
-        <div
+        <img
           className="archiveImages"
+          width="420px"
           src={
             program.image_link === ""
               ? "https://via.placeholder.com/310x225?text=No Image Available"
               : program.image_link
           }
-        ></div>
+        />
       </div>
       <div className="col-span-4 text-center text-base ">
         <span className="py-1 block text-base font-semibold  text-center">

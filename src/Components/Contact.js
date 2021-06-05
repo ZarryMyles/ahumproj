@@ -117,13 +117,18 @@ function Contact() {
                     </span>
                   </div>
                   <div className="lg:col-start-4 col-end-6 w-5/6 md:w-4/6 flex flex-col">
-                    <span className="text-white text-sm">Email Address</span>
-                    <div className="border-t border-white border"></div>
                     <input
-                      className="py-1 px-2 mt-2 focus:outline-none"
-                      type="text"
+                      className="newsField text-white text-sm bg-ahum-brown border-b-0"
+                      placeholder="Email Address"
+                    ></input>
+                    <div className="border-t border-white border"></div>
+                    <button
+                      className="newsBtn  px-2 mt-2 bg-ahum-brown-collage transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-grey-600 text-lg"
+                      type="submit"
                       name="name"
-                    />
+                    >
+                      Submit
+                    </button>
                   </div>
                   {/* for normal screen */}
                   <div className="col-start-6 col-end-8 hidden lg:flex flex-col">

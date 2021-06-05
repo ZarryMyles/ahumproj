@@ -585,3 +585,17 @@ a.article:hover {
 *:focus {
   outline: none;
 }
+
+.newsField::placeholder {
+  color: white;
+}
+
+.newsBtn {
+  background-color: gray;
+  height: 30px;
+}
+
+.newsBtn:focus {
+  border: none;
+  outline: none;
+}

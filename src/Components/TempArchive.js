@@ -1,7 +1,7 @@
 import React from "react";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import Linkicon from "@material-ui/icons/Link";
+import PublicIcon from "@material-ui/icons/Public";
 
 export default function TempArchive(props) {
   const { program } = props;
@@ -12,13 +12,14 @@ export default function TempArchive(props) {
         {program.date.split(" ")[1]}
       </div>
       <div className="col-span-5 mr-20">
-        <img
+        <div
+          className="archiveImages"
           src={
             program.image_link === ""
               ? "https://via.placeholder.com/310x225?text=No Image Available"
               : program.image_link
           }
-        />
+        ></div>
       </div>
       <div className="col-span-4 text-center text-base ">
         <span className="py-1 block text-base font-semibold  text-center">
@@ -36,13 +37,13 @@ export default function TempArchive(props) {
           </a>
         )}
         {program.youtube && (
-          <a href={program.links.youtube} className="px-3 py-2 ">
+          <a href={program.youtube} className="px-3 py-2 ">
             <YouTubeIcon style={{ fontSize: 30 }} />
           </a>
         )}
-        {program.link && (
-          <a href={program.link} className="px-3 py-2 ">
-            <Linkicon style={{ fontSize: 30 }} />
+        {program.othLink && (
+          <a href={program.othLink} className="px-3 py-2 ">
+            <PublicIcon style={{ fontSize: 30 }} />
           </a>
         )}
       </div>

@@ -14,6 +14,9 @@ function Events() {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
+  const resize = () => {
+    $("#sidebar").addClass("active");
+  };
   return (
     <div class="wrapper" style={{ background: "white" }}>
       <Navbar />

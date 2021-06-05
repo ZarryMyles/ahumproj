@@ -26,6 +26,9 @@ function BookSpace() {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
+  const resize = () => {
+    $("#sidebar").addClass("active");
+  };
 
   const photos = [
     {

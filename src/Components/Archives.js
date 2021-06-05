@@ -64,11 +64,14 @@ function Archives(props) {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
+  const resize = () => {
+    $("#sidebar").addClass("active");
+  };
 
   return (
     <div class="">
       <Navbar />
-      <div id="content" className="pt-0">
+      <div id="content" class=" px-0 md:-ml-11 py-0">
         <div class="container-fluid justify-content-center px-0">
           <button
             type="button"
@@ -133,10 +136,9 @@ function Archives(props) {
                             className="listBox absolute z-2 right-20"
                           >
                             <Listbox.Button>
-                              {" "}
                               {selectedYear.name + " ▾"}
                             </Listbox.Button>
-                            <Listbox.Options className="relative bg-ahum-brown-collage opacity-90 rounded-sm p-3 -right-4">
+                            <Listbox.Options className="relative bg-ahum-brown-collage opacity-90 rounded-sm p-3 -right-2">
                               {yearO.map((person) => (
                                 <Listbox.Option key={person.id} value={person}>
                                   {person.name}
@@ -153,7 +155,10 @@ function Archives(props) {
                 </div>
 
                 <div className="flex flex-row h-full">
-                  <div className="bg-black h-full w-2 ml-3"></div>
+                  <div
+                    className="bg-black h-full  ml-3"
+                    style={{ width: "4px" }}
+                  ></div>
                   <div>
                     {
                       <ArchiveMedia

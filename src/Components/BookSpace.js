@@ -26,6 +26,9 @@ function BookSpace() {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
+  const resize = () => {
+    $("#sidebar").addClass("active");
+  };
 
   const photos = [
     {
@@ -63,8 +66,11 @@ function BookSpace() {
   return (
     <div class="wrapper">
       <Navbar />
-      <div className="p-0">
-        <div class="container-fluid justify-content-center px-0">
+      <div id="content" class=" px-0 md:-ml-11 py-0">
+        <div
+          class="container-fluid justify-content-center px-0"
+          onMouseDown={resize}
+        >
           <button
             type="button"
             id="sidebarCollapse"

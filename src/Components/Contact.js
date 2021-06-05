@@ -10,6 +10,9 @@ function Contact() {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
+  const resize = () => {
+    $("#sidebar").addClass("active");
+  };
 
   const inputCSS =
     "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-300 mb-3 py-2 px-2 w-full border-solid border border-black";
@@ -18,7 +21,10 @@ function Contact() {
     <div class="wrapper">
       <Navbar />
       <div id="content" className="p-0">
-        <div class="container-fluid justify-content-center px-0">
+        <div
+          class="container-fluid justify-content-center px-0"
+          onMouseDown={resize}
+        >
           <button
             type="button"
             id="sidebarCollapse"

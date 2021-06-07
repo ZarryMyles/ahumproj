@@ -65,30 +65,11 @@ function BookSpace() {
 
   return (
     <div class="wrapper">
-      <Navbar />
       <div className="p-0">
         <div
           class="container-fluid justify-content-center px-0"
           onMouseDown={resize}
         >
-          <button
-            type="button"
-            id="sidebarCollapse"
-            class="btn "
-            style={{
-              background: "transparent",
-              position: "fixed",
-              top: "10px",
-              left: 0,
-              zIndex: 1000,
-            }}
-            onClick={handleToggle}
-          >
-            <i class="fas fa-align-left"></i>
-          </button>
-
-          <TopLogoBar />
-
           <>
             <div className="py-5">
               {/* Top Content */}

@@ -14,6 +14,7 @@ function Navbar() {
     <nav
       id="sidebar"
       className="active"
+      onMouseLeave={resize}
       style={{
         zIndex: 99999,
         position: "fixed",

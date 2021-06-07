@@ -19,29 +19,11 @@ function Contact() {
 
   return (
     <div class="wrapper">
-      <Navbar />
       <div id="content" className="p-0">
         <div
           class="container-fluid justify-content-center px-0"
           onMouseDown={resize}
         >
-          <button
-            type="button"
-            id="sidebarCollapse"
-            class="btn "
-            style={{
-              background: "transparent",
-              position: "fixed",
-              top: "10px",
-              left: 0,
-              zIndex: 1000,
-            }}
-            onClick={handleToggle}
-          >
-            <i class="fas fa-align-left"></i>
-          </button>
-          <TopLogoBar />
-
           <>
             <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
               <div className="flex justify-center items-center col-span-1 ml-24 w-8/12">

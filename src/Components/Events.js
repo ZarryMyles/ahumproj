@@ -19,29 +19,11 @@ function Events() {
   };
   return (
     <div class="wrapper" style={{ background: "white" }}>
-      <Navbar />
       <div id="content" className="p-0">
         <div
           class="container-fluid justify-content-center px-0"
           onMouseDown={resize}
         >
-          <button
-            type="button"
-            id="sidebarCollapse"
-            class="btn "
-            style={{
-              background: "transparent",
-              position: "fixed",
-              top: "10px",
-              left: 0,
-              zIndex: 1000,
-            }}
-            onClick={handleToggle}
-          >
-            <i class="fas fa-align-left"></i>
-          </button>
-          <TopLogoBar />
-
           <h1 className="text-2xl font-semibold text-center mt-10">Events</h1>
           <div
             className="row justify-content-center my-3 mx-0 py-3"

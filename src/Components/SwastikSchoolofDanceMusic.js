@@ -64,29 +64,10 @@ function SwastikSchoolofDanceMusic() {
 
   return (
     <>
-      <Navbar />
-
       <div
         class="container-fluid justify-content-center px-0"
         onMouseDown={resize}
       >
-        <button
-          type="button"
-          id="sidebarCollapse"
-          class="btn "
-          style={{
-            background: "transparent",
-            position: "fixed",
-            top: "10px",
-            left: 0,
-            zIndex: 1000,
-          }}
-          onClick={handleToggle}
-        >
-          <i class="fas fa-align-left"></i>
-        </button>
-        <TopLogoBar className="absolute right-0" />
-
         <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10 my-4">
           Swastika School of Dance & Music
         </h1>

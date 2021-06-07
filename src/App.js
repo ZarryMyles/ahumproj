@@ -12,11 +12,37 @@ import SwastikSchoolofDanceMusic from "./Components/SwastikSchoolofDanceMusic";
 import Contact from "./Components/Contact";
 import BookSpace from "./Components/BookSpace";
 import Archives from "./Components/Archives";
-
+import $ from "jquery";
+import TopLogoBar from "./Components/TopLogoBar";
 function App() {
+  const handleToggle = () => {
+    $("#sidebar").toggleClass("active");
+  };
+  const resize = () => {
+    $("#sidebar").addClass("active");
+  };
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
+
+        <button
+          type="button"
+          id="sidebarCollapse"
+          class="btn "
+          style={{
+            background: "transparent",
+            position: "fixed",
+            top: "10px",
+            left: 0,
+            zIndex: 1000,
+          }}
+          onClick={handleToggle}
+        >
+          <i class="fas fa-align-left"></i>
+        </button>
+
+        <TopLogoBar />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />

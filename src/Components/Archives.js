@@ -76,29 +76,11 @@ function Archives(props) {
 
   return (
     <div class="">
-      <Navbar />
       <div id="" className="">
         <div
           class="container-fluid justify-content-center px-0"
           onMouseDown={resize}
         >
-          <button
-            type="button"
-            id="sidebarCollapse"
-            class="btn "
-            style={{
-              background: "transparent",
-              position: "fixed",
-              top: "10px",
-              left: 0,
-              zIndex: 1000,
-            }}
-            onClick={handleToggle}
-          >
-            <i class="fas fa-align-left"></i>
-          </button>
-          <TopLogoBar />
-
           <>
             <div className="py-5 md:px-64 xs:px-5 xs:pl-10 flex justify-start">
               <div className="">

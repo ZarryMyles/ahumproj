@@ -66,7 +66,7 @@ function SwastikSchoolofDanceMusic() {
     <div className="">
       <Navbar />
 
-      <div id="content" class=" px-0 md:-ml-11 py-0 " onMouseDown={resize}>
+      <div id="" class=" px-0  py-0 " onMouseDown={resize}>
         <button
           type="button"
           id="sidebarCollapse"

@@ -27,9 +27,16 @@ import TopLogoBar from "./TopLogoBar";
 function Archives(props) {
   const { category } = props.match.params;
   useEffect(() => {
+    console.log(category);
     window.scrollTo(0, 0);
   }, []);
-
+  const programList = {
+    saturdaysatswastika: "Saturdays @ Swastika",
+    musicbythelake: "Music By the Lake",
+    kalakridi: "Kalakrida",
+    swastikaschoolofdance: "Swastika School of Dance",
+    shows: "shows",
+  };
   const program = [
     {
       id: 1,
@@ -95,7 +102,10 @@ function Archives(props) {
               <div className="">
                 <div className="flex flex-col justify-start font-medium md:text-xl text-lg mb-3 -ml-2">
                   <div className="flex justify-between">
-                    <span className="md:-ml-7 -ml-6">ARCHIVES</span>{" "}
+                    <span className="md:-ml-7 -ml-6">
+                      ARCHIVES
+                      {}
+                    </span>{" "}
                     <div className="">
                       <span className="pr-5 text-right">
                         {/* Program <KeyboardArrowDownIcon /> */}

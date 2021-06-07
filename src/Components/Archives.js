@@ -26,39 +26,45 @@ import TopLogoBar from "./TopLogoBar";
 
 function Archives(props) {
   const { category } = props.match.params;
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const program = [
-    {
-      id: 1,
-      name: category ? "Saturdays @ Swastika" : "All programs",
-      cat: category ? "saturdaysatswastika" : "program",
-    },
-    {
-      id: 2,
-      name: !category ? "Saturdays @ Swastika" : "All programs",
-      cat: !category ? "saturdaysatswastika" : "program",
-    },
+    { id: 1, name: "All programs", cat: "program" },
+    { id: 2, name: "Saturdays @ Swastika", cat: "saturdaysatswastika" },
     { id: 3, name: "Music By the Lake", cat: "musicbythelake" },
-    { id: 4, name: "Kalakrida", cat: "kalakridi" },
+    { id: 4, name: "Kalakrida", cat: "kalakrida" },
     { id: 5, name: "Swastika School of Dance", cat: "swastikaschoolofdance" },
     { id: 6, name: "Shows", cat: "shows" },
   ];
   const yearO = [
-    { id: 1, name: category ? "2021" : "Year" },
-    { id: 2, name: !category ? "2021" : "Year" },
-    { id: 3, name: "2020" },
-    { id: 4, name: "2019" },
-    { id: 5, name: "2018" },
-    { id: 6, name: "2017" },
+    { id: 1, name: "2021" },
+    { id: 2, name: "2020" },
+    { id: 3, name: "2019" },
+    { id: 4, name: "2018" },
+    { id: 5, name: "2017" },
   ];
-  const [selectedProgram, setSelectedProgram] = useState(program[0]);
+  function choice(category = "program") {
+    switch (category) {
+      case "saturdaysatswastika":
+        return program[1];
+      case "musicbythelake":
+        return program[2];
+      case "kalakrida":
+        return program[3];
+      case "swastikaschoolofdance":
+        return program[4];
+      case "shows":
+        return program[5];
+      default:
+        return program[0];
+    }
+  }
+  const [selectedProgram, setSelectedProgram] = useState(
+    category ? choice(category) : program[0]
+  );
   const [selectedYear, setSelectedYear] = useState(yearO[0]);
-  const [swastika, setSwastika] = useState(false);
+
   useEffect(() => {
-    if (category === "saturdaysatswastika") setSwastika(true);
+    window.scrollTo(0, 0);
   }, []);
 
   const handleToggle = () => {

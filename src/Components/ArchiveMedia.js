@@ -19,9 +19,9 @@ export default function ArchiveMedia(props) {
     // const { data: archiveData } = await axios.get(
     //   "https://sheetdb.io/api/v1/nhnqv6cb4schd"
     // );
-    await fetch("https://sheetdb.io/api/v1/nhnqv6cb4schd").then((res) =>
-      res.json().then((archiveData) => setArchive(archiveData))
-    );
+    await fetch(
+      "https://sheet.best/api/sheets/8324c8be-99ab-41a9-be09-9b9d87cfb3c0"
+    ).then((res) => res.json().then((archiveData) => setArchive(archiveData)));
   };
   function filtering() {
     const newData = archive.filter(
@@ -91,5 +91,13 @@ export default function ArchiveMedia(props) {
       );
   }
   const filter = chooseFilter();
-  return <>{filter && !filter.length > 0 ? <h2>Empty</h2> : filter}</>;
+  return (
+    <>
+      {filter && !filter.length > 0 ? (
+        <div className=" w-96 md:pl-52 "> No results for this!</div>
+      ) : (
+        filter
+      )}
+    </>
+  );
 }

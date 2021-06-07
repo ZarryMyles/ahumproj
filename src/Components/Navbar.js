@@ -65,6 +65,9 @@ function Navbar() {
 
       <ul class="list-unstyled components">
         <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
           <Link to="/about-us">About</Link>
         </li>
         <li>

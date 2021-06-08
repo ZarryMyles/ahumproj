@@ -78,7 +78,7 @@ function Navbar() {
           <Link to="/events">Events</Link>
         </li>
         <li>
-          <Link to="/swastik-school-of-dance">Swastik School Of Dance</Link>
+          <Link to="/swastik-school-of-dance">Swastika School of Dance</Link>
         </li>
         <li>
           <a href="/bookspace">Book the Space</a>

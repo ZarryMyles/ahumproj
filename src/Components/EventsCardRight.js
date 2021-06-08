@@ -6,6 +6,9 @@ function EventsCardRight() {
       className="row justify-content-center my-3 mx-0 py-3"
       style={{ background: "#D7CEC7", minHeight: "100vh" }}
     >
+      <div className="col-md-5 col-md-pull-6 align-self-center md:hidden block pt-5">
+        <div class="holderbg2"></div>
+      </div>
       <div className="col-md-6 col-md-push-6 py-5 align-self-center">
         <h2
           className="text-center text-xl"
@@ -36,7 +39,7 @@ function EventsCardRight() {
           </a>
         </div>
       </div>
-      <div className="col-md-5 col-md-pull-6 align-self-center">
+      <div className="col-md-5 col-md-pull-6 align-self-center md:block hidden">
         <div class="holderbg2"></div>
       </div>
     </div>

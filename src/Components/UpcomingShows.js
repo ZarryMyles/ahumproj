@@ -25,6 +25,8 @@ function UpcomingShows() {
     return (
       <div className="col-sm-12 col-md-6 col-xl-4 my-2">
         <div
+          data-aos="fade-down"
+          data-aos-duration="400"
           class="bg-holderbg2  mx-auto my-3"
           style={{ backgroundImage: `url('${program.image}')` }}
         ></div>

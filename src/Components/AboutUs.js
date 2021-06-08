@@ -72,7 +72,7 @@ function About() {
           </div>
           <div className="col-md-1"></div>
           <div
-            className="row justify-content-center align-items-center mb-2 mx-0 py-5"
+            className="row justify-content-center align-items-center mx-0 py-5"
             style={{
               background: "#D7CEC7",
               minHeight: "xxx",

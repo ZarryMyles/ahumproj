@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./App.css";
 import "./assets/css/tailwind.css";
@@ -17,7 +17,13 @@ import TopLogoBar from "./Components/TopLogoBar";
 import Form from "./Components/Form";
 
 import $ from "jquery";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };

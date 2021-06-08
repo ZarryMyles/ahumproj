@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ title, c1, c2, c3 }) {
   return (
-    <div className="md:mb-6">
+    <div className="md:mb-6" data-aos="fade-down" data-aos-duration="200">
       <div class="text-center">
         <h4 className=" pb-2 text-xl font-medium">{title}</h4>
       </div>

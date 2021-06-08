@@ -27,6 +27,10 @@ function SwastikSchoolofDanceMusic() {
           <div className="md:w-1/2 w-full   flex justify-center ">
             <div
               className="w-full squarebgpic2 "
+              data-aos="fade-right"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-sine"
+              data-aos-anchor-placement="top-bottom"
               style={{
                 backgroundImage: `url('${lesson.image_url}')`,
               }}

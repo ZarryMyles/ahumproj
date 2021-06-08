@@ -23,12 +23,6 @@ function BookSpace() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleToggle = () => {
-    $("#sidebar").toggleClass("active");
-  };
-  const resize = () => {
-    $("#sidebar").addClass("active");
-  };
 
   const photos = [
     {
@@ -66,10 +60,7 @@ function BookSpace() {
   return (
     <div class="wrapper">
       <div className="p-0">
-        <div
-          class="container-fluid justify-content-center px-0"
-          onMouseDown={resize}
-        >
+        <div class="container-fluid justify-content-center px-0">
           <>
             <div className="py-5">
               {/* Top Content */}
@@ -234,9 +225,12 @@ function BookSpace() {
                   </div>
                 </div>
                 <div className="flex justify-center lg:justify-start">
-                  <button className="text-lg my-10 h-10 bg-ahum-maroon w-max items-center focus:outline-none flex px-5 rounded-full text-white transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl">
+                  <a
+                    href="/form/enquiry"
+                    className="text-lg my-10 h-10 bg-ahum-maroon w-max items-center focus:outline-none flex px-5 rounded-full text-white transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl"
+                  >
                     Enquire
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

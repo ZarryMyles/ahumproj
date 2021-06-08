@@ -19,15 +19,36 @@ export default function ArchiveMedia(props) {
     // const { data: archiveData } = await axios.get(
     //   "https://sheetdb.io/api/v1/nhnqv6cb4schd"
     // );
-    await fetch(
-      "https://sheet.best/api/sheets/8324c8be-99ab-41a9-be09-9b9d87cfb3c0"
-    ).then((res) => res.json().then((archiveData) => setArchive(archiveData)));
-  };
-  function filtering() {
-    const newData = archive.filter(
-      (program) =>
-        program.category.toLowerCase().trim() === "saturdays at swastika"
+    await fetch("https://sheetdb.io/api/v1/rl6xxethwit7k").then((res) =>
+      res.json().then((archiveData) => setArchive(archiveData))
     );
+  };
+  const months = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+  ];
+  function compare(a, b) {
+    if (
+      months.indexOf(a.date.split(" ")[1]) <
+      months.indexOf(b.date.split(" ")[1])
+    )
+      return -1;
+    if (
+      months.indexOf(a.date.split(" ")[1]) >
+      months.indexOf(b.date.split(" ")[1])
+    )
+      return 1;
+    return 0;
   }
   const byProg =
     archive &&
@@ -56,15 +77,6 @@ export default function ArchiveMedia(props) {
         program.date.toLowerCase().trim().replaceAll(" ", "").slice(-4) ===
         "2021"
     );
-  const bySwastika =
-    archive &&
-    archive.filter(
-      (program) =>
-        program.date.toLowerCase().trim().replaceAll(" ", "").slice(-4) ===
-          "2021" &&
-        program.category.toLowerCase().trim().replaceAll(" ", "") ===
-          "saturdaysatswastika"
-    );
   function chooseFilter() {
     if (year === "year" && category !== "program")
       return (
@@ -91,10 +103,16 @@ export default function ArchiveMedia(props) {
       );
   }
   const filter = chooseFilter();
+  let test = [{ date: "january" }, { date: "march" }, { date: "february" }];
   return (
     <>
       {filter && !filter.length > 0 ? (
-        <div className=" w-96 md:pl-52 "> No results for this!</div>
+        <div className="my-auto md:w-96 w-64  md:h-32 h-96 md:px-100 flex items-center">
+          {" "}
+          <h3 className="my-auto mx-auto text-center text-ahum-maroon pt-20">
+            No results found! {console.log(test.compare)}
+          </h3>
+        </div>
       ) : (
         filter
       )}

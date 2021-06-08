@@ -1,8 +1,9 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 import "./assets/css/tailwind.css";
+
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import AboutUs from "./Components/AboutUs";
@@ -12,8 +13,10 @@ import SwastikSchoolofDanceMusic from "./Components/SwastikSchoolofDanceMusic";
 import Contact from "./Components/Contact";
 import BookSpace from "./Components/BookSpace";
 import Archives from "./Components/Archives";
-import $ from "jquery";
 import TopLogoBar from "./Components/TopLogoBar";
+import Form from "./Components/Form";
+
+import $ from "jquery";
 function App() {
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
@@ -43,21 +46,24 @@ function App() {
         </button>
 
         <TopLogoBar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/events" exact component={Events} />
-          <Route path="/upcoming-shows" exact component={UpcomingShows} />
-          <Route
-            path="/swastik-school-of-dance"
-            exact
-            component={SwastikSchoolofDanceMusic}
-          />
-          <Route path="/about-us" exact component={AboutUs} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/bookspace" exact component={BookSpace} />
-          <Route path="/archives/:category" component={Archives} />
-          <Route path="/archives" component={Archives} />
-        </Switch>
+        <div onClick={resize}>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/events" exact component={Events} />
+            <Route path="/upcoming-shows" exact component={UpcomingShows} />
+            <Route
+              path="/swastik-school-of-dance"
+              exact
+              component={SwastikSchoolofDanceMusic}
+            />
+            <Route path="/about-us" exact component={AboutUs} />
+            <Route path="/contact" exact component={Contact} />
+            <Route path="/bookspace" exact component={BookSpace} />
+            <Route path="/archives/:category" component={Archives} />
+            <Route path="/archives" component={Archives} />
+            <Route path="/form/:title" component={Form} />
+          </Switch>
+        </div>
       </BrowserRouter>
     </div>
   );

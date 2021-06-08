@@ -3,23 +3,15 @@ import Navbar from "./Navbar";
 import $ from "jquery";
 import TopLogoBar from "./TopLogoBar";
 
-function SwastikSchoolofDanceMusic() {
+function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleToggle = () => {
-    $("#sidebar").toggleClass("active");
-  };
-  const resize = () => {
-    $("#sidebar").addClass("active");
-  };
+
   return (
     <div class="wrapper">
       <div id="content" className="p-0">
-        <div
-          class="container-fluid justify-content-center px-0"
-          onMouseDown={resize}
-        >
+        <div class="container-fluid justify-content-center px-0">
           <div class="bg-holder-about"></div>
           <p class="text-justify customp">
             ahum - art heart u and mind is a trust which was founded in 2015
@@ -117,4 +109,4 @@ function SwastikSchoolofDanceMusic() {
   );
 }
 
-export default SwastikSchoolofDanceMusic;
+export default About;

@@ -41,6 +41,7 @@ function Archives(props) {
     { id: 3, name: "2019" },
     { id: 4, name: "2018" },
     { id: 5, name: "2017" },
+    { id: 6, name: "2016" },
   ];
   function choice(category = "program") {
     switch (category) {

@@ -9,17 +9,15 @@ function SwastikSchoolofDanceMusic() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleToggle = () => {
-    $("#sidebar").toggleClass("active");
-  };
+
   const resize = () => {
-    $("#sidebar").addClass("active");
+    $("#sidebar").removeClass("active");
   };
   function section(lesson) {
     return (
       <>
         <div
-          className="flex md:flex-row flex-col  align-items-center md:mb-14  w-4/6"
+          className="flex md:flex-row flex-col  align-items-center md:mb-14  md:w-4/6 w-11/12 md:px-0 px-3 "
           style={{
             background: "white",
             minHeight: "40vh",
@@ -64,11 +62,8 @@ function SwastikSchoolofDanceMusic() {
 
   return (
     <>
-      <div
-        class="container-fluid justify-content-center px-0"
-        onMouseDown={resize}
-      >
-        <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10 my-4">
+      <div class=" justify-content-center px-0 md:ml-20">
+        <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10  my-4">
           Swastika School of Dance & Music
         </h1>
         <div class="bg-holder-school mx-auto"></div>
@@ -84,22 +79,22 @@ function SwastikSchoolofDanceMusic() {
         </p>
       </div>
       <div
-        class="text-center font-medium  md:py-4 md:mb-5"
+        class="text-center font-medium  md:py-4 py-2 md:mb-5"
         style={{ backgroundColor: "#D7CEC7" }}
       >
         <h2 className="text-2xl" style={{ color: "#41363D" }}>
           Schedule
         </h2>
       </div>
-      <div className=" py-4 flex flex-col items-center">
+      <div className=" py-4 md:px-0  flex flex-col items-center">
         {schedule.map((lesson) => section(lesson))}
       </div>
 
-      <div class="text-center my-4 ">
+      <div class="text-center mb-5 ">
         <a
           type="button"
           className="btn py-2 px-5"
-          href="/archives/saturdaysatswastika"
+          href="/archives/swastikaschoolofdance"
           style={{
             borderRadius: "25px",
             background: "#411b22",

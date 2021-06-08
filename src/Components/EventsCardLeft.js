@@ -28,7 +28,8 @@ function EventsCardLeft() {
           crowd fund this community development project through crowdfunding.
         </p>
         <div class="text-center">
-          <button
+          <a
+            href="/archives/kalakrida"
             type="button"
             className="btn py-2 px-5"
             style={{
@@ -38,7 +39,7 @@ function EventsCardLeft() {
             }}
           >
             Know More
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ function Navbar() {
     <nav
       id="sidebar"
       className="active"
-      onMouseLeave={resize}
+      // onMouseLeave={resize}
       style={{
         zIndex: 99999,
         position: "fixed",
@@ -64,7 +64,7 @@ function Navbar() {
         </button>
       </div>
 
-      <ul class="list-unstyled components">
+      <ul class="list-unstyled components" onClick={resize}>
         <li>
           <Link to="/">Home</Link>
         </li>

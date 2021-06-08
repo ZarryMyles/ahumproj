@@ -22,7 +22,8 @@ function EventsCardRight() {
           nature without much of a frill of technology.
         </p>
         <div class="text-center">
-          <button
+          <a
+            href="/archives/musicbythelake"
             type="button"
             className="btn py-2 px-5"
             style={{
@@ -32,7 +33,7 @@ function EventsCardRight() {
             }}
           >
             Know More
-          </button>
+          </a>
         </div>
       </div>
       <div className="col-md-5 col-md-pull-6 align-self-center">

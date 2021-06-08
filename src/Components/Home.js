@@ -6,19 +6,11 @@ function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleToggle = () => {
-    $("#sidebar").toggleClass("active");
-  };
-  const resize = () => {
-    $("#sidebar").addClass("active");
-  };
+
   return (
     <div class="wrapper">
       <div id="content">
-        <div
-          class="container-fluid justify-content-center"
-          onMouseDown={resize}
-        ></div>
+        <div class="container-fluid justify-content-center"></div>
       </div>
     </div>
   );

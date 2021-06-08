@@ -11,19 +11,11 @@ function Events() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleToggle = () => {
-    $("#sidebar").toggleClass("active");
-  };
-  const resize = () => {
-    $("#sidebar").addClass("active");
-  };
+
   return (
     <div class="wrapper" style={{ background: "white" }}>
       <div id="content" className="p-0">
-        <div
-          class="container-fluid justify-content-center px-0"
-          onMouseDown={resize}
-        >
+        <div class="container-fluid justify-content-center px-0">
           <h1 className="text-2xl font-semibold text-center mt-10">Events</h1>
           <div
             className="row justify-content-center my-3 mx-0 py-3"
@@ -50,7 +42,8 @@ function Events() {
                 patrons.
               </p>
               <div class="text-center">
-                <button
+                <a
+                  href="/archives/saturdaysatswastika"
                   type="button"
                   className="btn py-2 px-5"
                   style={{
@@ -60,7 +53,7 @@ function Events() {
                   }}
                 >
                   Know More
-                </button>
+                </a>
               </div>
             </div>
           </div>

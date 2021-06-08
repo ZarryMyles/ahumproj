@@ -7,12 +7,6 @@ function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleToggle = () => {
-    $("#sidebar").toggleClass("active");
-  };
-  const resize = () => {
-    $("#sidebar").addClass("active");
-  };
 
   const inputCSS =
     "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-300 mb-3 py-2 px-2 w-full border-solid border border-black";
@@ -20,10 +14,7 @@ function Contact() {
   return (
     <div class="wrapper">
       <div id="content" className="p-0">
-        <div
-          class="container-fluid justify-content-center px-0"
-          onMouseDown={resize}
-        >
+        <div class="container-fluid justify-content-center px-0">
           <>
             <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
               <div className="flex justify-center items-center col-span-1 ml-24 w-8/12">

@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ title, c1, c2, c3 }) {
   return (
-    <div className="md:mb-6" data-aos="fade-down" data-aos-duration="200">
+    <div className="md:mb-6">
       <div class="text-center">
         <h4 className=" pb-2 text-xl font-medium">{title}</h4>
       </div>
@@ -19,7 +19,7 @@ function Card({ title, c1, c2, c3 }) {
       </div>
       <div class="text-center my-2 ">
         <a
-          href="/form/rsvp"
+          href={"/form/rsvp/" + title}
           type="button"
           className="btn py-1.5 px-5 my-3"
           style={{

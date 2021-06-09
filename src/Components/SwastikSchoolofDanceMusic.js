@@ -70,7 +70,7 @@ function SwastikSchoolofDanceMusic() {
         <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10  my-4">
           Swastika School of Dance & Music
         </h1>
-        <div class="bg-holder-school mx-auto"></div>
+        <div class="bg-holder-school   mx-auto"></div>
 
         <p class="text-justify customp leading-5 md:text-base text-sm md:font-normal ">
           The school started in the year 2010 and was taken under the umbrella
@@ -94,7 +94,7 @@ function SwastikSchoolofDanceMusic() {
         {schedule.map((lesson) => section(lesson))}
       </div>
 
-      <div class="text-center mb-5 ">
+      <div class="text-center mb-5 md:ml-20">
         <a
           type="button"
           className="btn py-2 px-5"

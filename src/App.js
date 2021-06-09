@@ -67,6 +67,8 @@ function App() {
             <Route path="/bookspace" exact component={BookSpace} />
             <Route path="/archives/:category" component={Archives} />
             <Route path="/archives" component={Archives} />
+            <Route path="/form/:title/:event" component={Form} />
+
             <Route path="/form/:title" component={Form} />
           </Switch>
         </div>

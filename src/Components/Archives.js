@@ -13,6 +13,7 @@ function Archives(props) {
     { id: 4, name: "Kalakrida", cat: "kalakrida" },
     { id: 5, name: "Swastika School of Dance", cat: "swastikaschoolofdance" },
     { id: 6, name: "Shows", cat: "shows" },
+    { id: 7, name: "Adhoc Programs", cat: "adhocprograms" },
   ];
   const yearO = [
     { id: 1, name: "2021" },
@@ -21,6 +22,7 @@ function Archives(props) {
     { id: 4, name: "2018" },
     { id: 5, name: "2017" },
     { id: 6, name: "2016" },
+    { id: 7, name: "2015" },
   ];
   function choice(category = "program") {
     switch (category) {

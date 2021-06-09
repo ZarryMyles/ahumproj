@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
-import Navbar from "./Navbar";
+
 import EventsCardLeft from "./EventsCardLeft";
 import EventsCardRight from "./EventsCardRight";
-import $ from "jquery";
-
-import logo from "../Images/logo.png";
-import TopLogoBar from "./TopLogoBar";
 
 function Events() {
   useEffect(() => {
@@ -22,7 +18,7 @@ function Events() {
             style={{ background: "white", minHeight: "75vh" }}
           >
             <div className="col-md-5 col-md-pull-6 align-self-center">
-              <div class="holderbg1"></div>
+              <div data-aos="fade-right" class="holderbg1"></div>
             </div>
 
             <div className="col-md-6 py-5 align-self-center">

@@ -1,28 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import { Listbox, Transition } from "@headlessui/react";
-import logo from "../Images/logo.png";
 import $ from "jquery";
-
-import InstagramIcon from "@material-ui/icons/Instagram";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-
-import archives from "../assets/JSON/archives.json";
 import ArchiveMedia from "./ArchiveMedia";
-// import Timeline from "@material-ui/lab/Timeline";
-// import TimelineItem from "@material-ui/lab/TimelineItem";
-// import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
-// import TimelineOppositeContent from "@material-ui/lab/TimelineSeparator";
-// import TimelineConnector from "@material-ui/lab/TimelineConnector";
-// import TimelineContent from "@material-ui/lab/TimelineContent";
-// import TimelineDot from "@material-ui/lab/TimelineDot";
-
-import img1 from "../assets/images/Image_004.png";
-import img2 from "../assets/images/Image_006.png";
-import img3 from "../assets/images/Image_007.png";
-import img4 from "../assets/images/Image_008.png";
-import TopLogoBar from "./TopLogoBar";
 
 function Archives(props) {
   const { category } = props.match.params;
@@ -64,10 +43,6 @@ function Archives(props) {
   );
   const [selectedYear, setSelectedYear] = useState(yearO[0]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
@@ -77,140 +52,111 @@ function Archives(props) {
 
   return (
     <div class="">
-      <div id="" className="">
+      <div className="md:ml-5">
         <div
           class="container-fluid justify-content-center px-0"
           onMouseDown={resize}
         >
-          <>
-            <div className="py-5 md:px-64 xs:px-5 xs:pl-10 flex justify-start">
-              <div className="">
-                <div className="flex flex-col justify-start font-medium md:text-xl text-lg mb-3 -ml-2">
-                  <div className="flex justify-between">
-                    <span className="md:-ml-7 -ml-6">ARCHIVES</span>{" "}
-                    <div className="">
-                      <span className="pr-5 text-right">
-                        {/* Program <KeyboardArrowDownIcon /> */}
-                        <Listbox
-                          as="div"
-                          value={selectedProgram}
-                          className="listBox absolute z-2 right-52"
-                          onChange={setSelectedProgram}
-                        >
-                          <Listbox.Button>
-                            {selectedProgram.name + " ▾"}
-                          </Listbox.Button>
-                          <Transition
-                            enter="transition duration-100 ease-out"
-                            enterFrom="transform scale-95 opacity-0"
-                            enterTo="transform scale-100 opacity-100"
-                            leave="transition duration-75 ease-out"
-                            leaveFrom="transform scale-100 opacity-100"
-                            leaveTo="transform scale-95 opacity-0"
-                          >
-                            <Listbox.Options className="relative bg-ahum-brown opacity-90 p-3 -right-3 rounded-sm ">
-                              {program.map((person) => (
-                                <Listbox.Option key={person.id} value={person}>
-                                  {person.name}
-                                </Listbox.Option>
-                              ))}
-                            </Listbox.Options>
-                          </Transition>
-                        </Listbox>
-                      </span>
-                      <a href="#">
-                        <span className="text-right">
-                          {/* Year <KeyboardArrowDownIcon /> */}
-                          <Listbox
-                            as="div"
-                            value={selectedYear}
-                            onChange={setSelectedYear}
-                            className="listBox absolute z-2 right-20"
-                          >
-                            <Listbox.Button>
-                              {selectedYear.name + " ▾"}
-                            </Listbox.Button>
-                            <Listbox.Options className="relative bg-ahum-brown-collage opacity-90 rounded-sm p-3 -right-2">
-                              {yearO.map((person) => (
-                                <Listbox.Option key={person.id} value={person}>
-                                  {person.name}
-                                </Listbox.Option>
-                              ))}
-                            </Listbox.Options>
-                          </Listbox>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
+          <div className="py-5 md:pl-64 md:pr-32 xs:px-5 xs:pl-10 justify-start">
+            <div className="">
+              <div className="flex flex-col justify-start font-medium md:text-xl text-lg mb-3 -ml-2">
+                <div className="flex justify-between">
+                  <span className="md:-ml-0">ARCHIVES</span>
+                  <span className="pr-5 text-right">
+                    {/* Program <KeyboardArrowDownIcon /> */}
+                    <Listbox
+                      as="div"
+                      value={selectedProgram}
+                      className="listBox absolute z-2 md:right-52 right-20 text-lg"
+                      onChange={setSelectedProgram}
+                    >
+                      <Listbox.Button className="focus:outline-none">
+                        {selectedProgram.name + " ▾"}
+                      </Listbox.Button>
+                      <Transition
+                        enter="transition duration-500 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-500 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                      >
+                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage -right-10 rounded-md hover:cursor-pointer">
+                          {program.map((person) => (
+                            <Listbox.Option
+                              className="dropOptions py-1.5 px-2.5"
+                              key={person.id}
+                              value={person}
+                            >
+                              {person.name}
+                            </Listbox.Option>
+                          ))}
+                        </Listbox.Options>
+                      </Transition>
+                    </Listbox>
+                  </span>
 
-                  <span className="mt-3">{selectedYear.name}</span>
-                </div>
-
-                <div className="flex flex-row h-full">
-                  <div
-                    className="bg-black h-full ml-3"
-                    style={{
-                      width: 2,
-                      marginRight: 1,
-                    }}
-                  ></div>
-                  <div>
-                    {
-                      <ArchiveMedia
-                        year={selectedYear.name}
-                        category={selectedProgram.cat}
-                      />
-                    }
-                  </div>
+                  <span
+                    className="text-right font font-sans"
+                    data-aos="fade-up"
+                  >
+                    <Listbox
+                      as="div"
+                      value={selectedYear}
+                      onChange={setSelectedYear}
+                      className="listBox absolute z-2 md:right-20 right-6 text-lg"
+                    >
+                      <Listbox.Button className=" focus:outline-none">
+                        {selectedYear.name + " ▾"}
+                      </Listbox.Button>
+                      <Transition
+                        enter="transition duration-500 ease-out"
+                        enterFrom="transform scale-75 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-500 opacity-100"
+                        leaveTo="transform scale-75 opacity-0"
+                      >
+                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 focus:outline-white">
+                          {yearO.map((person) => (
+                            <Listbox.Option
+                              className="dropOptions py-1.5 px-2.5"
+                              key={person.id}
+                              value={person}
+                            >
+                              {person.name}
+                            </Listbox.Option>
+                          ))}
+                        </Listbox.Options>
+                      </Transition>
+                    </Listbox>
+                  </span>
                 </div>
               </div>
-              {/* <Timeline align="alternate">
-                <TimelineItem>
 
-                  <TimelineSeparator>
-                    <TimelineConnector className="" />
-                  </TimelineSeparator>
-                  <TimelineContent />
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  
-
-                  <TimelineContent><div className="grid grid-cols-12 gap-4 items-center">
-                    <div className="col-span-2">November 19</div>
-                    <div className="col-span-5">
-                      <img src={img1}/>
-                    </div>
-                    <div className="col-span-5">
-                    ‘NATYA RASA’
-                    Artists : lore ipsum , lore ipsum
-                    Lorem ipsum is a dummy text used for
-filling up content on websites, apps etc.
-Its very useful when we don’t have data
-                    </div>
-                    
-                    </div></TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>December 19</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                  </TimelineSeparator>
-                  <TimelineContent>January 19</TimelineContent>
-                </TimelineItem>
-              </Timeline> */}
+              <span className="ml-2.5 text-2xl font-medium">
+                {selectedYear.name}
+              </span>
             </div>
-          </>
+
+            <div className="flex flex-row h-full w-full mt-18  ml-4">
+              <div
+                className="bg-black h-full ml-3 w-3/5"
+                style={{
+                  width: 10,
+                  marginRight: 1,
+                }}
+              ></div>
+              <div className="my-5">
+                {
+                  <ArchiveMedia
+                    year={selectedYear.name}
+                    category={selectedProgram.cat}
+                  />
+                }
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -609,3 +609,23 @@ a.article:hover {
   border: none;
   outline: none;
 }
+
+.dropOptions:hover {
+  cursor: pointer;
+  background-color: #bdb5af;
+}
+.dropOptions {
+  padding: 0 3px;
+}
+.dropOpC {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.archiveImages {
+  max-height: 250px !important;
+}
+
+* {
+  transition: all 0.5s;
+}

@@ -235,16 +235,12 @@ function Contact() {
                     <form id="newsLetter">
                       <input
                         type="email"
-                        className="newsField text-white text-base bg-ahum-brown focus:bg-transparent focus:placeholder-transparent"
+                        className="newsField w-full text-white text-base bg-ahum-brown focus:bg-transparent focus:placeholder-transparent"
                         placeholder="Email Address"
                         onChange={(e) => setNewsMail(e.target.value)}
                       ></input>
-                      {/* <div
-                        className="border-t border"
-                        style={{ borderColor: borderColor }}
-                      ></div> */}
                       <button
-                        className="newsBtn  px-2 mt-2 bg-ahum-brown-collage transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-grey-600 text-base focus:border-none text-gray-700"
+                        className="newsBtn w-full px-2 mt-2 bg-ahum-brown-collage transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-grey-600 text-base focus:border-none text-gray-700"
                         type="submit"
                         name="emailSubmit"
                         onClick={(event) => {

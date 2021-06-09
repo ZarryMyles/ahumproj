@@ -6,7 +6,7 @@ import PublicIcon from "@material-ui/icons/Public";
 export default function TempArchive(props) {
   const { program } = props;
   return (
-    <div className="md:grid xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0 grid-cols-12 gap-4 items-center py-8 flex-shrink-0 mb-10  ml-0 mr-6">
+    <div className="md:grid  xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0 grid-cols-12 gap-4 items-center py-2 flex-shrink-0 mb-10  ml-0 mr-0">
       <div
         className="rounded-full flex bg-black md:h-3 md:w-3 h-4 w-4 col-span-1  archive-dot"
         // md:-ml-2 xs:-ml-8

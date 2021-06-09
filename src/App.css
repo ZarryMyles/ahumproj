@@ -625,7 +625,14 @@ a.article:hover {
 .archiveImages {
   max-height: 250px !important;
 }
-
+.archive-dot {
+  margin-left: -8.5px;
+}
+@media (max-width: 640px) {
+  .archive-dot {
+    margin-left: -30px;
+  }
+}
 * {
   transition: all 0.5s;
 }

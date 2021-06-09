@@ -62,75 +62,77 @@ function Archives(props) {
               <div className="flex flex-col justify-start font-medium md:text-xl text-lg mb-3 -ml-2">
                 <div className="flex justify-between">
                   <span className="md:-ml-0">ARCHIVES</span>
-                  <span className="pr-5 text-right">
-                    {/* Program <KeyboardArrowDownIcon /> */}
-                    <Listbox
-                      as="div"
-                      value={selectedProgram}
-                      className="listBox absolute z-2 md:right-52 right-20 text-lg"
-                      onChange={setSelectedProgram}
-                    >
-                      <Listbox.Button className="focus:outline-none">
-                        {selectedProgram.name + " ▾"}
-                      </Listbox.Button>
-                      <Transition
-                        enter="transition duration-500 ease-out"
-                        enterFrom="transform scale-95 opacity-0"
-                        enterTo="transform scale-100 opacity-100"
-                        leave="transition duration-75 ease-out"
-                        leaveFrom="transform scale-500 opacity-100"
-                        leaveTo="transform scale-95 opacity-0"
+                  <div>
+                    <span className="pr-5 absolute md:right-48 right-7 text-right">
+                      {/* Program <KeyboardArrowDownIcon /> */}
+                      <Listbox
+                        as="div"
+                        value={selectedProgram}
+                        className="listBox  z-2  text-lg"
+                        onChange={setSelectedProgram}
                       >
-                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage -right-10 rounded-md hover:cursor-pointer">
-                          {program.map((person) => (
-                            <Listbox.Option
-                              className="dropOptions py-1.5 px-2.5"
-                              key={person.id}
-                              value={person}
-                            >
-                              {person.name}
-                            </Listbox.Option>
-                          ))}
-                        </Listbox.Options>
-                      </Transition>
-                    </Listbox>
-                  </span>
+                        <Listbox.Button className="focus:outline-none">
+                          {selectedProgram.name + " ▾"}
+                        </Listbox.Button>
+                        <Transition
+                          enter="transition duration-500 ease-out"
+                          enterFrom="transform scale-95 opacity-0"
+                          enterTo="transform scale-100 opacity-100"
+                          leave="transition duration-75 ease-out"
+                          leaveFrom="transform scale-500 opacity-100"
+                          leaveTo="transform scale-95 opacity-0"
+                        >
+                          <Listbox.Options className="dropOpC relative bg-ahum-brown-collage -right-10 rounded-md hover:cursor-pointer">
+                            {program.map((person) => (
+                              <Listbox.Option
+                                className="dropOptions py-1.5 px-2.5"
+                                key={person.id}
+                                value={person}
+                              >
+                                {person.name}
+                              </Listbox.Option>
+                            ))}
+                          </Listbox.Options>
+                        </Transition>
+                      </Listbox>
+                    </span>
 
-                  <span
-                    className="text-right font font-sans"
-                    data-aos="fade-up"
-                  >
-                    <Listbox
-                      as="div"
-                      value={selectedYear}
-                      onChange={setSelectedYear}
-                      className="listBox absolute z-2 md:right-20 right-6 text-lg"
+                    <span
+                      className="text-right font font-sans absolute md:right-20 right-4"
+                      data-aos="fade-up"
                     >
-                      <Listbox.Button className=" focus:outline-none">
-                        {selectedYear.name + " ▾"}
-                      </Listbox.Button>
-                      <Transition
-                        enter="transition duration-500 ease-out"
-                        enterFrom="transform scale-75 opacity-0"
-                        enterTo="transform scale-100 opacity-100"
-                        leave="transition duration-75 ease-out"
-                        leaveFrom="transform scale-500 opacity-100"
-                        leaveTo="transform scale-75 opacity-0"
+                      <Listbox
+                        as="div"
+                        value={selectedYear}
+                        onChange={setSelectedYear}
+                        className="listBox  z-2  text-lg"
                       >
-                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 focus:outline-white">
-                          {yearO.map((person) => (
-                            <Listbox.Option
-                              className="dropOptions py-1.5 px-2.5"
-                              key={person.id}
-                              value={person}
-                            >
-                              {person.name}
-                            </Listbox.Option>
-                          ))}
-                        </Listbox.Options>
-                      </Transition>
-                    </Listbox>
-                  </span>
+                        <Listbox.Button className=" focus:outline-none">
+                          {selectedYear.name + " ▾"}
+                        </Listbox.Button>
+                        <Transition
+                          enter="transition duration-500 ease-out"
+                          enterFrom="transform scale-75 opacity-0"
+                          enterTo="transform scale-100 opacity-100"
+                          leave="transition duration-75 ease-out"
+                          leaveFrom="transform scale-500 opacity-100"
+                          leaveTo="transform scale-75 opacity-0"
+                        >
+                          <Listbox.Options className="dropOpC relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 focus:outline-white">
+                            {yearO.map((person) => (
+                              <Listbox.Option
+                                className="dropOptions py-1.5 px-2.5"
+                                key={person.id}
+                                value={person}
+                              >
+                                {person.name}
+                              </Listbox.Option>
+                            ))}
+                          </Listbox.Options>
+                        </Transition>
+                      </Listbox>
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -139,12 +141,12 @@ function Archives(props) {
               </span>
             </div>
 
-            <div className="flex flex-row h-full w-full mt-18  ml-4">
+            <div className="flex flex-row h-full w-full mt-18  ml-4 ">
               <div
-                className="bg-black h-full ml-3 w-3/5"
+                className="bg-black  ml-3   w-1"
                 style={{
-                  width: 10,
                   marginRight: 1,
+                  // make a css file and put mediaquery fr phones marginright:3
                 }}
               ></div>
               <div className="my-5">

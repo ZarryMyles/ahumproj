@@ -17,7 +17,7 @@ function SwastikSchoolofDanceMusic() {
     return (
       <>
         <div
-          className="flex md:flex-row flex-col  align-items-center md:mb-14  md:w-4/6 w-11/12 md:px-0 px-3 "
+          className="flex md:flex-row flex-col  align-items-center md:mb-14  md:w-4/6 w-11/12 md:px-0 px-3  "
           style={{
             background: "white",
             minHeight: "40vh",
@@ -83,14 +83,14 @@ function SwastikSchoolofDanceMusic() {
         </p>
       </div>
       <div
-        class="text-center font-medium  md:py-4 py-2 md:mb-5"
+        class="text-center font-medium  md:py-4 py-2 md:mb-5 md:ml-20"
         style={{ backgroundColor: "#D7CEC7" }}
       >
         <h2 className="text-2xl" style={{ color: "#41363D" }}>
           Schedule
         </h2>
       </div>
-      <div className=" py-4 md:px-0  flex flex-col items-center">
+      <div className=" py-4 md:px-0  md:ml-20 flex flex-col items-center">
         {schedule.map((lesson) => section(lesson))}
       </div>
 

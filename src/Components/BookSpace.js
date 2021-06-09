@@ -1,7 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import Navbar from "./Navbar";
-
-import $ from "jquery";
 import ImageZoom from "react-medium-image-zoom";
 
 import facility1 from "../assets/images/wifi-signal.png";
@@ -17,46 +14,8 @@ import thumb3 from "../assets/images/6-thumb.jpg";
 import thumb4 from "../assets/images/7-thumb.jpg";
 import thumb5 from "../assets/images/8-thumb.jpg";
 import thumb6 from "../assets/images/9-thumb.jpg";
-import TopLogoBar from "./TopLogoBar";
 
 function BookSpace() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const photos = [
-    {
-      src: thumb1,
-      width: 4,
-      height: 3,
-    },
-    {
-      src: thumb2,
-      width: 1,
-      height: 1,
-    },
-    {
-      src: thumb3,
-      width: 1,
-      height: 1,
-    },
-    {
-      src: thumb5,
-      width: 1,
-      height: 1,
-    },
-    {
-      src: thumb6,
-      width: 1,
-      height: 1,
-    },
-    {
-      src: thumb4,
-      width: 1,
-      height: 1,
-    },
-  ];
-
   return (
     <div class="wrapper">
       <div className="p-0">
@@ -64,7 +23,7 @@ function BookSpace() {
           <>
             <div className="py-5">
               {/* Top Content */}
-              <div className="flex lg:mx-32 mx-10 pl-24 flex-col items-center">
+              <div className="flex lg:mx-32 mx-10 md:pl-24 flex-col items-center">
                 <h1 className="text-2xl font-semibold">Book Our Space</h1>
                 <p className="text-black py-3">
                   Contrary to popular belief, Lorem Ipsum is not simply random
@@ -80,7 +39,7 @@ function BookSpace() {
               </div>
 
               {/* Collage */}
-              <div className="bg-ahum-brown-collage mt-10 h-max pl-24 py-10 lg:py-20">
+              <div className="bg-ahum-brown-collage mt-10 h-max md:pl-24 py-10 lg:py-20">
                 <div className="lg:mx-32 mx-10">
                   <div className="flex flex-row justify-center items-center">
                     <div className="mr-4">
@@ -142,7 +101,7 @@ function BookSpace() {
               </div>
 
               {/* Facilities */}
-              <div className="lg:mx-32 mx-10 mt-12 pl-8 ">
+              <div className="lg:mx-32 md:mx-10 mt-12 md:pl-8">
                 {/* for phones */}
                 <h2 className="text-2xl font-semibold text-center lg:hidden">
                   Facilities
@@ -151,8 +110,8 @@ function BookSpace() {
                 <h2 className="text-2xl font-semibold hidden lg:flex">
                   Facilities
                 </h2>
-                <div className="mt-10 flex flex-wrap justify-between">
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                <div className="mt-10 md:flex md:flex-row flex-wrap justify-between  w-full">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
                     <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-3/6"
@@ -163,7 +122,7 @@ function BookSpace() {
                     <span className="font-medium my-3 text-xl">WiFi</span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
                     <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-3/6"
@@ -176,7 +135,7 @@ function BookSpace() {
                     </span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
                     <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-3/6"
@@ -189,7 +148,7 @@ function BookSpace() {
                     </span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
                     <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-3/6"
@@ -202,7 +161,7 @@ function BookSpace() {
                     </span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
                     <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-3/6"
@@ -213,7 +172,7 @@ function BookSpace() {
                     <span className="font-medium my-3 text-xl">Pantry</span>
                   </div>
 
-                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2">
+                  <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
                     <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                       <img
                         className="w-3/6"

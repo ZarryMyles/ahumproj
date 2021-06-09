@@ -478,20 +478,21 @@ a.article:hover {
     width: 100%;
     /* background-color: white; */
     z-index: 99;
-    margin: auto;
     float: none;
   }
   .squarepic2 {
-    background-image: url("./Images/Anuradha.jpg");
+    background-image: url("./Images/Nat.jpg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     min-height: 50vh;
-    width: 100%;
+    width: 110%;
     /* background-color: white; */
     z-index: 99;
-    margin: auto;
     float: none;
+  }
+  .customp {
+    padding: 50px 12%;
   }
 
   .nattext {
@@ -588,6 +589,15 @@ a.article:hover {
 
 .newsField::placeholder {
   color: white;
+}
+.newsField {
+  border-bottom: 2px solid white !important;
+  max-width: 250px;
+  margin-bottom: 0.25rem;
+}
+
+.inputCss {
+  border: 1px solid lightgray !important;
 }
 
 .newsBtn {

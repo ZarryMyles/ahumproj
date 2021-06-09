@@ -33,7 +33,7 @@ export default function Form(props) {
           <div className="md:w-4/12 w-3/3">
             <input
               className={inputCSS}
-              type="text"
+              type="number"
               name="name"
               placeholder="Phone"
             />

@@ -15,7 +15,7 @@ export default function ArchiveMedia(props) {
     // const { data: archiveData } = await axios.get(
     //   "https://sheetdb.io/api/v1/nhnqv6cb4schd"
     // );
-    await fetch("https://sheetdb.io/api/v1/rl6xxethwit7k").then((res) =>
+    await fetch("https://sheetdb.io/api/v1/yvbjhrj1fdnek").then((res) =>
       res.json().then((archiveData) => setArchive(archiveData))
     );
   };
@@ -103,10 +103,10 @@ export default function ArchiveMedia(props) {
   return (
     <>
       {filter && !filter.length > 0 ? (
-        <div className="my-auto md:w-96 w-64  md:h-32 h-96 md:px-100 flex items-center">
+        <div className="my-auto w-auto md:ml-64 ml-12   md:h-32 h-96 md:px-100 flex items-center ">
           {" "}
-          <h3 className="my-auto mx-auto text-center text-ahum-maroon pt-20">
-            No results found! {console.log(test.compare)}
+          <h3 className="my-auto md:ml-32 text-center text-xl text-ahum-maroon pt-0 ">
+            No results found!
           </h3>
         </div>
       ) : (

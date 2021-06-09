@@ -1,32 +1,43 @@
 import React, { useEffect, useState } from "react";
-
-import Navbar from "./Navbar";
 import Card from "./Card";
-import $ from "jquery";
 import axios from "axios";
-import logo from "../Images/logo.png";
-import TopLogoBar from "./TopLogoBar";
 
 function UpcomingShows() {
   const [events, setEvents] = useState();
-  const [loading, setLoading] = useState(true);
-  const showsAPI = "https://sheetdb.io/api/v1/f33dgqjo600c9";
+  const [mail, setMail] = useState();
+  const [mailColor, setMailColor] = useState("black");
+  const validateEmail = RegExp(
+    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  );
+  function mailChange(email) {
+    setMail(email);
+    console.log(mail);
+  }
+  function submitHandler() {
+    if (!mail || !validateEmail.test(mail)) {
+      setMailColor("red");
+      alert("Enter a Valid e-mail");
+    } else {
+      alert("e-mail submitted");
+      setMailColor("green");
+    }
+    console.log(validateEmail.test(mail));
+  }
+  const showsAPI = "https://sheetdb.io/api/v1/y0lswprxys73t";
   useEffect(() => {
     window.scrollTo(0, 0);
     getData();
-    setLoading(false);
   }, []);
   const getData = async () => {
     const { data: events } = await axios.get(showsAPI);
     setEvents(events);
-    console.log(events.length);
   };
   function eventCard(program) {
     return (
       <div className="col-sm-12 col-md-6 col-xl-4 my-2">
         <div
-          data-aos="fade-down"
-          data-aos-duration="400"
+          data-aos="flip-right"
+          data-aos-duration="800"
           class="bg-holderbg2  mx-auto my-3"
           style={{ backgroundImage: `url('${program.image}')` }}
         ></div>
@@ -68,12 +79,17 @@ function UpcomingShows() {
             <input
               type="text"
               placeholder="you@mail.com"
-              className="my-auto  focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-300 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3   border-solid border border-black"
+              onChange={(e) => mailChange(e.target.value)}
+              style={{
+                color: { mailColor },
+              }}
+              className="my-auto  focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-300 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3  border "
             />
             <button
               className="my-2 py-1 px-4 bg-ahum-brown trantop sition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg "
               type="submit"
               value="Send Message"
+              onClick={submitHandler}
             >
               Submit
             </button>
@@ -94,7 +110,7 @@ function UpcomingShows() {
   }
   return (
     <div className=" md:ml-20 ">
-      <h1 className="text-2xl font-semibold text-center text-gray-700  md:my-5 ">
+      <h1 className="text-2xl font-semibold text-center text-gray-700  md:my-4 ">
         {events && events.length !== 0 ? "Upcoming Shows" : ""}
       </h1>
       {events ? (

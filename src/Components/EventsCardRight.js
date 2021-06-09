@@ -1,16 +1,19 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
 function EventsCardRight() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div
       className="row justify-content-center my-3 mx-0 py-3"
       style={{ background: "#D7CEC7", minHeight: "100vh" }}
     >
       <div className="col-md-5 col-md-pull-6 align-self-center md:hidden block pt-5">
-        <div class="holderbg2"></div>
+        <div data-aos="slide-right" class="holderbg2"></div>
       </div>
       <div
-        data-aos="fade-up"
+        data-aos="fade-right"
         className="col-md-6 col-md-push-6 py-5 align-self-center"
       >
         <h2

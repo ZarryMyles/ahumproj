@@ -13,7 +13,9 @@ function Archives(props) {
     { id: 4, name: "Kalakrida", cat: "kalakrida" },
     { id: 5, name: "Swastika School of Dance", cat: "swastikaschoolofdance" },
     { id: 6, name: "Shows", cat: "shows" },
-    { id: 7, name: "Adhoc Programs", cat: "adhocprograms" },
+    { id: 7, name: "Workshops", cat: "workshop" },
+    { id: 8, name: "ADHOC Program", cat: "adhocprograms" },
+    { id: 9, name: "Know your Art", cat: "knowyourart" },
   ];
   const yearO = [
     { id: 1, name: "2021" },
@@ -65,7 +67,7 @@ function Archives(props) {
                 <div className="flex justify-between">
                   <span className="md:-ml-0">ARCHIVES</span>
                   <div>
-                    <span className="pr-5 absolute md:right-48 right-7 text-right">
+                    <span className="pr-5 absolute md:right-48 -right-8 md:mt-0 mt-10 text-right">
                       {/* Program <KeyboardArrowDownIcon /> */}
                       <Listbox
                         as="div"
@@ -76,26 +78,17 @@ function Archives(props) {
                         <Listbox.Button className="focus:outline-none">
                           {selectedProgram.name + " ▾"}
                         </Listbox.Button>
-                        <Transition
-                          enter="transition duration-500 ease-out"
-                          enterFrom="transform scale-95 opacity-0"
-                          enterTo="transform scale-100 opacity-100"
-                          leave="transition duration-75 ease-out"
-                          leaveFrom="transform scale-500 opacity-100"
-                          leaveTo="transform scale-95 opacity-0"
-                        >
-                          <Listbox.Options className="dropOpC relative bg-ahum-brown-collage -right-10 rounded-md hover:cursor-pointer">
-                            {program.map((person) => (
-                              <Listbox.Option
-                                className="dropOptions py-1.5 px-2.5"
-                                key={person.id}
-                                value={person}
-                              >
-                                {person.name}
-                              </Listbox.Option>
-                            ))}
-                          </Listbox.Options>
-                        </Transition>
+                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 rounded-md hover:cursor-pointer">
+                          {program.map((person) => (
+                            <Listbox.Option
+                              className="dropOptions py-1.5 px-2.5"
+                              key={person.id}
+                              value={person}
+                            >
+                              {person.name}
+                            </Listbox.Option>
+                          ))}
+                        </Listbox.Options>
                       </Listbox>
                     </span>
 
@@ -112,26 +105,17 @@ function Archives(props) {
                         <Listbox.Button className=" focus:outline-none">
                           {selectedYear.name + " ▾"}
                         </Listbox.Button>
-                        <Transition
-                          enter="transition duration-500 ease-out"
-                          enterFrom="transform scale-75 opacity-0"
-                          enterTo="transform scale-100 opacity-100"
-                          leave="transition duration-75 ease-out"
-                          leaveFrom="transform scale-500 opacity-100"
-                          leaveTo="transform scale-75 opacity-0"
-                        >
-                          <Listbox.Options className="dropOpC relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 focus:outline-white">
-                            {yearO.map((person) => (
-                              <Listbox.Option
-                                className="dropOptions py-1.5 px-2.5"
-                                key={person.id}
-                                value={person}
-                              >
-                                {person.name}
-                              </Listbox.Option>
-                            ))}
-                          </Listbox.Options>
-                        </Transition>
+                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 ">
+                          {yearO.map((person) => (
+                            <Listbox.Option
+                              className="dropOptions py-1.5 px-2.5"
+                              key={person.id}
+                              value={person}
+                            >
+                              {person.name}
+                            </Listbox.Option>
+                          ))}
+                        </Listbox.Options>
                       </Listbox>
                     </span>
                   </div>

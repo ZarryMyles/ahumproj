@@ -25,7 +25,7 @@ function BookSpace() {
               {/* Top Content */}
               <div className="flex lg:mx-32 mx-10 md:pl-24 flex-col items-center">
                 <h1 className="text-2xl font-semibold">Book Our Space</h1>
-                <p className="text-black py-3">
+                <p className="text-black py-3 text-base">
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old. Richard McClintock,

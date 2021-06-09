@@ -61,13 +61,13 @@ function Archives(props) {
             <div className="">
               <div className="flex flex-col justify-start font-medium md:text-xl text-lg mb-3 -ml-2">
                 <div className="flex justify-between">
-                  <span className="md:-ml-0 -ml-6">ARCHIVES</span>
+                  <span className="md:-ml-0">ARCHIVES</span>
                   <span className="pr-5 text-right">
                     {/* Program <KeyboardArrowDownIcon /> */}
                     <Listbox
                       as="div"
                       value={selectedProgram}
-                      className="listBox absolute z-2 right-52 text-lg"
+                      className="listBox absolute z-2 md:right-52 right-20 text-lg"
                       onChange={setSelectedProgram}
                     >
                       <Listbox.Button className="focus:outline-none">
@@ -96,12 +96,15 @@ function Archives(props) {
                     </Listbox>
                   </span>
 
-                  <span className="text-right">
+                  <span
+                    className="text-right font font-sans"
+                    data-aos="fade-up"
+                  >
                     <Listbox
                       as="div"
                       value={selectedYear}
                       onChange={setSelectedYear}
-                      className="listBox absolute z-2 right-20 text-lg"
+                      className="listBox absolute z-2 md:right-20 right-6 text-lg"
                     >
                       <Listbox.Button className=" focus:outline-none">
                         {selectedYear.name + " ▾"}

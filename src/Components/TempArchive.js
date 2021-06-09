@@ -6,15 +6,15 @@ import PublicIcon from "@material-ui/icons/Public";
 export default function TempArchive(props) {
   const { program } = props;
   return (
-    <div className="md:grid xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0 grid-cols-12 gap-4 items-center py-8 flex-shrink-0 mb-10">
+    <div className="md:grid xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0 grid-cols-12 gap-4 items-center py-8 flex-shrink-0 mb-10  ml-0 mr-6">
       <div className="rounded-full flex bg-black md:h-3 md:w-3 h-4 w-4 col-span-1 md:-ml-2 xs:-ml-8"></div>
-      <div className="col-span-2 pl-1.5 font-normal text-lg xs:pb-3  md:pb-0 -mt-7  md:-mt-0">
+      <div className="col-span-2 pl-1.5 font-normal text-lg xs:pb-3  md:pb-0 -mt-5  md:-mt-0 md:mb-2 mb-3">
         {program.date.split(" ").length == 3 && program.date.split(" ")[1]}
         {program.date.split(" ").length == 2 && program.date.split(" ")[0]}
       </div>
       <div className="col-span-5 mr-10">
         <img
-          className="archiveImages"
+          className="archiveImages md:mb-0 mb-4"
           width="600px"
           height="300"
           src={
@@ -24,7 +24,7 @@ export default function TempArchive(props) {
           }
         />
       </div>
-      <div className="col-span-4 text-center text-base">
+      <div className="col-span-4 text-center text-base md:mr-0 mr-5">
         <span className="py-1 block text-xl font-semibold  text-center">
           ‘{program.event.toUpperCase()}’
         </span>

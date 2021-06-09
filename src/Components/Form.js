@@ -4,6 +4,7 @@ export default function Form(props) {
   const { title, event } = props.match.params;
 
   const titles = ["enquiry", "rsvp", "bookthespace"];
+  const events = ["event 1", "event 2", "event 3"];
   const history = useHistory();
   console.log(event, title);
   const [formDetails, setFormDetails] = useState({
@@ -17,7 +18,7 @@ export default function Form(props) {
 
       phno: "Enter a vaild Phone Number",
       mail: "Enter a vaild Email Address",
-      msg: "Enter a vaild Message",
+      // msg: "Enter a vaild Message",
       attendees: title === "rsvp" ? "Enter a vaild numbe for attendees" : "",
     },
   });
@@ -60,14 +61,14 @@ export default function Form(props) {
         }));
         break;
 
-      case "msg":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            msg: val.length < 5 ? "Enter a valid message!" : "",
-          },
-        }));
+        // case "msg":
+        //   setFormDetails((prevState) => ({
+        //     ...prevState,
+        //     error: {
+        //       ...prevState.error,
+        //       msg: val.length < 5 ? "Enter a valid message!" : "",
+        //     },
+        //   }));
         break;
       case "attendees":
         setFormDetails((prevState) => ({
@@ -114,30 +115,34 @@ export default function Form(props) {
 
       // Reset checkboxes and fields
       // document.getElementById("cForm").reset();
-      document.getElementById("formName").placeholder = "Your Name";
-      document.getElementById("formMail").placeholder = "Email";
-      document.getElementById("formPhno").placeholder = "Phone";
-      document.getElementById("formMsg").placeholder = "Your Message";
+      // document.getElementById("formName").placeholder = "Your Name";
+      // document.getElementById("formMail").placeholder = "Email";
+      // document.getElementById("formPhno").placeholder = "Phone";
+      // document.getElementById("formMsg").placeholder = "Your Message";
       // document.getElementById("attendees").placeholder = "No. of attendees";
 
       alert("Your Details have been submitted!");
       return history.push("/");
     } else {
       // setBorderColor("red");
-      console.error("Invalid Form");
+      // console.error("Invalid Form");
     }
   };
   const inputCSS =
     "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-300 mb-3 py-2 px-2 w-full border ";
-  useEffect(() => {
-    checkQuery();
-  }, []);
 
   function checkQuery() {
     if (!titles.includes(title.toLowerCase())) {
       return history.push("/");
     }
+    if (event !== undefined && !events.includes(event.toLowerCase())) {
+      console.log(true);
+      return history.push("/upcoming-shows");
+    }
   }
+  useEffect(() => {
+    checkQuery();
+  }, []);
   function form(rsvp = false) {
     return (
       <div className="flex flex-col md:w-5/12 ">

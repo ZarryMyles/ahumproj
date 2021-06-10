@@ -15,11 +15,9 @@ export default function TempArchive(props) {
         {program.date.split(" ").length == 3 && program.date.split(" ")[1]}
         {program.date.split(" ").length == 2 && program.date.split(" ")[0]}
       </div>
-      <div className="col-span-5 mr-10">
+      <div className="md:col-span-5 col-span-4 mr-10">
         <img
           className="archiveImages md:mb-0 mb-4"
-          width="400px"
-          height="300px"
           src={
             program.image_link === ""
               ? "https://via.placeholder.com/310x225?text=No Image Available"
@@ -39,7 +37,7 @@ export default function TempArchive(props) {
         </span>
         {program.date && (
           <span className="py-1 mb-2 block font-normal text-base leading-5 text-center">
-            {program.date}
+            {program.date.split(" ").length === 3 && program.date}
           </span>
         )}
         {program.instagram && (

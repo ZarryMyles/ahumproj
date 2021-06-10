@@ -126,11 +126,13 @@ function Archives(props) {
                 {selectedYear.name}
               </span>
             </div>
-
             <div className="flex flex-row h-full w-full mt-18  ml-4 ">
+              {/* this is the fuckin line */}
+
               <div
-                className="bg-black  ml-3   w-1"
+                className="bg-black  ml-3 archiveLine  "
                 style={{
+                  width: "2.5px",
                   marginRight: 1,
                   // make a css file and put mediaquery fr phones marginright:3
                 }}

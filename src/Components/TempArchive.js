@@ -6,7 +6,7 @@ import PublicIcon from "@material-ui/icons/Public";
 export default function TempArchive(props) {
   const { program } = props;
   return (
-    <div className="md:grid  xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0 grid-cols-12 gap-4 items-center py-2 flex-shrink-0 mb-10  ml-0 mr-0">
+    <div className="md:grid  xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0  grid-cols-12 gap-4 items-center py-2 flex-shrink-0 mb-10  ml-0 mr-0 ">
       <div
         className="rounded-full flex bg-black md:h-3 md:w-3 h-4 w-4 col-span-1  archive-dot"
         // md:-ml-2 xs:-ml-8
@@ -18,8 +18,8 @@ export default function TempArchive(props) {
       <div className="col-span-5 mr-10">
         <img
           className="archiveImages md:mb-0 mb-4"
-          width="600px"
-          height="300"
+          width="400px"
+          height="300px"
           src={
             program.image_link === ""
               ? "https://via.placeholder.com/310x225?text=No Image Available"
@@ -28,15 +28,20 @@ export default function TempArchive(props) {
         />
       </div>
       <div className="col-span-4 text-center text-base md:mr-0 mr-5">
-        <span className="py-1 block text-xl font-semibold  text-center">
+        <span className="py-1 block text-lg font-semibold  text-center">
           ‘{program.event.toUpperCase()}’
         </span>
-        <span className="py-2 block font-normal text-lg text-center  ">
+        <span className="py-1 block font-normal text-base text-center  ">
           Artists: {program.artist}
         </span>
-        <span className="py-2 mb-2 block font-normal text-lg leading-5 text-center">
+        <span className="py-1 block font-normal text-base leading-5 text-center">
           {program.category}
         </span>
+        {program.date && (
+          <span className="py-1 mb-2 block font-normal text-base leading-5 text-center">
+            {program.date}
+          </span>
+        )}
         {program.instagram && (
           <a href={program.instagram} className="px-3 py-3">
             {/* <InstagramIcon style={{ fontSize: 25 }} /> */}

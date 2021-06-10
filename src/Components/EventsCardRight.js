@@ -12,13 +12,10 @@ function EventsCardRight() {
       <div className="col-md-5 col-md-pull-6 align-self-center md:hidden block pt-5">
         <div class="holderbg2"></div>
       </div>
-      <div
-        data-aos="fade-right"
-        className="col-md-6 col-md-push-6 py-5 align-self-center"
-      >
+      <div className="col-md-6 col-md-push-6 py-5 align-self-center">
         <h2
           className="text-center text-xl"
-          style={{ color: "#5f585d", fontWeight: "600" }}
+          style={{ color: "#222021", fontWeight: "600" }}
         >
           Music by The Lake
         </h2>

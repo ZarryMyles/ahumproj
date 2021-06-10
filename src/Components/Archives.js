@@ -67,7 +67,7 @@ function Archives(props) {
                 <div className="flex justify-between">
                   <span className="md:-ml-0">ARCHIVES</span>
                   <div>
-                    <span className="pr-5 absolute md:right-48 -right-8 md:mt-0 mt-10 text-right">
+                    <span className="pr-2 absolute md:right-48 -right-8 md:mt-0 mt-10 text-right">
                       {/* Program <KeyboardArrowDownIcon /> */}
                       <Listbox
                         as="div"
@@ -75,13 +75,13 @@ function Archives(props) {
                         className="listBox  z-2  text-lg"
                         onChange={setSelectedProgram}
                       >
-                        <Listbox.Button className="focus:outline-none">
+                        <Listbox.Button className="focus:outline-none md:mb-1 md:mr-0 mr-10">
                           {selectedProgram.name + " ▾"}
                         </Listbox.Button>
-                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 rounded-md hover:cursor-pointer">
+                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 md:pt-1 rounded-md hover:cursor-pointer text-lg md:mr-0 mr-10">
                           {program.map((person) => (
                             <Listbox.Option
-                              className="dropOptions py-1.5 px-2.5"
+                              className="dropOptions py-1.5 px-2.5 text-base"
                               key={person.id}
                               value={person}
                             >
@@ -102,13 +102,13 @@ function Archives(props) {
                         onChange={setSelectedYear}
                         className="listBox  z-2  text-lg"
                       >
-                        <Listbox.Button className=" focus:outline-none">
+                        <Listbox.Button className=" focus:outline-none md:mb-1">
                           {selectedYear.name + " ▾"}
                         </Listbox.Button>
                         <Listbox.Options className="dropOpC relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 ">
                           {yearO.map((person) => (
                             <Listbox.Option
-                              className="dropOptions py-1.5 px-2.5"
+                              className="dropOptions py-1.5 px-2.5 md:text-base"
                               key={person.id}
                               value={person}
                             >

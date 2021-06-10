@@ -10,10 +10,10 @@ function EventsCardLeft() {
         <div class="holderbg3"></div>
       </div>
 
-      <div data-aos="fade-left" className="col-md-6 py-5 align-self-center">
+      <div className="col-md-6 py-5 align-self-center">
         <h2
           className="text-center text-xl"
-          style={{ color: "#5f585d", fontWeight: "600" }}
+          style={{ color: "#222021", fontWeight: "600" }}
         >
           Kalakrida
         </h2>

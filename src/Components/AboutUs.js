@@ -9,7 +9,7 @@ function About() {
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
           <div class="bg-holder-about"></div>
-          <p class="text-justify customp">
+          <p class="text-justify customp text-gray-700">
             ahum - art heart u and mind is a trust which was founded in 2015
             with the aim of connecting art and community. Today this has become
             very important. Though we are moving towards a more civilized world,

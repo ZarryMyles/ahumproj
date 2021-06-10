@@ -18,7 +18,7 @@ function Events() {
             style={{ background: "white", minHeight: "75vh" }}
           >
             <div className="col-md-5 col-md-pull-6 align-self-center">
-              <div data-aos="fade-right" class="holderbg1"></div>
+              <div class="holderbg1"></div>
             </div>
 
             <div className="col-md-6 py-5 align-self-center">

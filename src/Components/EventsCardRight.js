@@ -10,7 +10,7 @@ function EventsCardRight() {
       style={{ background: "#D7CEC7", minHeight: "100vh" }}
     >
       <div className="col-md-5 col-md-pull-6 align-self-center md:hidden block pt-5">
-        <div data-aos="slide-right" class="holderbg2"></div>
+        <div class="holderbg2"></div>
       </div>
       <div
         data-aos="fade-right"

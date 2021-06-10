@@ -7,10 +7,10 @@ function EventsCardLeft() {
       style={{ background: "white", height: "100vh" }}
     >
       <div className="col-md-5  col-md-pull-6 align-self-center">
-        <div data-aos="fade-right" class="holderbg3"></div>
+        <div class="holderbg3"></div>
       </div>
 
-      <div data-aos="fade-up" className="col-md-6 py-5 align-self-center">
+      <div data-aos="fade-left" className="col-md-6 py-5 align-self-center">
         <h2
           className="text-center text-xl"
           style={{ color: "#5f585d", fontWeight: "600" }}

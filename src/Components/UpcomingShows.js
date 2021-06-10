@@ -6,9 +6,7 @@ function UpcomingShows() {
   const [events, setEvents] = useState();
   const [mail, setMail] = useState();
   const [mailColor, setMailColor] = useState("black");
-  const validateEmail = RegExp(
-    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-  );
+  const validateEmail = RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/i);
   function mailChange(email) {
     setMail(email);
     console.log(mail);
@@ -23,10 +21,12 @@ function UpcomingShows() {
     }
     console.log(validateEmail.test(mail));
   }
-  const showsAPI = "https://sheetdb.io/api/v1/y0lswprxys73t";
+  const showsAPI =
+    "https://sheet.best/api/sheets/78bb0a4f-1844-4bc9-b638-c87a21c3ab50";
   useEffect(() => {
     window.scrollTo(0, 0);
     getData();
+    console.log("api", showsAPI);
   }, []);
   const getData = async () => {
     const { data: events } = await axios.get(showsAPI);
@@ -98,19 +98,19 @@ function UpcomingShows() {
       );
     if (loading)
       return (
-        <div className=" w-full h-96  flex flex-col items-center justify-center">
-          <h1 className=" text-center  text-ahum-maroon font-semibold md:text-4xl text-2xl">
-            Loading Data
-          </h1>
-          <div className="flex items-center flex-col justify-center">
-            <h4 className="text-lg my-5 text-center">Please wait...</h4>
+        <div className=" w-full   flex flex-col items-center justify-center md:mt-64 mt-96">
+          <div class="page-loader ">
+            <div class="spinner bg-ahum-maroon my-4"></div>
+            <div class="txt text-ahum-brown font-monserrat font-semibold md:text-2xl text-xl text-center">
+              Loading data
+            </div>{" "}
           </div>
         </div>
       );
   }
   return (
-    <div className=" md:ml-20 ">
-      <h1 className="text-2xl font-semibold text-center text-gray-700  md:my-4 ">
+    <div className=" md:ml-20 " style={{ transitionDelay: "0" }}>
+      <h1 className="text-2xl font-semibold text-center text-gray-700  my-2  ">
         {events && events.length !== 0 ? "Upcoming Shows" : ""}
       </h1>
       {events ? (

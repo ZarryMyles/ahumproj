@@ -36,10 +36,7 @@ function SwastikSchoolofDanceMusic() {
               }}
             ></div>
           </div>
-          <div
-            className="md:w-5/12 w-full py-3 md:pl-12 text-sm font-normal  md:border-l-2 md:border-t-0 border-t-2 md:my-0 mt-4"
-            style={{ borderColor: "#D7CEC7" }}
-          >
+          <div className="md:w-5/12 w-full py-3 md:pl-12 text-sm font-normal    md:my-0 mt-4">
             <h4 className="md:my-4 my-2 text-2xl md:text-left text-center">
               '{lesson.title.toUpperCase()}'
             </h4>
@@ -72,7 +69,7 @@ function SwastikSchoolofDanceMusic() {
         </h1>
         <div class="bg-holder-school   mx-auto"></div>
 
-        <p class="text-justify customp leading-5 md:text-base text-sm md:font-normal ">
+        <p class="text-justify customp leading-5 md:text-base text-sm md:font-normal text-ahum-gray">
           The school started in the year 2010 and was taken under the umbrella
           of ahum trust in 2015. At the school we conduct classes in
           Bharatanatyam and Carnatic vocal mainly. We have also had other forms

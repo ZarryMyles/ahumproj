@@ -18,14 +18,16 @@ export default function Form(props) {
 
       phno: "Enter a vaild Phone Number",
       mail: "Enter a vaild Email Address",
-      // msg: "Enter a vaild Message",
+      msg: title === "bookthespace" ? "Enter a vaild Message" : "",
       attendees: title === "rsvp" ? "Enter a vaild numbe for attendees" : "",
     },
   });
   const validateEmail = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
-  const validatePhone = RegExp(/^\d{10}$/i);
+  const validatePhone = RegExp(
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i
+  );
   let changeHandler = (event) => {
     let nam = event.target.name;
     let val = event.target.value;
@@ -61,14 +63,14 @@ export default function Form(props) {
         }));
         break;
 
-        // case "msg":
-        //   setFormDetails((prevState) => ({
-        //     ...prevState,
-        //     error: {
-        //       ...prevState.error,
-        //       msg: val.length < 5 ? "Enter a valid message!" : "",
-        //     },
-        //   }));
+      case "msg":
+        setFormDetails((prevState) => ({
+          ...prevState,
+          error: {
+            ...prevState.error,
+            msg: val.length < 5 ? "Enter a valid message!" : "",
+          },
+        }));
         break;
       case "attendees":
         setFormDetails((prevState) => ({
@@ -112,7 +114,6 @@ export default function Form(props) {
       // });
 
       // setBorderColor("green"); //Changes field border color to green
-
       // Reset checkboxes and fields
       // document.getElementById("cForm").reset();
       // document.getElementById("formName").placeholder = "Your Name";
@@ -122,10 +123,10 @@ export default function Form(props) {
       // document.getElementById("attendees").placeholder = "No. of attendees";
 
       alert("Your Details have been submitted!");
-      return history.push("/");
+      if (title === "rsvp") return history.push("/upcoming-shows");
+      else if (title === "bookthespace") return history.push("/bookspace");
+      else return history.push("/");
     } else {
-      // setBorderColor("red");
-      // console.error("Invalid Form");
     }
   };
   const inputCSS =
@@ -146,7 +147,7 @@ export default function Form(props) {
   function form(rsvp = false) {
     return (
       <div className="flex flex-col md:w-5/12 ">
-        <span className="mb-3 font-medium">We will get in touch!</span>
+        <span className="mb-3 font-medium">Please provide your details!</span>
         <div className="md:w-12/12">
           <input
             className={inputCSS}
@@ -257,7 +258,7 @@ export default function Form(props) {
     );
   }
   return (
-    <div className="flex flex-col items-center  mt-10 justify-center px-0 md:ml-20  pb-32">
+    <div className="flex flex-col items-center  mt-10 justify-center px-0 md:ml-20  pb-32 .font-montserrat">
       <h2 className="text-2xl font-semibold text-ahum-maroon mb-5">
         {title === "rsvp" && event}
         {title === "bookthespace" && "Book The Space"}

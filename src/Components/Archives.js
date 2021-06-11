@@ -47,28 +47,20 @@ function Archives(props) {
   );
   const [selectedYear, setSelectedYear] = useState(yearO[0]);
 
-  const handleToggle = () => {
-    $("#sidebar").toggleClass("active");
-  };
-  const resize = () => {
-    $("#sidebar").addClass("active");
-  };
-
   return (
     <div class="">
       <div className="md:ml-5">
-        <div
-          class="container-fluid justify-content-center px-0"
-          onMouseDown={resize}
-        >
+        <div class="container-fluid justify-content-center px-0">
           <div className="py-5 md:pl-64 md:pr-32 xs:px-5 xs:pl-10 justify-start">
             <div className="">
               <div className="flex flex-col justify-start font-medium md:text-xl text-lg mb-3 -ml-2">
                 <div className="flex justify-between">
                   <span className="md:-ml-0">ARCHIVES</span>
                   <div>
-                    <span className="pr-2 absolute md:right-48 -right-8 md:mt-0 mt-10 text-right">
-                      {/* Program <KeyboardArrowDownIcon /> */}
+                    <span
+                      className="pr-2 absolute md:right-48 -right-8 md:mt-0 mt-10 text-right "
+                      style={{ zIndex: "5000" }}
+                    >
                       <Listbox
                         as="div"
                         value={selectedProgram}

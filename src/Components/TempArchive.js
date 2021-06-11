@@ -33,7 +33,8 @@ export default function TempArchive(props) {
         </span>
         {program.artist && (
           <span className="py-1 block font-normal text-base text-center  ">
-            Artists: {program.artist}
+            {program.artist.split(",").length > 1 ? "Artists : " : "Artist : "}
+            {program.artist}
           </span>
         )}
         <span className="py-1 block font-normal text-base leading-5 text-center">

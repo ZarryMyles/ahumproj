@@ -13,7 +13,7 @@ function Archives(props) {
     { id: 4, name: "Kalakrida", cat: "kalakrida" },
     { id: 5, name: "Swastika School of Dance", cat: "swastikaschoolofdance" },
     { id: 6, name: "Shows", cat: "shows" },
-    { id: 7, name: "Workshops", cat: "workshop" },
+    { id: 7, name: "Workshops", cat: "workshops" },
     { id: 8, name: "ADHOC Program", cat: "adhocprograms" },
     { id: 9, name: "Know your Art", cat: "knowyourart" },
   ];

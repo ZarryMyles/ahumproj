@@ -31,9 +31,11 @@ export default function TempArchive(props) {
         <span className="py-1 block text-lg font-semibold  text-center">
           ‘{program.event.toUpperCase()}’
         </span>
-        <span className="py-1 block font-normal text-base text-center  ">
-          Artists: {program.artist}
-        </span>
+        {program.artist && (
+          <span className="py-1 block font-normal text-base text-center  ">
+            Artists: {program.artist}
+          </span>
+        )}
         <span className="py-1 block font-normal text-base leading-5 text-center">
           {program.category}
         </span>

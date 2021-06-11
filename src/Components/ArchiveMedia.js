@@ -7,7 +7,7 @@ export default function ArchiveMedia(props) {
   let { year, category } = props;
 
   const [archive, setArchive] = useState();
-
+  const [currentMonth, setCurrentMonth] = useState("");
   useEffect(() => {
     getData();
   }, []);
@@ -33,19 +33,7 @@ export default function ArchiveMedia(props) {
     "november",
     "december",
   ];
-  function compare(a, b) {
-    if (
-      months.indexOf(a.date.split(" ")[1]) <
-      months.indexOf(b.date.split(" ")[1])
-    )
-      return -1;
-    if (
-      months.indexOf(a.date.split(" ")[1]) >
-      months.indexOf(b.date.split(" ")[1])
-    )
-      return 1;
-    return 0;
-  }
+
   const byProg =
     archive &&
     archive.filter(
@@ -74,28 +62,61 @@ export default function ArchiveMedia(props) {
         "2021"
     );
   function chooseFilter() {
+    let currentMonth = "";
     if (year === "year" && category !== "program")
       return (
-        archive && byProg.map((program) => <TempArchive program={program} />)
+        archive &&
+        byProg.map((program) => {
+          let dispMonth = true;
+          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
+          else currentMonth = program.date.split(" ")[1];
+          console.log(currentMonth, dispMonth);
+          return <TempArchive program={program} dispMonth={dispMonth} />;
+        })
       );
     else if (year !== "year" && category === "program")
       return (
-        archive && byYear.map((program) => <TempArchive program={program} />)
+        archive &&
+        byYear.map((program) => {
+          let dispMonth = true;
+          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
+          else currentMonth = program.date.split(" ")[1];
+          console.log(currentMonth, dispMonth);
+          return <TempArchive program={program} dispMonth={dispMonth} />;
+        })
       );
     else if (year !== "year" && category !== "program") {
       return (
         archive &&
-        byProgYear.map((program) => <TempArchive program={program} />)
+        byProgYear.map((program) => {
+          let dispMonth = true;
+          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
+          else currentMonth = program.date.split(" ")[1];
+          console.log(currentMonth, dispMonth);
+          return <TempArchive program={program} dispMonth={dispMonth} />;
+        })
       );
     } else if (year === "year" && category === "program")
       return (
         archive &&
-        byCurrentYear.map((program) => <TempArchive program={program} />)
+        byCurrentYear.map((program) => {
+          let dispMonth = true;
+          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
+          else currentMonth = program.date.split(" ")[1];
+          console.log(currentMonth, dispMonth);
+          return <TempArchive program={program} dispMonth={dispMonth} />;
+        })
       );
     else
       return (
         archive &&
-        byCurrentYear.map((program) => <TempArchive program={program} />)
+        byCurrentYear.map((program) => {
+          let dispMonth = true;
+          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
+          else currentMonth = program.date.split(" ")[1];
+          console.log(currentMonth, dispMonth);
+          return <TempArchive program={program} dispMonth={dispMonth} />;
+        })
       );
   }
   const filter = chooseFilter();

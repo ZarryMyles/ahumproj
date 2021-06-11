@@ -92,10 +92,7 @@ function Archives(props) {
                       </Listbox>
                     </span>
 
-                    <span
-                      className="text-right font font-sans absolute md:right-20 right-4"
-                      data-aos="fade-up"
-                    >
+                    <span className="text-right font font-sans absolute md:right-20 right-4">
                       <Listbox
                         as="div"
                         value={selectedYear}

@@ -40,11 +40,9 @@ export default function TempArchive(props) {
         <span className="py-1 block font-normal text-base leading-5 text-center">
           {program.category}
         </span>
-        {program.date && (
+        {program && (
           <span className="py-1 mb-2 block font-normal text-base leading-5 text-center">
-            {program.date.split(" ").length === 3 &&
-              program.date.split(" ")[2] === 1 &&
-              program.date}
+            {program.date.split(" ")[0] !== "1" && program.date}
           </span>
         )}
         {program.instagram && (

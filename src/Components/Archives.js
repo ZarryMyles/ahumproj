@@ -124,8 +124,6 @@ function Archives(props) {
               </span>
             </div>
             <div className="flex flex-row h-full w-full mt-18  ml-4 ">
-              {/* this is the fuckin line */}
-
               <div
                 className="bg-black  ml-3 archiveLine  "
                 style={{

@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import ImageZoom from "react-medium-image-zoom";
+import Carousel from 'react-elastic-carousel';
+import 'styled-components';
 
 import facility1 from "../assets/images/wifi-signal.png";
 import facility2 from "../assets/images/microphone.png";
@@ -15,7 +17,10 @@ import thumb4 from "../assets/images/7-thumb.jpg";
 import thumb5 from "../assets/images/8-thumb.jpg";
 import thumb6 from "../assets/images/9-thumb.jpg";
 
+
 function BookSpace() {
+  const isPhone = window.innerWidth < 700;
+
   return (
     <div class="wrapper">
       <div className="p-0">
@@ -39,65 +44,110 @@ function BookSpace() {
               </div>
 
               {/* Collage */}
-              <div className="bg-ahum-brown-collage mt-10 h-max md:pl-24 py-10 lg:py-20">
-                <div className="lg:mx-32 mx-10">
-                  <div className="flex flex-row justify-center items-center">
-                    <div className="mr-4">
-                      <ImageZoom
-                        image={{
-                          src: thumb1,
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center items-center">
-                      <div className="flex flex-row justify-center items-center">
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: thumb2,
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
+              <div className="bg-ahum-brown-collage md:block flex mt-10 md:h-max md:pl-24 py-10 lg:py-20">
+                {isPhone? (<div className="h-full  w-screen">
+                  <div>
+                  <Carousel itemsToShow={1} className=" w-screen">
+                    <div><ImageZoom
+                          image={{
+                            src: thumb1,
+                            alt: "Golden Gate Bridge",
+                          }}
+                        /></div>
+                    <div><ImageZoom
+                              image={{
+                                src: thumb2,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            /></div>
+                    <div><ImageZoom
+                              image={{
+                                src: thumb3,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            /></div>
+                    <div><ImageZoom
+                              image={{
+                                src: thumb4,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            /></div>
+                    <div><ImageZoom
+                              image={{
+                                src: thumb5,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            /></div>
+                    <div><ImageZoom
+                              image={{
+                                src: thumb6,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            /></div>
+
+                  </Carousel>                  
+                  </div>
+                </div>):(
+                  <div className="lg:mx-32 mx-10 ">
+                    <div className="flex flex-row justify-center items-center">
+                      <div className="mr-4">
+                        <ImageZoom
+                          image={{
+                            src: thumb1,
+                            alt: "Golden Gate Bridge",
+                          }}
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center items-center">
+                        <div className="flex flex-row justify-center items-center">
+                          <div className="mr-4">
+                            <ImageZoom
+                              image={{
+                                src: thumb2,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            />
+                          </div>
+                          <div className="mr-4">
+                            <ImageZoom
+                              image={{
+                                src: thumb3,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            />
+                          </div>
                         </div>
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: thumb3,
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
+                        <div className="flex flex-row justify-center items-center">
+                          <div className="mr-4">
+                            <ImageZoom
+                              image={{
+                                src: thumb5,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            />
+                          </div>
+                          <div className="mr-4">
+                            <ImageZoom
+                              image={{
+                                src: thumb6,
+                                alt: "Golden Gate Bridge",
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div className="flex flex-row justify-center items-center">
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: thumb5,
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
-                        </div>
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: thumb6,
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
-                        </div>
+                      <div className="">
+                        <ImageZoom
+                          image={{
+                            src: thumb4,
+                            alt: "Golden Gate Bridge",
+                          }}
+                        />
                       </div>
-                    </div>
-                    <div className="">
-                      <ImageZoom
-                        image={{
-                          src: thumb4,
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
                     </div>
                   </div>
-                </div>
+                )
+}
               </div>
 
               {/* Facilities */}

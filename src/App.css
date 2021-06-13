@@ -698,3 +698,30 @@ a.article:hover {
     opacity: 0;
   }
 }
+
+.rec.rec-arrow {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+.rec.rec-arrow:enabled{
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none;
+}
+.rec.rec-arrow:focus{
+  outline: none;
+  border: none;
+}
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+.rec.rec-dot:hover, .rec.rec-dot:focus{
+  box-shadow: 0 0 1px 3px #b96c34 !important;
+}
+.rec-dot_active:hover,
+.rec-dot_active:focus, .ejXxNI {
+  box-shadow: 0 0 1px 3px #b96c34 !important;
+  background-color: #b96c34 !important;
+
+}

@@ -29,7 +29,7 @@ function TopLogoBar() {
           <img
             className={
               scrollDetect
-                ? "absolute h-20 md:ml-28 ml-10 mt-3 p-2 bg-ahum-brown-collage rounded-full border-black"
+                ? "absolute h-20 md:ml-28 ml-10 mt-3"
                 : "absolute h-28 md:ml-28 ml-10 p-2"
             }
             src={scrollDetect ? logo2 : logo}

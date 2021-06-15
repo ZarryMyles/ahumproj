@@ -12,7 +12,7 @@ export default function TempArchive(props) {
       className="md:grid  xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0  grid-cols-12 gap-4 items-center py-2 flex-shrink-0 mb-10  ml-0 mr-0 "
     >
       <div
-        className="rounded-full flex bg-black md:h-3 md:w-3 h-4 w-4 col-span-1  archive-dot"
+        className="rounded-full flex bg-black md:h-3 md:w-3 h-4 w-4 col-span-1  archive-dot md:-mt-4"
         // md:-ml-2 xs:-ml-8
       ></div>
       <div className="col-span-2 pl-1.5 font-normal text-lg xs:pb-3  md:pb-0 -mt-5  md:-mt-0 md:mb-2 mb-3">

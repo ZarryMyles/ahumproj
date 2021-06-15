@@ -51,26 +51,26 @@ function Archives(props) {
     <div class="">
       <div className="md:ml-5">
         <div class="container-fluid justify-content-center px-0">
-          <div className="md:py-5 py-5 md:pl-64 md:pr-32 xs:px-5 xs:pl-10 justify-start">
+          <div className="md:py-5 py-4 md:pl-64 md:pr-32 xs:px-5 xs:pl-10 justify-start">
             <div className="">
               <div className="flex flex-col justify-start font-medium md:text-xl text-base mb-3 -ml-2">
                 <div className="flex justify-between">
-                  <span className="md:-ml-0 md:-top-0 -top-10">ARCHIVES</span>
+                  <span className="md:-ml-0  md:pb-0 pb-3">ARCHIVES</span>
                   <div>
                     <span
-                      className="pr-2 absolute md:right-48 right-6 md:mt-0 mt-0  text-right  "
+                      className="pr-2 absolute md:right-48 right-16 md:mt-0 mt-4  text-right"
                       style={{ zIndex: "5000" }}
                     >
                       <Listbox
                         as="div"
                         value={selectedProgram}
-                        className="listBox  z-2  text-base"
+                        className="listBox  z-2  text-base max-w-6 "
                         onChange={setSelectedProgram}
                       >
-                        <Listbox.Button className="focus:outline-none md:mb-1 md:mr-0 mr-10">
+                        <Listbox.Button className="focus:outline-none md:mb-1">
                           {selectedProgram.name + " ▾"}
                         </Listbox.Button>
-                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 md:pt-1 rounded-md hover:cursor-pointer text-lg md:mr-0 mr-10">
+                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 md:pt-1 rounded-md hover:cursor-pointer text-lg">
                           {program.map((person) => (
                             <Listbox.Option
                               className="dropOptions py-1.5 px-2.5 text-base"
@@ -84,12 +84,12 @@ function Archives(props) {
                       </Listbox>
                     </span>
 
-                    <span className="text-right font font-sans absolute md:right-20 right-4">
+                    <span className="text-right font font-sans absolute md:right-20 right-4 md:mt-0 mt-4">
                       <Listbox
                         as="div"
                         value={selectedYear}
                         onChange={setSelectedYear}
-                        className="listBox  z-2  text-base"
+                        className="listBox  text-base"
                       >
                         <Listbox.Button className=" focus:outline-none md:mb-1">
                           {selectedYear.name + " ▾"}

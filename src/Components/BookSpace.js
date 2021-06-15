@@ -247,7 +247,7 @@ function BookSpace() {
                       src={facility6}
                     />
                   </div>
-                  <span className="font-medium my-3 text-base md:text-lg text-center">Restroom</span>
+                  <span className="font-medium my-3 text-base text-center">Restroom</span>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-start">

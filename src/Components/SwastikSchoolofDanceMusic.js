@@ -6,9 +6,6 @@ import logo from "../Images/logo.png";
 import TopLogoBar from "./TopLogoBar";
 import schedule from "../assets/JSON/schedule.json";
 function SwastikSchoolofDanceMusic() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const resize = () => {
     $("#sidebar").removeClass("active");
@@ -17,7 +14,7 @@ function SwastikSchoolofDanceMusic() {
     return (
       <>
         <div
-          className="flex md:flex-row flex-col  align-items-center md:mb-14  md:w-4/6 w-11/12 md:px-0 px-3  "
+          className="flex md:flex-row flex-col  align-items-center md:mb-4  md:w-4/6 w-11/12 md:px-0 px-3  "
           style={{
             background: "white",
             minHeight: "40vh",
@@ -36,7 +33,7 @@ function SwastikSchoolofDanceMusic() {
               }}
             ></div>
           </div>
-          <div className="md:w-5/12 w-full py-3 md:pl-12 text-sm font-normal    md:my-0 mt-4">
+          <div className="md:w-5/12 w-full py-3 md:pl-12 text-sm font-normal md:my-0 mt-4">
             <h4 className="md:my-4 my-2 text-2xl md:text-left text-center">
               '{lesson.title.toUpperCase()}'
             </h4>
@@ -62,7 +59,7 @@ function SwastikSchoolofDanceMusic() {
   }
 
   return (
-    <>
+    <div>
       <div class=" justify-content-center px-0 md:ml-20">
         <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10  my-4">
           Swastika School of Dance & Music
@@ -87,14 +84,14 @@ function SwastikSchoolofDanceMusic() {
           Schedule
         </h2>
       </div>
-      <div className=" py-4 md:px-0  md:ml-20 flex flex-col items-center">
+      <div className=" pt-4 md:px-0  md:ml-20 flex flex-col items-center">
         {schedule.map((lesson) => section(lesson))}
       </div>
 
-      <div class="text-center mb-5 md:ml-20">
+      <div class="text-center my-5 md:ml-20">
         <a
           type="button"
-          className="btn py-2 px-5"
+          className="btn py-2 px-5 mb-10"
           href="/archives/swastikaschoolofdance"
           style={{
             borderRadius: "25px",
@@ -105,7 +102,7 @@ function SwastikSchoolofDanceMusic() {
           Archives
         </a>
       </div>
-    </>
+    </div>
   );
 }
 

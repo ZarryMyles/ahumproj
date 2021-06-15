@@ -67,7 +67,7 @@ function Archives(props) {
                         className="listBox  z-2  text-base max-w-6 "
                         onChange={setSelectedProgram}
                       >
-                        <Listbox.Button className="focus:outline-none font-sans md:mb-1">
+                        <Listbox.Button className="focus:outline-none md:mb-1">
                           {selectedProgram.name + " ▾"}
                         </Listbox.Button>
                         <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 md:pt-1 rounded-md hover:cursor-pointer text-lg">

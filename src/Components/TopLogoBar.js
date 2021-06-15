@@ -22,14 +22,14 @@ function TopLogoBar() {
         <div
           className={
             scrollDetect
-              ? "fixed h-20 w-100 flex justify-center pr-10 z-50"
-              : "fixed h-28 bg-white w-100 z-50 flex justify-center pr-10"
+              ? "fixed h-0 w-100 flex justify-end z-50 md:pr-4 pr-2 bg-red-300"
+              : "fixed h-28 bg-white w-100 z-50 flex justify-end pr-10"
           }
         >
           <img
             className={
               scrollDetect
-                ? "absolute h-20 md:ml-28 ml-10 mt-3 z-50"
+                ? "absolute md:h-20 h-16 md:ml-28 ml-10 mt-3 z-50"
                 : "absolute h-28 md:ml-28 ml-10 p-2 z-50"
             }
             src={scrollDetect ? logo2 : logo}

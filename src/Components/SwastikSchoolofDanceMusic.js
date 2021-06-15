@@ -42,7 +42,6 @@ function SwastikSchoolofDanceMusic() {
                 <span className="font-medium">Instructor :</span>{" "}
                 {lesson.instructor}
               </h6>
-              {/* <h6 style={{ fontSize: "0.98em" }}><b>Genre :</b> Lorem Ipsum</h6> */}
               <h6 className="my-0.5">
                 {" "}
                 <span className="font-medium">Timings :</span> {lesson.timings}

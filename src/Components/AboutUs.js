@@ -45,10 +45,10 @@ function About() {
           </div>
 
           <div className="col-md-6 nattext  " id="block1">
-            <h5 className="pt-4 pb-2 text-lg" style={{ fontWeight: "600" }}>
+            <h5 className="pt-4 pb-1 text-lg" style={{ fontWeight: "600" }}>
               About Anuradha Venkataraman
             </h5>
-            <h5>Founder, Teacher</h5>
+            <h5 style={{ fontWeight: "400" }}>Founder, Teacher</h5>
             <p className="customp7">
               <br />I am a Bharatanatyam dancer and have trained under
               Padmabhushan Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an
@@ -81,10 +81,10 @@ function About() {
             </div>
 
             <div className="col-md-6 nattext" id="block1">
-              <h5 className="pt-4 pb-2 text-lg" style={{ fontWeight: "600" }}>
+              <h5 className="pt-4 pb-1 text-lg" style={{ fontWeight: "600" }}>
                 About Natarajan Ramamurthy
               </h5>
-              <h5>Founder</h5>
+              <h5 style={{ fontWeight: "400" }}>Founder</h5>
               <p className="customp7">
                 <br />
                 An engineer by profession, Natarajan has always been a patron of

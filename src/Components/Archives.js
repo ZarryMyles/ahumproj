@@ -58,7 +58,7 @@ function Archives(props) {
                   <span className="md:-ml-0 md:-top-0 -top-10">ARCHIVES</span>
                   <div>
                     <span
-                      className="pr-2 absolute md:right-48 -right-8 md:mt-0 mt-10  text-right bg-red-500 "
+                      className="pr-2 absolute md:right-48 right-6 md:mt-0 mt-0  text-right  "
                       style={{ zIndex: "5000" }}
                     >
                       <Listbox
@@ -111,11 +111,11 @@ function Archives(props) {
                 </div>
               </div>
 
-              <span className="ml-2.5 text-2xl font-medium">
+              <span className="md:ml-2.5 ml-1 text-2xl font-medium">
                 {selectedYear.name}
               </span>
             </div>
-            <div className="flex flex-row h-full w-full mt-18  ml-4 ">
+            <div className="flex flex-row h-full w-full mt-18  md:ml-4 ml-2.5">
               <div
                 className="bg-black  ml-3 archiveLine  "
                 style={{

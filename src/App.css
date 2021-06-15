@@ -648,6 +648,7 @@ a.article:hover {
     margin-left: -30px;
   }
   .archiveImages {
+    margin-left: 3rem !important;
     min-width: 200px !important;
     max-width: 200px !important;
     min-height: 155px !important;
@@ -704,24 +705,25 @@ a.article:hover {
   box-shadow: none;
   background-color: transparent;
 }
-.rec.rec-arrow:enabled{
+.rec.rec-arrow:enabled {
   background-color: transparent !important;
   box-shadow: none !important;
   border: none;
 }
-.rec.rec-arrow:focus{
+.rec.rec-arrow:focus {
   outline: none;
   border: none;
 }
 .rec.rec-arrow:disabled {
   visibility: hidden;
 }
-.rec.rec-dot:hover, .rec.rec-dot:focus{
+.rec.rec-dot:hover,
+.rec.rec-dot:focus {
   box-shadow: 0 0 1px 3px #b96c34 !important;
 }
 .rec-dot_active:hover,
-.rec-dot_active:focus, .ejXxNI {
+.rec-dot_active:focus,
+.ejXxNI {
   box-shadow: 0 0 1px 3px #b96c34 !important;
   background-color: #b96c34 !important;
-
 }

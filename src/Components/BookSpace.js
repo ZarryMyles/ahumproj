@@ -177,77 +177,77 @@ function BookSpace() {
               <h2 className="text-2xl font-semibold hidden lg:flex">
                 Facilities
               </h2>
-              <div className="mt-10 md:flex md:flex-row flex-wrap justify-between  w-full">
+              <div className="mt-10 md:flex md:flex-row grid grid-cols-2 justify-between  w-full">
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
-                  <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="rounded-full bg-ahum-brown-collage h-28 w-28 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                     <img
                       className="w-3/6"
                       alt="facilities wifi"
                       src={facility1}
                     />
                   </div>
-                  <span className="font-medium my-3 text-xl">WiFi</span>
+                  <span className="font-medium my-3 text-base md:text-lg text-center">WiFi</span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
-                  <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="rounded-full bg-ahum-brown-collage h-28 w-28 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                     <img
                       className="w-3/6"
                       alt="facilities 3 Microphones"
                       src={facility2}
                     />
                   </div>
-                  <span className="font-medium my-3 text-xl">
+                  <span className="font-medium my-3 text-base md:text-lg text-center">
                     3 Microphones
                   </span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
-                  <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="rounded-full bg-ahum-brown-collage h-28 w-28 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                     <img
                       className="w-3/6"
                       alt="facilities JBL EON Speakers"
                       src={facility3}
                     />
                   </div>
-                  <span className="font-medium my-3 text-xl">
+                  <span className="font-medium my-3 text-base md:text-lg text-center">
                     JBL EON Speakers
                   </span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
-                  <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="rounded-full bg-ahum-brown-collage h-28 w-28 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                     <img
                       className="w-3/6"
                       alt="facilities 4 LED Warm Lights"
                       src={facility4}
                     />
                   </div>
-                  <span className="font-medium my-3 text-xl">
-                    4 LED Warm Lights
+                  <span className="font-medium my-3 text-base md:text-lg text-center">
+                    4 LED Warm-Lights
                   </span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
-                  <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="rounded-full bg-ahum-brown-collage h-28 w-28 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                     <img
                       className="w-3/6"
                       alt="facilities Pantry"
                       src={facility5}
                     />
                   </div>
-                  <span className="font-medium my-3 text-xl">Pantry</span>
+                  <span className="font-medium my-3 text-base md:text-lg text-center">Pantry</span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
-                  <div className="rounded-full bg-ahum-brown-collage h-32 w-32 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
+                  <div className="rounded-full bg-ahum-brown-collage h-28 w-28 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                     <img
                       className="w-3/6"
                       alt="facilities Restroom"
                       src={facility6}
                     />
                   </div>
-                  <span className="font-medium my-3 text-xl">Restroom</span>
+                  <span className="font-medium my-3 text-base md:text-lg text-center">Restroom</span>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-start">

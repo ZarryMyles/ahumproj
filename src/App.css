@@ -416,7 +416,7 @@ a.article:hover {
   #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: rgb(65, 54, 61);
+    background: #411b22;
     transition: all 0.3s;
     color: white;
     height: 100vh;
@@ -572,7 +572,7 @@ a.article:hover {
         right: 10%; */
   }
   .customp7 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.95em;
     color: #41363d;
     line-height: 150%;
@@ -731,4 +731,29 @@ a.article:hover {
 .ejXxNI {
   box-shadow: 0 0 1px 3px #b96c34 !important;
   background-color: #b96c34 !important;
+}
+
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;  
+  background-color: #ffffff; 
 }

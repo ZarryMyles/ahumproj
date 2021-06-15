@@ -48,7 +48,7 @@ function Events() {
                     color: "white",
                   }}
                 >
-                  Know More
+                  Archives
                 </a>
               </div>
             </div>

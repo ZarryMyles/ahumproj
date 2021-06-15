@@ -38,7 +38,7 @@ function EventsCardRight() {
               color: "white",
             }}
           >
-            Know More
+            Archives
           </a>
         </div>
       </div>

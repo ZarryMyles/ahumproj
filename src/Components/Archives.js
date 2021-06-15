@@ -55,11 +55,11 @@ function Archives(props) {
             <div className="">
               <div className="flex flex-col justify-start font-medium md:text-xl text-base mb-3 -ml-2">
                 <div className="flex justify-between">
-                  <span className="md:-ml-0  md:pb-0 pb-3">ARCHIVES</span>
+                  <span className="md:-ml-0 md:pb-0 pb-3">ARCHIVES</span>
                   <div>
                     <span
                       className="pr-2 absolute md:right-48 right-16 md:mt-0 mt-4  text-right"
-                      style={{ zIndex: "5000" }}
+                      style={{ zIndex: "5" }}
                     >
                       <Listbox
                         as="div"
@@ -67,7 +67,7 @@ function Archives(props) {
                         className="listBox  z-2  text-base max-w-6 "
                         onChange={setSelectedProgram}
                       >
-                        <Listbox.Button className="focus:outline-none md:mb-1">
+                        <Listbox.Button className="focus:outline-none font-sans md:mb-1">
                           {selectedProgram.name + " ▾"}
                         </Listbox.Button>
                         <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 md:pt-1 rounded-md hover:cursor-pointer text-lg">
@@ -84,7 +84,7 @@ function Archives(props) {
                       </Listbox>
                     </span>
 
-                    <span className="text-right font font-sans absolute md:right-20 right-4 md:mt-0 mt-4">
+                    <span className="text-right  absolute md:right-20 right-4 md:mt-0 mt-4">
                       <Listbox
                         as="div"
                         value={selectedYear}
@@ -94,7 +94,7 @@ function Archives(props) {
                         <Listbox.Button className=" focus:outline-none md:mb-1">
                           {selectedYear.name + " ▾"}
                         </Listbox.Button>
-                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 ">
+                        <Listbox.Options className="dropOpC font-sans relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 ">
                           {yearO.map((person) => (
                             <Listbox.Option
                               className="dropOptions py-1.5 px-2.5 md:text-base"

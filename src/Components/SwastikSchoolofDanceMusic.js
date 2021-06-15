@@ -102,7 +102,7 @@ function SwastikSchoolofDanceMusic() {
             color: "white",
           }}
         >
-          Gallery
+          Archives
         </a>
       </div>
     </>

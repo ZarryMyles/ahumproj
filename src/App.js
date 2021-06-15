@@ -26,7 +26,7 @@ function App() {
     AOS.init();
   }, []);
 
-  // This is the variable that stores the API Key. Use this for all posts and Requests
+  // This is the variable that stores the API Key. Use this for all back-end posts and Requests
   console.log(process.env.REACT_APP_API_KEY);
 
   const handleToggle = () => {

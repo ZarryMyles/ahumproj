@@ -6,13 +6,12 @@ import logo from "../Images/logo.png";
 import TopLogoBar from "./TopLogoBar";
 import schedule from "../assets/JSON/schedule.json";
 function SwastikSchoolofDanceMusic() {
-
   const resize = () => {
     $("#sidebar").removeClass("active");
   };
   function section(lesson) {
     return (
-      <>
+      <div>
         <div
           className="flex md:flex-row flex-col  align-items-center md:mb-4  md:w-4/6 w-11/12 md:px-0 px-3  "
           style={{
@@ -53,7 +52,7 @@ function SwastikSchoolofDanceMusic() {
             </p>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 

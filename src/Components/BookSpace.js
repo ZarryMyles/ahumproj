@@ -42,7 +42,7 @@ function BookSpace() {
             </div>
 
             {/* Collage */}
-            <>
+            <div>
               {isPhone ? (
                 <div className="  w-screen justify-center bg-ahum-brown-collage py-4">
                   <Carousel
@@ -165,7 +165,7 @@ function BookSpace() {
                   </div>
                 </div>
               )}
-            </>
+            </div>
 
             {/* Facilities */}
             <div className="lg:mx-32 md:mx-10 mt-12 md:pl-8">
@@ -186,7 +186,9 @@ function BookSpace() {
                       src={facility1}
                     />
                   </div>
-                  <span className="font-medium my-3 text-base md:text-lg text-center">WiFi</span>
+                  <span className="font-medium my-3 text-base md:text-lg text-center">
+                    WiFi
+                  </span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
@@ -236,7 +238,9 @@ function BookSpace() {
                       src={facility5}
                     />
                   </div>
-                  <span className="font-medium my-3 text-base md:text-lg text-center">Pantry</span>
+                  <span className="font-medium my-3 text-base md:text-lg text-center">
+                    Pantry
+                  </span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
@@ -247,7 +251,9 @@ function BookSpace() {
                       src={facility6}
                     />
                   </div>
-                  <span className="font-medium my-3 text-base text-center">Restroom</span>
+                  <span className="font-medium my-3 text-base text-center">
+                    Restroom
+                  </span>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-start">

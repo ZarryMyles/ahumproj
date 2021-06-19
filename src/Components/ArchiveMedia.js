@@ -122,7 +122,7 @@ export default function ArchiveMedia(props) {
   const filter = chooseFilter();
   let test = [{ date: "january" }, { date: "march" }, { date: "february" }];
   return (
-    <>
+    <div>
       {filter && !filter.length > 0 ? (
         <div className="my-auto w-auto md:ml-64 ml-12   md:h-32 h-96 md:px-100 flex items-center ">
           {" "}
@@ -133,6 +133,6 @@ export default function ArchiveMedia(props) {
       ) : (
         filter
       )}
-    </>
+    </div>
   );
 }

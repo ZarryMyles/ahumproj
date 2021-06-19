@@ -15,7 +15,7 @@ import thumb2 from "../assets/images/4-thumb.jpg";
 import thumb3 from "../assets/images/6-thumb.jpg";
 import thumb4 from "../assets/images/7-thumb.jpg";
 import thumb5 from "../assets/images/8-thumb.jpg";
-import thumb6 from "../assets/images/9-thumb.jpg";
+import thumb6 from "../assets/images/10.jpg";
 
 function BookSpace() {
   const isPhone = window.innerWidth < 700;

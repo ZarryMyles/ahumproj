@@ -1,14 +1,146 @@
 import React, { useEffect } from "react";
-import Navbar from "./Navbar";
-import $ from "jquery";
-import TopLogoBar from "./TopLogoBar";
+import ImageZoom from "react-medium-image-zoom";
+import Carousel from "react-elastic-carousel";
+import "styled-components";
+
+// import car1 from ("https://res.cloudinary.com/ahum/image/upload/v1624519173/Ahum/collage1_h0ailx.jpg");
+// import car2 from "https://res.cloudinary.com/ahum/image/upload/v1624519174/Ahum/collage2_kglhum.jpg";
+// import car3 from "https://res.cloudinary.com/ahum/image/upload/v1624519796/Ahum/collage3_n13s1l.jpg";
+// import car4 from "https://res.cloudinary.com/ahum/image/upload/v1624519177/Ahum/collage4_pkzzxg.jpg";
+// import car5 from "https://res.cloudinary.com/ahum/image/upload/v1624519178/Ahum/collage5_je5r2a.jpg";
+// import car6 from "https://res.cloudinary.com/ahum/image/upload/v1624519175/Ahum/collage6_ulbfvt.jpg";
 
 function About() {
+  const isMob = window.innerWidth < 767;
+
   return (
     <div class="wrapper">
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
-          <div class="bg-holder-about"></div>
+          <>
+            {isMob ? (
+              <div className="  w-screen justify-center bg-ahum-brown-collage py-4">
+                <Carousel
+                  itemsToShow={1}
+                  className=" h-96 w-screen justify-center items-center"
+                >
+                  <div className="mt-20">
+                    <ImageZoom
+                      image={{
+                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519173/Ahum/collage1_h0ailx.jpg",
+                        alt: "Golden Gate Bridge",
+                      }}
+                    />
+                  </div>
+
+                  <div className="mt-12">
+                    <ImageZoom
+                      image={{
+                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519174/Ahum/collage2_kglhum.jpg",
+                        alt: "Golden Gate Bridge",
+                      }}
+                    />
+                  </div>
+                  <div className="mt-16">
+                    <ImageZoom
+                      image={{
+                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519796/Ahum/collage3_n13s1l.jpg",
+                        alt: "Golden Gate Bridge",
+                      }}
+                    />
+                  </div>
+
+                  <div className="mt-14">
+                    <ImageZoom
+                      image={{
+                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519177/Ahum/collage4_pkzzxg.jpg",
+                        alt: "Golden Gate Bridge",
+                      }}
+                    />
+                  </div>
+
+                  <div className="mt-14">
+                    <ImageZoom
+                      image={{
+                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519178/Ahum/collage5_je5r2a.jpg",
+                        alt: "Golden Gate Bridge",
+                      }}
+                    />
+                  </div>
+
+                  <div className="mt-14">
+                    <ImageZoom
+                      image={{
+                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519175/Ahum/collage6_ulbfvt.jpg",
+                        alt: "Golden Gate Bridge",
+                      }}
+                    />
+                  </div>
+                </Carousel>
+              </div>
+            ) : (
+              <div className="bg-ahum-brown-collage md:block flex mt-10 md:h-max md:pl-24 py-10 lg:py-20">
+                <div className="lg:mx-32 mx-10 ">
+                  <div className="flex flex-row justify-center bg-gray-400 items-center">
+                    <div className="mr-4">
+                      <ImageZoom
+                        image={{
+                          src: "https://res.cloudinary.com/ahum/image/upload/v1624519173/Ahum/collage1_h0ailx.jpg",
+                          alt: "Golden Gate Bridge",
+                        }}
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                      <div className="flex flex-row justify-center items-center">
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519174/Ahum/collage2_kglhum.jpg",
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519796/Ahum/collage3_n13s1l.jpg",
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-row justify-center items-center">
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519177/Ahum/collage4_pkzzxg.jpg",
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                        <div className="mr-4">
+                          <ImageZoom
+                            image={{
+                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519178/Ahum/collage5_je5r2a.jpg",
+                              alt: "Golden Gate Bridge",
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="">
+                      <ImageZoom
+                        image={{
+                          src: "https://res.cloudinary.com/ahum/image/upload/v1624519175/Ahum/collage6_ulbfvt.jpg",
+                          alt: "Golden Gate Bridge",
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
           <p class="text-justify customp text-gray-700">
             ahum - art heart u and mind is a trust which was founded in 2015
             with the aim of connecting art and community. Today this has become
@@ -48,7 +180,9 @@ function About() {
             <h5 className="pt-4 pb-1 text-lg" style={{ fontWeight: "600" }}>
               About Anuradha Venkataraman
             </h5>
-            <h5 style={{ fontWeight: "400" }}>Founder, Dancer, Choreographer</h5>
+            <h5 style={{ fontWeight: "400" }}>
+              Founder, Dancer, Choreographer
+            </h5>
             <p className="customp7">
               <br />I am a Bharatanatyam dancer and have trained under
               Padmabhushan Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an
@@ -57,8 +191,8 @@ function About() {
               years. Some of the productions choreographed by me are: "Pratham
               Parth", Jananyey Namah", "Vaidehi", “Stories Unearthed”, a site-
               specific work, 6 feet land and us & Female Gaze. I have been an
-              Artist in residence at TUIDA (South Korea) and OMI (New York).
-              Under ICCR, I performed in Sarajevo, Poland, Germany, Denmark and
+              Artist in residence at TUIDA (South Korea) and OMI ( York). Under
+              ICCR, I performed in Sarajevo, Poland, Germany, Denmark and
               Luxembourg. Academically, I am a gold medalist in Mphil- Cultural
               Studies from Jain University. With this background, it was natural
               for me to create a platform where I could bring art and society

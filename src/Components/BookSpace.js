@@ -27,17 +27,12 @@ function BookSpace() {
           <div className="py-5">
             {/* Top Content */}
             <div className="flex lg:mx-32 mx-10 md:pl-24 flex-col items-center">
-              <h1 className="text-2xl font-semibold">Book Our Space</h1>
-              <p className="text-black py-3 text-base">
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage. Contrary to popular belief, Lorem Ipsum is not
-                simply random text. It has roots in a piece of classical Latin
-                literature from 45 BC, making it over 2000 years old. Richard
-                McClintock
+              <h1 className="text-2xl font-semibold mb-4">Book Our Space</h1>
+              <div class="bg-holder-book mx-auto w-full mb-3"></div>
+              <p className="text-black py-3 text-base bookText">
+                Swastika studio can be booked for the following- Chamber
+                concerts, workshops, rehearsal space, conducting classes, stay
+                for artists who want to be in a residency and create work
               </p>
             </div>
 
@@ -186,7 +181,9 @@ function BookSpace() {
                       src={facility1}
                     />
                   </div>
-                  <span className="font-medium my-3 text-base md:text-lg text-center">WiFi</span>
+                  <span className="font-medium my-3 text-base md:text-lg text-center">
+                    WiFi
+                  </span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
@@ -236,7 +233,9 @@ function BookSpace() {
                       src={facility5}
                     />
                   </div>
-                  <span className="font-medium my-3 text-base md:text-lg text-center">Pantry</span>
+                  <span className="font-medium my-3 text-base md:text-lg text-center">
+                    Pantry
+                  </span>
                 </div>
 
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
@@ -247,7 +246,9 @@ function BookSpace() {
                       src={facility6}
                     />
                   </div>
-                  <span className="font-medium my-3 text-base text-center">Restroom</span>
+                  <span className="font-medium my-3 text-base text-center">
+                    Restroom
+                  </span>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-start">

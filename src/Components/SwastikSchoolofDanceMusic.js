@@ -6,7 +6,6 @@ import logo from "../Images/logo.png";
 import TopLogoBar from "./TopLogoBar";
 import schedule from "../assets/JSON/schedule.json";
 function SwastikSchoolofDanceMusic() {
-
   const resize = () => {
     $("#sidebar").removeClass("active");
   };
@@ -63,7 +62,7 @@ function SwastikSchoolofDanceMusic() {
         <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10  my-4">
           Swastika School of Dance & Music
         </h1>
-        <div class="bg-holder-school   mx-auto"></div>
+        <div class="bg-holder-school mx-auto"></div>
 
         <p class="text-justify customp leading-5 md:text-base text-sm md:font-normal text-ahum-gray">
           The school started in the year 2010 and was taken under the umbrella

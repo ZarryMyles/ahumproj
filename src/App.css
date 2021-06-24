@@ -243,14 +243,15 @@ a.article:hover {
   height: 50vh;
   width: 70%;
   /* background-color: ; */
-  background-image: url("./Images/coverschool.JPG");
+  background-image: url("https://res.cloudinary.com/ahum/image/upload/v1624528295/Ahum/imageedit_18_7664862360_mfyrij.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 @media (max-width: 600px) {
   .bg-holder-school {
     width: 100%;
+    background-size: cover;
   }
 }
 .bg-holder-about {
@@ -375,7 +376,7 @@ a.article:hover {
                             Screen 7
  -------------------------------------------------------*/
 .squarebgpic2 {
-  /* background-image: url("./Images/classpic1.JPG"); */
+  background-image: url("./Images/classpic1.JPG");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -733,8 +734,6 @@ a.article:hover {
   background-color: #b96c34 !important;
 }
 
-
-
 ::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -748,12 +747,39 @@ a.article:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   border: 2px solid #ffffff;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;  
-  background-color: #ffffff; 
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.bookText {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+@media (max-width: 767px) {
+  .bookText {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.bg-holder-book {
+  height: 50vh;
+  width: 70%;
+  /* background-color: ; */
+  background-image: url("https://res.cloudinary.com/ahum/image/upload/v1624528295/Ahum/imageedit_18_7664862360_mfyrij.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 600px) {
+  .bg-holder-book {
+    width: 100%;
+    background-size: cover;
+  }
 }

@@ -48,7 +48,7 @@ function About() {
             <h5 className="pt-4 pb-1 text-lg" style={{ fontWeight: "600" }}>
               About Anuradha Venkataraman
             </h5>
-            <h5 style={{ fontWeight: "400" }}>Founder, Teacher</h5>
+            <h5 style={{ fontWeight: "400" }}>Founder, Dancer, Choreographer</h5>
             <p className="customp7">
               <br />I am a Bharatanatyam dancer and have trained under
               Padmabhushan Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an

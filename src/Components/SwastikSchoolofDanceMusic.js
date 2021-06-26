@@ -1,19 +1,12 @@
-import React, { useEffect } from "react";
-
-import Navbar from "./Navbar";
-import $ from "jquery";
-import logo from "../Images/logo.png";
-import TopLogoBar from "./TopLogoBar";
+import React from "react";
 import schedule from "../assets/JSON/schedule.json";
+
 function SwastikSchoolofDanceMusic() {
-  const resize = () => {
-    $("#sidebar").removeClass("active");
-  };
   function section(lesson) {
     return (
-      <div>
+      <div className="flex justify-center ">
         <div
-          className="flex md:flex-row flex-col  align-items-center md:mb-4  md:w-4/6 w-11/12 md:px-0 px-3  "
+          className="flex md:flex-row  flex-col  align-items-center md:mb-4  md:w-4/6 w-11/12 md:px-0 px-3  "
           style={{
             background: "white",
             minHeight: "40vh",
@@ -27,6 +20,7 @@ function SwastikSchoolofDanceMusic() {
               data-aos-duration="400"
               data-aos-easing="ease-in-sine"
               data-aos-anchor-placement="top-bottom"
+              data-aos-once
               style={{
                 backgroundImage: `url('${lesson.image_url}')`,
               }}
@@ -74,6 +68,27 @@ function SwastikSchoolofDanceMusic() {
           Vocal by Shruthi Sridhara.
         </p>
       </div>
+      {/* instructor image */}
+      <div className="flex justify-center md:ml-20 mb-5">
+        <img
+          className="md:mx-2 mx-1"
+          src="https://res.cloudinary.com/ahum/image/upload/v1624519795/Ahum/Dance_instructor_aygtd6.png"
+          style={{
+            width: "400px",
+            minWidth: "150px",
+            height: "400px",
+          }}
+        ></img>
+        <img
+          className="md:mx-2 mx-1"
+          src="https://res.cloudinary.com/ahum/image/upload/v1624519793/Ahum/Music_instructor_qgvgap.png"
+          style={{
+            width: "400px",
+            minWidth: "150px",
+            height: "400px",
+          }}
+        ></img>
+      </div>
       <div
         class="text-center font-medium  md:py-4 py-2 md:mb-5 md:ml-20"
         style={{ backgroundColor: "#D7CEC7" }}
@@ -82,6 +97,7 @@ function SwastikSchoolofDanceMusic() {
           Schedule
         </h2>
       </div>
+      {/* schedule */}
       <div className=" pt-4 md:px-0  md:ml-20 flex flex-col items-center">
         {schedule.map((lesson) => section(lesson))}
       </div>

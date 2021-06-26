@@ -17,7 +17,7 @@ function About() {
     <div class="wrapper">
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
-          <>
+          <div>
             {isMob ? (
               <div className="  w-screen justify-center bg-ahum-brown-collage py-4">
                 <Carousel
@@ -140,7 +140,7 @@ function About() {
                 </div>
               </div>
             )}
-          </>
+          </div>
           <p class="text-justify customp text-gray-700">
             ahum - art heart u and mind is a trust which was founded in 2015
             with the aim of connecting art and community. Today this has become

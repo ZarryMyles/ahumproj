@@ -22,7 +22,7 @@ function About() {
               <div className="  w-screen justify-center bg-ahum-brown-collage py-4">
                 <Carousel
                   itemsToShow={1}
-                  className=" h-72 w-screen justify-center items-center"
+                  className=" h-96 w-screen justify-center items-center"
                 >
                   <div className="mt-20">
                     <ImageZoom
@@ -81,11 +81,11 @@ function About() {
             ) : (
               <div className="bg-ahum-brown-collage md:block flex mt-10 md:h-max md:pl-24 py-10 lg:py-20">
                 <div className="lg:mx-32 mx-10 ">
-                  <div className="flex flex-row justify-center  items-center">
+                  <div className="flex flex-row justify-center bg-gray-400 items-center">
                     <div className="mr-4">
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/genesiscloudimages/image/upload/v1625131287/ahum/about%20page%20collage/collage1_krugpj.jpg",
+                          src: "https://res.cloudinary.com/ahum/image/upload/v1624519173/Ahum/collage1_h0ailx.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -95,12 +95,12 @@ function About() {
                         <div className="mr-4">
                           <ImageZoom
                             image={{
-                              src: "https://res.cloudinary.com/genesiscloudimages/image/upload/v1625131287/ahum/about%20page%20collage/collage2_r7rmfl.jpg",
+                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519174/Ahum/collage2_kglhum.jpg",
                               alt: "Golden Gate Bridge",
                             }}
                           />
                         </div>
-                        <div className="mr-4 ">
+                        <div className="mr-4">
                           <ImageZoom
                             image={{
                               src: "https://res.cloudinary.com/ahum/image/upload/v1624519796/Ahum/collage3_n13s1l.jpg",
@@ -113,7 +113,7 @@ function About() {
                         <div className="mr-4">
                           <ImageZoom
                             image={{
-                              src: "https://res.cloudinary.com/genesiscloudimages/image/upload/v1625131289/ahum/about%20page%20collage/collage4_gosrtm.jpg",
+                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519177/Ahum/collage4_pkzzxg.jpg",
                               alt: "Golden Gate Bridge",
                             }}
                           />
@@ -121,7 +121,7 @@ function About() {
                         <div className="mr-4">
                           <ImageZoom
                             image={{
-                              src: "https://res.cloudinary.com/genesiscloudimages/image/upload/v1625131288/ahum/about%20page%20collage/collage5_pjtivt.jpg",
+                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519178/Ahum/collage5_je5r2a.jpg",
                               alt: "Golden Gate Bridge",
                             }}
                           />
@@ -131,7 +131,7 @@ function About() {
                     <div className="">
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/genesiscloudimages/image/upload/v1625131287/ahum/about%20page%20collage/collage6_xbzhqk.jpg",
+                          src: "https://res.cloudinary.com/ahum/image/upload/v1624519175/Ahum/collage6_ulbfvt.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />

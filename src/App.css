@@ -375,6 +375,11 @@ a.article:hover {
 /*-------------------------------------------------------
                             Screen 7
  -------------------------------------------------------*/
+.bg-image-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .squarebgpic2 {
   background-image: url("./Images/classpic1.JPG");
   background-position: top;

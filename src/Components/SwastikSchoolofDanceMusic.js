@@ -69,25 +69,30 @@ function SwastikSchoolofDanceMusic() {
         </p>
       </div>
       {/* instructor image */}
-      <div className="flex justify-center md:ml-20 mb-5">
-        <img
-          className="md:mx-2 mx-1"
-          src="https://res.cloudinary.com/ahum/image/upload/v1624519795/Ahum/Dance_instructor_aygtd6.png"
-          style={{
-            width: "400px",
-            minWidth: "150px",
-            height: "400px",
-          }}
-        ></img>
-        <img
-          className="md:mx-2 mx-1"
-          src="https://res.cloudinary.com/ahum/image/upload/v1624519793/Ahum/Music_instructor_qgvgap.png"
-          style={{
-            width: "400px",
-            minWidth: "150px",
-            height: "400px",
-          }}
-        ></img>
+      <div>
+        <div className=" md:ml-20 mb-3 md:text-2xl text-xl font-normal text-center md:my-10  my-4">
+          Instructors
+        </div>
+        <div className="flex justify-center md:ml-20 mb-5">
+          <img
+            className="md:mx-2 mx-1 "
+            src="https://res.cloudinary.com/ahum/image/upload/v1624519795/Ahum/Dance_instructor_aygtd6.png"
+            style={{
+              width: "400px",
+              minWidth: "150px",
+              height: "400px",
+            }}
+          ></img>
+          <img
+            className="md:mx-2 mx-1"
+            src="https://res.cloudinary.com/ahum/image/upload/v1624519793/Ahum/Music_instructor_qgvgap.png"
+            style={{
+              width: "200px",
+              minWidth: "150px",
+              height: "400px",
+            }}
+          ></img>
+        </div>
       </div>
       <div
         class="text-center font-medium  md:py-4 py-2 md:mb-5 md:ml-20"

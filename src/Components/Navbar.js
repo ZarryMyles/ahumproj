@@ -81,7 +81,7 @@ function Navbar() {
           <Link to="/swastik-school-of-dance">Swastika School of Dance</Link>
         </li>
         <li>
-          <a href="/bookspace">Book the Space</a>
+          <a href="/bookspace">Book our Space</a>
         </li>
         <li>
           <a href="/archives">Archives</a>

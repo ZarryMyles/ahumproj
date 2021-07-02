@@ -3,13 +3,6 @@ import ImageZoom from "react-medium-image-zoom";
 import Carousel from "react-elastic-carousel";
 import "styled-components";
 
-// import car1 from ("https://res.cloudinary.com/ahum/image/upload/v1624519173/Ahum/collage1_h0ailx.jpg");
-// import car2 from "https://res.cloudinary.com/ahum/image/upload/v1624519174/Ahum/collage2_kglhum.jpg";
-// import car3 from "https://res.cloudinary.com/ahum/image/upload/v1624519796/Ahum/collage3_n13s1l.jpg";
-// import car4 from "https://res.cloudinary.com/ahum/image/upload/v1624519177/Ahum/collage4_pkzzxg.jpg";
-// import car5 from "https://res.cloudinary.com/ahum/image/upload/v1624519178/Ahum/collage5_je5r2a.jpg";
-// import car6 from "https://res.cloudinary.com/ahum/image/upload/v1624519175/Ahum/collage6_ulbfvt.jpg";
-
 function About() {
   const isMob = window.innerWidth < 767;
 
@@ -81,7 +74,7 @@ function About() {
             ) : (
               <div className="bg-ahum-brown-collage md:block flex mt-10 md:h-max md:pl-24 py-10 lg:py-20">
                 <div className="lg:mx-32 mx-10 ">
-                  <div className="flex flex-row justify-center bg-gray-400 items-center">
+                  <div className="flex flex-row justify-center items-center">
                     <div className="mr-4">
                       <ImageZoom
                         image={{

@@ -28,7 +28,6 @@ function BookSpace() {
             {/* Top Content */}
             <div className="flex lg:mx-32 mx-10 md:pl-24 flex-col items-center">
               <h1 className="text-2xl font-semibold mb-4">Book Our Space</h1>
-              <div class="bg-holder-book mx-auto w-full mb-3"></div>
               <p className="text-black py-3 text-base bookText">
                 Swastika studio can be booked for the following- Chamber
                 concerts, workshops, rehearsal space, conducting classes, stay

@@ -72,8 +72,8 @@ function About() {
                 </Carousel>
               </div>
             ) : (
-              <div className="bg-ahum-brown-collage md:block flex mt-10 md:h-max md:pl-24 py-10 lg:py-20">
-                <div className="lg:mx-32 mx-10 ">
+              <div className="bg-ahum-brown-collage md:block flex md:pl-0 ">
+                {/* <div className="lg:mx-32 mx-10 ">
                   <div className="flex flex-row justify-center items-center">
                     <div className="mr-4">
                       <ImageZoom
@@ -130,7 +130,12 @@ function About() {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
+                <img
+                  className="w-full "
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/q_auto:eco/v1625828788/about_collage/ahum_collage_2_o1cthv.png"
+                  alt="about us collage"
+                />
               </div>
             )}
           </div>

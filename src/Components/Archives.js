@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import $ from "jquery";
+import React, { useState } from "react";
+import { Listbox } from "@headlessui/react";
+
 import ArchiveMedia from "./ArchiveMedia";
 
 function Archives(props) {

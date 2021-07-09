@@ -21,8 +21,7 @@ function UpcomingShows() {
     }
     console.log(validateEmail.test(mail));
   }
-  const showsAPI =
-    "https://sheet.best/api/sheets/78bb0a4f-1844-4bc9-b638-c87a21c3ab50";
+  const showsAPI = "http://184.168.122.143:1337/upcomings";
   useEffect(() => {
     window.scrollTo(0, 0);
     getData();
@@ -83,7 +82,7 @@ function UpcomingShows() {
               style={{
                 color: { mailColor },
               }}
-              className="my-auto  focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-300 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3  border "
+              className="my-auto  focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3  border "
             />
             <button
               className="my-2 py-1 px-4 bg-ahum-brown trantop sition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg "

@@ -5,6 +5,20 @@ import PublicIcon from "@material-ui/icons/Public";
 
 export default function TempArchive(props) {
   const { program, dispMonth } = props;
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   return (
     <div
       data-aos="slide-up"
@@ -16,18 +30,17 @@ export default function TempArchive(props) {
         // md:-ml-2 xs:-ml-8
       ></div>
       <div className="col-span-2 pl-1.5 font-normal text-lg xs:pb-3  md:pb-0 -mt-5  md:-mt-0 md:mb-2 mb-3">
-        {dispMonth &&
-          program.date.split(" ").length == 3 &&
-          program.date.split(" ")[1]}
+        {dispMonth && months[parseInt(program.date.split("-")[1])]}
         {program.date.split(" ").length == 2 && program.date.split(" ")[0]}
       </div>
       <div className="md:col-span-5 col-span-4 mr-10">
+        {console.log(program.image_link)}
         <img
           className="archiveImages md:mb-0 mb-4"
           src={
-            program.image_link === ""
+            !program.image
               ? "https://via.placeholder.com/310x225?text=No Image Available"
-              : program.image_link
+              : program.image
           }
         />
       </div>
@@ -46,7 +59,7 @@ export default function TempArchive(props) {
         </span>
         {program && (
           <span className="py-1 mb-2 block font-normal text-base leading-5 text-center">
-            {program.date.split(" ")[0] !== "1" && program.date}
+            {program.date && program.date.split("-").reverse().join("-")}
           </span>
         )}
         {program.instagram && (

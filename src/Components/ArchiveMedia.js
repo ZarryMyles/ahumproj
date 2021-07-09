@@ -13,26 +13,23 @@ export default function ArchiveMedia(props) {
   }, []);
   let getData = async () => {
     // const { data: archiveData } = await axios.get(
-    //   "https://sheetdb.io/api/v1/nhnqv6cb4schd"
+    //   "http://184.168.122.143:1337/archives"
     // );
-    await fetch("https://sheetdb.io/api/v1/yvbjhrj1fdnek").then((res) =>
+    // setArchive(archiveData);
+    // console.log(archiveData);
+
+    await fetch("http://184.168.122.143:1337/archives").then((res) =>
       res.json().then((archiveData) => setArchive(archiveData))
     );
+
+    await fetch("http://184.168.122.143:1337/archives").then((res) =>
+      res
+        .json()
+        .then((archiveData) =>
+          archiveData.map((data) => console.log(data.date.split("-")[0]))
+        )
+    );
   };
-  const months = [
-    "january",
-    "february",
-    "march",
-    "april",
-    "may",
-    "june",
-    "july",
-    "august",
-    "september",
-    "october",
-    "november",
-    "december",
-  ];
 
   const byProg =
     archive &&
@@ -41,26 +38,17 @@ export default function ArchiveMedia(props) {
         program.category.toLowerCase().trim().replaceAll(" ", "") === category
     );
   const byYear =
-    archive &&
-    archive.filter(
-      (program) =>
-        program.date.toLowerCase().trim().replaceAll(" ", "").slice(-4) === year
-    );
+    archive && archive.filter((program) => program.date.split("-")[0] === year);
   const byProgYear =
     archive &&
     archive.filter(
       (program) =>
-        program.date.toLowerCase().trim().replaceAll(" ", "").slice(-4) ===
-          year &&
+        program.date.split("-")[0] === year &&
         program.category.toLowerCase().trim().replaceAll(" ", "") === category
     );
   const byCurrentYear =
     archive &&
-    archive.filter(
-      (program) =>
-        program.date.toLowerCase().trim().replaceAll(" ", "").slice(-4) ===
-        "2021"
-    );
+    archive.filter((program) => program.date.split("-")[0] === "2021");
   function chooseFilter() {
     let currentMonth = "";
     if (year === "year" && category !== "program")
@@ -68,8 +56,8 @@ export default function ArchiveMedia(props) {
         archive &&
         byProg.map((program) => {
           let dispMonth = true;
-          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
-          else currentMonth = program.date.split(" ")[1];
+          if (currentMonth === program.date.split("-")[1]) dispMonth = false;
+          else currentMonth = program.date.split("-")[1];
           console.log(currentMonth, dispMonth);
           return <TempArchive program={program} dispMonth={dispMonth} />;
         })
@@ -79,8 +67,8 @@ export default function ArchiveMedia(props) {
         archive &&
         byYear.map((program) => {
           let dispMonth = true;
-          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
-          else currentMonth = program.date.split(" ")[1];
+          if (currentMonth === program.date.split("-")[1]) dispMonth = false;
+          else currentMonth = program.date.split("-")[1];
           console.log(currentMonth, dispMonth);
           return <TempArchive program={program} dispMonth={dispMonth} />;
         })
@@ -90,8 +78,8 @@ export default function ArchiveMedia(props) {
         archive &&
         byProgYear.map((program) => {
           let dispMonth = true;
-          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
-          else currentMonth = program.date.split(" ")[1];
+          if (currentMonth === program.date.split("-")[1]) dispMonth = false;
+          else currentMonth = program.date.split("-")[1];
           console.log(currentMonth, dispMonth);
           return <TempArchive program={program} dispMonth={dispMonth} />;
         })
@@ -101,8 +89,8 @@ export default function ArchiveMedia(props) {
         archive &&
         byCurrentYear.map((program) => {
           let dispMonth = true;
-          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
-          else currentMonth = program.date.split(" ")[1];
+          if (currentMonth === program.date.split("-")[1]) dispMonth = false;
+          else currentMonth = program.date.split("-")[1];
           console.log(currentMonth, dispMonth);
           return <TempArchive program={program} dispMonth={dispMonth} />;
         })
@@ -112,15 +100,15 @@ export default function ArchiveMedia(props) {
         archive &&
         byCurrentYear.map((program) => {
           let dispMonth = true;
-          if (currentMonth === program.date.split(" ")[1]) dispMonth = false;
-          else currentMonth = program.date.split(" ")[1];
+          if (currentMonth === program.date.split("-")[1]) dispMonth = false;
+          else currentMonth = program.date.split("-")[1];
           console.log(currentMonth, dispMonth);
           return <TempArchive program={program} dispMonth={dispMonth} />;
         })
       );
   }
   const filter = chooseFilter();
-  let test = [{ date: "january" }, { date: "march" }, { date: "february" }];
+
   return (
     <div>
       {filter && !filter.length > 0 ? (
@@ -136,3 +124,11 @@ export default function ArchiveMedia(props) {
     </div>
   );
 }
+// <div className="  flex flex-col items-center justify-center ">
+//   <div class="page-loader my-auto  w-full  md:ml-20 flex flex-col items-center">
+//     <div class="spinner bg-ahum-maroon my-4"></div>
+//     <div class="txt text-ahum-brown font-monserrat font-semibold md:text-2xl text-xl text-center">
+//       Loading data
+//     </div>
+//   </div>
+// </div>

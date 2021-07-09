@@ -104,14 +104,14 @@ export default function Form(props) {
       return valid;
     };
     if (validateForm(formDetails.error)) {
-      // console.log({
-      //   Name: formDetails.name,
-      //   Mail: formDetails.mail,
-      //   PhNo: formDetails.phno,
-      //   Message: formDetails.msg,
-      //   Att: formDetails.attendees,
-      //   Date: new Date().toLocaleString(),
-      // });
+      console.log({
+        Name: formDetails.name,
+        Mail: formDetails.mail,
+        PhNo: formDetails.phno,
+        Message: formDetails.msg,
+        Att: formDetails.attendees,
+        Date: new Date().toLocaleString(),
+      });
 
       // setBorderColor("green"); //Changes field border color to green
       // Reset checkboxes and fields
@@ -130,7 +130,7 @@ export default function Form(props) {
     }
   };
   const inputCSS =
-    "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-300 mb-3 py-2 px-2 w-full border ";
+    "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 px-2 w-full border ";
 
   function checkQuery() {
     if (!titles.includes(title.toLowerCase())) {

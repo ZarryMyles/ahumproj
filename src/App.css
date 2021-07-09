@@ -243,7 +243,7 @@ a.article:hover {
   height: 50vh;
   width: 70%;
   /* background-color: ; */
-  background-image: url("https://res.cloudinary.com/ahum/image/upload/v1624528295/Ahum/imageedit_18_7664862360_mfyrij.jpg");
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625834727/swastika%20school%20of%20dance%20schedule/swastika-school-of-dance_giqla4.jpg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -256,7 +256,7 @@ a.article:hover {
 }
 .bg-holder-about {
   height: 55vh;
-  background-image: url("./Images/AboutUSBackground.JPG");
+  /* background-image: url("./Images/AboutUSBackground.JPG"); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -269,7 +269,7 @@ a.article:hover {
   line-height: 150%;
 }
 .squarepic1 {
-  background-image: url("./Images/Anuradha.jpg");
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/q_auto:eco/v1625830330/Anuradha_nwm3fa.jpg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -279,7 +279,7 @@ a.article:hover {
   z-index: 99;
 }
 .squarepic2 {
-  background-image: url("./Images/Nat.jpg");
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/q_auto:eco/v1625830328/Natarajan_vcun0e.jpg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -297,7 +297,7 @@ a.article:hover {
                             Screen 4 
  -------------------------------------------------------*/
 .holderbg1 {
-  background-image: url("./Images/sssbgpic1.jpg");
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835305/events/sssbgpic1_imroc8.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -306,7 +306,7 @@ a.article:hover {
   width: 100%;
 }
 .holderbg2 {
-  background-image: url("./Images/musicbgpic2.jpg");
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835306/events/musicbgpic2_x96ri3.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -315,7 +315,7 @@ a.article:hover {
   width: 100%;
 }
 .holderbg3 {
-  background-image: url("./Images/kalakaribgpic3.jpg");
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835305/events/sssbgpic1_imroc8.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -340,7 +340,6 @@ a.article:hover {
   height: 47vh;
   width: 60%;
 
-  background-image: url("./Images/eventsbg1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -349,7 +348,7 @@ a.article:hover {
 .bg-holderbg2 {
   height: 47vh;
   width: 60%;
-  background-image: url("./Images/eventsbg2.jpg");
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -357,7 +356,7 @@ a.article:hover {
 .bg-holderbg3 {
   height: 47vh;
   width: 60%;
-  background-image: url("./Images/eventsbg3.jpg");
+
   background-position: center;
   background-size: cover;
 
@@ -381,16 +380,17 @@ a.article:hover {
   background-repeat: no-repeat;
 }
 .squarebgpic2 {
-  background-image: url("./Images/classpic1.JPG");
-  background-position: top;
+  /* background-image: url("./Images/classpic1.JPG"); */
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 36vh;
-  max-width: 80%;
+  /* width: 100px; */
+  /* max-width: 80%; */
   /* z-index: 99; */
 }
 .squarebgpic3 {
-  background-image: url("./Images/carnoic2.jpg");
+  /* background-image: url("./Images/carnoic2.jpg"); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -485,7 +485,7 @@ a.article:hover {
     right: 10%;
   }
   .squarepic1 {
-    background-image: url("./Images/Anuradha.jpg");
+    background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625830330/Anuradha_nwm3fa.jpg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -496,7 +496,7 @@ a.article:hover {
     float: none;
   }
   .squarepic2 {
-    background-image: url("./Images/Nat.jpg");
+    background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625830328/Natarajan_vcun0e.jpg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

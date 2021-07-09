@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React from "react";
 import ImageZoom from "react-medium-image-zoom";
 import Carousel from "react-elastic-carousel";
 import "styled-components";
@@ -9,13 +9,6 @@ import facility3 from "../assets/images/speaker.png";
 import facility4 from "../assets/images/light-bulb.png";
 import facility5 from "../assets/images/pantry.png";
 import facility6 from "../assets/images/toilet-signs.png";
-
-import thumb1 from "../assets/images/1-thumb.jpg";
-import thumb2 from "../assets/images/4-thumb.jpg";
-import thumb3 from "../assets/images/6-thumb.jpg";
-import thumb4 from "../assets/images/7-thumb.jpg";
-import thumb5 from "../assets/images/8-thumb.jpg";
-import thumb6 from "../assets/images/10.jpg";
 
 function BookSpace() {
   const isPhone = window.innerWidth < 700;
@@ -46,7 +39,7 @@ function BookSpace() {
                     <div>
                       <ImageZoom
                         image={{
-                          src: thumb1,
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/1-thumb_ytxlja.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -55,7 +48,7 @@ function BookSpace() {
                     <div className="mt-12">
                       <ImageZoom
                         image={{
-                          src: thumb2,
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/4-thumb_oz1auf.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -63,7 +56,7 @@ function BookSpace() {
                     <div className="mt-28">
                       <ImageZoom
                         image={{
-                          src: thumb3,
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/6-thumb_lbtiy5.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -72,7 +65,7 @@ function BookSpace() {
                     <div>
                       <ImageZoom
                         image={{
-                          src: thumb4,
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/7-thumb_ixjwtq.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -81,7 +74,7 @@ function BookSpace() {
                     <div className="mt-28">
                       <ImageZoom
                         image={{
-                          src: thumb5,
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/8-thumb_ih2pel.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -90,7 +83,7 @@ function BookSpace() {
                     <div className="mt-20">
                       <ImageZoom
                         image={{
-                          src: thumb6,
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835832/Bookourspace/10_ogx0zf.jpg",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -104,7 +97,7 @@ function BookSpace() {
                       <div className="mr-4">
                         <ImageZoom
                           image={{
-                            src: thumb1,
+                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/1-thumb_ytxlja.jpg",
                             alt: "Golden Gate Bridge",
                           }}
                         />
@@ -114,7 +107,7 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: thumb2,
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/4-thumb_oz1auf.jpg",
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -122,7 +115,7 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: thumb3,
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/6-thumb_lbtiy5.jpg",
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -132,7 +125,7 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: thumb5,
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/8-thumb_ih2pel.jpg",
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -140,7 +133,7 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: thumb6,
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835832/Bookourspace/10_ogx0zf.jpg",
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -150,7 +143,7 @@ function BookSpace() {
                       <div className="">
                         <ImageZoom
                           image={{
-                            src: thumb4,
+                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/7-thumb_ixjwtq.jpg",
                             alt: "Golden Gate Bridge",
                           }}
                         />

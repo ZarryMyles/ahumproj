@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import $ from "jquery";
-import { ImportantDevices } from "@material-ui/icons";
+import axios from "axios";
 
 function Contact() {
   //Form data
   const [borderColor, setBorderColor] = useState("white");
   const [newsMail, setNewsMail] = useState("");
+  const contactAPI = "http://184.168.122.143:1337/contacts";
+  const newsAPI = "http://184.168.122.143:1337/newsletters";
   const [formDetails, setFormDetails] = useState({
     name: "",
     phno: "",
@@ -88,6 +89,15 @@ function Contact() {
       return valid;
     };
     if (validateForm(formDetails.error)) {
+      const formData = {
+        name: formDetails.name,
+        mail: formDetails.mail,
+        phone: formDetails.phno,
+        message: formDetails.msg,
+        bookOurSpace: false,
+        // Date: new Date().toLocaleString(),
+      };
+      axios.post(contactAPI, formData);
       console.log({
         Name: formDetails.name,
         Mail: formDetails.mail,
@@ -118,6 +128,10 @@ function Contact() {
     if (validateEmail.test(newsMail)) {
       document.getElementById("newsLetter").reset();
       document.getElementById("newsLetter").placeholder = "Email Address";
+      axios.post(newsAPI, {
+        mail: newsMail,
+        fillTime: new Date().toLocaleString(),
+      });
       alert("Your have been subscribed");
     } else {
       alert("Please enter a valid Email");

@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import React, { useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 import "./App.css";
 import "./assets/css/tailwind.css";
@@ -27,7 +27,6 @@ function App() {
   }, []);
 
   // This is the variable that stores the API Key. Use this for all back-end posts and Requests
-  console.log(process.env.REACT_APP_API_KEY);
 
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");

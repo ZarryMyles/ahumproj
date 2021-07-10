@@ -93,24 +93,37 @@ export default function ArchiveMedia(props) {
 
   return (
     <div>
-      {filter && !filter.length > 0 ? (
-        <div className="my-auto w-auto md:ml-64 ml-12   md:h-32 h-96 md:px-100 flex items-center ">
-          {" "}
-          <h3 className="my-auto md:ml-32 text-center text-xl text-ahum-maroon pt-0 ">
-            No results found!
-          </h3>
-        </div>
+      {filter ? (
+        !filter.length > 0 ? (
+          <div className="my-auto w-auto md:ml-64 ml-12   md:h-32 h-96 md:px-100 flex items-center ">
+            {" "}
+            <h3 className="my-auto md:ml-32 text-center text-xl text-ahum-maroon pt-0 ">
+              No results found!
+            </h3>
+          </div>
+        ) : (
+          filter
+        )
       ) : (
-        filter
+        <div className=" hidden  md:flex flex-col items-center justify-center my-10 ">
+          <div class="page-loader my-auto w-full md:left-16   flex flex-col items-center">
+            <div class="spinner bg-ahum-maroon  my-4"></div>
+            <div class="txt text-ahum-brown font-monserrat font-semibold md:text-2xl text-xl text-center">
+              Loading data
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
 }
-// <div className="  flex flex-col items-center justify-center ">
-//   <div class="page-loader my-auto  w-full  md:ml-20 flex flex-col items-center">
-//     <div class="spinner bg-ahum-maroon my-4"></div>
-//     <div class="txt text-ahum-brown font-monserrat font-semibold md:text-2xl text-xl text-center">
-//       Loading data
-//     </div>
-//   </div>
-// </div>
+{
+  /* <div className="  flex flex-col items-center justify-center ">
+  <div class="page-loader my-auto  w-full  md:ml-20 flex flex-col items-center">
+    <div class="spinner bg-ahum-maroon my-4"></div>
+    <div class="txt text-ahum-brown font-monserrat font-semibold md:text-2xl text-xl text-center">
+      Loading data
+    </div>
+  </div>
+</div> */
+}

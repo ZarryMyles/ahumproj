@@ -30,7 +30,7 @@ export default function TempArchive(props) {
         // md:-ml-2 xs:-ml-8
       ></div>
       <div className="col-span-2 pl-1.5 font-normal text-lg xs:pb-3  md:pb-0 -mt-5  md:-mt-0 md:mb-2 mb-3">
-        {dispMonth && months[parseInt(program.date.split("-")[1])]}
+        {dispMonth && months[parseInt(program.date.split("-")[1]) - 1]}
         {program.date.split(" ").length == 2 && program.date.split(" ")[0]}
       </div>
       <div className="md:col-span-5 col-span-4 mr-10">

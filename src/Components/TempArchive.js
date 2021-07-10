@@ -34,7 +34,6 @@ export default function TempArchive(props) {
         {program.date.split(" ").length == 2 && program.date.split(" ")[0]}
       </div>
       <div className="md:col-span-5 col-span-4 mr-10">
-        {console.log(program.image_link)}
         <img
           className="archiveImages md:mb-0 mb-4"
           src={

@@ -7,6 +7,7 @@ export default function Form(props) {
   const titles = ["enquiry", "rsvp", "bookthespace"];
   // const events = ["event 1", "event 2", "event 3"];
   const history = useHistory();
+
   const rsvpAPI = process.env.REACT_APP_API_END + "rsvps";
   const upcomingAPI = process.env.REACT_APP_API_END + "upcomings";
   const [currentShows, setCurrentShows] = useState([]);
@@ -129,12 +130,15 @@ export default function Form(props) {
       };
 
       if (currentShows.includes(eventName)) {
-        axios.post(rsvpAPI, rsvpSubmissionData);
+        axios.post(rsvpAPI, rsvpSubmissionData, {
+          headers: {
+            Authorization: process.env.REACT_APP_API_KEY,
+          },
+        });
         alert("Your Details have been submitted!");
       } else {
         alert("Error finding the event!");
       }
-
       if (title === "rsvp") return history.push("/upcoming-shows");
       // else if (title === "bookthespace") return history.push("/bookspace");
       else return history.push("/");

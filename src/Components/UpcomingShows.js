@@ -5,36 +5,54 @@ import axios from "axios";
 function UpcomingShows() {
   const [events, setEvents] = useState();
   const [mail, setMail] = useState();
-  const [mailColor, setMailColor] = useState("black");
+  // api
+  const newsLetterAPI = process.env.REACT_APP_API_END + "newsletters";
+  const showsAPI = process.env.REACT_APP_API_END + "upcomings";
+
   const validateEmail = RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/i);
+
+  // event handlers
   function mailChange(email) {
     setMail(email);
-    console.log(mail);
   }
   function submitHandler() {
     if (!mail || !validateEmail.test(mail)) {
-      setMailColor("red");
       alert("Enter a Valid e-mail");
     } else {
-      alert("e-mail submitted");
-      setMailColor("green");
+      axios.post(
+        newsLetterAPI,
+        {
+          mail: mail,
+        },
+        {
+          headers: {
+            Authorization: process.env.REACT_APP_API_KEY,
+          },
+        }
+      );
+      alert("Your have been subscribed");
     }
-    console.log(validateEmail.test(mail));
   }
-  const showsAPI = process.env.REACT_APP_API_END + "upcomings";
+
   useEffect(() => {
     window.scrollTo(0, 0);
     getData();
-    console.log("api", showsAPI);
   }, []);
   const getData = async () => {
-    const { data: events } = await axios.get(showsAPI, {
-      headers: {
-        Authorization: process.env.REACT_APP_API_KEY,
-      },
-    });
-    setEvents(events);
+    axios
+      .get(showsAPI, {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          Authorization: process.env.REACT_APP_API_KEY,
+        },
+      })
+      .then((res) => setEvents(res.data))
+      .catch((error) => {
+        console.log("err", error);
+      });
   };
+
+  // upcoming show card
   function eventCard(program) {
     return (
       <div className="col-sm-12 col-md-6 col-xl-4 my-2">
@@ -47,13 +65,15 @@ function UpcomingShows() {
         <Card
           title={program.title}
           c1={program.time}
-          c2={program.date}
+          c2={program.date.split("-").reverse().join("-")}
           c3={program.place}
         />
       </div>
     );
   }
+
   function displayError(loading = false) {
+    // when no upcoming shows present
     if (!loading)
       return (
         <div className=" w-full h-96  flex flex-col items-center justify-center">
@@ -83,9 +103,6 @@ function UpcomingShows() {
               type="text"
               placeholder="you@mail.com"
               onChange={(e) => mailChange(e.target.value)}
-              style={{
-                color: { mailColor },
-              }}
               className="my-auto  focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3  border "
             />
             <button
@@ -99,6 +116,7 @@ function UpcomingShows() {
           </div>
         </div>
       );
+    // preloader
     if (loading)
       return (
         <div className=" w-full   flex flex-col items-center justify-center md:mt-64 mt-64">
@@ -106,11 +124,12 @@ function UpcomingShows() {
             <div class="spinner bg-ahum-maroon my-4"></div>
             <div class="txt text-ahum-brown font-monserrat font-semibold md:text-2xl text-xl text-center">
               Loading data
-            </div>{" "}
+            </div>
           </div>
         </div>
       );
   }
+
   return (
     <div className=" md:ml-20 " style={{ transitionDelay: "0" }}>
       <h1 className="text-2xl font-semibold text-center text-gray-700  my-2  ">

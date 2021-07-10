@@ -7,10 +7,15 @@ export default function Form(props) {
   const titles = ["enquiry", "rsvp", "bookthespace"];
   // const events = ["event 1", "event 2", "event 3"];
   const history = useHistory();
-  const rsvpAPI = "http://184.168.122.143:1337/rsvps";
+  const rsvpAPI = process.env.REACT_APP_API_END + "rsvps";
+  const upcomingAPI = process.env.REACT_APP_API_END + "upcomings";
   const [currentShows, setCurrentShows] = useState([]);
   let getData = async () => {
-    await fetch("http://184.168.122.143:1337/upcomings").then((res) =>
+    await fetch(upcomingAPI, {
+      headers: {
+        Authorization: process.env.REACT_APP_API_KEY,
+      },
+    }).then((res) =>
       res.json().then((events) => {
         events.map((event) =>
           setCurrentShows((currentShows) => currentShows.concat(event.title))

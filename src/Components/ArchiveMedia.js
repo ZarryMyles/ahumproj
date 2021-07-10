@@ -3,14 +3,17 @@ import TempArchive from "./TempArchive";
 
 export default function ArchiveMedia(props) {
   let { year, category } = props;
+  const archiveAPI = process.env.REACT_APP_API_END + "archives";
   const [archive, setArchive] = useState();
   useEffect(() => {
     getData();
   }, []);
   let getData = async () => {
-    await fetch("http://184.168.122.143:1337/archives").then((res) =>
-      res.json().then((archiveData) => setArchive(archiveData))
-    );
+    await fetch(archiveAPI, {
+      headers: {
+        Authorization: process.env.REACT_APP_API_KEY,
+      },
+    }).then((res) => res.json().then((archiveData) => setArchive(archiveData)));
   };
 
   const byProg =

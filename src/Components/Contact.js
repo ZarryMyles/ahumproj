@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function Contact() {
+function Contact(props) {
   //Form data
+  const [bookCase] = useState(props.match.params.bookspace ? true : false);
   const [borderColor, setBorderColor] = useState("white");
   const [newsMail, setNewsMail] = useState("");
-  const contactAPI = "http://184.168.122.143:1337/contacts";
-  const newsAPI = "http://184.168.122.143:1337/newsletters";
+  const contactAPI = process.env.REACT_APP_API_END + "contacts";
+  const newsAPI = process.env.REACT_APP_API_END + "newsletters";
   const [formDetails, setFormDetails] = useState({
     name: "",
     phno: "",
@@ -94,10 +95,15 @@ function Contact() {
         mail: formDetails.mail,
         phone: formDetails.phno,
         message: formDetails.msg,
-        bookOurSpace: false,
+        bookOurSpace: bookCase,
         // Date: new Date().toLocaleString(),
       };
-      axios.post(contactAPI, formData);
+
+      axios.post(contactAPI, formData, {
+        headers: {
+          Authorization: process.env.REACT_APP_API_KEY,
+        },
+      });
       console.log({
         Name: formDetails.name,
         Mail: formDetails.mail,
@@ -128,10 +134,18 @@ function Contact() {
     if (validateEmail.test(newsMail)) {
       document.getElementById("newsLetter").reset();
       document.getElementById("newsLetter").placeholder = "Email Address";
-      axios.post(newsAPI, {
-        mail: newsMail,
-        fillTime: new Date().toLocaleString(),
-      });
+      axios.post(
+        newsAPI,
+        {
+          mail: newsMail,
+          fillTime: new Date().toLocaleString(),
+        },
+        {
+          headers: {
+            Authorization: process.env.REACT_APP_API_KEY,
+          },
+        }
+      );
       alert("Your have been subscribed");
     } else {
       alert("Please enter a valid Email");

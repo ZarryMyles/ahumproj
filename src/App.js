@@ -26,8 +26,6 @@ function App() {
     AOS.init();
   }, []);
 
-  // This is the variable that stores the API Key. Use this for all back-end posts and Requests
-
   const handleToggle = () => {
     $("#sidebar").toggleClass("active");
   };
@@ -68,6 +66,7 @@ function App() {
             />
             <Route path="/about-us" exact component={AboutUs} />
             <Route path="/contact" exact component={Contact} />
+            <Route path="/contact/:bookspace" exact component={Contact} />
             <Route path="/bookspace" exact component={BookSpace} />
             <Route path="/archives/:category" component={Archives} />
             <Route path="/archives" component={Archives} />

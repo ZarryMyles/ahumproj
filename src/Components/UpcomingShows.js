@@ -21,14 +21,18 @@ function UpcomingShows() {
     }
     console.log(validateEmail.test(mail));
   }
-  const showsAPI = "http://184.168.122.143:1337/upcomings";
+  const showsAPI = process.env.REACT_APP_API_END + "upcomings";
   useEffect(() => {
     window.scrollTo(0, 0);
     getData();
     console.log("api", showsAPI);
   }, []);
   const getData = async () => {
-    const { data: events } = await axios.get(showsAPI);
+    const { data: events } = await axios.get(showsAPI, {
+      headers: {
+        Authorization: process.env.REACT_APP_API_KEY,
+      },
+    });
     setEvents(events);
   };
   function eventCard(program) {

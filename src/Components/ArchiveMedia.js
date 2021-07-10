@@ -1,33 +1,15 @@
 import React, { useState, useEffect } from "react";
-
-// import archives from "../assets/JSON/archives.json";
 import TempArchive from "./TempArchive";
-import axios from "axios";
+
 export default function ArchiveMedia(props) {
   let { year, category } = props;
-
   const [archive, setArchive] = useState();
-  const [currentMonth, setCurrentMonth] = useState("");
   useEffect(() => {
     getData();
   }, []);
   let getData = async () => {
-    // const { data: archiveData } = await axios.get(
-    //   "http://184.168.122.143:1337/archives"
-    // );
-    // setArchive(archiveData);
-    // console.log(archiveData);
-
     await fetch("http://184.168.122.143:1337/archives").then((res) =>
       res.json().then((archiveData) => setArchive(archiveData))
-    );
-
-    await fetch("http://184.168.122.143:1337/archives").then((res) =>
-      res
-        .json()
-        .then((archiveData) =>
-          archiveData.map((data) => console.log(data.date.split("-")[0]))
-        )
     );
   };
 

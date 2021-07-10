@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 export default function Form(props) {
   const { title, event } = props.match.params;
-
+  const eventName = props.match.params.event;
   const titles = ["enquiry", "rsvp", "bookthespace"];
-  const events = ["event 1", "event 2", "event 3"];
+  // const events = ["event 1", "event 2", "event 3"];
   const history = useHistory();
-  console.log(event, title);
+  const rsvpAPI = "http://184.168.122.143:1337/rsvps";
+  const [currentShows, setCurrentShows] = useState([]);
+  let getData = async () => {
+    await fetch("http://184.168.122.143:1337/upcomings").then((res) =>
+      res.json().then((events) => {
+        events.map((event) =>
+          setCurrentShows((currentShows) => currentShows.concat(event.title))
+        );
+      })
+    );
+  };
+
   const [formDetails, setFormDetails] = useState({
     name: "",
     phno: "",
@@ -15,7 +27,6 @@ export default function Form(props) {
     attendees: "",
     error: {
       name: "Enter a vaild Name",
-
       phno: "Enter a vaild Phone Number",
       mail: "Enter a vaild Email Address",
       msg: title === "bookthespace" ? "Enter a vaild Message" : "",
@@ -104,27 +115,23 @@ export default function Form(props) {
       return valid;
     };
     if (validateForm(formDetails.error)) {
-      console.log({
-        Name: formDetails.name,
-        Mail: formDetails.mail,
-        PhNo: formDetails.phno,
-        Message: formDetails.msg,
-        Att: formDetails.attendees,
-        Date: new Date().toLocaleString(),
-      });
+      const rsvpSubmissionData = {
+        name: formDetails.name,
+        mail: formDetails.mail,
+        phone: formDetails.phno,
+        attendees: formDetails.attendees,
+        event: eventName,
+      };
 
-      // setBorderColor("green"); //Changes field border color to green
-      // Reset checkboxes and fields
-      // document.getElementById("cForm").reset();
-      // document.getElementById("formName").placeholder = "Your Name";
-      // document.getElementById("formMail").placeholder = "Email";
-      // document.getElementById("formPhno").placeholder = "Phone";
-      // document.getElementById("formMsg").placeholder = "Your Message";
-      // document.getElementById("attendees").placeholder = "No. of attendees";
+      if (currentShows.includes(eventName)) {
+        axios.post(rsvpAPI, rsvpSubmissionData);
+        alert("Your Details have been submitted!");
+      } else {
+        alert("Error finding the event!");
+      }
 
-      alert("Your Details have been submitted!");
       if (title === "rsvp") return history.push("/upcoming-shows");
-      else if (title === "bookthespace") return history.push("/bookspace");
+      // else if (title === "bookthespace") return history.push("/bookspace");
       else return history.push("/");
     } else {
     }
@@ -136,13 +143,14 @@ export default function Form(props) {
     if (!titles.includes(title.toLowerCase())) {
       return history.push("/");
     }
-    if (event !== undefined && !events.includes(event.toLowerCase())) {
-      console.log(true);
-      return history.push("/upcoming-shows");
-    }
+    // if (event !== undefined && !currentShows.includes(eventName)) {
+    //   console.log(true);
+    //   return history.push("/upcoming-shows");
+    // }
   }
   useEffect(() => {
     checkQuery();
+    getData();
   }, []);
   function form(rsvp = false) {
     return (

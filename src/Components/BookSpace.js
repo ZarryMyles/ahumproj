@@ -245,7 +245,7 @@ function BookSpace() {
               </div>
               <div className="flex justify-center lg:justify-start">
                 <a
-                  href="/form/bookthespace"
+                  href="/contact"
                   className="text-lg my-10 h-10 bg-ahum-maroon w-max items-center focus:outline-none flex px-5 rounded-full text-white transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl"
                 >
                   Enquire

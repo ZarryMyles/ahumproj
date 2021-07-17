@@ -1,17 +1,10 @@
-import React, { useEffect } from "react";
-
-import EventsCardLeft from "./EventsCardLeft";
-import EventsCardRight from "./EventsCardRight";
+import React from "react";
 
 function Events() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div class="wrapper" style={{ background: "white" }}>
       <div id="content" className="p-0">
-        <div class="container-fluid justify-content-center px-0">
+        <div class="container-fluid justify-content-center px-0 -mb-4">
           <h1 className="text-2xl font-semibold text-center mt-10">Events</h1>
           <div
             className="row justify-content-center my-3 mx-0 py-3"
@@ -25,6 +18,47 @@ function Events() {
               <h2
                 className="text-center text-xl"
                 style={{ color: "#222021", fontWeight: "500" }}
+              >
+                Kalakrida
+              </h2>
+              <p class="text-justify customp1">
+                Kalakrida is ahum’s signature project. ahum has been
+                successfully conducting since 2016 . Kalakrida, is a community
+                arts workshop for the children studying in government schools in
+                and around Jakkur and Sampigehalli, Bangalore. Govt. PU College
+                , Govt. Higher Primary School, Govt. Middle Primary School,
+                Govt. Lower Primary school participated in this project. The
+                children responded with a lot of enthusiasm and readiness. Given
+                the scale of the workshop, we chose to crowd fund this community
+                development project through crowdfunding.
+              </p>
+              <div class="text-center">
+                <a
+                  href="/archives/kalakrida"
+                  type="button"
+                  className="btn py-2 px-5"
+                  style={{
+                    borderRadius: "25px",
+                    background: "#401A21",
+                    color: "white",
+                  }}
+                >
+                  Archives
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="row justify-content-center my-3 mx-0 py-3"
+            style={{ background: "#D7CEC7", minHeight: "100vh" }}
+          >
+            <div className="col-md-5 col-md-pull-6 align-self-center md:hidden block pt-5">
+              <div class="holderbg2"></div>
+            </div>
+            <div className="col-md-6 col-md-push-6 py-5 align-self-center">
+              <h2
+                className="text-center text-xl"
+                style={{ color: "#222021", fontWeight: "600" }}
               >
                 Saturday's @ Swastika
               </h2>
@@ -52,9 +86,96 @@ function Events() {
                 </a>
               </div>
             </div>
+            <div className="col-md-5 col-md-pull-6 align-self-center md:block hidden">
+              <div class="holderbg2"></div>
+            </div>
           </div>
-          <EventsCardRight />
-          <EventsCardLeft />
+          <div
+            className="row justify-content-center my-3 mx-0 py-3"
+            style={{ background: "white", minHeight: "75vh" }}
+          >
+            <div className="col-md-5 col-md-pull-6 align-self-center">
+              <div class="holderbg3"></div>
+            </div>
+
+            <div className="col-md-6 py-5 align-self-center">
+              <h2
+                className="text-center text-xl"
+                style={{ color: "#222021", fontWeight: "500" }}
+              >
+                Music by The Lake
+              </h2>
+              <p class="text-justify customp1">
+                ahum with support of Jalaposhan has been presenting “Music by
+                the Lake”, a monthly concert. The idea behind this concept is to
+                bring art, community and nature in unison with each other. The
+                series was started on March 2016 and till date we had had high
+                caliber artistes performing for us, who have all thoroughly
+                enjoyed performing amidst nature without much of a frill of
+                technology.
+              </p>
+              <div class="text-center">
+                <a
+                  href="/archives/musicbythelake"
+                  type="button"
+                  className="btn py-2 px-5"
+                  style={{
+                    borderRadius: "25px",
+                    background: "#401A21",
+                    color: "white",
+                  }}
+                >
+                  Archives
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="row justify-content-center my-3 mx-0 py-3"
+            style={{ background: "#D7CEC7", minHeight: "100vh" }}
+          >
+            <div className="col-md-5 col-md-pull-6 align-self-center md:hidden block pt-5">
+              <div class="holderbg4"></div>
+            </div>
+            <div className="col-md-6 col-md-push-6 py-5 align-self-center">
+              <h2
+                className="text-center text-xl"
+                style={{ color: "#222021", fontWeight: "600" }}
+              >
+                Know Your Art
+              </h2>
+              <p class="text-justify customp1">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum
+              </p>
+              <div class="text-center">
+                <a
+                  href="/archives/knowyourart"
+                  type="button"
+                  className="btn py-2 px-5"
+                  style={{
+                    borderRadius: "25px",
+                    background: "#401A21",
+                    color: "white",
+                  }}
+                >
+                  Archives
+                </a>
+              </div>
+            </div>
+            <div className="col-md-5 col-md-pull-6 align-self-center md:block hidden">
+              <div class="holderbg4"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

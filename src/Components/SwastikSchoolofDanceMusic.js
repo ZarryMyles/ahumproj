@@ -85,21 +85,6 @@ function SwastikSchoolofDanceMusic() {
       <div className=" pt-4 md:px-0  md:ml-20 flex flex-col items-center">
         {schedule.map((lesson) => section(lesson))}
       </div>
-
-      <div class="text-center my-5 md:ml-20">
-        <a
-          type="button"
-          className="btn py-2 px-5 mb-10"
-          href="/archives/swastikaschoolofdance"
-          style={{
-            borderRadius: "25px",
-            background: "#411b22",
-            color: "white",
-          }}
-        >
-          Archives
-        </a>
-      </div>
     </div>
   );
 }

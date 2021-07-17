@@ -36,6 +36,8 @@ function Archives(props) {
         return program[3];
       case "swastikaschoolofdance":
         return program[4];
+      case "knowyourart":
+        return program[8];
       case "shows":
         return program[5];
       default:

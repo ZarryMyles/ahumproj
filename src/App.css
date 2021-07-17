@@ -297,16 +297,7 @@ a.article:hover {
                             Screen 4 
  -------------------------------------------------------*/
 .holderbg1 {
-  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835305/events/sssbgpic1_imroc8.jpg");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 65vh;
-  /* background-color: #e4e4e4; */
-  width: 100%;
-}
-.holderbg2 {
-  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835306/events/musicbgpic2_x96ri3.jpg");
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835308/events/kalakaribgpic3_t7s8oq.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -315,7 +306,25 @@ a.article:hover {
   width: 100%;
 }
 .holderbg3 {
+  background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835306/events/musicbgpic2_x96ri3.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 65vh;
+  /* background-color: #e4e4e4; */
+  width: 100%;
+}
+.holderbg2 {
   background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835305/events/sssbgpic1_imroc8.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 65vh;
+  /* background-color: #e4e4e4; */
+  width: 100%;
+}
+.holderbg4 {
+  background-image: url("https://bn1302files.storage.live.com/y4mvXln-HWwNlup86Y8sq3qsjRiNDSAIYkpTJLpTia9_5TD9io8-J4z7SFXupgPzDjSZGH-BMjcGp9nIMRkik2iidSiU6GZmcA3mUmtiKX2Szq4T2Iu56fMTS3rJvWFS2_Mmc30Wc0sBfO9Pk6YUpBPeJaWceL07br19WlzWBajd3Sv3QEi5eI-po4uMBWimk6f?width=2048&height=1365&cropmode=none");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

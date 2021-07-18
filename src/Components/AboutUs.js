@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import ImageZoom from "react-medium-image-zoom";
-import Carousel from "react-elastic-carousel";
+import React from "react";
 import "styled-components";
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,82 +14,61 @@ import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper/core";
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 function About() {
-  const isMob = window.innerWidth < 767;
+  // const isMob = window.innerWidth < 767;
 
   return (
     <div class="">
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
-          <div>
-            {true ? (
-              <div
-                className="aboutUsCarouselImage md:w-full   w-screen flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden"
-                // style={{ height: "630px" }}
-              >
-                <Swiper
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  loop={true}
-                  // pagination={{
-                  //   clickable: true,
-                  // }}
-                  // navigation={true}
-                  className="md:h-auto w-screen flex justify-center content-center items-center"
-                >
-                  <SwiperSlide className="">
-                    <img
-                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage1_h0ailx_zr6tg9.webp"
-                      alt=""
-                    />
-                  </SwiperSlide>
-
-                  <SwiperSlide className="">
-                    <img
-                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage2_kglhum_i361jg.webp"
-                      alt=""
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide className="">
-                    <img
-                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613971/AboutUs/collage3_n13s1l-min-min_kbccyw.webp"
-                      alt=""
-                    />
-                  </SwiperSlide>
-
-                  <SwiperSlide className="">
-                    <img
-                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage4_pkzzxg-min_lznyc8.webp"
-                      alt=""
-                    />
-                  </SwiperSlide>
-
-                  <SwiperSlide className="">
-                    <img
-                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage5_je5r2a-min_i4ip6b.webp"
-                      alt=""
-                    />
-                  </SwiperSlide>
-
-                  <SwiperSlide className="">
-                    <img
-                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage6_ulbfvt-min_vdebma.webp"
-                      alt=""
-                    />
-                  </SwiperSlide>
-                </Swiper>
-              </div>
-            ) : (
-              <div className="bg-ahum-brown-collage md:block flex md:pl-0 ">
+          <div className="aboutUsCarouselImage md:w-full   w-screen flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden">
+            <Swiper
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true,
+              }}
+              loop={true}
+              className="md:h-auto w-screen flex justify-center content-center items-center"
+            >
+              <SwiperSlide className="">
                 <img
-                  className="w-full "
-                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/q_auto:eco/v1625828788/about_collage/ahum_collage_2_o1cthv.png"
-                  alt="about us collage"
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage1_h0ailx_zr6tg9.webp"
+                  alt=""
                 />
-              </div>
-            )}
+              </SwiperSlide>
+
+              <SwiperSlide className="">
+                <img
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage2_kglhum_i361jg.webp"
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <img
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613971/AboutUs/collage3_n13s1l-min-min_kbccyw.webp"
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <img
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage4_pkzzxg-min_lznyc8.webp"
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <img
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage5_je5r2a-min_i4ip6b.webp"
+                  alt=""
+                />
+              </SwiperSlide>
+              <SwiperSlide className="">
+                <img
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage6_ulbfvt-min_vdebma.webp"
+                  alt=""
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
+
           <p class="text-justify customp text-gray-700">
             ahum - art heart u and mind is a trust which was founded in 2015
             with the aim of connecting art and community. Today this has become

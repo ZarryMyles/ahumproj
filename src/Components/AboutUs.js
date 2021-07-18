@@ -2,135 +2,88 @@ import React, { useEffect } from "react";
 import ImageZoom from "react-medium-image-zoom";
 import Carousel from "react-elastic-carousel";
 import "styled-components";
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+// import Swiper core and required modules
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper/core";
+// import { Autoplay } from "swiper/js/swiper.esm";
+
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 function About() {
   const isMob = window.innerWidth < 767;
 
   return (
-    <div class="wrapper">
+    <div class="">
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
           <div>
-            {isMob ? (
-              <div className="  w-screen justify-center bg-ahum-brown-collage py-4">
-                <Carousel
-                  itemsToShow={1}
-                  className=" h-96 w-screen justify-center items-center"
+            {true ? (
+              <div
+                className="aboutUsCarouselImage md:w-full   w-screen flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden"
+                // style={{ height: "630px" }}
+              >
+                <Swiper
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  loop={true}
+                  // pagination={{
+                  //   clickable: true,
+                  // }}
+                  // navigation={true}
+                  className="md:h-auto w-screen flex justify-center content-center items-center"
                 >
-                  <div className="mt-20">
-                    <ImageZoom
-                      image={{
-                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519173/Ahum/collage1_h0ailx.jpg",
-                        alt: "Golden Gate Bridge",
-                      }}
+                  <SwiperSlide className="">
+                    <img
+                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage1_h0ailx_zr6tg9.webp"
+                      alt=""
                     />
-                  </div>
+                  </SwiperSlide>
 
-                  <div className="mt-12">
-                    <ImageZoom
-                      image={{
-                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519174/Ahum/collage2_kglhum.jpg",
-                        alt: "Golden Gate Bridge",
-                      }}
+                  <SwiperSlide className="">
+                    <img
+                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage2_kglhum_i361jg.webp"
+                      alt=""
                     />
-                  </div>
-                  <div className="mt-16">
-                    <ImageZoom
-                      image={{
-                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519796/Ahum/collage3_n13s1l.jpg",
-                        alt: "Golden Gate Bridge",
-                      }}
+                  </SwiperSlide>
+                  <SwiperSlide className="">
+                    <img
+                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613971/AboutUs/collage3_n13s1l-min-min_kbccyw.webp"
+                      alt=""
                     />
-                  </div>
+                  </SwiperSlide>
 
-                  <div className="mt-14">
-                    <ImageZoom
-                      image={{
-                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519177/Ahum/collage4_pkzzxg.jpg",
-                        alt: "Golden Gate Bridge",
-                      }}
+                  <SwiperSlide className="">
+                    <img
+                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage4_pkzzxg-min_lznyc8.webp"
+                      alt=""
                     />
-                  </div>
+                  </SwiperSlide>
 
-                  <div className="mt-14">
-                    <ImageZoom
-                      image={{
-                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519178/Ahum/collage5_je5r2a.jpg",
-                        alt: "Golden Gate Bridge",
-                      }}
+                  <SwiperSlide className="">
+                    <img
+                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage5_je5r2a-min_i4ip6b.webp"
+                      alt=""
                     />
-                  </div>
+                  </SwiperSlide>
 
-                  <div className="mt-14">
-                    <ImageZoom
-                      image={{
-                        src: "https://res.cloudinary.com/ahum/image/upload/v1624519175/Ahum/collage6_ulbfvt.jpg",
-                        alt: "Golden Gate Bridge",
-                      }}
+                  <SwiperSlide className="">
+                    <img
+                      src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage6_ulbfvt-min_vdebma.webp"
+                      alt=""
                     />
-                  </div>
-                </Carousel>
+                  </SwiperSlide>
+                </Swiper>
               </div>
             ) : (
               <div className="bg-ahum-brown-collage md:block flex md:pl-0 ">
-                {/* <div className="lg:mx-32 mx-10 ">
-                  <div className="flex flex-row justify-center items-center">
-                    <div className="mr-4">
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/ahum/image/upload/v1624519173/Ahum/collage1_h0ailx.jpg",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center items-center">
-                      <div className="flex flex-row justify-center items-center">
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519174/Ahum/collage2_kglhum.jpg",
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
-                        </div>
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519796/Ahum/collage3_n13s1l.jpg",
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
-                        </div>
-                      </div>
-                      <div className="flex flex-row justify-center items-center">
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519177/Ahum/collage4_pkzzxg.jpg",
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
-                        </div>
-                        <div className="mr-4">
-                          <ImageZoom
-                            image={{
-                              src: "https://res.cloudinary.com/ahum/image/upload/v1624519178/Ahum/collage5_je5r2a.jpg",
-                              alt: "Golden Gate Bridge",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="">
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/ahum/image/upload/v1624519175/Ahum/collage6_ulbfvt.jpg",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div> */}
                 <img
                   className="w-full "
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/q_auto:eco/v1625828788/about_collage/ahum_collage_2_o1cthv.png"

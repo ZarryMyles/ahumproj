@@ -146,6 +146,20 @@ function UpcomingShows() {
       ) : (
         displayError(true)
       )}
+
+
+
+
+<div class="p-20 flex ">
+	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+</div>
+
+
+
+
     </div>
   );
 }

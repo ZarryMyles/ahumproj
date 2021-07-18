@@ -261,6 +261,21 @@ a.article:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.aboutUsCarouselImage {
+  height: 530px;
+}
+.aboutUsCarouselImage img {
+  height: 580px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .aboutUsCarouselImage {
+    height: 200px;
+  }
+  .aboutUsCarouselImage img {
+    height: 200px;
+  }
+}
 
 .customp {
   font-weight: 400;

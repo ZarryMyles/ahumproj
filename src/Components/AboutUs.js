@@ -14,53 +14,61 @@ import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper/core";
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 function About() {
-  // const isMob = window.innerWidth < 767;
+  const isMob = window.innerWidth < 767;
 
   return (
-    <div class="">
+    <div class="font-montserrat">
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
-          <div className="aboutUsCarouselImage md:w-full   w-screen flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden">
+          <div className="aboutUsCarouselImage md:w-full    flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden">
             <Swiper
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: true,
               }}
               loop={true}
-              className="md:h-auto w-screen flex justify-center content-center items-center"
+              navigation={!isMob}
+              className="md:h-auto flex md:w-8/12 w-10/12 justify-center content-center items-center"
+              style={
+                {
+                  // width: "60%",
+                }
+              }
             >
-              <SwiperSlide className="">
+              <SwiperSlide className=" flex justify-center ">
+                {/* <div className="w-3/10  "></div> */}
                 <img
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage1_h0ailx_zr6tg9.webp"
                   alt=""
                 />
+                {/* <div className="w-3/10"></div> */}
               </SwiperSlide>
 
-              <SwiperSlide className="">
+              <SwiperSlide className=" flex justify-center ">
                 <img
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage2_kglhum_i361jg.webp"
                   alt=""
                 />
               </SwiperSlide>
-              <SwiperSlide className="">
+              <SwiperSlide className=" flex justify-center ">
                 <img
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613971/AboutUs/collage3_n13s1l-min-min_kbccyw.webp"
                   alt=""
                 />
               </SwiperSlide>
-              <SwiperSlide className="">
+              <SwiperSlide className=" flex justify-center ">
                 <img
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage4_pkzzxg-min_lznyc8.webp"
                   alt=""
                 />
               </SwiperSlide>
-              <SwiperSlide className="">
+              <SwiperSlide className=" flex justify-center ">
                 <img
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage5_je5r2a-min_i4ip6b.webp"
                   alt=""
                 />
               </SwiperSlide>
-              <SwiperSlide className="">
+              <SwiperSlide className=" flex justify-center ">
                 <img
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage6_ulbfvt-min_vdebma.webp"
                   alt=""
@@ -69,7 +77,7 @@ function About() {
             </Swiper>
           </div>
 
-          <p class="text-justify customp text-gray-700">
+          <p class="text-justify customp  text-gray-700">
             ahum - art heart u and mind is a trust which was founded in 2015
             with the aim of connecting art and community. Today this has become
             very important. Though we are moving towards a more civilized world,

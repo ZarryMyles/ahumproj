@@ -276,7 +276,15 @@ a.article:hover {
     height: 200px;
   }
 }
-
+/* .swiper-button-next {
+  left: 300px;
+} */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #bdb5af;
+  /* height: 100px; */
+  /* width: 150px; */
+}
 .customp {
   font-weight: 400;
   font-size: 1em;

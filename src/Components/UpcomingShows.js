@@ -122,7 +122,7 @@ function UpcomingShows() {
         <div className=" w-full   flex flex-col items-center justify-center md:mt-64 mt-64">
           <div class="page-loader ">
             <div class="spinner bg-ahum-maroon my-4"></div>
-            <div class="txt text-ahum-brown font-monserrat font-semibold md:text-2xl text-xl text-center">
+            <div class="txt text-ahum-brown font-montserrat font-semibold md:text-2xl text-xl text-center">
               Loading data
             </div>
           </div>
@@ -147,19 +147,12 @@ function UpcomingShows() {
         displayError(true)
       )}
 
-
-
-
-<div class="p-20 flex ">
-	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-	<div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-</div>
-
-
-
-
+      <div class="p-20 flex ">
+        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
+      </div>
     </div>
   );
 }

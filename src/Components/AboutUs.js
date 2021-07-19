@@ -20,14 +20,14 @@ function About() {
     <div class="font-montserrat">
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
-          <div className="aboutUsCarouselImage md:w-full    flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden">
+          <div className="aboutUsCarouselImage md:w-full flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden">
             <Swiper
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: true,
               }}
               loop={true}
-              navigation={!isMob}
+              navigation={true}
               className="md:h-auto flex md:w-8/12 w-10/12 justify-center content-center items-center"
               style={
                 {

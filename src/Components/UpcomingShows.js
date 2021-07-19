@@ -76,7 +76,7 @@ function UpcomingShows() {
     // when no upcoming shows present
     if (!loading)
       return (
-        <div className=" w-full h-96  flex flex-col items-center justify-center">
+        <div className="font-montserrat w-full h-96  flex flex-col items-center justify-center">
           <h1 className=" text-center  text-ahum-maroon font-semibold md:text-4xl text-2xl mb-10">
             No Upcoming Shows
           </h1>
@@ -131,7 +131,10 @@ function UpcomingShows() {
   }
 
   return (
-    <div className=" md:ml-20 " style={{ transitionDelay: "0" }}>
+    <div
+      className=" font-montserrat md:ml-20 "
+      style={{ transitionDelay: "0" }}
+    >
       <h1 className="text-2xl font-semibold text-center text-gray-700  my-2  ">
         {events && events.length !== 0 ? "Upcoming Shows" : ""}
       </h1>
@@ -146,13 +149,6 @@ function UpcomingShows() {
       ) : (
         displayError(true)
       )}
-
-      <div class="p-20 flex ">
-        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-        <div class="w-10 h-10 bg-red-500 rounded m-5"></div>
-      </div>
     </div>
   );
 }

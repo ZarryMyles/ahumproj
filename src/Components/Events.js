@@ -4,7 +4,7 @@ function Events() {
   return (
     <div class="wrapper" style={{ background: "white" }}>
       <div id="content" className="p-0">
-        <div class="container-fluid justify-content-center px-0 -mb-4">
+        <div class="font-montserrat container-fluid justify-content-center px-0 -mb-4">
           <h1 className="text-2xl font-semibold text-center mt-10">Events</h1>
           <div
             className="row justify-content-center my-3 mx-0 py-3"

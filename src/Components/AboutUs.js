@@ -28,7 +28,7 @@ function About() {
               }}
               loop={true}
               navigation={!isMob}
-              className="md:h-auto flex md:w-8/12 w-10/12 justify-center content-center items-center"
+              className="md:h-auto flex md:w-9/12 w-10/12 justify-center content-center items-center"
               style={
                 {
                   // width: "60%",
@@ -77,7 +77,7 @@ function About() {
             </Swiper>
           </div>
 
-          <p class="text-justify customp  text-gray-700">
+          <p class="text-justify customp    text-gray-700">
             ahum - art heart u and mind is a trust which was founded in 2015
             with the aim of connecting art and community. Today this has become
             very important. Though we are moving towards a more civilized world,
@@ -119,7 +119,7 @@ function About() {
             <h5 style={{ fontWeight: "400" }}>
               Founder, Dancer, Choreographer
             </h5>
-            <p className="customp7">
+            <p className="customp7 ">
               <br />I am a Bharatanatyam dancer and have trained under
               Padmabhushan Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an
               'A' graded artist of Delhi Doordarshan and an empanelled artist of

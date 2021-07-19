@@ -51,12 +51,12 @@ function Archives(props) {
 
   return (
     <div class="">
-      <div className="md:ml-5">
+      <div className="md:ml-5 font-montserrat">
         <div class="container-fluid justify-content-center px-0">
           <div className="md:py-5 py-4 md:pl-64 md:pr-32 xs:px-5 xs:pl-10 justify-start">
             <div className="">
               <div className="flex flex-col justify-start font-medium md:text-xl text-base mb-3 -ml-2">
-                <div className="flex justify-between">
+                <div className="flex justify-between font-semibold">
                   <span className="md:-ml-0 md:pb-0 pb-3">ARCHIVES</span>
                   <div>
                     <span
@@ -69,10 +69,10 @@ function Archives(props) {
                         className="listBox  z-2  text-base max-w-6 "
                         onChange={setSelectedProgram}
                       >
-                        <Listbox.Button className="focus:outline-none md:mb-1">
+                        <Listbox.Button className="focus:outline-none md:mb-1 font-semibold">
                           {selectedProgram.name + " ▾"}
                         </Listbox.Button>
-                        <Listbox.Options className="dropOpC relative bg-ahum-brown-collage md:-right-10 md:pt-1 rounded-md hover:cursor-pointer text-lg">
+                        <Listbox.Options className="dropOpC  relative bg-ahum-brown-collage md:-right-10 md:pt-1 rounded-md hover:cursor-pointer text-lg">
                           {program.map((person) => (
                             <Listbox.Option
                               className="dropOptions py-1.5 px-2.5 text-base"
@@ -93,7 +93,7 @@ function Archives(props) {
                         onChange={setSelectedYear}
                         className="listBox  text-base"
                       >
-                        <Listbox.Button className=" focus:outline-none md:mb-1">
+                        <Listbox.Button className="font-semibold focus:outline-none md:mb-1">
                           {selectedYear.name + " ▾"}
                         </Listbox.Button>
                         <Listbox.Options className="dropOpC font-sans relative bg-ahum-brown-collage opacity-90 rounded-md -right-1 ">

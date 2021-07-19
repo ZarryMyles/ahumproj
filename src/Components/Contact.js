@@ -159,11 +159,11 @@ function Contact(props) {
   return (
     <div class="wrapper">
       <div className="p-0 md:ml-20">
-        <div class="container-fluid justify-content-center px-0">
+        <div class="container-fluid justify-content-center px-0 font-montserrat">
           <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
             <div className="flex justify-center items-center col-span-1 md:ml-24 md:w-8/12">
               <div className="flex flex-col">
-                <span className="font-normal mb-3 w-full text-center md:text-left md:w-auto">
+                <span className="font-medium mb-3 w-full text-center md:text-left md:w-auto">
                   Drop us a message, we'll call you back!
                 </span>
                 <form id="cForm">

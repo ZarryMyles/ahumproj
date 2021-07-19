@@ -4,7 +4,7 @@ import schedule from "../assets/JSON/schedule.json";
 function SwastikSchoolofDanceMusic() {
   function section(lesson) {
     return (
-      <div className="flex justify-center ">
+      <div className="flex justify-center font-montserrat ">
         <div
           className="flex md:flex-row  flex-col  align-items-center md:mb-4  md:w-4/6 w-11/12 md:px-0 px-3  "
           style={{
@@ -31,18 +31,19 @@ function SwastikSchoolofDanceMusic() {
               ></div>
             </div>
           </div>
-          <div className="md:w-5/12 w-full py-3 md:pl-12 text-sm font-normal md:my-0 mt-4">
-            <h4 className="md:my-4 my-2 text-2xl md:text-left text-center">
+          <div className="md:w-5/12 w-full py-3 md:pl-12 text-sm font-medium md:my-0 mt-4">
+            <h4 className="md:my-4 my-2 text-2xl md:text-left text-center font-semibold ">
               '{lesson.title.toUpperCase()}'
             </h4>
             <div className="my-4">
               <h6 className="my-0.5">
-                <span className="font-medium">Instructor :</span>{" "}
-                {lesson.instructor}
+                <span className=" font-semibold">Instructor :</span>{" "}
+                <span className="font-medium"> {lesson.instructor}</span>
               </h6>
               <h6 className="my-0.5">
                 {" "}
-                <span className="font-medium">Timings :</span> {lesson.timings}
+                <span className="font-semibold">Timings :</span>{" "}
+                <span className="font-medium">{lesson.timings}</span>
               </h6>
             </div>
 
@@ -57,7 +58,7 @@ function SwastikSchoolofDanceMusic() {
 
   return (
     <div>
-      <div class=" justify-content-center px-0 md:ml-20">
+      <div class="font-montserrat justify-content-center px-0 md:ml-20">
         <h1 className="md:text-2xl text-xl font-semibold text-center md:my-10  my-4">
           Swastika School of Dance & Music
         </h1>

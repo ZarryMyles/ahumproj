@@ -14,9 +14,9 @@ function BookSpace() {
   const isPhone = window.innerWidth < 700;
 
   return (
-    <div class="wrapper">
+    <div class="wrapper ">
       <div className="p-0">
-        <div class="container-fluid justify-content-center px-0">
+        <div class="container-fluid justify-content-center px-0 font-montserrat">
           <div className="py-5">
             {/* Top Content */}
             <div className="flex lg:mx-32 mx-10 md:pl-24 flex-col items-center">
@@ -164,7 +164,7 @@ function BookSpace() {
               <h2 className="text-2xl font-semibold hidden lg:flex">
                 Facilities
               </h2>
-              <div className="mt-10 md:flex md:flex-row grid grid-cols-2 justify-between  w-full">
+              <div className="mt-10 md:flex md:flex-row grid grid-cols-2 justify-between font-montserrat  w-full">
                 <div className="flex flex-col items-center transition duration-500 ease-in-out transform md:hover:scale-105 mx-2 md:px-3">
                   <div className="rounded-full bg-ahum-brown-collage h-28 w-28 flex items-center justify-center transition duration-500 ease-in-out transform hover:shadow-xl">
                     <img

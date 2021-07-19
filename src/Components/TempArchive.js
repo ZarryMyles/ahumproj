@@ -23,7 +23,7 @@ export default function TempArchive(props) {
     <div
       data-aos="slide-up"
       data-aos-duration="700"
-      className="md:grid  xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0  grid-cols-12 gap-4 items-center py-2 flex-shrink-0 mb-10  ml-0 mr-0 "
+      className="font-montserrat md:grid  xs:pl-5 md:ml-0 xs:ml-0.5 md:pl-0  grid-cols-12 gap-4 items-center py-2 flex-shrink-0 mb-10  ml-0 mr-0 "
     >
       <div
         className="rounded-full flex bg-black md:h-3 md:w-3 h-4 w-4 col-span-1  archive-dot md:-mt-4"
@@ -44,11 +44,11 @@ export default function TempArchive(props) {
         />
       </div>
       <div className="col-span-4 text-center text-base md:mr-0 mr-5">
-        <span className="py-1 block text-lg font-semibold  text-center">
+        <span className="py-1 block text-lg font-semibold   text-center">
           ‘{program.event.toUpperCase()}’
         </span>
         {program.artist && (
-          <span className="py-1 block font-normal text-base text-center  ">
+          <span className="py-1 block font-normal text-base text-center font-montserrat  ">
             {program.artist.split(",").length > 1 ? "Artists : " : "Artist : "}
             {program.artist}
           </span>

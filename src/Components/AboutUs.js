@@ -120,20 +120,21 @@ function About() {
               Founder, Dancer, Choreographer
             </h5>
             <p className="customp7 ">
-              <br />I am a Bharatanatyam dancer and have trained under
+              <br />
+              Anuradha is a Bharatanatyam dancer and has trained under
               Padmabhushan Dr. Saroja Vaidyanathan at Ganesa Natyalaya. Being an
               'A' graded artist of Delhi Doordarshan and an empanelled artist of
-              ICCR, I have been dancing professionally for the past twenty
-              years. Some of the productions choreographed by me are: "Pratham
+              ICCR, she has been dancing professionally for the past twenty
+              years. Some of the productions choreographed by her are: "Pratham
               Parth", Jananyey Namah", "Vaidehi", “Stories Unearthed”, a site-
-              specific work, 6 feet land and us & Female Gaze. I have been an
-              Artist in residence at TUIDA (South Korea) and OMI ( York). Under
-              ICCR, I performed in Sarajevo, Poland, Germany, Denmark and
-              Luxembourg. Academically, I am a gold medalist in Mphil- Cultural
-              Studies from Jain University. With this background, it was natural
-              for me to create a platform where I could bring art and society
-              closer in together and try and create a beautiful community. Ahum
-              was born out of this desire.
+              specific work, 6 feet land and us & Female Gaze. Anuradha has been
+              an Artist in residence at TUIDA (South Korea) and OMI ( York).
+              Under ICCR, she has performed in Sarajevo, Poland, Germany,
+              Denmark and Luxembourg. Academically, she is a gold medalist in
+              Mphil- Cultural Studies from Jain University. With this
+              background, it was natural for her to create a platform where she
+              could bring art and society closer in together and try and create
+              a beautiful community. Ahum was born out of this desire.
             </p>
           </div>
           <div className="col-md-1"></div>
@@ -158,12 +159,12 @@ function About() {
               <p className="customp7">
                 <br />
                 An engineer by profession, Natarajan has always been a patron of
-                arts. This engagement deepened after marrying Anu and when Anu
-                decided to start ahum, he was a natural partner. With his 20+
-                years of corporate experience, Natarajan believes that the
+                arts. This engagement deepened after marrying Anuradha and when
+                she decided to start ahum, he was a natural partner. With his
+                20+ years of corporate experience, Natarajan believes that the
                 ecosystem of arts will benefit from a dash of corporate
                 organization. He believes that arts matter because more than any
-                other human endeavor it possesses the capacity of move us, which
+                other human endeavor it possesses the capacity to move us, which
                 brings out the best in us humans.
               </p>
             </div>

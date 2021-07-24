@@ -77,7 +77,7 @@ function UpcomingShows() {
     if (!loading)
       return (
         <div className="font-montserrat w-full h-96  flex flex-col items-center justify-center">
-          <h1 className=" text-center  text-ahum-maroon font-semibold md:text-4xl text-2xl mb-10">
+          <h1 className=" text-center   text-ahum-maroon font-semibold md:text-4xl text-2xl mb-10">
             No Upcoming Shows
           </h1>
           <div className="flex items-center flex-col justify-center">

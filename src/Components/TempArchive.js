@@ -1,7 +1,4 @@
 import React from "react";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import PublicIcon from "@material-ui/icons/Public";
 
 export default function TempArchive(props) {
   const { program, dispMonth } = props;
@@ -48,7 +45,7 @@ export default function TempArchive(props) {
           ‘{program.event.toUpperCase()}’
         </span>
         {program.artist && (
-          <span className="py-1 block font-normal text-base text-center font-montserrat  ">
+          <span className="py-1 block font-normal text-base text-center   ">
             {program.artist.split(",").length > 1 ? "Artists : " : "Artist : "}
             {program.artist}
           </span>
@@ -63,19 +60,16 @@ export default function TempArchive(props) {
         )}
         {program.instagram && (
           <a href={program.instagram} className="px-3 py-3">
-            {/* <InstagramIcon style={{ fontSize: 25 }} /> */}
             <i class="fab fa-instagram"></i>
           </a>
         )}
         {program.youtube && (
           <a href={program.youtube} className="px-3 py-3">
-            {/* <YouTubeIcon style={{ fontSize: 30 }} /> */}
             <i class="fab fa-youtube"></i>
           </a>
         )}
         {program.othLink && (
           <a href={program.othLink} className="px-3 py-2 ">
-            {/* <PublicIcon style={{ fontSize: 25 }} /> */}
             <i class="fas fa-globe-americas"></i>{" "}
           </a>
         )}

@@ -39,7 +39,7 @@ function BookSpace() {
                     <div>
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/1-thumb_ytxlja.jpg",
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/1-thumb-min_jvfx78.webp",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -48,7 +48,7 @@ function BookSpace() {
                     <div className="mt-12">
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/4-thumb_oz1auf.jpg",
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/4-thumb-min_stk3dv.webp",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -56,7 +56,7 @@ function BookSpace() {
                     <div className="mt-28">
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/6-thumb_lbtiy5.jpg",
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/6-thumb-min_a9hsbk.webp",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -65,7 +65,7 @@ function BookSpace() {
                     <div>
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/7-thumb_ixjwtq.jpg",
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/7-thumb-min_cs8vxb.webp",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -74,7 +74,7 @@ function BookSpace() {
                     <div className="mt-28">
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/8-thumb_ih2pel.jpg",
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/8-thumb-min_tqhsks.webp",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -83,7 +83,7 @@ function BookSpace() {
                     <div className="mt-20">
                       <ImageZoom
                         image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835832/Bookourspace/10_ogx0zf.jpg",
+                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/10-thumb-min-min_bdbazs.webp",
                           alt: "Golden Gate Bridge",
                         }}
                       />
@@ -97,7 +97,7 @@ function BookSpace() {
                       <div className="mr-4">
                         <ImageZoom
                           image={{
-                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/1-thumb_ytxlja.jpg",
+                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/1-thumb-min_jvfx78.webp",
                             alt: "Golden Gate Bridge",
                           }}
                         />
@@ -107,7 +107,7 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/4-thumb_oz1auf.jpg",
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/4-thumb-min_stk3dv.webp",
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -115,7 +115,8 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/6-thumb_lbtiy5.jpg",
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/6-thumb-min_a9hsbk.webp",
+
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -125,7 +126,8 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/8-thumb_ih2pel.jpg",
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/8-thumb-min_tqhsks.webp",
+
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -133,7 +135,8 @@ function BookSpace() {
                           <div className="mr-4">
                             <ImageZoom
                               image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835832/Bookourspace/10_ogx0zf.jpg",
+                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/10-thumb-min-min_bdbazs.webp",
+
                                 alt: "Golden Gate Bridge",
                               }}
                             />
@@ -143,7 +146,8 @@ function BookSpace() {
                       <div className="">
                         <ImageZoom
                           image={{
-                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1625835829/Bookourspace/7-thumb_ixjwtq.jpg",
+                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/7-thumb-min_cs8vxb.webp",
+
                             alt: "Golden Gate Bridge",
                           }}
                         />

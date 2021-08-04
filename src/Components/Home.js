@@ -12,7 +12,7 @@ function Home() {
   return (
     <div class="wrapper ">
       <div id="content">
-        <div class=" justify-content-center flex items-center justify-center h-auto">
+        <div class=" justify-content-center flex items-center justify-center md:h-auto md:mt-0 mt-44">
           <video
             // className="mb-40"
             width={window.innerWidth > 767 ? "77%" : "100%"}

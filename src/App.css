@@ -547,7 +547,7 @@ a.article:hover {
     right: 10%;
   }
   .squarepic1 {
-    background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625830330/Anuradha_nwm3fa.jpg");
+    background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129622/Anuradha_nwm3fa_wx4lxb.webp");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -558,7 +558,7 @@ a.article:hover {
     float: none;
   }
   .squarepic2 {
-    background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1625830328/Natarajan_vcun0e.jpg");
+    background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129622/Natarajan_vcun0e_wchkhn.webp");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -704,7 +704,6 @@ a.article:hover {
   height: 250px; */
   min-width: 350px;
   min-height: 250px !important;
-
   max-height: 250px !important;
   max-width: 350px !important;
 }

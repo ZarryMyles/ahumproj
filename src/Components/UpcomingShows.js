@@ -77,12 +77,12 @@ function UpcomingShows() {
     // when no upcoming shows present
     if (!loading)
       return (
-        <div className="font-montserrat w-full h-96  flex flex-col items-center justify-center">
+        <div className="font-montserrat w-full h-96 flex flex-col items-center justify-center">
           <h1 className=" text-center   text-ahum-maroon font-semibold md:text-4xl text-2xl mb-10">
             No Upcoming Shows
           </h1>
           <div className="flex items-center flex-col justify-center">
-            <h3 className="md:text-xl text-lg ">Checkout our archives</h3>
+            <h3 className="md:text-xl text-lg ">Take a look at our archives</h3>
             <a
               href="/archives"
               type="button"
@@ -102,7 +102,7 @@ function UpcomingShows() {
             </h4>
             <input
               type="text"
-              placeholder="you@mail.com"
+              placeholder="your@email.com"
               onChange={(e) => mailChange(e.target.value)}
               className="my-auto  focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3  border "
             />

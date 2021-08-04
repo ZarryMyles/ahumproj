@@ -81,7 +81,7 @@ function UpcomingShows() {
           className="font-montserrat    flex flex-col items-center justify-center"
           style={{ height: "80vh" }}
         >
-          <h1 className=" text-center   text-ahum-maroon font-semibold md:text-4xl text-2xl mb-10">
+          <h1 className=" text-center   text-ahum-maroon font-semibold md:text-4xl text-2xl md:mb-10">
             No Upcoming Shows
           </h1>
           <div className="flex items-center flex-col justify-center">
@@ -99,7 +99,7 @@ function UpcomingShows() {
               Archives
             </a>
           </div>
-          <div className=" flex md:flex-row flex-col w-2/3 justify-center mt-14 items-center">
+          <div className=" flex md:flex-row flex-col w-2/3 justify-center md:mt-14 mt-5 items-center">
             <h4 className="md:text-lg text-sm my-2">
               Subscribe to stay updated :{" "}
             </h4>

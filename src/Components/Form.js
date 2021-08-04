@@ -145,6 +145,9 @@ export default function Form(props) {
     } else {
     }
   };
+  const backHandler = () => {
+    history.push("/upcoming-shows");
+  };
   const inputCSS =
     "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 px-2 w-full border ";
 
@@ -271,6 +274,12 @@ export default function Form(props) {
         >
           Submit
         </button>
+        <div
+          className="  text-ahum-brown text-center underline text-sm cursor-pointer my-1 "
+          onClick={backHandler}
+        >
+          Back
+        </div>
       </div>
     );
   }

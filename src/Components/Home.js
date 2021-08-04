@@ -10,12 +10,12 @@ function Home() {
   const homeVid =
     "https://res.cloudinary.com/dtfecnt6o/video/upload/v1628087028/ahumhomepage_tbfmxd.mp4";
   return (
-    <div class="wrapper">
+    <div class="wrapper ">
       <div id="content">
-        <div class="justify-content-center flex items-center justify-center h-full">
+        <div class=" justify-content-center flex items-center justify-center h-auto">
           <video
-            className="mb-40"
-            width={window.innerWidth > 767 ? "75%" : "100%"}
+            // className="mb-40"
+            width={window.innerWidth > 767 ? "77%" : "100%"}
             loop
             controlsList="nodownload"
             preload="auto"

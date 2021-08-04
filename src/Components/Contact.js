@@ -24,7 +24,9 @@ function Contact(props) {
   const validateEmail = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
-  const validatePhone = RegExp(/^\d{10}$/i);
+  const validatePhone = RegExp(
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i
+  );
 
   //Contact form change and Submit Handlers
   let changeHandler = (event) => {

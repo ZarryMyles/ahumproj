@@ -57,8 +57,9 @@ function UpcomingShows() {
     return (
       <div className="col-sm-12 col-md-6 col-xl-4 my-2">
         <div
-          data-aos="flip-right"
-          data-aos-duration="800"
+          // data-aos-offset="0"
+          // data-aos="slide-right"
+          // data-aos-duration="800"
           class="bg-holderbg2  mx-auto my-3"
           style={{ backgroundImage: `url('${program.image}')` }}
         ></div>

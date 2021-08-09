@@ -160,7 +160,7 @@ function Contact(props) {
 
   return (
     <div class="wrapper">
-      <div className="p-0 md:ml-20">
+      <div className="p-0 md:ml-20 w-full overflow-hidden">
         <div class="container-fluid justify-content-center px-0 font-montserrat">
           <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
             <div className="flex justify-center items-center col-span-1 md:ml-24 md:w-8/12">
@@ -249,7 +249,7 @@ function Contact(props) {
               </div>
             </div>
           </div>
-          <div className="bg-ahum-brown lg:absolute lg:inset-x-0 lg:bottom-0 lg:h-52 h-max py-6 mt-10 lg:p-0 lg:mt-0">
+          <div className="bg-ahum-brown md:max-h-36 lg:absolute lg:inset-x-0 lg:bottom-0 lg:h-52 h-max py-6 mt-10 lg:p-0 lg:mt-0">
             <div className="flex mx-9 lg:mt-0 h-full lg:ml-24 justify-center items-center">
               <div className="lg:grid w-full lg:grid-cols-8">
                 <div className="col-start-2 col-span-2 flex flex-col mb-2 md:mb-0">
@@ -283,8 +283,8 @@ function Contact(props) {
                 {/* for normal screen */}
                 <div className="col-start-6 col-end-8 hidden lg:flex flex-col">
                   <span className="text-white">
-                    Phone : <a href="tel:+919886334046">+91 9886334046</a>, +91
-                    999999990
+                    Phone : <a href="tel:+919886334046">+91 9886334046</a>,{" "}
+                    <a href="tel:+917349764046">+91 7349764046</a>
                   </span>
                   <span className="text-white">
                     Email : <a href="mailto:contact@ahum.in">contact@ahum.in</a>

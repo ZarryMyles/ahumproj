@@ -845,3 +845,11 @@ a.article:hover {
     background-size: cover;
   }
 }
+
+/* toastify */
+.Toastify__toast {
+  margin-left: 80px;
+}
+.Toastify__toast-container {
+  width: fit-content;
+}

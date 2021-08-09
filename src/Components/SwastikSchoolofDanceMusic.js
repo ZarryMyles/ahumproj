@@ -15,7 +15,7 @@ function SwastikSchoolofDanceMusic() {
         >
           <div className="md:w-1/2 w-full flex justify-center">
             <div
-              className="md:w-2/3 w-full   flex justify-center bg-ahum-brown-collage"
+              className="md:w-2/3 w-full   flex justify-center "
               data-aos="fade-right"
               data-aos-duration="400"
               data-aos-easing="ease-in-sine"

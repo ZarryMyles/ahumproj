@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
+// toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function UpcomingShows() {
+  // taost notification
+  const notify = (message) => toast(message);
+
   const [events, setEvents] = useState();
   const [mail, setMail] = useState();
+
   // api
   const newsLetterAPI = process.env.REACT_APP_API_END + "newsletters";
   const showsAPI = process.env.REACT_APP_API_END + "upcomings";
@@ -30,7 +37,11 @@ function UpcomingShows() {
           },
         }
       );
-      alert("Your have been subscribed");
+      notify(
+        <div className=" text-green-800">
+          Thank you for your interest in ahum!
+        </div>
+      );
     }
   }
 
@@ -100,7 +111,7 @@ function UpcomingShows() {
             </a>
           </div>
           <div className=" flex md:flex-row flex-col w-2/3 justify-center md:mt-14 mt-5 items-center">
-            <h4 className="md:text-lg text-sm my-2">
+            <h4 className="md:text-lg text-sm my-2 font-medium ">
               Subscribe to stay updated :{" "}
             </h4>
             <input
@@ -153,6 +164,16 @@ function UpcomingShows() {
       ) : (
         displayError(true)
       )}
+      <div className="">
+        {" "}
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+        />
+      </div>
     </div>
   );
 }

@@ -36,12 +36,10 @@ function About() {
               }
             >
               <SwiperSlide className=" flex justify-center ">
-                {/* <div className="w-3/10  "></div> */}
                 <img
-                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage1_h0ailx_zr6tg9.webp"
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage5_je5r2a-min_i4ip6b.webp"
                   alt=""
                 />
-                {/* <div className="w-3/10"></div> */}
               </SwiperSlide>
 
               <SwiperSlide className=" flex justify-center ">
@@ -62,17 +60,20 @@ function About() {
                   alt=""
                 />
               </SwiperSlide>
-              <SwiperSlide className=" flex justify-center ">
-                <img
-                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage5_je5r2a-min_i4ip6b.webp"
-                  alt=""
-                />
-              </SwiperSlide>
+
               <SwiperSlide className=" flex justify-center ">
                 <img
                   src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1626613970/AboutUs/collage6_ulbfvt-min_vdebma.webp"
                   alt=""
                 />
+              </SwiperSlide>
+              <SwiperSlide className=" flex justify-center ">
+                {/* <div className="w-3/10  "></div> */}
+                <img
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1628431764/AboutUs/collage1_h0ailx_zr6tg9_vbv2rr.webp"
+                  alt=""
+                />
+                {/* <div className="w-3/10"></div> */}
               </SwiperSlide>
             </Swiper>
           </div>

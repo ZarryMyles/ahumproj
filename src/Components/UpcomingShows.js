@@ -12,6 +12,9 @@ function UpcomingShows() {
   const [events, setEvents] = useState();
   const [mail, setMail] = useState();
 
+  // subscribe input border color
+  const [subColor, setSubColor] = useState("gray");
+
   // api
   const newsLetterAPI = process.env.REACT_APP_API_END + "newsletters";
   const showsAPI = process.env.REACT_APP_API_END + "upcomings";
@@ -24,7 +27,7 @@ function UpcomingShows() {
   }
   function submitHandler() {
     if (!mail || !validateEmail.test(mail)) {
-      alert("Enter a Valid e-mail");
+      setSubColor("red");
     } else {
       axios.post(
         newsLetterAPI,
@@ -37,8 +40,10 @@ function UpcomingShows() {
           },
         }
       );
+      setSubColor("green");
+
       notify(
-        <div className=" text-green-800">
+        <div className=" text-green-800 text-center">
           Thank you for your interest in ahum!
         </div>
       );
@@ -112,13 +117,14 @@ function UpcomingShows() {
           </div>
           <div className=" flex md:flex-row flex-col w-2/3 justify-center md:mt-14 mt-5 items-center">
             <h4 className="md:text-lg text-sm my-2 font-medium ">
-              Subscribe to stay updated :{" "}
+              Subscribe to stay updated :
             </h4>
             <input
               type="text"
               placeholder="your@email.com"
               onChange={(e) => mailChange(e.target.value)}
-              className="my-auto  focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3  border "
+              className="my-auto    focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3   "
+              style={{ borderColor: subColor, border: "1px solid" }}
             />
             <button
               className="my-2 py-1 px-4 bg-ahum-brown trantop sition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg "

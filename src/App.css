@@ -669,9 +669,9 @@ a.article:hover {
   margin-bottom: 0.25rem;
 }
 
-.inputCss {
+/* .inputCss {
   border: 1px solid lightgray !important;
-}
+} */
 
 .newsBtn {
   background-color: gray;
@@ -844,6 +844,10 @@ a.article:hover {
     width: 100%;
     background-size: cover;
   }
+}
+/* rsvp form */
+#rsvp-form input {
+  border: 1px solid;
 }
 
 /* toastify */

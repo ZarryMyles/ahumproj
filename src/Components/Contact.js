@@ -194,7 +194,7 @@ function Contact(props) {
     <div class="wrapper">
       {window.innerWidth > 767 ? (
         <ToastContainer
-          className="font-medium font-montserrat text-left text-red-600"
+          className="font-medium font-montserrat text-center text-black"
           position="bottom-center"
           autoClose={5000}
           hideProgressBar={true}
@@ -204,7 +204,7 @@ function Contact(props) {
         />
       ) : (
         <ToastContainer
-          className="text-left font-montserrat font-medium text-black"
+          className="text-center font-montserrat font-medium text-black"
           position="bottom-center"
           autoClose={5000}
           transition={Slide}

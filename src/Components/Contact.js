@@ -124,6 +124,20 @@ function Contact(props) {
       document.getElementById("phno").style.borderColor = "lightgray";
       document.getElementById("msg").style.borderColor = "lightgray";
 
+      //Resetting Values to prevent multiple entries
+      setFormDetails({
+        name: "",
+        phno: "",
+        mail: "",
+        msg: "",
+        error: {
+          name: "Enter a vaild Name",
+          mail: "Enter a vaild Email Address",
+          phno: "Enter a vaild Phone Number",
+          msg: "Enter a vaild Message",
+        },
+      });
+
       tst.success("Thank you for your interest in ahum!");
     } else {
       //Resetting border colors
@@ -163,10 +177,12 @@ function Contact(props) {
           },
         }
       );
+
+      setNewsMail("");
       tst.success("Thank you for your interest in ahum!");
       document.getElementById("newsId").style.borderColor = "green";
     } else {
-      toast("Entered Email is invalid");
+      toast("Enter a valid email address");
       document.getElementById("newsId").style.borderColor = "red";
     }
   };
@@ -178,8 +194,8 @@ function Contact(props) {
     <div class="wrapper">
       {window.innerWidth > 767 ? (
         <ToastContainer
-          className="font-medium font-montserrat text-left"
-          position="bottom-right"
+          className="font-medium font-montserrat text-left text-red-600"
+          position="bottom-center"
           autoClose={5000}
           hideProgressBar={true}
           newestOnTop={false}
@@ -188,8 +204,8 @@ function Contact(props) {
         />
       ) : (
         <ToastContainer
-          className="text-left font-montserrat font-medium"
-          position="bottom-right"
+          className="text-left font-montserrat font-medium text-black"
+          position="bottom-center"
           autoClose={5000}
           transition={Slide}
           hideProgressBar={true}

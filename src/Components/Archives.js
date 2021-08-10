@@ -14,8 +14,8 @@ function Archives(props) {
     { id: 5, name: "Swastika School of Dance", cat: "swastikaschoolofdance" },
     { id: 6, name: "Shows", cat: "shows" },
     { id: 7, name: "Workshops", cat: "workshops" },
-    { id: 8, name: "ADHOC Program", cat: "adhocprograms" },
-    { id: 9, name: "Know your Art", cat: "knowyourart" },
+    { id: 8, name: "Know your Art", cat: "knowyourart" },
+    { id: 9, name: "Other Programs", cat: "otherprograms" },
   ];
   const yearO = [
     { id: 1, name: "2021" },
@@ -37,7 +37,7 @@ function Archives(props) {
       case "swastikaschoolofdance":
         return program[4];
       case "knowyourart":
-        return program[8];
+        return program[7];
       case "shows":
         return program[5];
       default:

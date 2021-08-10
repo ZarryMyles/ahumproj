@@ -664,14 +664,14 @@ a.article:hover {
   color: white;
 }
 .newsField {
-  border-bottom: 2px solid white !important;
+  border-bottom: 2px solid white;
   max-width: 250px;
   margin-bottom: 0.25rem;
 }
 
-/* .inputCss {
-  border: 1px solid lightgray !important;
-} */
+.inputCss {
+  border: 1px solid lightgray;
+}
 
 .newsBtn {
   background-color: gray;

@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 function Contact(props) {
+  // taost notification
+  const notify = (message) => toast(message);
+
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
-  const [borderColor, setBorderColor] = useState("white");
+  const [borderColor, setBorderColor] = useState("lightgray");
   const [newsMail, setNewsMail] = useState("");
   const contactAPI = process.env.REACT_APP_API_END + "contacts";
   const newsAPI = process.env.REACT_APP_API_END + "newsletters";
@@ -123,7 +128,7 @@ function Contact(props) {
       document.getElementById("phno").placeholder = "Phone";
       document.getElementById("msg").placeholder = "Your Message";
 
-      alert("Your Details have been submitted!");
+      toast.success("Thank you for your interest in ahum!");
     } else {
       setBorderColor("red");
       console.error("Invalid Form");
@@ -148,18 +153,40 @@ function Contact(props) {
           },
         }
       );
-      alert("Your have been subscribed");
+      toast.success("Thank you for your interest in ahum!");
+      document.getElementById("newsId").style.borderColor = "green";
     } else {
-      alert("Please enter a valid Email");
-      setBorderColor("red");
+      alert("Entered Email is invalid");
+      document.getElementById("newsId").style.borderColor = "red";
     }
   };
 
   const inputCSS =
-    "inputCss focus:placeholder-gray-500 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 px-2 w-full border-solid border";
+    "inputCss focus:placeholder-gray-500 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 px-2 w-full";
 
   return (
     <div class="wrapper">
+      {window.innerWidth > 767 ? (
+        <ToastContainer
+          className="font-medium font-montserrat text-left"
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          transition={Slide}
+          closeOnClick
+        />
+      ) : (
+        <ToastContainer
+          className="text-left font-montserrat font-medium"
+          position="bottom-right"
+          autoClose={5000}
+          transition={Slide}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+        />
+      )}
       <div className="p-0 md:ml-20 w-full overflow-hidden">
         <div class="container-fluid justify-content-center px-0 font-montserrat">
           <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
@@ -187,6 +214,7 @@ function Contact(props) {
                         type="tel"
                         name="phno"
                         id="phno"
+                        style={{ borderColor: borderColor }}
                         placeholder="Phone"
                         onChange={(event) => {
                           changeHandler(event);
@@ -199,6 +227,7 @@ function Contact(props) {
                         type="email"
                         name="mail"
                         id="mail"
+                        style={{ borderColor: borderColor }}
                         placeholder="Email"
                         onChange={(event) => {
                           changeHandler(event);
@@ -211,6 +240,7 @@ function Contact(props) {
                     type="text"
                     name="msg"
                     id="msg"
+                    style={{ borderColor: borderColor }}
                     placeholder="Your Message"
                     onChange={(event) => {
                       changeHandler(event);
@@ -263,6 +293,7 @@ function Contact(props) {
                 <div className="lg:col-start-4 col-end-6 w-5/6 md:w-4/6 flex flex-col">
                   <form id="newsLetter">
                     <input
+                      id="newsId"
                       type="email"
                       className="newsField w-full text-white text-base bg-ahum-brown focus:bg-transparent focus:placeholder-transparent"
                       placeholder="Email Address"

@@ -1,16 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+// toast
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Form(props) {
+  const history = useHistory();
+  // api
+  const rsvpAPI = process.env.REACT_APP_API_END + "rsvps";
+  const upcomingAPI = process.env.REACT_APP_API_END + "upcomings";
+  //
   const { title, event } = props.match.params;
   const eventName = props.match.params.event;
   const titles = ["enquiry", "rsvp", "bookthespace"];
-  // const events = ["event 1", "event 2", "event 3"];
-  const history = useHistory();
-
-  const rsvpAPI = process.env.REACT_APP_API_END + "rsvps";
-  const upcomingAPI = process.env.REACT_APP_API_END + "upcomings";
   const [currentShows, setCurrentShows] = useState([]);
+  // toastify
+  const notify = (message) => toast(message);
+  // input values
+  const [inputValues, setInputValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    attendees: "",
+  });
+  // bordercolors of input fields
+  const [nameBorder, setNameBorder] = useState("gray");
+  const [emailBorder, setEmailBorder] = useState("gray");
+  const [phoneBorder, setPhoneBorder] = useState("gray");
+  const [attendeesBorder, setAttendeesBorder] = useState("gray");
+
   let getData = async () => {
     await fetch(upcomingAPI, {
       headers: {
@@ -24,159 +43,111 @@ export default function Form(props) {
       })
     );
   };
-
-  const [formDetails, setFormDetails] = useState({
-    name: "",
-    phno: "",
-    mail: "",
-    msg: "",
-    attendees: "",
-    error: {
-      name: "Enter a vaild Name",
-      phno: "Enter a vaild Phone Number",
-      mail: "Enter a vaild Email Address",
-      msg: title === "bookthespace" ? "Enter a vaild Message" : "",
-      attendees: title === "rsvp" ? "Enter a vaild numbe for attendees" : "",
-    },
-  });
+  // regex for phone number and email
   const validateEmail = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
   const validatePhone = RegExp(
     /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i
   );
-  let changeHandler = (event) => {
-    let nam = event.target.name;
-    let val = event.target.value;
-
-    switch (nam) {
-      case "name":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            name: val.length < 2 ? "Enter a vaild Name" : "",
-          },
-        }));
-        break;
-
-      case "mail":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            mail: validateEmail.test(val) ? "" : "Enter a valid email address",
-          },
-        }));
-        break;
-
-      case "phno":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            phno: validatePhone.test(val) ? "" : "Enter a valid Phone Number",
-          },
-        }));
-        break;
-
-      case "msg":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            msg: val.length < 5 ? "Enter a valid message!" : "",
-          },
-        }));
-        break;
-      case "attendees":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            attendees:
-              val <= 0 || val.length === 0
-                ? "Enter a valid number of attendees!"
-                : "",
-          },
-        }));
-        break;
-      default:
-        break;
-    }
-
-    setFormDetails((prevState) => ({ ...prevState, [nam]: val }));
+  // validating input values
+  const validateValues = () => {
+    console.log(
+      !validatePhone.test(inputValues.phone),
+      inputValues.phone === ""
+    );
+    let invalid = false;
+    if (inputValues.name === "") {
+      invalid = true;
+      setNameBorder("red");
+    } else setNameBorder("gray");
+    if (!validatePhone.test(inputValues.phone) || inputValues.phone === "") {
+      invalid = true;
+      setPhoneBorder("red");
+    } else setPhoneBorder("gray");
+    if (!validateEmail.test(inputValues.email) || inputValues.email === "") {
+      invalid = true;
+      setEmailBorder("red");
+    } else setEmailBorder("gray");
+    if (inputValues.attendees === "" || inputValues.attendees < 1) {
+      invalid = true;
+      setAttendeesBorder("red");
+    } else setAttendeesBorder("gray");
+    return invalid;
   };
-
-  let handleSubmit = async (event) => {
-    event.preventDefault();
-    const validateForm = (errors) => {
-      let valid = true;
-      Object.keys(errors).forEach((key) => {
-        if (errors[key].length !== 0 && valid === true) {
-          alert(errors[key]);
-          valid = false;
-        }
-      });
-      return valid;
+  // submit handler
+  const onsubmit = (e) => {
+    e.preventDefault();
+    const rsvpSubmissionData = {
+      name: inputValues.name,
+      mail: inputValues.email,
+      phone: inputValues.phone,
+      attendees: inputValues.attendees,
+      event: eventName,
     };
-    if (validateForm(formDetails.error)) {
-      const rsvpSubmissionData = {
-        name: formDetails.name,
-        mail: formDetails.mail,
-        phone: formDetails.phno,
-        attendees: formDetails.attendees,
-        event: eventName,
-      };
-
+    if (!validateValues())
       if (currentShows.includes(eventName)) {
+        // send data to api
         axios.post(rsvpAPI, rsvpSubmissionData, {
           headers: {
             Authorization: process.env.REACT_APP_API_KEY,
           },
         });
-        alert("Your Details have been submitted!");
+        notify(
+          <div className=" text-green-800 text-center">
+            Submitted! <br /> We will get back to you.
+          </div>
+        );
+        setTimeout(() => {
+          return history.push("/upcoming-shows");
+        }, 1000);
       } else {
-        alert("Error finding the event!");
+        notify(
+          <div className=" text-red-800 text-center">
+            Error finding event. <br /> Please try again.
+          </div>
+        );
+        setTimeout(() => {
+          return history.push("/upcoming-shows");
+        }, 1000);
       }
-      if (title === "rsvp") return history.push("/upcoming-shows");
-      // else if (title === "bookthespace") return history.push("/bookspace");
-      else return history.push("/");
-    } else {
-    }
   };
   const backHandler = () => {
     history.push("/upcoming-shows");
   };
-  const inputCSS =
-    "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 px-2 w-full border ";
-
+  // checking if the event is valid
   function checkQuery() {
     if (!titles.includes(title.toLowerCase())) {
       return history.push("/");
     }
-    // if (event !== undefined && !currentShows.includes(eventName)) {
-    //   console.log(true);
-    //   return history.push("/upcoming-shows");
-    // }
   }
   useEffect(() => {
     checkQuery();
     getData();
+
+    // if (!currentShows.includes(eventName)) {
+    //   return history.push("/upcoming-shows");
+    // }
   }, []);
+
+  // input box
+  const inputCSS =
+    "focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 px-2 w-full  ";
+
   function form(rsvp = false) {
     return (
-      <div className="flex flex-col md:w-5/12 ">
+      <div className="flex flex-col md:w-5/12 " id="rsvp-form">
         <span className="mb-3 font-medium">Please provide your details!</span>
         <div className="md:w-12/12">
           <input
             className={inputCSS}
+            style={{ borderColor: nameBorder }}
             id="formName"
             type="text"
             name="name"
             placeholder="Your Name"
-            onChange={(event) => {
-              changeHandler(event);
+            onChange={(e) => {
+              setInputValues({ ...inputValues, name: e.target.value });
             }}
           />
         </div>
@@ -185,26 +156,28 @@ export default function Form(props) {
             <div className="md:w-5/12 w-3/3">
               <input
                 id="formPhno"
+                onChange={(e) => {
+                  setInputValues({ ...inputValues, phone: e.target.value });
+                }}
                 className={inputCSS}
+                style={{ borderColor: phoneBorder }}
                 type="text"
                 name="phno"
                 placeholder="Phone number"
-                onChange={(event) => {
-                  changeHandler(event);
-                }}
               />
             </div>
           ) : (
             <div className="md:w-5/12 w-3/3 ">
               <input
                 className={inputCSS}
+                style={{ borderColor: phoneBorder }}
+                onChange={(e) => {
+                  setInputValues({ ...inputValues, phone: e.target.value });
+                }}
                 id="formPhno"
                 type="text"
                 name="phno"
                 placeholder="Phone number"
-                onChange={(event) => {
-                  changeHandler(event);
-                }}
               />
             </div>
           )}
@@ -212,63 +185,53 @@ export default function Form(props) {
             <div className="md:w-6/12 w-3/3 md:ml-10">
               <input
                 id="formMail"
+                onChange={(e) => {
+                  setInputValues({ ...inputValues, email: e.target.value });
+                }}
                 className={inputCSS}
+                style={{ borderColor: emailBorder }}
                 type="email"
                 name="mail"
                 placeholder="Email"
-                onChange={(event) => {
-                  changeHandler(event);
-                }}
               />
             </div>
           ) : (
             <div className="md:w-6/12 w-3/3">
               <input
                 className={inputCSS}
+                style={{ borderColor: emailBorder }}
+                onChange={(e) => {
+                  setInputValues({ ...inputValues, email: e.target.value });
+                }}
                 id="formMail"
                 type="email"
                 name="mail"
                 placeholder="Email"
-                onChange={(event) => {
-                  changeHandler(event);
-                }}
               />
             </div>
           )}
         </div>
-        {rsvp && (
-          <div className="md:w-5/12 w-3/32">
-            <input
-              className={inputCSS}
-              type="number"
-              min="0"
-              // max="10"
-              id="attendees"
-              name="attendees"
-              placeholder="No. of attendees"
-              onChange={(event) => {
-                changeHandler(event);
-              }}
-            />
-          </div>
-        )}
-        {!rsvp && (
-          <textarea
+
+        <div className="md:w-5/12 w-3/32">
+          <input
             className={inputCSS}
-            id="formMsg"
-            type="text"
-            name="msg"
-            placeholder="Your Message"
-            onChange={(event) => {
-              changeHandler(event);
+            style={{ borderColor: attendeesBorder }}
+            onChange={(e) => {
+              setInputValues({ ...inputValues, attendees: e.target.value });
             }}
+            type="number"
+            min="1"
+            id="attendees"
+            name="attendees"
+            placeholder="No. of attendees"
           />
-        )}
+        </div>
+
         <button
           className="my-1 md:py-1 py-2  mx-auto md:px-0 px-4 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
           type="submit"
           onClick={(event) => {
-            handleSubmit(event);
+            onsubmit(event);
           }}
           value="Send Message"
         >
@@ -291,6 +254,13 @@ export default function Form(props) {
         {title === "enquiry" && "Enquiry"}
       </h2>
       {title === "rsvp" ? form(true) : form()}
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+      />
     </div>
   );
 }

@@ -845,6 +845,10 @@ a.article:hover {
     background-size: cover;
   }
 }
+/* rsvp form */
+#rsvp-form input {
+  border: 1px solid;
+}
 
 /* toastify */
 .Toastify__toast {

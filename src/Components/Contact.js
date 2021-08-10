@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { ToastContainer, toast, Slide } from "react-toastify";
+import React, { useState } from "react";
+import { ToastContainer, toast as tst, Slide } from "react-toastify";
+import toast from "react-simple-toasts";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 function Contact(props) {
-  // taost notification
-  const notify = (message) => toast(message);
-
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
   const [borderColor, setBorderColor] = useState("lightgray");
@@ -49,22 +47,22 @@ function Contact(props) {
         }));
         break;
 
-      case "mail":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            mail: validateEmail.test(val) ? "" : "Enter a valid email address",
-          },
-        }));
-        break;
-
       case "phno":
         setFormDetails((prevState) => ({
           ...prevState,
           error: {
             ...prevState.error,
             phno: validatePhone.test(val) ? "" : "Enter a valid Phone Number",
+          },
+        }));
+        break;
+
+      case "mail":
+        setFormDetails((prevState) => ({
+          ...prevState,
+          error: {
+            ...prevState.error,
+            mail: validateEmail.test(val) ? "" : "Enter a valid email address",
           },
         }));
         break;
@@ -90,12 +88,13 @@ function Contact(props) {
       let valid = true;
       Object.keys(errors).forEach((key) => {
         if (errors[key].length !== 0 && valid === true) {
-          alert(errors[key]);
+          toast(errors[key]);
           valid = false;
         }
       });
       return valid;
     };
+
     if (validateForm(formDetails.error)) {
       const formData = {
         name: formDetails.name,
@@ -111,27 +110,38 @@ function Contact(props) {
           Authorization: process.env.REACT_APP_API_KEY,
         },
       });
-      console.log({
-        Name: formDetails.name,
-        Mail: formDetails.mail,
-        PhNo: formDetails.phno,
-        Message: formDetails.msg,
-        Date: new Date().toLocaleString(),
-      });
 
-      setBorderColor("green"); //Changes field border color to green
-
-      // Reset checkboxes and fields
+      // Reset fields
       document.getElementById("cForm").reset();
       document.getElementById("name").placeholder = "Your Name";
       document.getElementById("mail").placeholder = "Email";
       document.getElementById("phno").placeholder = "Phone";
       document.getElementById("msg").placeholder = "Your Message";
 
-      toast.success("Thank you for your interest in ahum!");
+      //Resetting border colors
+      document.getElementById("name").style.borderColor = "lightgray";
+      document.getElementById("mail").style.borderColor = "lightgray";
+      document.getElementById("phno").style.borderColor = "lightgray";
+      document.getElementById("msg").style.borderColor = "lightgray";
+
+      tst.success("Thank you for your interest in ahum!");
     } else {
-      setBorderColor("red");
-      console.error("Invalid Form");
+      //Resetting border colors
+      document.getElementById("name").style.borderColor = "lightgray";
+      document.getElementById("mail").style.borderColor = "lightgray";
+      document.getElementById("phno").style.borderColor = "lightgray";
+      document.getElementById("msg").style.borderColor = "lightgray";
+
+      //Setting Color fields of invalid entries red
+      if (formDetails.name.length < 2) {
+        document.getElementById("name").style.borderColor = "red";
+      } else if (!validateEmail.test(formDetails.mail)) {
+        document.getElementById("mail").style.borderColor = "red";
+      } else if (!validatePhone.test(formDetails.phno)) {
+        document.getElementById("phno").style.borderColor = "red";
+      } else if (formDetails.msg.length < 5) {
+        document.getElementById("msg").style.borderColor = "red";
+      }
     }
   };
 
@@ -153,10 +163,10 @@ function Contact(props) {
           },
         }
       );
-      toast.success("Thank you for your interest in ahum!");
+      tst.success("Thank you for your interest in ahum!");
       document.getElementById("newsId").style.borderColor = "green";
     } else {
-      alert("Entered Email is invalid");
+      toast("Entered Email is invalid");
       document.getElementById("newsId").style.borderColor = "red";
     }
   };
@@ -208,19 +218,6 @@ function Contact(props) {
                     }}
                   />
                   <div className="md:grid grid-cols-5 gap-4">
-                    <div className="col-span-2">
-                      <input
-                        className={inputCSS}
-                        type="tel"
-                        name="phno"
-                        id="phno"
-                        style={{ borderColor: borderColor }}
-                        placeholder="Phone"
-                        onChange={(event) => {
-                          changeHandler(event);
-                        }}
-                      />
-                    </div>
                     <div className="col-span-3">
                       <input
                         className={inputCSS}
@@ -229,6 +226,19 @@ function Contact(props) {
                         id="mail"
                         style={{ borderColor: borderColor }}
                         placeholder="Email"
+                        onChange={(event) => {
+                          changeHandler(event);
+                        }}
+                      />
+                    </div>
+                    <div className="col-span-2">
+                      <input
+                        className={inputCSS}
+                        type="tel"
+                        name="phno"
+                        id="phno"
+                        style={{ borderColor: borderColor }}
+                        placeholder="Phone"
                         onChange={(event) => {
                           changeHandler(event);
                         }}

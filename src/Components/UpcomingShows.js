@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function UpcomingShows() {
-  // taost notification
+  // toast notification
   const notify = (message) => toast(message);
 
   const [events, setEvents] = useState();
@@ -116,18 +116,18 @@ function UpcomingShows() {
             </a>
           </div>
           <div className=" flex md:flex-row flex-col w-2/3 justify-center md:mt-14 mt-5 items-center">
-            <h4 className="md:text-lg text-sm my-2 font-medium ">
+            <h4 className="md:text-lg text-base my-2 font-medium ">
               Subscribe to stay updated :
             </h4>
             <input
               type="text"
               placeholder="your@email.com"
               onChange={(e) => mailChange(e.target.value)}
-              className="my-auto    focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto w-2/3   "
+              className="my-auto focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto   "
               style={{ borderColor: subColor, border: "1px solid" }}
             />
             <button
-              className="my-2 py-1 px-4 bg-ahum-brown trantop sition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg "
+              className="md:my-2 my-4 py-1 px-4 bg-ahum-brown trantop sition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg "
               type="submit"
               value="Send Message"
               onClick={submitHandler}

@@ -852,6 +852,11 @@ a.article:hover {
 .Toastify__toast {
   margin-left: 80px;
 }
+@media (max-width: 600px) {
+  .Toastify__toast {
+    margin-left: 0;
+  }
+}
 .Toastify__toast-container {
   width: fit-content;
 }

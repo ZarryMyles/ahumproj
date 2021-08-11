@@ -208,12 +208,11 @@ function Contact(props) {
     <div class="wrapper">
       {window.innerWidth > 767 ? (
         <ToastContainer
-          className="contactToast ml-12 font-montserrat text-center text-green-800"
+          className="contactToast ml-2 font-montserrat text-center text-green-800"
           position="bottom-left"
           autoClose={5000}
           hideProgressBar={true}
           newestOnTop={false}
-          transition={Slide}
           closeOnClick
         />
       ) : (
@@ -221,7 +220,6 @@ function Contact(props) {
           className="text-center font-montserrat font-medium text-green-800"
           position="bottom-center"
           autoClose={5000}
-          transition={Slide}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick

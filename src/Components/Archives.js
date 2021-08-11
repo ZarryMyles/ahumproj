@@ -11,11 +11,9 @@ function Archives(props) {
     { id: 2, name: "Saturdays @ Swastika", cat: "saturdaysatswastika" },
     { id: 3, name: "Music By the Lake", cat: "musicbythelake" },
     { id: 4, name: "Kalakrida", cat: "kalakrida" },
-    { id: 5, name: "Swastika School of Dance", cat: "swastikaschoolofdance" },
-    { id: 6, name: "Shows", cat: "shows" },
-    { id: 7, name: "Workshops", cat: "workshops" },
-    { id: 8, name: "Know your Art", cat: "knowyourart" },
-    { id: 9, name: "Other Programs", cat: "otherprograms" },
+    { id: 5, name: "Workshops", cat: "workshops" },
+    { id: 6, name: "Know your Art", cat: "knowyourart" },
+    { id: 7, name: "Other Programs", cat: "otherprograms" },
   ];
   const yearO = [
     { id: 1, name: "2021" },
@@ -34,11 +32,7 @@ function Archives(props) {
         return program[2];
       case "kalakrida":
         return program[3];
-      case "swastikaschoolofdance":
-        return program[4];
       case "knowyourart":
-        return program[7];
-      case "shows":
         return program[5];
       default:
         return program[0];

@@ -20,7 +20,7 @@ function About() {
     <div class="font-montserrat">
       <div className="p-0 md:ml-20">
         <div class="container-fluid justify-content-center px-0">
-          <div className="aboutUsCarouselImage md:w-full flex items-center justify-center bg-ahum-brown-collage py-4 overflow-hidden">
+          <div className="aboutUsCarouselImage md:w-full flex items-center justify-center py-4 overflow-hidden">
             <Swiper
               autoplay={{
                 delay: 2500,
@@ -29,11 +29,6 @@ function About() {
               loop={true}
               navigation={true}
               className="md:h-auto flex md:w-9/12 w-10/12 justify-center content-center items-center"
-              style={
-                {
-                  // width: "60%",
-                }
-              }
             >
               <SwiperSlide className=" flex justify-center ">
                 <img
@@ -70,7 +65,7 @@ function About() {
               <SwiperSlide className=" flex justify-center ">
                 {/* <div className="w-3/10  "></div> */}
                 <img
-                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1628431764/AboutUs/collage1_h0ailx_zr6tg9_vbv2rr.webp"
+                  src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1628674701/AboutUs/aboutP_zqiqyr.webp"
                   alt=""
                 />
                 {/* <div className="w-3/10"></div> */}

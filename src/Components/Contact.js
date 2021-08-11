@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { ToastContainer, toast as tst, Slide } from "react-toastify";
-import toast from "react-simple-toasts";
+import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 function Contact(props) {
+  // Toastify
+  const notify = (tText) => toast(tText);
+
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
   const [borderColor, setBorderColor] = useState("lightgray");
@@ -88,7 +90,9 @@ function Contact(props) {
       let valid = true;
       Object.keys(errors).forEach((key) => {
         if (errors[key].length !== 0 && valid === true) {
-          toast(errors[key]);
+          notify(
+            <div className=" text-red-500 text-center">{errors[key]}</div>
+          );
           valid = false;
         }
       });
@@ -138,7 +142,11 @@ function Contact(props) {
         },
       });
 
-      tst.success("Thank you for your interest in ahum!");
+      notify(
+        <div className=" text-green-800 text-center">
+          Thank you for your interest in ahum!
+        </div>
+      );
     } else {
       //Resetting border colors
       document.getElementById("name").style.borderColor = "lightgray";
@@ -179,10 +187,16 @@ function Contact(props) {
       );
 
       setNewsMail("");
-      tst.success("Thank you for your interest in ahum!");
+      notify(
+        <div className=" text-green-800 text-center">
+          Thank you for your interest in ahum!
+        </div>
+      );
       document.getElementById("newsId").style.borderColor = "green";
     } else {
-      toast("Enter a valid email address");
+      notify(
+        <div className=" text-red-800 text-center">Enter a valid email</div>
+      );
       document.getElementById("newsId").style.borderColor = "red";
     }
   };
@@ -194,8 +208,8 @@ function Contact(props) {
     <div class="wrapper">
       {window.innerWidth > 767 ? (
         <ToastContainer
-          className="font-medium font-montserrat text-center text-black"
-          position="bottom-center"
+          className="contactToast ml-12 font-montserrat text-center text-green-800"
+          position="bottom-left"
           autoClose={5000}
           hideProgressBar={true}
           newestOnTop={false}
@@ -204,7 +218,7 @@ function Contact(props) {
         />
       ) : (
         <ToastContainer
-          className="text-center font-montserrat font-medium text-black"
+          className="text-center font-montserrat font-medium text-green-800"
           position="bottom-center"
           autoClose={5000}
           transition={Slide}

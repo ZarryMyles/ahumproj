@@ -265,20 +265,18 @@ a.article:hover {
   height: 530px;
 }
 .aboutUsCarouselImage img {
-  height: 580px;
-  width: 100%;
+  height: 700px;
+  width: 80%;
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .aboutUsCarouselImage {
     height: 250px;
   }
   .aboutUsCarouselImage img {
     height: 250px;
+    width: 100%;
   }
 }
-/* .swiper-button-next {
-  left: 300px;
-} */
 .swiper-button-next::after,
 .swiper-button-prev::after {
   color: #ffffff00;
@@ -305,10 +303,10 @@ a.article:hover {
     min-width: 30px;
   }
   .swiper-button-next::after {
-    margin-right: 30px;
+    margin-right: 900%;
   }
   .swiper-button-prev::after {
-    margin-left: 30px;
+    margin-left: 900%;
   }
 }
 .customp {
@@ -856,4 +854,8 @@ a.article:hover {
 }
 .Toastify__toast-container {
   width: fit-content;
+}
+
+.contactToast {
+  margin-bottom: 7.5%;
 }

@@ -111,6 +111,12 @@ export default function Form(props) {
           return history.push("/upcoming-shows");
         }, 1000);
       }
+    else
+      notify(
+        <div className="text-red-500 text-center">
+          Please enter correct details!
+        </div>
+      );
   };
   const backHandler = () => {
     history.push("/upcoming-shows");
@@ -254,13 +260,16 @@ export default function Form(props) {
         {title === "enquiry" && "Enquiry"}
       </h2>
       {title === "rsvp" ? form(true) : form()}
-      <ToastContainer
-        position="bottom-center"
-        autoClose={5000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-      />
+      <div className="rsvp-form-toast">
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          limit={1}
+        />
+      </div>
     </div>
   );
 }

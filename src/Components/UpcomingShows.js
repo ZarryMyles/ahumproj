@@ -128,7 +128,7 @@ function UpcomingShows() {
               type="text"
               placeholder="your@email.com"
               onChange={(e) => mailChange(e.target.value)}
-              className="my-auto focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto   "
+              className="my-auto text-center focus:placeholder-gray-200 focus:outline-none focus:shadow-xl hover:shadow-md placeholder-gray-400 mb-3 py-2 mx-2 pl-2 md:w-auto   "
               style={{ borderColor: subColor, border: "1px solid" }}
             />
             <button
@@ -175,7 +175,7 @@ function UpcomingShows() {
       ) : (
         displayError(true)
       )}
-      <div className="absolute">
+      <div className="upcoming-shows-toast">
         {" "}
         <ToastContainer
           position="bottom-center"

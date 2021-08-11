@@ -154,7 +154,7 @@ function Events() {
                 demonstrations, in a way that lets the audience enter the space
                 of art. So far we have invited artists from the following
                 classical dance forms: Odissi, Kathak, Mohiniattam, Kuchipudi
-                and Vilasini Natyam
+                and Vilasini Natyam.
               </p>
               <div class="text-center">
                 <a

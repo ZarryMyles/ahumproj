@@ -44,7 +44,7 @@ function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            name: val.length < 2 ? "Enter a vaild Name" : "",
+            name: val.length < 2 ? "Enter a valid name" : "",
           },
         }));
         break;
@@ -54,7 +54,7 @@ function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            phno: validatePhone.test(val) ? "" : "Enter a valid Phone Number",
+            phno: validatePhone.test(val) ? "" : "Enter a valid phone number",
           },
         }));
         break;
@@ -74,7 +74,7 @@ function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            msg: val.length < 5 ? "Enter a valid message!" : "",
+            msg: val.length < 5 ? "Enter a valid message" : "",
           },
         }));
         break;
@@ -157,11 +157,14 @@ function Contact(props) {
       //Setting Color fields of invalid entries red
       if (formDetails.name.length < 2) {
         document.getElementById("name").style.borderColor = "red";
-      } else if (!validateEmail.test(formDetails.mail)) {
+      }
+      if (!validateEmail.test(formDetails.mail)) {
         document.getElementById("mail").style.borderColor = "red";
-      } else if (!validatePhone.test(formDetails.phno)) {
+      }
+      if (!validatePhone.test(formDetails.phno)) {
         document.getElementById("phno").style.borderColor = "red";
-      } else if (formDetails.msg.length < 5) {
+      }
+      if (formDetails.msg.length < 5) {
         document.getElementById("msg").style.borderColor = "red";
       }
     }

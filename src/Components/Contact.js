@@ -215,6 +215,7 @@ function Contact(props) {
           newestOnTop={false}
           transition={Slide}
           closeOnClick
+          limit={1}
         />
       ) : (
         <ToastContainer
@@ -225,6 +226,7 @@ function Contact(props) {
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
+          limit={1}
         />
       )}
       <div className="p-0 md:ml-20 w-full overflow-hidden">

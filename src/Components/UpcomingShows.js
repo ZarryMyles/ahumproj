@@ -28,6 +28,11 @@ function UpcomingShows() {
   function submitHandler() {
     if (!mail || !validateEmail.test(mail)) {
       setSubColor("red");
+      notify(
+        <div className="text-red-500 text-center">
+          Please enter a valid email address
+        </div>
+      );
     } else {
       axios.post(
         newsLetterAPI,
@@ -170,7 +175,7 @@ function UpcomingShows() {
       ) : (
         displayError(true)
       )}
-      <div className="">
+      <div className="absolute">
         {" "}
         <ToastContainer
           position="bottom-center"
@@ -178,6 +183,7 @@ function UpcomingShows() {
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
+          limit={1}
         />
       </div>
     </div>

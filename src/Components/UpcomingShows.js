@@ -120,7 +120,7 @@ function UpcomingShows() {
               Archives
             </a>
           </div>
-          <div className=" flex md:flex-row flex-col w-2/3 justify-center md:mt-14 mt-5 items-center">
+          <div className=" flex md:flex-row flex-col w-2/3 justify-center  items-center">
             <h4 className="md:text-lg text-base my-2 font-medium ">
               Subscribe to stay updated :
             </h4>
@@ -139,6 +139,16 @@ function UpcomingShows() {
             >
               Submit
             </button>
+          </div>
+          <div className="upcoming-shows-toast relative">
+            <ToastContainer
+              position="bottom-center"
+              autoClose={5000}
+              hideProgressBar={true}
+              newestOnTop={false}
+              closeOnClick
+              limit={1}
+            />
           </div>
         </div>
       );
@@ -175,17 +185,6 @@ function UpcomingShows() {
       ) : (
         displayError(true)
       )}
-      <div className="upcoming-shows-toast">
-        {" "}
-        <ToastContainer
-          position="bottom-center"
-          autoClose={5000}
-          hideProgressBar={true}
-          newestOnTop={false}
-          closeOnClick
-          limit={1}
-        />
-      </div>
     </div>
   );
 }

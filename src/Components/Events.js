@@ -146,16 +146,15 @@ function Events() {
                 Know Your Art
               </h2>
               <p class="text-justify customp1">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum
+                This series has been curated with the idea of demystifying
+                different genres of art forms. Often, we notice that the
+                audience can find its connection better when they have some
+                entry point to the craft itself. Know your art series brings
+                artists from different genres to talk about their craft with
+                demonstrations, in a way that lets the audience enter the space
+                of art. So far we have invited artists from the following
+                classical dance forms: Odissi, Kathak, Mohiniattam, Kuchipudi
+                and Vilasini Natyam.
               </p>
               <div class="text-center">
                 <a

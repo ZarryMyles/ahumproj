@@ -290,19 +290,26 @@ function Contact(props) {
                     }}
                   />
 
-                  <button
-                    className="my-1 py-1 px-1 md:px-0 w-full md:w-1/5 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
-                    type="submit"
-                    value="Send Message"
-                    onClick={(event) => {
-                      handleSubmit(event);
-                    }}
-                  >
-                    Submit
-                  </button>
+                  <div className="flex">
+                    <div className="flex items-center">
+                      <button
+                        className="my-1  py-1 h-1/2  px-2 md:px-0 w-full  bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
+                        type="submit"
+                        value="Send Message"
+                        onClick={(event) => {
+                          handleSubmit(event);
+                        }}
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <div className="mx-3 scale-50">
+                      {" "}
+                      <Captcha />
+                    </div>
+                  </div>
                 </form>
                 {/* recaptcha */}
-                <Captcha />
               </div>
             </div>
             <div className="xs:mt-4 md:mt-0 flex justify-center md:col-span-1 items-center md:ml-10 pb-8">

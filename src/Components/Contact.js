@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+// recaptcha
+import Captcha from "./Captcha";
 
 function Contact(props) {
   // Toastify
   const notify = (tText) => toast(tText);
-
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
   const [borderColor, setBorderColor] = useState("lightgray");
@@ -44,7 +45,7 @@ function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            name: val.length < 2 ? "Enter a valid name" : "",
+            name: val.length < 2 ? "Enter a vaild Name" : "",
           },
         }));
         break;
@@ -54,7 +55,7 @@ function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            phno: validatePhone.test(val) ? "" : "Enter a valid phone number",
+            phno: validatePhone.test(val) ? "" : "Enter a valid Phone Number",
           },
         }));
         break;
@@ -74,7 +75,7 @@ function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            msg: val.length < 5 ? "Enter a valid message" : "",
+            msg: val.length < 5 ? "Enter a valid message!" : "",
           },
         }));
         break;
@@ -157,14 +158,11 @@ function Contact(props) {
       //Setting Color fields of invalid entries red
       if (formDetails.name.length < 2) {
         document.getElementById("name").style.borderColor = "red";
-      }
-      if (!validateEmail.test(formDetails.mail)) {
+      } else if (!validateEmail.test(formDetails.mail)) {
         document.getElementById("mail").style.borderColor = "red";
-      }
-      if (!validatePhone.test(formDetails.phno)) {
+      } else if (!validatePhone.test(formDetails.phno)) {
         document.getElementById("phno").style.borderColor = "red";
-      }
-      if (formDetails.msg.length < 5) {
+      } else if (formDetails.msg.length < 5) {
         document.getElementById("msg").style.borderColor = "red";
       }
     }
@@ -211,11 +209,12 @@ function Contact(props) {
     <div class="wrapper">
       {window.innerWidth > 767 ? (
         <ToastContainer
-          className="contactToast ml-2 font-montserrat text-center text-green-800"
+          className="contactToast ml-12 font-montserrat text-center text-green-800"
           position="bottom-left"
           autoClose={5000}
           hideProgressBar={true}
           newestOnTop={false}
+          transition={Slide}
           closeOnClick
           limit={1}
         />
@@ -224,6 +223,7 @@ function Contact(props) {
           className="text-center font-montserrat font-medium text-green-800"
           position="bottom-center"
           autoClose={5000}
+          transition={Slide}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
@@ -301,6 +301,8 @@ function Contact(props) {
                     Submit
                   </button>
                 </form>
+                {/* recaptcha */}
+                <Captcha />
               </div>
             </div>
             <div className="xs:mt-4 md:mt-0 flex justify-center md:col-span-1 items-center md:ml-10 pb-8">

@@ -4,6 +4,8 @@ import axios from "axios";
 // toast
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// recaptcha
+import Captcha from "./Captcha";
 
 export default function Form(props) {
   const history = useHistory();
@@ -263,13 +265,14 @@ export default function Form(props) {
       <div className="rsvp-form-toast">
         <ToastContainer
           position="bottom-center"
-          autoClose={5000}
+          autoClose={3500}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
           limit={1}
         />
       </div>
+      <Captcha />
     </div>
   );
 }

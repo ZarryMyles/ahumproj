@@ -2,6 +2,7 @@ import React from "react";
 
 export default function TempArchive(props) {
   const { program, dispMonth } = props;
+  const year = program.date.slice(0, 4);
   const months = [
     "January",
     "February",
@@ -72,6 +73,11 @@ export default function TempArchive(props) {
           <a href={program.othLink} className="px-3 py-2 ">
             <i class="fas fa-globe-americas"></i>{" "}
           </a>
+        )}
+        {program.category.toLowerCase() === "kalakrida" && (
+          <div className="col-span-4 text-center font-normal underline">
+            <a href={`/kalakrida/` + year}>View more</a>
+          </div>
         )}
       </div>
     </div>

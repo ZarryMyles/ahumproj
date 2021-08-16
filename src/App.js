@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 import "./App.css";
 import "./assets/css/tailwind.css";
-
+// components
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import AboutUs from "./Components/AboutUs";
@@ -15,6 +15,8 @@ import BookSpace from "./Components/BookSpace";
 import Archives from "./Components/Archives";
 import TopLogoBar from "./Components/TopLogoBar";
 import Form from "./Components/Form";
+import KalakridaParentFolder from "./Components/KalakridaParentFolder";
+import KalakridaGallery from "./Components/KalakridaGallery";
 
 import $ from "jquery";
 import AOS from "aos";
@@ -70,8 +72,17 @@ function App() {
             <Route path="/archives/:category" component={Archives} />
             <Route path="/archives" component={Archives} />
             <Route path="/form/:title/:event" component={Form} />
-
             <Route path="/form/:title" component={Form} />
+            <Route
+              path="/kalakrida/:year"
+              exact
+              component={KalakridaParentFolder}
+            />
+            <Route
+              path="/kalakrida/gallery/:year"
+              exact
+              component={KalakridaGallery}
+            />
           </Switch>
         </div>
       </BrowserRouter>

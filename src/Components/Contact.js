@@ -6,6 +6,11 @@ import axios from "axios";
 import Captcha from "./Captcha";
 
 function Contact(props) {
+  // catpcha Verification
+  const [captcha, setCaptcha] = useState(false);
+  const captchaVerify = () => {
+    setCaptcha(true);
+  };
   // Toastify
   const notify = (tText) => toast(tText);
   //Form data
@@ -87,6 +92,14 @@ function Contact(props) {
 
   let handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!captcha) {
+      notify(
+        <div className="text-red-500 text-center">Please fill the Captcha!</div>
+      );
+      return;
+    }
+
     const validateForm = (errors) => {
       let valid = true;
       Object.keys(errors).forEach((key) => {
@@ -305,7 +318,7 @@ function Contact(props) {
                     </div>
                     <div className="mx-3 scale-50">
                       {" "}
-                      <Captcha />
+                      <Captcha captchaVerify={captchaVerify} />
                     </div>
                   </div>
                 </form>

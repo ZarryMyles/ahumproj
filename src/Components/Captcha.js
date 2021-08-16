@@ -24,7 +24,7 @@ export default class Captcha extends Component {
   }
 
   handleChange = (value) => {
-    console.log("Captcha value:", value);
+    // console.log("Captcha value:", value);
     this.setState({ value });
     // if value is null recaptcha expired
     if (value === null) this.setState({ expired: "true" });
@@ -45,7 +45,7 @@ export default class Captcha extends Component {
             theme="light"
             ref={this._reCaptchaRef}
             sitekey={TEST_SITE_KEY}
-            onChange={this.handleChange}
+            onChange={this.props.captchaVerify}
             asyncScriptOnLoad={this.asyncScriptOnLoad}
           />
         )}

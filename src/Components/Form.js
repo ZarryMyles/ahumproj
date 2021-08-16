@@ -17,6 +17,12 @@ export default function Form(props) {
   const eventName = props.match.params.event;
   const titles = ["enquiry", "rsvp", "bookthespace"];
   const [currentShows, setCurrentShows] = useState([]);
+  // captcha verification
+  const [captcha, setCaptcha] = useState(false);
+  const captchaVerify = () => {
+    setCaptcha(true);
+  };
+
   // toastify
   const notify = (message) => toast(message);
   // input values
@@ -79,6 +85,12 @@ export default function Form(props) {
   };
   // submit handler
   const onsubmit = (e) => {
+    if (!captcha) {
+      notify(
+        <div className="text-center text-red-500">Please fill the captcha!</div>
+      );
+      return;
+    }
     e.preventDefault();
     const rsvpSubmissionData = {
       name: inputValues.name,
@@ -235,6 +247,9 @@ export default function Form(props) {
           />
         </div>
 
+        <div className="mx-auto">
+          <Captcha captchaVerify={captchaVerify} />
+        </div>
         <button
           className="my-1 md:py-1 py-2  mx-auto md:px-0 px-4 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
           type="submit"
@@ -272,7 +287,6 @@ export default function Form(props) {
           limit={1}
         />
       </div>
-      <Captcha />
     </div>
   );
 }

@@ -22,6 +22,9 @@ export default function Form(props) {
   const captchaVerify = () => {
     setCaptcha(true);
   };
+  const captchaExpired = () => {
+    setCaptcha(false);
+  };
 
   // toastify
   const notify = (message) => toast(message);
@@ -117,7 +120,7 @@ export default function Form(props) {
         }, 1000);
       } else {
         notify(
-          <div className=" text-red-800 text-center">
+          <div className=" text-red-500 text-center">
             Error finding event. <br /> Please try again.
           </div>
         );
@@ -248,7 +251,10 @@ export default function Form(props) {
         </div>
 
         <div className="mx-auto">
-          <Captcha captchaVerify={captchaVerify} />
+          <Captcha
+            captchaVerify={captchaVerify}
+            captchaExpire={captchaExpired}
+          />
         </div>
         <button
           className="my-1 md:py-1 py-2  mx-auto md:px-0 px-4 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"

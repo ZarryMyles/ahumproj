@@ -11,6 +11,9 @@ function Contact(props) {
   const captchaVerify = () => {
     setCaptcha(true);
   };
+  const captchaExpired = () => {
+    setCaptcha(false);
+  };
   // Toastify
   const notify = (tText) => toast(tText);
   //Form data
@@ -303,8 +306,8 @@ function Contact(props) {
                     }}
                   />
 
-                  <div className="flex">
-                    <div className="flex items-center">
+                  <div className="flex md:flex-row flex-col">
+                    <div className="flex  items-center">
                       <button
                         className="my-1  py-1 h-1/2  px-2 md:px-0 w-full  bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
                         type="submit"
@@ -316,9 +319,12 @@ function Contact(props) {
                         Submit
                       </button>
                     </div>
-                    <div className="mx-3 scale-50">
+                    <div className="md:mx-3 md:my-0 my-2 scale-50">
                       {" "}
-                      <Captcha captchaVerify={captchaVerify} />
+                      <Captcha
+                        captchaVerify={captchaVerify}
+                        captchaExpired={captchaExpired}
+                      />
                     </div>
                   </div>
                 </form>

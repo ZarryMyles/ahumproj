@@ -229,21 +229,19 @@ export default function Contact(props) {
         <ToastContainer
           className="contactToast ml-12 font-montserrat text-center text-green-800"
           position="bottom-left"
-          autoClose={5000}
+          autoClose={4000}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
-          limit={1}
         />
       ) : (
         <ToastContainer
           className="text-center font-montserrat font-medium text-green-800"
           position="bottom-center"
-          autoClose={5000}
+          autoClose={4000}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
-          limit={1}
         />
       )}
       <div className="p-0 md:ml-20 w-full overflow-hidden">
@@ -280,6 +278,7 @@ export default function Contact(props) {
                         }}
                       />
                     </div>
+
                     <div className="col-span-2">
                       <input
                         className={inputCSS}

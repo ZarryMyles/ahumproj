@@ -23,7 +23,25 @@ export default function KalakridaReport(props) {
           {data.map((item) => {
             return (
               <div className=" w-screen md:h-screen md:mt-0 mt-10 mb-10 flex items-center justify-center">
-                <iframe className="md:w-4/6 md:h-full " src={test}></iframe>
+                {window.innerWidth > 767 ? (
+                  <iframe
+                    className="md:w-4/6 md:h-full "
+                    width="700"
+                    height="600"
+                    frameborder="0"
+                    scrolling="no"
+                    src={item.pdf_path}
+                  ></iframe>
+                ) : (
+                  <iframe
+                    className=""
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    scrolling="no"
+                    src={item.pdf_path + "#view=FitH"}
+                  ></iframe>
+                )}
               </div>
             );
           })}

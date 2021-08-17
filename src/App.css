@@ -880,3 +880,14 @@ a.article:hover {
     margin-bottom: 0;
   }
 }
+/* kalakrida thumbnail */
+.kalakrida-thumbnail {
+  width: 47vh;
+  height: 31vh;
+}
+@media (max-width: 600px) {
+  .kalakrida-thumbnail {
+    width: 270px;
+    height: 200px;
+  }
+}

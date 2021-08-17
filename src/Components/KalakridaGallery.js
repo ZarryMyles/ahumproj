@@ -2,6 +2,7 @@ import React from "react";
 import Preloader from "./Preloader";
 import GalleryData from "../assets/JSON/kalakridaGallery.json";
 import ImageZoom from "react-medium-image-zoom";
+import BackIcon from "../assets/images/left-arrow.png";
 import "react-medium-image-zoom/dist/styles.css";
 
 export default function KalakridaGallery(props) {
@@ -10,12 +11,14 @@ export default function KalakridaGallery(props) {
   console.log(data, GalleryData);
   return (
     <div className="md:ml-20">
+      <div className="flex text-ahum-brown  justify-end w-full lg:pr-5 pr-1 pt-2">
+        <a href={`/kalakrida/` + year} className="flex mx-1">
+          <img src={BackIcon} alt="back-icon" width="20px" className="mx-1" />
+          Back
+        </a>
+      </div>
       <div className="md:mt-0 mt-5 text-center text-2xl text-ahum-maroon font-bold">
         Kalakrida Gallery ({year})
-      </div>
-
-      <div className="flex text-ahum-brown  justify-end w-full pr-5">
-        <a href={`/kalakrida/` + year}>&#129040; Back</a>
       </div>
 
       {data.length === 0 ? (

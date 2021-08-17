@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Kreport16",
+    "pdf_path": "../assets/testReport.pdf",
+    "year": "2016"
+  },
+  {
+    "id": "Kreport17",
+    "pdf_path": "../assets/report.pdf",
+    "year": "2017"
+  },
+  {
+    "id": "Kreport18",
+    "pdf_path": "../assets/report.pdf",
+    "year": "2018"
+  },
+  {
+    "id": "Kreport19",
+    "pdf_path": "../assets/report.pdf",
+    "year": "2019"
+  }
+]

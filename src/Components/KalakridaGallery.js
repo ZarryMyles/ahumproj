@@ -1,6 +1,6 @@
 import React from "react";
 import Preloader from "./Preloader";
-import GalleryData from "../assets/JSON/kalakrida.json";
+import GalleryData from "../assets/JSON/kalakridaGallery.json";
 import ImageZoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
@@ -17,19 +17,20 @@ export default function KalakridaGallery(props) {
       <div className="flex text-ahum-brown  justify-end w-full pr-5">
         <a href={`/kalakrida/` + year}>&#129040; Back</a>
       </div>
+
       {data.length === 0 ? (
         // display no data message
         <div className="flex justify-center">No data</div>
       ) : (
         // display data
         <div className="flex justify-center flex-wrap">
-          {data.map((item, index) => {
+          {data.map((item) => {
             return (
               <div className="kalakridaGallery md:flex md:m-10 md:w-1/6 md:px-0 px-10 md:py-0 py-3 mt-5">
                 <ImageZoom
                   image={{
                     src: item.image_link,
-                    alt: "Golden Gate Bridge",
+                    alt: "Kalakrida Picture",
                   }}
                 />
               </div>

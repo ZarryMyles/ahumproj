@@ -1,22 +1,27 @@
 [
   {
     "id": "Kreport16",
-    "pdf_path": "../assets/testReport.pdf",
+    "pdf_path": "https://onedrive.live.com/embed?cid=27B690DFC5368946&resid=27B690DFC5368946%21514&authkey=AJ00XnzCyWrQic4&em=2#view=FitW",
     "year": "2016"
   },
   {
     "id": "Kreport17",
-    "pdf_path": "../assets/report.pdf",
+    "pdf_path": "https://onedrive.live.com/embed?cid=27B690DFC5368946&resid=27B690DFC5368946%21511&authkey=AHJFJPdUOqnTw_U&em=2",
     "year": "2017"
   },
   {
     "id": "Kreport18",
-    "pdf_path": "../assets/report.pdf",
+    "pdf_path": "https://onedrive.live.com/embed?cid=27B690DFC5368946&resid=27B690DFC5368946%21512&authkey=AAyXOqPHMRkAjMk&em=2",
+    "year": "2018"
+  },
+  {
+    "id": "Kreport18Article",
+    "pdf_path": "https://onedrive.live.com/embed?cid=27B690DFC5368946&resid=27B690DFC5368946%21510&authkey=ABIreZ0jGhYDvW8&em=2",
     "year": "2018"
   },
   {
     "id": "Kreport19",
-    "pdf_path": "../assets/report.pdf",
+    "pdf_path": "https://onedrive.live.com/embed?cid=27B690DFC5368946&resid=27B690DFC5368946%21513&authkey=AMAeuqy7OY7eoHI&em=2",
     "year": "2019"
   }
 ]

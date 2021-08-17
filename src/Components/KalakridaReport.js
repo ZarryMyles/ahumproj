@@ -22,7 +22,7 @@ export default function KalakridaReport(props) {
         <div className="flex justify-center flex-wrap">
           {data.map((item) => {
             return (
-              <div className="md:ml-20 w-screen md:h-screen md:mt-0 mt-10 mb-10 flex items-center justify-center">
+              <div className=" w-screen md:h-screen md:mt-0 mt-10 mb-10 flex items-center justify-center">
                 <iframe className="md:w-4/6 md:h-full " src={test}></iframe>
               </div>
             );

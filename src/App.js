@@ -17,6 +17,7 @@ import TopLogoBar from "./Components/TopLogoBar";
 import Form from "./Components/Form";
 import KalakridaParentFolder from "./Components/KalakridaParentFolder";
 import KalakridaGallery from "./Components/KalakridaGallery";
+import KalakridaReport from "./Components/KalakridaReport";
 
 import $ from "jquery";
 import AOS from "aos";
@@ -82,6 +83,11 @@ function App() {
               path="/kalakrida/gallery/:year"
               exact
               component={KalakridaGallery}
+            />
+            <Route
+              path="/kalakrida/report/:year"
+              exact
+              component={KalakridaReport}
             />
           </Switch>
         </div>

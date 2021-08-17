@@ -6,7 +6,7 @@ export default function KalakridaParentFolder(props) {
   const year = props.match.params.year;
 
   return (
-    <div className="   ml-20" style={{ height: "75vh" }}>
+    <div className="md:ml-20" style={{ height: "75vh" }}>
       <div className="flex justify-center text-2xl font-bold  md:py-5 text-center text-ahum-maroon font-montserrat ">
         KALAKRIDA - {year}
       </div>

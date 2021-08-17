@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { ToastContainer, toast, Slide } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-// recaptcha
 import Captcha from "./Captcha";
 
-function Contact(props) {
+export default function Contact(props) {
   // catpcha Verification
   const [captcha, setCaptcha] = useState(false);
   const captchaVerify = () => {
@@ -14,11 +13,13 @@ function Contact(props) {
   const captchaExpired = () => {
     setCaptcha(false);
   };
-  // Toastify
-  const notify = (tText) => toast(tText);
+
+  const notify = (tText) => toast(tText); // Toastify
+
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
-  const [borderColor, setBorderColor] = useState("lightgray");
+  const [borderColor] = "lightgray";
+  const [epFlag, setEpFlag] = useState(false);
   const [newsMail, setNewsMail] = useState("");
   const contactAPI = process.env.REACT_APP_API_END + "contacts";
   const newsAPI = process.env.REACT_APP_API_END + "newsletters";
@@ -28,13 +29,14 @@ function Contact(props) {
     mail: "",
     msg: "",
     error: {
-      name: "Enter a vaild Name",
-      mail: "Enter a vaild Email Address",
-      phno: "Enter a vaild Phone Number",
-      msg: "Enter a vaild Message",
+      name: "Enter a valid Name",
+      mail: "Enter a valid Email/Ph No.",
+      phno: "Enter a valid Email/Ph No.",
+      msg: "Enter a valid Message",
     },
   });
 
+  //Functions to validate Email and Phone
   const validateEmail = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
@@ -132,7 +134,7 @@ function Contact(props) {
         },
       });
 
-      // Reset fields
+      // Reset field placeholders
       document.getElementById("cForm").reset();
       document.getElementById("name").placeholder = "Your Name";
       document.getElementById("mail").placeholder = "Email";
@@ -153,8 +155,8 @@ function Contact(props) {
         msg: "",
         error: {
           name: "Enter a vaild Name",
-          mail: "Enter a vaild Email Address",
-          phno: "Enter a vaild Phone Number",
+          mail: "Enter a vaild Email Address or Phone Number",
+          phno: "Enter a vaild Email Address or Phone Number",
           msg: "Enter a vaild Message",
         },
       });
@@ -212,7 +214,7 @@ function Contact(props) {
       document.getElementById("newsId").style.borderColor = "green";
     } else {
       notify(
-        <div className=" text-red-800 text-center">Enter a valid email</div>
+        <div className=" text-red-500 text-center">Enter a valid email</div>
       );
       document.getElementById("newsId").style.borderColor = "red";
     }
@@ -230,7 +232,6 @@ function Contact(props) {
           autoClose={5000}
           hideProgressBar={true}
           newestOnTop={false}
-          transition={Slide}
           closeOnClick
           limit={1}
         />
@@ -239,7 +240,6 @@ function Contact(props) {
           className="text-center font-montserrat font-medium text-green-800"
           position="bottom-center"
           autoClose={5000}
-          transition={Slide}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
@@ -251,7 +251,7 @@ function Contact(props) {
           <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
             <div className="flex justify-center items-center col-span-1 md:ml-24 md:w-8/12">
               <div className="flex flex-col">
-                <span className="font-medium mb-3 w-full text-center md:text-left md:w-auto">
+                <span className="font-medium mb-2 w-full text-center md:text-left md:w-auto">
                   Drop us a message, we'll call you back!
                 </span>
                 <form id="cForm">
@@ -325,10 +325,10 @@ function Contact(props) {
                         captchaVerify={captchaVerify}
                         captchaExpired={captchaExpired}
                       />
-                    </div>
+                    </div>{" "}
+                    {/* recaptcha */}
                   </div>
                 </form>
-                {/* recaptcha */}
               </div>
             </div>
             <div className="xs:mt-4 md:mt-0 flex justify-center md:col-span-1 items-center md:ml-10 pb-8">
@@ -410,5 +410,3 @@ function Contact(props) {
     </div>
   );
 }
-
-export default Contact;

@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import Captcha from "./Captcha";
 
-export default function Contact(props) {
+function Contact(props) {
+  // catpcha Verification
+  const [captcha, setCaptcha] = useState(false);
+  const captchaVerify = () => {
+    setCaptcha(true);
+  };
+  const captchaExpired = () => {
+    setCaptcha(false);
+  };
   // Toastify
   const notify = (tText) => toast(tText);
-
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
   const [borderColor] = "lightgray";
@@ -46,7 +54,7 @@ export default function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            name: val.length < 2 ? "Enter a valid name" : "",
+            name: val.length < 2 ? "Enter a vaild Name" : "",
           },
         }));
         break;
@@ -56,7 +64,7 @@ export default function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            phno: validatePhone.test(val) ? "" : "Enter a valid phone number",
+            phno: validatePhone.test(val) ? "" : "Enter a valid Phone Number",
           },
         }));
         break;
@@ -76,7 +84,7 @@ export default function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            msg: val.length < 5 ? "Enter a valid message" : "",
+            msg: val.length < 5 ? "Enter a valid message!" : "",
           },
         }));
         break;
@@ -88,6 +96,14 @@ export default function Contact(props) {
 
   let handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!captcha) {
+      notify(
+        <div className="text-red-500 text-center">Please fill the Captcha!</div>
+      );
+      return;
+    }
+
     const validateForm = (errors) => {
       let valid = true;
       Object.keys(errors).forEach((key) => {
@@ -159,14 +175,11 @@ export default function Contact(props) {
       //Setting Color fields of invalid entries red
       if (formDetails.name.length < 2) {
         document.getElementById("name").style.borderColor = "red";
-      }
-      if (!validateEmail.test(formDetails.mail)) {
+      } else if (!validateEmail.test(formDetails.mail)) {
         document.getElementById("mail").style.borderColor = "red";
-      }
-      if (!validatePhone.test(formDetails.phno)) {
+      } else if (!validatePhone.test(formDetails.phno)) {
         document.getElementById("phno").style.borderColor = "red";
-      }
-      if (formDetails.msg.length < 5) {
+      } else if (formDetails.msg.length < 5) {
         document.getElementById("msg").style.borderColor = "red";
       }
     }
@@ -213,11 +226,12 @@ export default function Contact(props) {
     <div class="wrapper">
       {window.innerWidth > 767 ? (
         <ToastContainer
-          className="contactToast ml-2 font-montserrat text-center text-green-800"
+          className="contactToast ml-12 font-montserrat text-center text-green-800"
           position="bottom-left"
           autoClose={5000}
           hideProgressBar={true}
           newestOnTop={false}
+          transition={Slide}
           closeOnClick
           limit={1}
         />
@@ -226,6 +240,7 @@ export default function Contact(props) {
           className="text-center font-montserrat font-medium text-green-800"
           position="bottom-center"
           autoClose={5000}
+          transition={Slide}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
@@ -292,17 +307,29 @@ export default function Contact(props) {
                     }}
                   />
 
-                  <button
-                    className="my-1 py-1 px-1 md:px-0 w-full md:w-1/5 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
-                    type="submit"
-                    value="Send Message"
-                    onClick={(event) => {
-                      handleSubmit(event);
-                    }}
-                  >
-                    Submit
-                  </button>
+                  <div className="flex md:flex-row flex-col">
+                    <div className="flex  items-center">
+                      <button
+                        className="my-1  py-1 h-1/2  px-2 md:px-0 w-full  bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
+                        type="submit"
+                        value="Send Message"
+                        onClick={(event) => {
+                          handleSubmit(event);
+                        }}
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <div className="md:mx-3 md:my-0 my-2 scale-50">
+                      {" "}
+                      <Captcha
+                        captchaVerify={captchaVerify}
+                        captchaExpired={captchaExpired}
+                      />
+                    </div>
+                  </div>
                 </form>
+                {/* recaptcha */}
               </div>
             </div>
             <div className="xs:mt-4 md:mt-0 flex justify-center md:col-span-1 items-center md:ml-10 pb-8">

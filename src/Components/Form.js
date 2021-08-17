@@ -4,6 +4,8 @@ import axios from "axios";
 // toast
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// recaptcha
+import Captcha from "./Captcha";
 
 export default function Form(props) {
   const history = useHistory();
@@ -15,6 +17,15 @@ export default function Form(props) {
   const eventName = props.match.params.event;
   const titles = ["enquiry", "rsvp", "bookthespace"];
   const [currentShows, setCurrentShows] = useState([]);
+  // captcha verification
+  const [captcha, setCaptcha] = useState(false);
+  const captchaVerify = () => {
+    setCaptcha(true);
+  };
+  const captchaExpired = () => {
+    setCaptcha(false);
+  };
+
   // toastify
   const notify = (message) => toast(message);
   // input values
@@ -77,6 +88,12 @@ export default function Form(props) {
   };
   // submit handler
   const onsubmit = (e) => {
+    if (!captcha) {
+      notify(
+        <div className="text-center text-red-500">Please fill the captcha!</div>
+      );
+      return;
+    }
     e.preventDefault();
     const rsvpSubmissionData = {
       name: inputValues.name,
@@ -103,7 +120,7 @@ export default function Form(props) {
         }, 1000);
       } else {
         notify(
-          <div className=" text-red-800 text-center">
+          <div className=" text-red-500 text-center">
             Error finding event. <br /> Please try again.
           </div>
         );
@@ -233,6 +250,12 @@ export default function Form(props) {
           />
         </div>
 
+        <div className="mx-auto">
+          <Captcha
+            captchaVerify={captchaVerify}
+            captchaExpire={captchaExpired}
+          />
+        </div>
         <button
           className="my-1 md:py-1 py-2  mx-auto md:px-0 px-4 bg-ahum-brown transition duration-500 ease-in-out transform md:hover:scale-105 hover:shadow-xl text-white text-lg"
           type="submit"
@@ -263,7 +286,7 @@ export default function Form(props) {
       <div className="rsvp-form-toast">
         <ToastContainer
           position="bottom-center"
-          autoClose={5000}
+          autoClose={3500}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick

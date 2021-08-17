@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import Captcha from "./Captcha";
 
-function Contact(props) {
+export default function Contact(props) {
   // catpcha Verification
   const [captcha, setCaptcha] = useState(false);
   const captchaVerify = () => {
@@ -13,8 +13,9 @@ function Contact(props) {
   const captchaExpired = () => {
     setCaptcha(false);
   };
-  // Toastify
-  const notify = (tText) => toast(tText);
+
+  const notify = (tText) => toast(tText); // Toastify
+
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
   const [borderColor] = "lightgray";
@@ -231,7 +232,6 @@ function Contact(props) {
           autoClose={5000}
           hideProgressBar={true}
           newestOnTop={false}
-          transition={Slide}
           closeOnClick
           limit={1}
         />
@@ -240,7 +240,6 @@ function Contact(props) {
           className="text-center font-montserrat font-medium text-green-800"
           position="bottom-center"
           autoClose={5000}
-          transition={Slide}
           hideProgressBar={true}
           newestOnTop={false}
           closeOnClick
@@ -252,7 +251,7 @@ function Contact(props) {
           <div className="lg:grid mx-9 mt-10 lg:mt-0 lg:h-ahum-contact-screen grid-cols-2 gap-10 2xl:gap-0">
             <div className="flex justify-center items-center col-span-1 md:ml-24 md:w-8/12">
               <div className="flex flex-col">
-                <span className="font-medium mb-3 w-full text-center md:text-left md:w-auto">
+                <span className="font-medium mb-2 w-full text-center md:text-left md:w-auto">
                   Drop us a message, we'll call you back!
                 </span>
                 <form id="cForm">
@@ -326,10 +325,10 @@ function Contact(props) {
                         captchaVerify={captchaVerify}
                         captchaExpired={captchaExpired}
                       />
-                    </div>
+                    </div>{" "}
+                    {/* recaptcha */}
                   </div>
                 </form>
-                {/* recaptcha */}
               </div>
             </div>
             <div className="xs:mt-4 md:mt-0 flex justify-center md:col-span-1 items-center md:ml-10 pb-8">

@@ -315,6 +315,11 @@ a.article:hover {
   padding: 50px 17%;
   line-height: 150%;
 }
+.div-bg-pic {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .squarepic1 {
   background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129622/Anuradha_nwm3fa_wx4lxb.webp");
   background-position: center;

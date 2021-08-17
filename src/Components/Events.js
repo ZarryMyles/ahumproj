@@ -1,6 +1,6 @@
 import React from "react";
 
-function Events() {
+export default function Events() {
   return (
     <div class="wrapper" style={{ background: "white" }}>
       <div id="content" className="p-0">
@@ -180,5 +180,3 @@ function Events() {
     </div>
   );
 }
-
-export default Events;

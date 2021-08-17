@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { ToastContainer, toast, Slide } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
-function Contact(props) {
+export default function Contact(props) {
   // Toastify
   const notify = (tText) => toast(tText);
 
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
-  const [borderColor, setBorderColor] = useState("lightgray");
+  const [borderColor] = "lightgray";
+  const [epFlag, setEpFlag] = useState(false);
   const [newsMail, setNewsMail] = useState("");
   const contactAPI = process.env.REACT_APP_API_END + "contacts";
   const newsAPI = process.env.REACT_APP_API_END + "newsletters";
@@ -19,13 +20,14 @@ function Contact(props) {
     mail: "",
     msg: "",
     error: {
-      name: "Enter a vaild Name",
-      mail: "Enter a vaild Email Address",
-      phno: "Enter a vaild Phone Number",
-      msg: "Enter a vaild Message",
+      name: "Enter a valid Name",
+      mail: "Enter a valid Email/Ph No.",
+      phno: "Enter a valid Email/Ph No.",
+      msg: "Enter a valid Message",
     },
   });
 
+  //Functions to validate Email and Phone
   const validateEmail = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
@@ -115,7 +117,7 @@ function Contact(props) {
         },
       });
 
-      // Reset fields
+      // Reset field placeholders
       document.getElementById("cForm").reset();
       document.getElementById("name").placeholder = "Your Name";
       document.getElementById("mail").placeholder = "Email";
@@ -136,8 +138,8 @@ function Contact(props) {
         msg: "",
         error: {
           name: "Enter a vaild Name",
-          mail: "Enter a vaild Email Address",
-          phno: "Enter a vaild Phone Number",
+          mail: "Enter a vaild Email Address or Phone Number",
+          phno: "Enter a vaild Email Address or Phone Number",
           msg: "Enter a vaild Message",
         },
       });
@@ -198,7 +200,7 @@ function Contact(props) {
       document.getElementById("newsId").style.borderColor = "green";
     } else {
       notify(
-        <div className=" text-red-800 text-center">Enter a valid email</div>
+        <div className=" text-red-500 text-center">Enter a valid email</div>
       );
       document.getElementById("newsId").style.borderColor = "red";
     }
@@ -382,5 +384,3 @@ function Contact(props) {
     </div>
   );
 }
-
-export default Contact;

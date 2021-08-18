@@ -315,6 +315,11 @@ a.article:hover {
   padding: 50px 17%;
   line-height: 150%;
 }
+.div-bg-pic {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .squarepic1 {
   background-image: url("https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129622/Anuradha_nwm3fa_wx4lxb.webp");
   background-position: center;
@@ -873,5 +878,16 @@ a.article:hover {
   .rsvp-form-toast .Toastify__toast,
   .upcoming-shows-toast .Toastify__toast {
     margin-bottom: 0;
+  }
+}
+/* kalakrida thumbnail */
+.kalakrida-thumbnail {
+  width: 47vh;
+  height: 31vh;
+}
+@media (max-width: 600px) {
+  .kalakrida-thumbnail {
+    width: 270px;
+    height: 200px;
   }
 }

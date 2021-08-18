@@ -4,8 +4,8 @@ import { Listbox } from "@headlessui/react";
 import ArchiveMedia from "./ArchiveMedia";
 
 function Archives(props) {
-  const { category } = props.match.params;
-
+  const { category, year } = props.match.params;
+  console.log(year);
   const program = [
     { id: 1, name: "All programs", cat: "program" },
     { id: 2, name: "Saturdays @ Swastika", cat: "saturdaysatswastika" },
@@ -38,10 +38,27 @@ function Archives(props) {
         return program[0];
     }
   }
+  function chooseYear(year = "2021") {
+    switch (year) {
+      case "2021":
+        return yearO[0];
+      case "2020":
+        return yearO[1];
+      case "2019":
+        return yearO[2];
+      case "2018":
+        return yearO[3];
+
+      default:
+        return program[0];
+    }
+  }
   const [selectedProgram, setSelectedProgram] = useState(
     category ? choice(category) : program[0]
   );
-  const [selectedYear, setSelectedYear] = useState(yearO[0]);
+  const [selectedYear, setSelectedYear] = useState(
+    year ? chooseYear(year) : yearO[0]
+  );
 
   return (
     <div class="">

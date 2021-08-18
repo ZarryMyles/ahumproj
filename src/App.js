@@ -70,6 +70,7 @@ function App() {
             <Route path="/contact" exact component={Contact} />
             <Route path="/contact/:bookspace" exact component={Contact} />
             <Route path="/bookspace" exact component={BookSpace} />
+            <Route path="/archives/:category/:year" component={Archives} />
             <Route path="/archives/:category" component={Archives} />
             <Route path="/archives" component={Archives} />
             <Route path="/form/:title/:event" component={Form} />

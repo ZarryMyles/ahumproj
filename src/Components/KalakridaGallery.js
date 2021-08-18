@@ -2,7 +2,7 @@ import React from "react";
 import Preloader from "./Preloader";
 import GalleryData from "../assets/JSON/kalakridaGallery.json";
 import Zoom from "react-medium-image-zoom";
-import BackIcon from "../assets/images/left-arrow.png";
+
 import "react-medium-image-zoom/dist/styles.css";
 
 export default function KalakridaGallery(props) {
@@ -10,9 +10,11 @@ export default function KalakridaGallery(props) {
   const data = GalleryData.filter((item) => item.year === year);
   return (
     <div className="md:ml-20">
-      <div className="flex text-ahum-brown  justify-start w-full lg:pr-5 pr-1 pt-2 md:mb-0 mb-3">
-        <a href={`/kalakrida/` + year} className="flex mx-1">
-          <img src={BackIcon} alt="back-icon" width="20px" className="mx-1" />
+      <div className="flex text-ahum-black  justify-start w-full lg:pr-5 pr-1 pt-2 md:mb-0 mb-3">
+        <a
+          href={`/kalakrida/` + year}
+          className="flex md:pl-3 pl-1 md:text-base underline hover:underline"
+        >
           Back
         </a>
       </div>

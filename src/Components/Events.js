@@ -34,7 +34,7 @@ export default function Events() {
               </p>
               <div class="text-center">
                 <a
-                  href="/archives/kalakrida"
+                  href="/archives/kalakrida/2019"
                   type="button"
                   className="btn py-2 px-5"
                   style={{

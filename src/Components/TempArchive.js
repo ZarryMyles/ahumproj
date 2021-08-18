@@ -43,7 +43,11 @@ export default function TempArchive(props) {
       </div>
       <div className="col-span-4 text-center text-base md:mr-0 mr-5">
         <span className="py-1 block text-lg font-semibold   text-center">
-          ‘{program.event.toUpperCase()}’
+          ‘
+          {program.category.toLowerCase() === "kalakrida"
+            ? "KALAKRIDA - " + year
+            : program.event.toUpperCase()}
+          ’
         </span>
         {program.artist && (
           <span className="py-1 block font-normal text-base text-center   ">
@@ -52,7 +56,9 @@ export default function TempArchive(props) {
           </span>
         )}
         <span className="py-1 block font-normal text-base leading-5 text-center">
-          {program.category}
+          {program.category.toLowerCase() === "kalakrida"
+            ? ""
+            : program.category}
         </span>
         {program && (
           <span className="py-1 mb-2 block font-normal text-base leading-5 text-center">

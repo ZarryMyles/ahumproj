@@ -18,7 +18,6 @@ export default function KalakridaReport(props) {
         Kalakrida Report ({year})
       </div>
 
-      {console.log(data)}
       {data.length === 0 ? (
         <div className="flex justify-center">No data</div>
       ) : (

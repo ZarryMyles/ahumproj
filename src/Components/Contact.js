@@ -68,6 +68,16 @@ export default function Contact(props) {
             phno: validatePhone.test(val) ? "" : "Enter a valid Phone Number",
           },
         }));
+        //If Email is already entered, phone error is set to ""
+        if (validateEmail.test(formDetails.mail)) {
+          setFormDetails((prevState) => ({
+            ...prevState,
+            error: {
+              ...prevState.error,
+              phno: "",
+            },
+          }));
+        }
         break;
 
       case "mail":
@@ -78,6 +88,16 @@ export default function Contact(props) {
             mail: validateEmail.test(val) ? "" : "Enter a valid email address",
           },
         }));
+        //If Phone is already entered, mail error is set to ""
+        if (validatePhone.test(formDetails.phno)) {
+          setFormDetails((prevState) => ({
+            ...prevState,
+            error: {
+              ...prevState.error,
+              mail: "",
+            },
+          }));
+        }
         break;
 
       case "msg":
@@ -95,6 +115,7 @@ export default function Contact(props) {
     setFormDetails((prevState) => ({ ...prevState, [nam]: val }));
   };
 
+  //Runs when submit button is clicked
   let handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -125,7 +146,6 @@ export default function Contact(props) {
         phone: formDetails.phno,
         message: formDetails.msg,
         bookOurSpace: bookCase,
-        // Date: new Date().toLocaleString(),
       };
 
       axios.post(contactAPI, formData, {
@@ -176,11 +196,18 @@ export default function Contact(props) {
       //Setting Color fields of invalid entries red
       if (formDetails.name.length < 2) {
         document.getElementById("name").style.borderColor = "red";
-      } else if (!validateEmail.test(formDetails.mail)) {
-        document.getElementById("mail").style.borderColor = "red";
-      } else if (!validatePhone.test(formDetails.phno)) {
-        document.getElementById("phno").style.borderColor = "red";
-      } else if (formDetails.msg.length < 5) {
+      }
+      if (!validateEmail.test(formDetails.mail)) {
+        if (!validatePhone.test(formDetails.phno)) {
+          document.getElementById("mail").style.borderColor = "red";
+        }
+      }
+      if (!validatePhone.test(formDetails.phno)) {
+        if (!validateEmail.test(formDetails.mail)) {
+          document.getElementById("phno").style.borderColor = "red";
+        }
+      }
+      if (formDetails.msg.length < 5) {
         document.getElementById("msg").style.borderColor = "red";
       }
     }
@@ -214,7 +241,9 @@ export default function Contact(props) {
       document.getElementById("newsId").style.borderColor = "green";
     } else {
       notify(
-        <div className=" text-red-500 text-center">Enter a valid email</div>
+        <div className=" text-red-500 text-center">
+          Enter a valid email or phone number
+        </div>
       );
       document.getElementById("newsId").style.borderColor = "red";
     }

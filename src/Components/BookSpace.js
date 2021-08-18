@@ -1,5 +1,5 @@
 import React from "react";
-import ImageZoom from "react-medium-image-zoom";
+import Zoom from "react-medium-image-zoom";
 import Carousel from "react-elastic-carousel";
 import "styled-components";
 
@@ -37,56 +37,56 @@ function BookSpace() {
                     className=" h-96 w-screen justify-center items-center  "
                   >
                     <div>
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/1-thumb-min_jvfx78.webp",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
+                      <Zoom>
+                        <img
+                          src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/1-thumb-min_jvfx78.webp"
+                          alt="Golden Gate Bridge"
+                        />
+                      </Zoom>
                     </div>
 
                     <div className="mt-12">
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/4-thumb-min_stk3dv.webp",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
+                      <Zoom>
+                        <img
+                          src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/4-thumb-min_stk3dv.webp"
+                          alt="Golden Gate Bridge"
+                        />
+                      </Zoom>
                     </div>
                     <div className="mt-28">
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/6-thumb-min_a9hsbk.webp",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
+                      <Zoom>
+                        <img
+                          src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/6-thumb-min_a9hsbk.webp"
+                          alt="Golden Gate Bridge"
+                        />
+                      </Zoom>
                     </div>
 
                     <div>
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/7-thumb-min_cs8vxb.webp",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
+                      <Zoom>
+                        <img
+                          src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/7-thumb-min_cs8vxb.webp"
+                          alt="Golden Gate Bridge"
+                        />
+                      </Zoom>
                     </div>
 
                     <div className="mt-28">
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/8-thumb-min_tqhsks.webp",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
+                      <Zoom>
+                        <img
+                          src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/8-thumb-min_tqhsks.webp"
+                          alt="Golden Gate Bridge"
+                        />
+                      </Zoom>
                     </div>
 
                     <div className="mt-20">
-                      <ImageZoom
-                        image={{
-                          src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/10-thumb-min-min_bdbazs.webp",
-                          alt: "Golden Gate Bridge",
-                        }}
-                      />
+                      <Zoom>
+                        <img
+                          src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/10-thumb-min-min_bdbazs.webp"
+                          alt="Golden Gate Bridge"
+                        />
+                      </Zoom>
                     </div>
                   </Carousel>
                 </div>
@@ -95,62 +95,58 @@ function BookSpace() {
                   <div className="lg:mx-32 mx-10 ">
                     <div className="flex flex-row justify-center items-center">
                       <div className="mr-4">
-                        <ImageZoom
-                          image={{
-                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/1-thumb-min_jvfx78.webp",
-                            alt: "Golden Gate Bridge",
-                          }}
-                        />
+                        <Zoom>
+                          <img
+                            src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/1-thumb-min_jvfx78.webp"
+                            alt="Golden Gate Bridge"
+                          />
+                        </Zoom>
                       </div>
                       <div className="flex flex-col justify-center items-center">
                         <div className="flex flex-row justify-center items-center">
                           <div className="mr-4">
-                            <ImageZoom
-                              image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/4-thumb-min_stk3dv.webp",
-                                alt: "Golden Gate Bridge",
-                              }}
-                            />
+                            <Zoom>
+                              <img
+                                src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/4-thumb-min_stk3dv.webp"
+                                alt="Golden Gate Bridge"
+                              />
+                            </Zoom>
                           </div>
                           <div className="mr-4">
-                            <ImageZoom
-                              image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/6-thumb-min_a9hsbk.webp",
-
-                                alt: "Golden Gate Bridge",
-                              }}
-                            />
+                            <Zoom>
+                              <img
+                                src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/6-thumb-min_a9hsbk.webp"
+                                alt="Golden Gate Bridge"
+                              />
+                            </Zoom>
                           </div>
                         </div>
                         <div className="flex flex-row justify-center items-center">
                           <div className="mr-4">
-                            <ImageZoom
-                              image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/8-thumb-min_tqhsks.webp",
-
-                                alt: "Golden Gate Bridge",
-                              }}
-                            />
+                            <Zoom>
+                              <img
+                                src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129170/Bookourspace/8-thumb-min_tqhsks.webp"
+                                alt="Golden Gate Bridge"
+                              />
+                            </Zoom>
                           </div>
                           <div className="mr-4">
-                            <ImageZoom
-                              image={{
-                                src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/10-thumb-min-min_bdbazs.webp",
-
-                                alt: "Golden Gate Bridge",
-                              }}
-                            />
+                            <Zoom>
+                              <img
+                                src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/10-thumb-min-min_bdbazs.webp"
+                                alt="Golden Gate Bridge"
+                              />
+                            </Zoom>
                           </div>
                         </div>
                       </div>
                       <div className="">
-                        <ImageZoom
-                          image={{
-                            src: "https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/7-thumb-min_cs8vxb.webp",
-
-                            alt: "Golden Gate Bridge",
-                          }}
-                        />
+                        <Zoom>
+                          <img
+                            src="https://res.cloudinary.com/dtfecnt6o/image/upload/v1627129169/Bookourspace/7-thumb-min_cs8vxb.webp"
+                            alt="Golden Gate Bridge"
+                          />
+                        </Zoom>
                       </div>
                     </div>
                   </div>

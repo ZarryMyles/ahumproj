@@ -1,14 +1,13 @@
 import React from "react";
 import Preloader from "./Preloader";
 import GalleryData from "../assets/JSON/kalakridaGallery.json";
-import ImageZoom from "react-medium-image-zoom";
+import Zoom from "react-medium-image-zoom";
 import BackIcon from "../assets/images/left-arrow.png";
 import "react-medium-image-zoom/dist/styles.css";
 
 export default function KalakridaGallery(props) {
   const year = props.match.params.year;
   const data = GalleryData.filter((item) => item.year === year);
-  console.log(data, GalleryData);
   return (
     <div className="md:ml-20">
       <div className="flex text-ahum-brown  justify-end w-full lg:pr-5 pr-1 pt-2">
@@ -30,12 +29,15 @@ export default function KalakridaGallery(props) {
           {data.map((item) => {
             return (
               <div className="kalakridaGallery md:flex md:m-10 md:w-1/6 md:px-0 px-10 md:py-0 py-3 mt-5">
-                <ImageZoom
+                {/* <ImageZoom
                   image={{
                     src: item.image_link,
                     alt: "Kalakrida Picture",
                   }}
-                />
+                /> */}
+                <Zoom>
+                  <img src={item.image_link} />
+                </Zoom>
               </div>
             );
           })}

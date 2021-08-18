@@ -93,16 +93,30 @@ function Navbar() {
       <div class="navFooter">
         <div class="d-flex justify-content-around ">
           <div>
-            <a href="https://www.instagram.com/ahumswastika/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-          </div>
-          <div>
-          <a href="https://www.facebook.com/ahum2015/" target="_blank">
-            <i class="fab fa-facebook"></i>
+            <a
+              href="https://www.instagram.com/ahumswastika/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
             </a>
           </div>
           <div>
-          <a href="https://www.youtube.com/channel/UC4VfeCPWIm_oK2jgXZcCwEQ/featured" target="_blank">
-            <i class="fab fa-youtube"></i>
+            <a
+              href="https://www.facebook.com/ahum2015/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://www.youtube.com/channel/UC4VfeCPWIm_oK2jgXZcCwEQ/featured"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-youtube"></i>
             </a>
           </div>
         </div>

@@ -33,6 +33,7 @@ function TopLogoBar() {
                 : "absolute h-28 md:ml-28 ml-10 p-2 z-50"
             }
             src={scrollDetect ? logo2 : logo}
+            alt="Top Logo"
           />
         </div>
       </div>

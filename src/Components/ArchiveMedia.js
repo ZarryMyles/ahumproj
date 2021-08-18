@@ -9,6 +9,7 @@ export default function ArchiveMedia(props) {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line
   }, []);
 
   let getData = async () => {

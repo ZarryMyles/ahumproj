@@ -58,6 +58,7 @@ function UpcomingShows() {
   useEffect(() => {
     window.scrollTo(0, 0);
     getData();
+    // eslint-disable-next-line
   }, []);
   const getData = async () => {
     axios

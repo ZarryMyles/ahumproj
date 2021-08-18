@@ -29,11 +29,15 @@ export default function TempArchive(props) {
       ></div>
       <div className="col-span-2 pl-1.5 font-normal text-lg xs:pb-3  md:pb-0 -mt-5  md:-mt-0 md:mb-2 mb-3">
         {dispMonth && months[parseInt(program.date.split("-")[1]) - 1]}
-        {program.date.split(" ").length == 2 && program.date.split(" ")[0]}
+        {
+          // eslint-disable-next-line
+          program.date.split(" ").length == 2 && program.date.split(" ")[0]
+        }
       </div>
       <div className="md:col-span-5 col-span-4 mr-10">
         <img
           className="archiveImages md:mb-0 mb-4"
+          alt="archives"
           src={
             !program.image
               ? "https://via.placeholder.com/310x225?text=No Image Available"

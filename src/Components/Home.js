@@ -1,7 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "./Navbar";
-import $ from "jquery";
-// import homeVid from "../Images/ahumhomepage.mp4";
 
 function Home() {
   useEffect(() => {

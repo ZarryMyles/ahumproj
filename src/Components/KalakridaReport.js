@@ -1,6 +1,4 @@
 import React from "react";
-import Preloader from "./Preloader";
-import test from "../assets/testReport.pdf";
 import ReportData from "../assets/JSON/kalakridaReport.json";
 
 export default function KalakridaReport(props) {
@@ -32,6 +30,7 @@ export default function KalakridaReport(props) {
                   <iframe
                     className="md:w-4/6 md:h-full "
                     width="700"
+                    title="PDFdesk"
                     height="600"
                     frameborder="0"
                     scrolling="no"
@@ -41,6 +40,7 @@ export default function KalakridaReport(props) {
                   <iframe
                     className=""
                     width="100%"
+                    title="PDFmobile"
                     height="600"
                     frameborder="0"
                     scrolling="no"

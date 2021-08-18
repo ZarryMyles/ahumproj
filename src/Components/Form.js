@@ -56,9 +56,11 @@ export default function Form(props) {
   };
   // regex for phone number and email
   const validateEmail = RegExp(
+    // eslint-disable-next-line
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
   const validatePhone = RegExp(
+    // eslint-disable-next-line
     /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i
   );
   // validating input values
@@ -148,9 +150,7 @@ export default function Form(props) {
     checkQuery();
     getData();
 
-    // if (!currentShows.includes(eventName)) {
-    //   return history.push("/upcoming-shows");
-    // }
+    // eslint-disable-next-line
   }, []);
 
   // input box

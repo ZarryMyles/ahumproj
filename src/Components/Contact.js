@@ -19,7 +19,6 @@ export default function Contact(props) {
   //Form data
   const [bookCase] = useState(props.match.params.bookspace ? true : false);
   const [borderColor] = "lightgray";
-  const [epFlag, setEpFlag] = useState(false);
   const [newsMail, setNewsMail] = useState("");
   const contactAPI = process.env.REACT_APP_API_END + "contacts";
   const newsAPI = process.env.REACT_APP_API_END + "newsletters";
@@ -38,9 +37,11 @@ export default function Contact(props) {
 
   //Functions to validate Email and Phone
   const validateEmail = RegExp(
+    // eslint-disable-next-line
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
   const validatePhone = RegExp(
+    // eslint-disable-next-line
     /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i
   );
 
@@ -369,6 +370,7 @@ export default function Contact(props) {
                 </span>
                 <div className="lg:w-5/6">
                   <iframe
+                    title="maps"
                     className="w-full h-60 pt-3"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10992.079379615054!2d77.60054457270812!3d13.080992781944996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82b5d79c5fe90710!2sart%20heart%20u%20%26%20mind!5e0!3m2!1sen!2sin!4v1618606129974!5m2!1sen!2sin"
                     allowfullscreen=""

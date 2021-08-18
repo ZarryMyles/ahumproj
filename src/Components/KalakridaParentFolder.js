@@ -10,7 +10,7 @@ export default function KalakridaParentFolder(props) {
       <div className="flex   justify-start w-full lg:pr-5 pr-1 pt-2 md:mb-0 mb-2">
         <a
           href={`/archives/kalakrida/` + year}
-          className="flex md:pl-3 pl-1 md:text-base underline hover:underline"
+          className="flex md:pl-3 pl-1 md:text-base underline hover:underline text-gray-700"
         >
           Back
         </a>

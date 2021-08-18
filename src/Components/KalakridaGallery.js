@@ -1,5 +1,4 @@
 import React from "react";
-import Preloader from "./Preloader";
 import GalleryData from "../assets/JSON/kalakridaGallery.json";
 import Zoom from "react-medium-image-zoom";
 
@@ -32,7 +31,7 @@ export default function KalakridaGallery(props) {
             return (
               <div className="kalakridaGallery md:flex md:m-10 md:w-1/6 md:px-0 px-10 md:py-0 py-3 mt-5">
                 <Zoom>
-                  <img src={item.image_link} />
+                  <img src={item.image_link} alt="Kalakrida Pic" />
                 </Zoom>
               </div>
             );

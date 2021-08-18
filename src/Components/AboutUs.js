@@ -8,14 +8,11 @@ import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 // import Swiper core and required modules
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper/core";
-// import { Autoplay } from "swiper/js/swiper.esm";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 function About() {
-  const isMob = window.innerWidth < 767;
-
   return (
     <div class="font-montserrat">
       <div className="p-0 md:ml-20">

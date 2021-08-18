@@ -2,19 +2,23 @@ import React from "react";
 import Preloader from "./Preloader";
 import test from "../assets/testReport.pdf";
 import ReportData from "../assets/JSON/kalakridaReport.json";
+import BackIcon from "../assets/images/left-arrow.png";
 
 export default function KalakridaReport(props) {
   const year = props.match.params.year;
   const data = ReportData.filter((item) => item.year === year);
   return (
     <div className="md:ml-20">
-      <div className="md:mt-0 mt-5 text-center text-2xl text-ahum-maroon font-bold">
+      <div className="flex text-ahum-brown  justify-start w-full lg:pr-5 pr-1 pt-2 md:mb-0 mb-3">
+        <a href={`/kalakrida/` + year} className="flex mx-1">
+          <img src={BackIcon} alt="back-icon" width="20px" className="mx-1" />
+          Back
+        </a>
+      </div>
+      <div className="md:mt-0 mt-1 font-bold text-2xl  md:py-5 text-center  font-montserrat">
         Kalakrida Report ({year})
       </div>
 
-      <div className="flex text-ahum-brown  justify-end w-full pr-5">
-        <a href={`/kalakrida/` + year}>&#129040; Back</a>
-      </div>
       {console.log(data)}
       {data.length === 0 ? (
         <div className="flex justify-center">No data</div>

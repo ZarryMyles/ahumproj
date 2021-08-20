@@ -5,7 +5,7 @@ import ArchiveMedia from "./ArchiveMedia";
 
 function Archives(props) {
   const { category, year } = props.match.params;
-  console.log(year);
+
   const program = [
     { id: 1, name: "All programs", cat: "program" },
     { id: 2, name: "Saturdays @ Swastika", cat: "saturdaysatswastika" },

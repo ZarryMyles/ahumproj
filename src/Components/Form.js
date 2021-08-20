@@ -65,10 +65,6 @@ export default function Form(props) {
   );
   // validating input values
   const validateValues = () => {
-    console.log(
-      !validatePhone.test(inputValues.phone),
-      inputValues.phone === ""
-    );
     let invalid = false;
     if (inputValues.name === "") {
       invalid = true;

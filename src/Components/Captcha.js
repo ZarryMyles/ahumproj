@@ -22,12 +22,9 @@ export default class Captcha extends Component {
     setTimeout(() => {
       this.setState({ load: true });
     }, DELAY);
-    // console.log("didMount - reCaptcha Ref-", this._reCaptchaRef);
   }
 
   handleChange = (value) => {
-    // console.log("Captcha value:", value);
-    // this.setState({ value });
     if (value) this.props.captchaVerify();
     // if value is null recaptcha expired
     if (value === null) {
@@ -38,7 +35,6 @@ export default class Captcha extends Component {
 
   asyncScriptOnLoad = () => {
     this.setState({ callback: "called!" });
-    // console.log("scriptLoad - reCaptcha Ref-", this._reCaptchaRef);
   };
 
   render() {

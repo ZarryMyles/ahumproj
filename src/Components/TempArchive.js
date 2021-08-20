@@ -17,6 +17,7 @@ export default function TempArchive(props) {
     "November",
     "December",
   ];
+
   return (
     <div
       data-aos="slide-up"
@@ -45,8 +46,19 @@ export default function TempArchive(props) {
           }
         />
       </div>
-      <div className="col-span-4 text-center text-base md:mr-0 mr-5">
-        <span className="py-1 block text-lg font-semibold   text-center">
+      <div
+        className={
+          program.category.toLowerCase() === "kalakrida"
+            ? window.innerWidth < 767
+              ? "col-span-4 text-center text-base md:mr-0 mr-5 ml-10"
+              : "col-span-4 text-center text-base md:mr-0 mr-5"
+            : "col-span-4 text-center text-base md:mr-0 mr-5"
+        }
+      >
+        <span
+          id="kalakridaMargin"
+          className="py-1 block text-lg font-semibold   text-center"
+        >
           ‘
           {program.category.toLowerCase() === "kalakrida"
             ? "KALAKRIDA - " + year

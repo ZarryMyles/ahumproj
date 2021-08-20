@@ -62,13 +62,6 @@ export default function Contact(props) {
         break;
 
       case "phno":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            phno: validatePhone.test(val) ? "" : "Enter a valid Phone Number",
-          },
-        }));
         //If Email is already entered, phone error is set to ""
         if (validateEmail.test(formDetails.mail)) {
           setFormDetails((prevState) => ({
@@ -78,24 +71,37 @@ export default function Contact(props) {
               phno: "",
             },
           }));
+        } else {
+          setFormDetails((prevState) => ({
+            ...prevState,
+            error: {
+              ...prevState.error,
+              phno: validatePhone.test(val)
+                ? ""
+                : "Enter a valid Phone Number or Email",
+            },
+          }));
         }
         break;
 
       case "mail":
-        setFormDetails((prevState) => ({
-          ...prevState,
-          error: {
-            ...prevState.error,
-            mail: validateEmail.test(val) ? "" : "Enter a valid email address",
-          },
-        }));
-        //If Phone is already entered, mail error is set to ""
+        // If Phone is already entered, mail error is set to ""
         if (validatePhone.test(formDetails.phno)) {
           setFormDetails((prevState) => ({
             ...prevState,
             error: {
               ...prevState.error,
               mail: "",
+            },
+          }));
+        } else {
+          setFormDetails((prevState) => ({
+            ...prevState,
+            error: {
+              ...prevState.error,
+              mail: validateEmail.test(val)
+                ? ""
+                : "Enter a valid Phone Numbe or Email",
             },
           }));
         }

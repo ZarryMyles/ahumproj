@@ -123,6 +123,9 @@ export default function Contact(props) {
   //Runs when submit button is clicked
   let handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(formDetails);
+    console.log(formMail);
+    console.log(formPhone);
 
     if (!captcha) {
       notify(
@@ -145,8 +148,11 @@ export default function Contact(props) {
     };
 
     const validateVars = (errors) => {
-      let validV = true;
-      if (errors.error) return validV;
+      let validV = false;
+      if (!errors.error) {
+        validV = true;
+      }
+      return validV;
     };
 
     if (validateForm(formDetails.error)) {
@@ -202,10 +208,6 @@ export default function Contact(props) {
           phno: "",
           error: "Enter a valid Phone Number or Email",
         });
-
-        console.log(formDetails);
-        console.log(formMail);
-        console.log(formPhone);
       }
     } else {
       //Resetting border colors

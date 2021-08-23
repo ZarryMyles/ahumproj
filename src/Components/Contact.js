@@ -149,7 +149,11 @@ export default function Contact(props) {
       if (errors.error) return validV;
     };
 
-    if (validateForm(formDetails.error) || validateVars(formPhone)) {
+    if (
+      validateForm(formDetails.error) &&
+      validateVars(formPhone) &&
+      validateVars(formMail)
+    ) {
       const formData = {
         name: formDetails.name,
         mail: formMail.mail,

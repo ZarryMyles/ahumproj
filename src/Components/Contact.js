@@ -149,66 +149,64 @@ export default function Contact(props) {
       if (errors.error) return validV;
     };
 
-    if (
-      validateForm(formDetails.error) &&
-      validateVars(formPhone) &&
-      validateVars(formMail)
-    ) {
-      const formData = {
-        name: formDetails.name,
-        mail: formMail.mail,
-        phone: formPhone.phno,
-        message: formDetails.msg,
-        bookOurSpace: bookCase,
-      };
+    if (validateForm(formDetails.error)) {
+      if (validateVars(formPhone) || validateVars(formMail)) {
+        const formData = {
+          name: formDetails.name,
+          mail: formMail.mail,
+          phone: formPhone.phno,
+          message: formDetails.msg,
+          bookOurSpace: bookCase,
+        };
 
-      axios.post(contactAPI, formData, {
-        headers: {
-          Authorization: process.env.REACT_APP_API_KEY,
-        },
-      });
+        axios.post(contactAPI, formData, {
+          headers: {
+            Authorization: process.env.REACT_APP_API_KEY,
+          },
+        });
 
-      // Reset field placeholders
-      document.getElementById("cForm").reset();
-      document.getElementById("name").placeholder = "Your Name";
-      document.getElementById("mail").placeholder = "Email";
-      document.getElementById("phno").placeholder = "Phone";
-      document.getElementById("msg").placeholder = "Your Message";
+        // Reset field placeholders
+        document.getElementById("cForm").reset();
+        document.getElementById("name").placeholder = "Your Name";
+        document.getElementById("mail").placeholder = "Email";
+        document.getElementById("phno").placeholder = "Phone";
+        document.getElementById("msg").placeholder = "Your Message";
 
-      //Resetting border colors
-      document.getElementById("name").style.borderColor = "lightgray";
-      document.getElementById("mail").style.borderColor = "lightgray";
-      document.getElementById("phno").style.borderColor = "lightgray";
-      document.getElementById("msg").style.borderColor = "lightgray";
+        //Resetting border colors
+        document.getElementById("name").style.borderColor = "lightgray";
+        document.getElementById("mail").style.borderColor = "lightgray";
+        document.getElementById("phno").style.borderColor = "lightgray";
+        document.getElementById("msg").style.borderColor = "lightgray";
 
-      //Displaying Success Toast
-      notify(
-        <div className=" text-green-800 text-center">
-          Thank you for your interest in ahum!
-        </div>
-      );
+        //Displaying Success Toast
+        notify(
+          <div className=" text-green-800 text-center">
+            Thank you for your interest in ahum!
+          </div>
+        );
 
-      //Resetting Values to prevent multiple entries
-      setFormDetails({
-        name: "",
-        msg: "",
-        error: {
-          name: "Enter a vaild Name",
-          msg: "Enter a vaild Message",
-        },
-      });
-      setFormMail({
-        mail: "",
-        error: "Enter a valid Phone Number or Email",
-      });
-      setFormPhone({
-        phno: "",
-        error: "Enter a valid Phone Number or Email",
-      });
+        //Resetting Values to prevent multiple entries
+        setFormDetails({
+          name: "",
+          msg: "",
+          error: {
+            name: "Enter a vaild Name",
+            msg: "Enter a vaild Message",
+          },
+        });
+        setFormMail({
+          mail: "",
+          error: "Enter a valid Phone Number or Email",
+        });
+        setFormPhone({
+          phno: "",
+          error: "Enter a valid Phone Number or Email",
+        });
 
-      console.log(formDetails);
-      console.log(formMail);
-      console.log(formPhone);
+        console.log(formDetails);
+        console.log(formMail);
+        console.log(formPhone);
+      }
     } else {
       //Resetting border colors
       document.getElementById("name").style.borderColor = "lightgray";

@@ -22,15 +22,19 @@ export default function Contact(props) {
   const [newsMail, setNewsMail] = useState("");
   const contactAPI = process.env.REACT_APP_API_END + "contacts";
   const newsAPI = process.env.REACT_APP_API_END + "newsletters";
+  const [formMail, setFormMail] = useState({
+    mail: "",
+    error: "Enter a valid Phone Number or Email",
+  });
+  const [formPhone, setFormPhone] = useState({
+    phno: "",
+    error: "Enter a valid Phone Number or Email",
+  });
   const [formDetails, setFormDetails] = useState({
     name: "",
-    phno: "",
-    mail: "",
     msg: "",
     error: {
       name: "Enter a valid Name",
-      mail: "Enter a valid Email/Ph No.",
-      phno: "Enter a valid Email/Ph No.",
       msg: "Enter a valid Message",
     },
   });
@@ -63,46 +67,34 @@ export default function Contact(props) {
 
       case "phno":
         //If Email is already entered, phone error is set to ""
-        if (validateEmail.test(formDetails.mail)) {
-          setFormDetails((prevState) => ({
+        if (validateEmail.test(formMail.mail)) {
+          setFormPhone((prevState) => ({
             ...prevState,
-            error: {
-              ...prevState.error,
-              phno: "",
-            },
+            error: "",
           }));
         } else {
-          setFormDetails((prevState) => ({
+          setFormPhone((prevState) => ({
             ...prevState,
-            error: {
-              ...prevState.error,
-              phno: validatePhone.test(val)
-                ? ""
-                : "Enter a valid Phone Number or Email",
-            },
+            error: validatePhone.test(val)
+              ? ""
+              : "Enter a valid Phone Number or Email",
           }));
         }
         break;
 
       case "mail":
         // If Phone is already entered, mail error is set to ""
-        if (validatePhone.test(formDetails.phno)) {
-          setFormDetails((prevState) => ({
+        if (validatePhone.test(formPhone.phno)) {
+          setFormMail((prevState) => ({
             ...prevState,
-            error: {
-              ...prevState.error,
-              mail: "",
-            },
+            error: "",
           }));
         } else {
-          setFormDetails((prevState) => ({
+          setFormMail((prevState) => ({
             ...prevState,
-            error: {
-              ...prevState.error,
-              mail: validateEmail.test(val)
-                ? ""
-                : "Enter a valid Phone Numbe or Email",
-            },
+            error: validateEmail.test(val)
+              ? ""
+              : "Enter a valid Phone Numbe or Email",
           }));
         }
         break;
@@ -112,14 +104,20 @@ export default function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            msg: val.length < 5 ? "Enter a valid message!" : "",
+            msg: val.length < 10 ? "Enter a valid message!" : "",
           },
         }));
         break;
       default:
         break;
     }
-    setFormDetails((prevState) => ({ ...prevState, [nam]: val }));
+    if (nam === "mail") {
+      setFormMail((prevState) => ({ ...prevState, [nam]: val }));
+    } else if (nam === "phno") {
+      setFormPhone((prevState) => ({ ...prevState, [nam]: val }));
+    } else {
+      setFormDetails((prevState) => ({ ...prevState, [nam]: val }));
+    }
   };
 
   //Runs when submit button is clicked
@@ -146,11 +144,16 @@ export default function Contact(props) {
       return valid;
     };
 
-    if (validateForm(formDetails.error)) {
+    const validateVars = (errors) => {
+      let validV = true;
+      if (errors.error) return validV;
+    };
+
+    if (validateForm(formDetails.error) || validateVars(formPhone)) {
       const formData = {
         name: formDetails.name,
-        mail: formDetails.mail,
-        phone: formDetails.phno,
+        mail: formMail.mail,
+        phone: formPhone.phno,
         message: formDetails.msg,
         bookOurSpace: bookCase,
       };
@@ -174,25 +177,34 @@ export default function Contact(props) {
       document.getElementById("phno").style.borderColor = "lightgray";
       document.getElementById("msg").style.borderColor = "lightgray";
 
-      //Resetting Values to prevent multiple entries
-      setFormDetails({
-        name: "",
-        phno: "",
-        mail: "",
-        msg: "",
-        error: {
-          name: "Enter a vaild Name",
-          mail: "Enter a vaild Email Address or Phone Number",
-          phno: "Enter a vaild Email Address or Phone Number",
-          msg: "Enter a vaild Message",
-        },
-      });
-
+      //Displaying Success Toast
       notify(
         <div className=" text-green-800 text-center">
           Thank you for your interest in ahum!
         </div>
       );
+
+      //Resetting Values to prevent multiple entries
+      setFormDetails({
+        name: "",
+        msg: "",
+        error: {
+          name: "Enter a vaild Name",
+          msg: "Enter a vaild Message",
+        },
+      });
+      setFormMail({
+        mail: "",
+        error: "Enter a valid Phone Number or Email",
+      });
+      setFormPhone({
+        phno: "",
+        error: "Enter a valid Phone Number or Email",
+      });
+
+      console.log(formDetails);
+      console.log(formMail);
+      console.log(formPhone);
     } else {
       //Resetting border colors
       document.getElementById("name").style.borderColor = "lightgray";
@@ -204,13 +216,13 @@ export default function Contact(props) {
       if (formDetails.name.length < 2) {
         document.getElementById("name").style.borderColor = "red";
       }
-      if (!validateEmail.test(formDetails.mail)) {
-        if (!validatePhone.test(formDetails.phno)) {
+      if (!validateEmail.test(formMail.mail)) {
+        if (!validatePhone.test(formPhone.phno)) {
           document.getElementById("mail").style.borderColor = "red";
         }
       }
-      if (!validatePhone.test(formDetails.phno)) {
-        if (!validateEmail.test(formDetails.mail)) {
+      if (!validatePhone.test(formPhone.phno)) {
+        if (!validateEmail.test(formMail.mail)) {
           document.getElementById("phno").style.borderColor = "red";
         }
       }

@@ -104,7 +104,7 @@ export default function Contact(props) {
           ...prevState,
           error: {
             ...prevState.error,
-            msg: val.length < 10 ? "Enter a valid message!" : "",
+            msg: val.length < 5 ? "Enter a valid message!" : "",
           },
         }));
         break;

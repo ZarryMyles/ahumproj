@@ -1,0 +1,37 @@
+[
+  {
+    "id": "Kreport16",
+    "year": "2016",
+    "category": "kalakrida",
+    "report_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629213240/kalakrida-gallery/report-thumbnails/2016_t2oupo.jpg",
+    "gallery_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629220918/kalakrida-gallery/report-thumbnails/2016-gal_xlyfm5.webp"
+  },
+  {
+    "id": "Kreport17",
+    "year": "2017",
+    "category": "kalakrida",
+    "report_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629213240/kalakrida-gallery/report-thumbnails/2017_o0zthi.jpg",
+    "gallery_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629220919/kalakrida-gallery/report-thumbnails/2017-gal_y52ahi.webp"
+  },
+  {
+    "id": "Kreport18",
+    "year": "2018",
+    "category": "kalakrida",
+    "report_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629213240/kalakrida-gallery/report-thumbnails/2018_c6i2fm.jpg",
+    "gallery_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629220919/kalakrida-gallery/report-thumbnails/2018-gal_psfvfh.webp"
+  },
+  {
+    "id": "Kreport19",
+    "year": "2019",
+    "category": "kalakrida",
+    "report_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629213240/kalakrida-gallery/report-thumbnails/2019_tggwly.jpg",
+    "gallery_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629282449/kalakrida-gallery/report-thumbnails/2019-gal_fiuaxk.webp"
+  },
+
+  {
+    "year": "2021",
+    "category": "other programs",
+
+    "gallery_thumbnail": "https://res.cloudinary.com/dtfecnt6o/image/upload/v1629282449/kalakrida-gallery/report-thumbnails/2019-gal_fiuaxk.webp"
+  }
+]

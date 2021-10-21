@@ -1,26 +1,43 @@
 [
   {
     "id": "Kreport16",
+    "event": "kalakrida",
     "pdf_path": "https://onedrive.live.com/embed?cid=155AEDABAF9AA224&resid=155AEDABAF9AA224%2135727&authkey=AHu4VSV0DySb7_8&em=2",
     "year": "2016"
   },
   {
     "id": "Kreport17",
+    "event": "kalakrida",
     "pdf_path": "https://onedrive.live.com/embed?cid=155AEDABAF9AA224&resid=155AEDABAF9AA224%2135730&authkey=AK-H2dXZvPV3-R0&em=2",
     "year": "2017"
   },
   {
     "id": "Kreport17Article",
+    "event": "kalakrida",
     "pdf_path": "https://onedrive.live.com/embed?cid=155AEDABAF9AA224&resid=155AEDABAF9AA224%2135731&authkey=AJQQxJ9pX3VzDZo&em=2",
     "year": "2017"
   },
   {
     "id": "Kreport18",
+    "event": "kalakrida",
     "pdf_path": "https://onedrive.live.com/embed?cid=155AEDABAF9AA224&resid=155AEDABAF9AA224%2135743&authkey=ABa0-etQXu90Dnc&em=2",
     "year": "2018"
   },
   {
     "id": "Kreport19",
+    "event": "kalakrida",
+    "pdf_path": "https://onedrive.live.com/embed?cid=155AEDABAF9AA224&resid=155AEDABAF9AA224%2135776&authkey=ANfzNhHwQMrfwNw&em=2",
+    "year": "2019"
+  },
+  {
+    "id": "OPreport21",
+    "event": "other programs",
+    "pdf_path": "https://onedrive.live.com/embed?cid=155AEDABAF9AA224&resid=155AEDABAF9AA224%2135776&authkey=ANfzNhHwQMrfwNw&em=2",
+    "year": "2021"
+  },
+  {
+    "id": "OPreport31",
+    "event": "other programs",
     "pdf_path": "https://onedrive.live.com/embed?cid=155AEDABAF9AA224&resid=155AEDABAF9AA224%2135776&authkey=ANfzNhHwQMrfwNw&em=2",
     "year": "2019"
   }

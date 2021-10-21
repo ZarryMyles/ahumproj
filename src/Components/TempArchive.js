@@ -96,9 +96,12 @@ export default function TempArchive(props) {
             <i class="fas fa-globe-americas"></i>{" "}
           </a>
         )}
-        {program.category.toLowerCase() === "kalakrida" && (
+        {(program.category.toLowerCase() === "kalakrida" ||
+          program.galleryEnable == true) && (
           <div className="col-span-4 text-center font-normal underline">
-            <a href={`/kalakrida/` + year}>View more</a>
+            <a href={`/details/${program.category.toLowerCase()}/` + year}>
+              View more
+            </a>
           </div>
         )}
       </div>

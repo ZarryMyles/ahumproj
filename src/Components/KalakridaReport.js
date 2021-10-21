@@ -2,8 +2,11 @@ import React from "react";
 import ReportData from "../assets/JSON/kalakridaReport.json";
 
 export default function KalakridaReport(props) {
-  const year = props.match.params.year;
-  const data = ReportData.filter((item) => item.year === year);
+  const { category, year } = props.match.params;
+  const data = ReportData.filter(
+    (item) => item.year === year && item.event === category
+  );
+
   return (
     <div className="md:ml-20">
       <div className="flex text-ahum-black  justify-start w-full lg:pr-5 pr-1 pt-2 md:mb-0 mb-3">
@@ -15,7 +18,7 @@ export default function KalakridaReport(props) {
         </a>
       </div>
       <div className="md:mt-0 mt-1 font-bold text-2xl  md:py-5 text-center  font-montserrat">
-        Kalakrida Report ({year})
+        {category[0].toUpperCase() + category.slice(1)} Report ({year})
       </div>
 
       {data.length === 0 ? (

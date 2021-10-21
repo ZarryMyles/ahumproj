@@ -5,7 +5,8 @@ export default function ArchiveMedia(props) {
   let { year, category } = props;
   const [archive, setArchive] = useState();
   // api
-  const archiveAPI = process.env.REACT_APP_API_END + "archives";
+  // const archiveAPI = process.env.REACT_APP_API_END + "archives";
+  const archiveAPI = "http://localhost:3000/JSON/archives.json";
 
   useEffect(() => {
     getData();
@@ -21,6 +22,7 @@ export default function ArchiveMedia(props) {
         },
       })
       .then((res) => setArchive(res.data))
+      .then((res) => console.log(res))
       .catch((error) => {
         console.log("err", error);
       });

@@ -5,13 +5,15 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 export default function KalakridaGallery(props) {
-  const year = props.match.params.year;
-  const data = GalleryData.filter((item) => item.year === year);
+  const { category, year } = props.match.params;
+  const data = GalleryData.filter(
+    (item) => item.year === year && item.event === category
+  );
   return (
     <div className="md:ml-20">
       <div className="flex text-ahum-black  justify-start w-full lg:pr-5 pr-1 pt-2 md:mb-0 mb-3">
         <a
-          href={`/kalakrida/` + year}
+          href={`/details/${category}/${year}`}
           className="flex md:pl-3 pl-1 md:text-base underline hover:underline"
         >
           Back

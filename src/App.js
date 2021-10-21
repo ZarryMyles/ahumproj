@@ -75,18 +75,19 @@ function App() {
             <Route path="/archives" component={Archives} />
             <Route path="/form/:title/:event" component={Form} />
             <Route path="/form/:title" component={Form} />
+            {/* temp */}
             <Route
-              path="/kalakrida/:year"
+              path="/details/:category/:year"
               exact
               component={KalakridaParentFolder}
             />
             <Route
-              path="/kalakrida/gallery/:year"
+              path="/details/:category/gallery/:year"
               exact
               component={KalakridaGallery}
             />
             <Route
-              path="/kalakrida/report/:year"
+              path="/details/:category/report/:year"
               exact
               component={KalakridaReport}
             />

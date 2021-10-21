@@ -6,7 +6,7 @@ export default function ArchiveMedia(props) {
   const [archive, setArchive] = useState();
   // api
   // const archiveAPI = process.env.REACT_APP_API_END + "archives";
-  const archiveAPI = "http://localhost:3000/JSON/archives.json";
+  const archiveAPI = " /JSON/archives.json";
 
   useEffect(() => {
     getData();

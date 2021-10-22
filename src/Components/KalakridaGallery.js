@@ -20,7 +20,7 @@ export default function KalakridaGallery(props) {
         </a>
       </div>
       <div className="md:mt-0 mt-5 flex justify-center text-2xl font-bold text-center  font-montserrat ">
-        {category} Gallery ({year})
+        {category.toUpperCase()} Gallery ({year})
       </div>
 
       {data.length === 0 ? (

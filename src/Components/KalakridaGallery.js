@@ -28,13 +28,26 @@ export default function KalakridaGallery(props) {
         <div className="flex justify-center">No data</div>
       ) : (
         // display data
-        <div className="flex justify-center flex-wrap">
+        <div className="flex justify-center flex-wrap my-16 md:my-0">
           {data.map((item) => {
             return (
               <div className="kalakridaGallery md:flex md:m-10 md:w-1/6 md:px-0 px-10 md:py-0 py-3 mt-5">
-                <Zoom>
-                  <img src={item.image_link} alt="Kalakrida Pic" />
-                </Zoom>
+                {item.image_link && (
+                  <Zoom>
+                    <img src={item.image_link} alt="Kalakrida Pic" />
+                  </Zoom>
+                )}
+                {item.video_link && (
+                  <div className="w-full h-full ">
+                    <video
+                      // style={{ height: "400px" }}
+                      src={item.video_link}
+                      controls
+                      width="500"
+                      // height="150"
+                    ></video>
+                  </div>
+                )}
               </div>
             );
           })}
